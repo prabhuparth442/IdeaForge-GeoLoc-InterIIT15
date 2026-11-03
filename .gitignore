@@ -1,0 +1,53 @@
+# ---------- data ----------
+# Big files are NEVER uploaded. Share them through Drive / a Release instead (see dataset/README.md).
+dataset_temp/
+dataset/small_sat_area/
+dataset/NUDT/
+dataset/**/*.tif
+dataset/**/*.tiff
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.engine
+*.zip
+*.tar
+*.tar.gz
+# tracked on purpose: dataset/d1.npz (54 MB, all 500 photos + metadata) and dataset/d1/
+
+# ---------- editor / OS ----------
+.vscode/
+.idea/
+*.code-workspace
+.DS_Store
+Thumbs.db
+
+# ---------- python ----------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ---------- notebooks ----------
+.ipynb_checkpoints/
+
+# ---------- secrets / local config ----------
+.env
+configs/local*.yaml
+
+# ---------- raster side files made by GIS tools ----------
+*.pyrx
+*.aux.xml
+
+# ---------- logs ----------
+*.log
