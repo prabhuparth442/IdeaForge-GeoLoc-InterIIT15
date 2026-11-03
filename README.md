@@ -1,4 +1,5 @@
-# NadirForge
+# IdeaForge-GeoLoc-InterIIT15
+
 
 UAV visual geo-localisation for the ideaForge problem statement (Inter-IIT Tech Meet 15.0). Code is the section-by-section conversion of `GeoLoc_Pipeline1.ipynb`.
 
