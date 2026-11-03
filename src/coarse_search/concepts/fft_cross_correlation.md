@@ -63,15 +63,7 @@ Notation (as in `template_matching_cosine_and_zncc.md`): layers `b = 1..8`, quer
 
 **Dot product (both scores' numerator, cosine).**
 
-$$
-\operatorname{dot}[i,j]
-=
-\sum_b C[W_b,Q_b][i,j]
-=
-\mathcal{F}^{-1}\left(
-\sum_b \widehat{W}_b \cdot \overline{\widehat{Q}_b}
-\right)
-$$
+$$\operatorname{dot}[i,j] = \sum_b C[W_b,Q_b][i,j] = \mathcal{F}^{-1}\left(\sum_b \widehat{W}_b \cdot \overline{\widehat{Q}_b}\right)$$
 
 Because the transform is linear, we sum over the 8 layers *in the frequency domain* and invert only once:
 
