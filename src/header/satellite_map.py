@@ -28,14 +28,18 @@ class SatelliteMap:
         return bands.astype(np.float32).mean(axis=0)
 
     def read_strip(self, top, rows):
+        assert rows > 0 and 0 <= top and top + rows <= self.height, "strip rows %d..%d outside the map (height %d)" % (top, top + rows, self.height)
         return self.read_grey(window=Window(0, top, self.width, rows))
 
     def grey_to_uint8(self, grey):
+        assert grey.ndim == 2, "grey must be a 2-D array, got shape %s" % (grey.shape,)
         result = np.clip(grey / self.gray_max, 0, 1) * 254 + 1
         result[grey <= 0] = 0
         return result.astype(np.uint8)
 
     def gps_to_map_pixel(self, lat, lon):
+        assert -90 <= lat <= 90, "latitude must be in degrees -90..90 (lat first, lon second), got %s" % lat
+        assert -180 <= lon <= 180, "longitude must be in degrees -180..180, got %s" % lon
         easting, northing = self.to_map_crs.transform(lon, lat)
         col, row = self.pixel_from_coords * (easting, northing)
         return row, col

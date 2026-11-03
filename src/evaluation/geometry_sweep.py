@@ -10,6 +10,7 @@ from image_processing.geometry import render_query
 
 
 def share_within_4_sigma(testset, store, geometry, ids):
+    assert len(ids) > 0, "no photo ids given"
     errors_in_sigma = []
     for i in ids:
         level = testset.query_levels[i]

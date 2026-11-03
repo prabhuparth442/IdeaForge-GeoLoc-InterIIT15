@@ -1,4 +1,5 @@
 def distort(camera, x, y):
+    assert x.shape == y.shape, "x and y must have the same shape, got %s and %s" % (x.shape, y.shape)
     r2 = x * x + y * y
     radial = 1 + camera.k1 * r2 + camera.k2 * r2 ** 2 + camera.k3 * r2 ** 3
     x_d = x * radial + 2 * camera.p1 * x * y + camera.p2 * (r2 + 2 * x * x)

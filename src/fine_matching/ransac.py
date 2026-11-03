@@ -7,6 +7,9 @@ from header.settings import RANSAC_PIXELS
 
 
 def fit_transform(points_a, points_b):
+    assert points_a.ndim == 2 and points_a.shape[1] == 2, "points_a must be (n, 2), got %s" % (points_a.shape,)
+    assert points_a.shape == points_b.shape, "points_a and points_b must have the same shape (row k matches row k)"
+    assert np.isfinite(points_a).all() and np.isfinite(points_b).all(), "points must be finite"
     if len(points_a) < 4:
         return None, np.zeros(len(points_a), dtype=bool)
     matrix, inliers = cv2.estimateAffinePartial2D(points_a, points_b, method=cv2.RANSAC, ransacReprojThreshold=RANSAC_PIXELS, maxIters=3000, confidence=0.995)

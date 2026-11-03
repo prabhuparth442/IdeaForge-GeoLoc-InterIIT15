@@ -11,6 +11,8 @@ from image_processing.map_levels import level_gsd, map_piece
 
 
 def prepare_canvas(matcher, canvas, valid):
+    assert canvas.shape == (TILE, TILE) and valid.shape == canvas.shape, "canvas and valid must be (%d, %d)" % (TILE, TILE)
+    assert valid.dtype == bool, "valid must be a bool array"
     fill = float(canvas[valid].mean()) if valid.any() else float(canvas.mean())
     padded = np.full((CTX, CTX), fill, dtype=np.float32)
     padded[CONTEXT_MARGIN:CONTEXT_MARGIN + TILE, CONTEXT_MARGIN:CONTEXT_MARGIN + TILE] = np.where(valid, canvas, fill)
@@ -29,6 +31,8 @@ def prepare_canvas(matcher, canvas, valid):
 
 
 def check_candidate(matcher, canvas_features, level_images, level, x_m, y_m):
+    assert level in level_images, "level %s was not built" % level
+    assert math.isfinite(x_m) and math.isfinite(y_m) and x_m < 1e8, "candidate position must be finite metres (empty slots have x = 1e9)"
     tile = map_piece(level_images, level, x_m, y_m, CTX)
     tile_features = find_keypoints(matcher, tile)
     points_a, points_b, scores = match_keypoints(matcher, canvas_features, tile_features, CTX)
@@ -42,6 +46,8 @@ def check_candidate(matcher, canvas_features, level_images, level, x_m, y_m):
 
 
 def second_stage(matcher, canvas, valid, level, peaks, level_images):
+    assert peaks.ndim == 2 and peaks.shape[0] == NUM_PEAKS and peaks.shape[1] >= 3, "peaks must be (NUM_PEAKS, >= 3) from search_frame, got %s" % (peaks.shape,)
+    assert level in level_images, "level %s was not built" % level
     canvas_features = prepare_canvas(matcher, canvas, valid)
     inliers = np.zeros(NUM_PEAKS)
     shifts = np.zeros((NUM_PEAKS, 2))

@@ -6,6 +6,7 @@ from result_thresholding.pipeline import localise_photo
 
 
 def check_independence(testset, store, matcher, ids):
+    assert len(ids) >= 2, "need at least 2 photos to test independence"
     run = lambda j: localise_photo(testset.items[j], testset.priors[j], testset.camera, store, matcher)
     forward = {j: run(j) for j in ids}
     backward = {j: run(j) for j in reversed(ids)}

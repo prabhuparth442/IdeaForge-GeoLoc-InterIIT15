@@ -7,20 +7,26 @@ from header import settings
 
 
 def level_gsd(level):
+    assert level in settings.LEVELS, "level %s is not one of %s" % (level, settings.LEVELS)
     return settings.MAP_GSD * 2 ** (level / 2)
 
 
 def level_scale(level):
+    assert level in settings.LEVELS, "level %s is not one of %s" % (level, settings.LEVELS)
     return settings.MAP_GSD / level_gsd(level)
 
 
 def level_for_height(height, camera):
+    assert height > 0, "height must be above 0 m, got %s" % height
+    assert camera.fx > 0 and camera.width > 0, "camera needs a positive focal length and width"
     footprint = camera.width * height / camera.fx
     level = math.ceil(2 * math.log2(footprint / (settings.TILE * settings.MAP_GSD)))
     return int(np.clip(level, min(settings.LEVELS), max(settings.LEVELS)))
 
 
 def build_level_images(satellite_map, levels, strip_rows=settings.STRIP_ROWS):
+    assert len(levels) > 0 and strip_rows > 0, "need at least one level and a positive strip height"
+    assert all(level in settings.LEVELS for level in levels), "levels must come from settings.LEVELS"
     images = {}
     for level in levels:
         out_h = int(satellite_map.height * level_scale(level))
@@ -41,6 +47,7 @@ def build_level_images(satellite_map, levels, strip_rows=settings.STRIP_ROWS):
 
 
 def normalise_reference(image):
+    assert image.ndim == 2 and image.dtype == np.uint8, "level image must be 2-D uint8 (0 = no map), got %s %s" % (image.shape, image.dtype)
     has_map = image > 0
     grid = (max(image.shape[1] // 28, 1), max(image.shape[0] // 28, 1))
     clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=grid)
@@ -58,6 +65,9 @@ def build_level_pictures(satellite_map):
 
 
 def map_piece(level_images, level, x_m, y_m, size=settings.TILE):
+    assert level in level_images, "level %s was not built" % level
+    assert size > 0, "size must be positive pixels"
+    assert math.isfinite(x_m) and math.isfinite(y_m), "x_m and y_m must be finite metres"
     image = level_images[level]
     gsd = level_gsd(level)
     top = int(round(y_m / gsd - size / 2))

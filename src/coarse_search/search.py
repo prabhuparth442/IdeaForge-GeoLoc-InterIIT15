@@ -11,6 +11,8 @@ from image_processing.map_levels import level_gsd
 
 
 def cut_map_features(features, top, left, rows, cols):
+    assert features.ndim == 3 and features.shape[0] == settings.N_BINS, "features must be (N_BINS, rows, cols), got %s" % (features.shape,)
+    assert rows > 0 and cols > 0, "window size must be positive"
     piece = np.zeros((settings.N_BINS, rows, cols), dtype=np.float32)
     r0 = max(top, 0)
     r1 = min(top + rows, features.shape[1])
@@ -22,6 +24,10 @@ def cut_map_features(features, top, left, rows, cols):
 
 
 def correlation_maps(map_features, level, query_features, query_cells, prior_m):
+    assert level in map_features, "no map features for level %s" % level
+    assert query_features.ndim == 3 and query_features.shape[0] == settings.N_BINS and query_features.shape[1] == query_features.shape[2], "query_features must be (N_BINS, side, side), got %s" % (query_features.shape,)
+    assert query_cells.shape == query_features.shape[1:], "query_cells must be (side, side)"
+    assert len(prior_m) == 2 and np.isfinite(prior_m).all(), "prior_m must be two finite numbers (x east, y south) in metres"
     gsd = level_gsd(level)
     side = query_features.shape[1]
     reach = DISC_RADIUS / gsd + side * CELL / 2
@@ -47,6 +53,9 @@ def correlation_maps(map_features, level, query_features, query_cells, prior_m):
 
 
 def pick_peaks(score_map, geometry, prior_map=None, beta=0.0):
+    assert score_map.ndim == 2 and geometry["inside"].shape == score_map.shape, "score_map and geometry[\"inside\"] must have the same 2-D shape"
+    assert beta >= 0, "beta must be >= 0"
+    assert prior_map is None or prior_map.shape == score_map.shape, "prior_map must be shaped like score_map"
     usable = (score_map > -1) & geometry["inside"]
     ranking = score_map.clone()
     if prior_map is not None and beta > 0:
@@ -76,6 +85,11 @@ def pick_peaks(score_map, geometry, prior_map=None, beta=0.0):
 
 
 def search_frame(canvas, valid, level, prior_m, store, variants=(("cosine", 0.0), ("zncc", 0.0)), dino=None):
+    assert canvas.shape == (TILE, TILE) and valid.shape == canvas.shape, "canvas and valid must be (%d, %d), got %s and %s" % (TILE, TILE, canvas.shape, valid.shape)
+    assert valid.dtype == bool and valid.any(), "valid must be a bool mask with at least one True"
+    assert "features" in store and "levels" in store, "store must come from build_map_store"
+    assert len(variants) > 0 and all(mode in ("cosine", "zncc") for mode, beta in variants), "variants must be (\"cosine\"|\"zncc\", beta) pairs"
+    assert all(beta == 0 or dino is not None for mode, beta in variants), "a variant with beta > 0 needs a DinoHint (dino=...)"
     query_features, query_cells = query_edge_features(canvas, valid)
     maps, geometry = correlation_maps(store["features"], level, query_features, query_cells, prior_m)
     raster, cutoff, prior_map = None, 0.0, None

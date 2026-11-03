@@ -8,6 +8,7 @@ from image_processing.geometry import render_query
 
 
 def share_for(testset, store, ids, geometry):
+    assert len(ids) > 0, "no photo ids given"
     hits = []
     for i in ids:
         level = testset.query_levels[i]

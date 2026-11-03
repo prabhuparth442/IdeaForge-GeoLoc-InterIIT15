@@ -5,6 +5,7 @@ from header.settings import CELL, N_BINS
 
 
 def gradient_parts(image):
+    assert image.ndim == 2 and min(image.shape) >= 3, "image must be 2-D and at least 3 x 3, got shape %s" % (image.shape,)
     blurred = cv2.GaussianBlur(image.astype(np.float32), (0, 0), 1.0)
     gx = np.zeros_like(blurred)
     gy = np.zeros_like(blurred)
@@ -17,6 +18,7 @@ def gradient_parts(image):
 
 
 def edge_features(image):
+    assert image.ndim == 2 and min(image.shape) >= CELL, "image must be 2-D and at least CELL (%d) pixels each way, got %s" % (CELL, image.shape)
     blurred, gx, gy, strength, angle, bin_id = gradient_parts(image)
     rows = image.shape[0] // CELL
     cols = image.shape[1] // CELL
@@ -28,6 +30,8 @@ def edge_features(image):
 
 
 def normalise_cells(features, cells_to_use=None):
+    assert features.ndim == 3 and features.shape[0] == N_BINS, "features must be (N_BINS, rows, cols), got %s" % (features.shape,)
+    assert cells_to_use is None or cells_to_use.shape == features.shape[1:], "cells_to_use must be (rows, cols)"
     length = np.sqrt((features ** 2).sum(axis=0))
     if cells_to_use is None:
         cells_to_use = length > 0
@@ -39,6 +43,9 @@ def normalise_cells(features, cells_to_use=None):
 
 
 def query_edge_features(canvas, valid):
+    assert canvas.ndim == 2 and canvas.shape[0] == canvas.shape[1], "canvas must be square, got %s" % (canvas.shape,)
+    assert canvas.shape[0] % CELL == 0, "canvas side must be a multiple of CELL (%d)" % CELL
+    assert valid.shape == canvas.shape and valid.dtype == bool, "valid must be a bool array shaped like canvas"
     features = edge_features(canvas)
     safe = cv2.erode(valid.astype(np.uint8), np.ones((7, 7), np.uint8))
     side = canvas.shape[0] // CELL
@@ -48,6 +55,7 @@ def query_edge_features(canvas, valid):
 
 
 def no_data_cells(image):
+    assert image.ndim == 2, "image must be 2-D"
     rows = image.shape[0] // CELL
     cols = image.shape[1] // CELL
     empty = (image[:rows * CELL, :cols * CELL] == 0).reshape(rows, CELL, cols, CELL).any(axis=(1, 3))
@@ -56,6 +64,8 @@ def no_data_cells(image):
 
 
 def map_edge_features(image):
+    assert image.ndim == 2 and image.dtype == np.uint8, "level image must be 2-D uint8, got %s %s" % (image.shape, image.dtype)
+    assert (image > 0).any(), "level image has no map pixels at all"
     rows = image.shape[0]
     strip = 1024
     pad = 8
@@ -77,6 +87,7 @@ def map_edge_features(image):
 
 
 def build_map_features(level_images):
+    assert len(level_images) > 0, "no level images given"
     map_features = {}
     for level, image in level_images.items():
         map_features[level] = map_edge_features(image)

@@ -4,6 +4,7 @@ from header import settings
 
 
 def fast_length(n):
+    assert int(n) == n and n >= 1, "n must be a whole number >= 1, got %s" % n
     while True:
         rest = n
         for factor in (2, 3, 5):
@@ -15,6 +16,12 @@ def fast_length(n):
 
 
 def correlate_everywhere(window, kernel, cells, min_energy=settings.MIN_ENERGY, min_variance=settings.MIN_VARIANCE):
+    assert window.ndim == 3 and kernel.ndim == 3, "window and kernel must be (bins, rows, cols)"
+    assert window.shape[0] == kernel.shape[0], "window and kernel need the same number of bins"
+    assert kernel.shape[1] <= window.shape[1] and kernel.shape[2] <= window.shape[2], "kernel is bigger than the window"
+    assert cells.shape == kernel.shape[1:], "cells must be (rows, cols) of the kernel"
+    assert window.device == kernel.device == cells.device, "window, kernel and cells must be on the same device"
+    assert cells.sum() > 0, "kernel has no valid cells"
     n_bins, height, width = window.shape
     kernel_h, kernel_w = kernel.shape[1], kernel.shape[2]
     size = (fast_length(height), fast_length(width))

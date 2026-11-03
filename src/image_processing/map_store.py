@@ -6,6 +6,7 @@ from image_processing.map_levels import build_level_pictures, level_gsd
 
 
 def build_map_store(satellite_map):
+    assert abs(satellite_map.gsd - settings.MAP_GSD) < 1e-3, "map pixel size %.3f m differs from settings.MAP_GSD %.3f" % (satellite_map.gsd, settings.MAP_GSD)
     start = time.time()
     level_images = build_level_pictures(satellite_map)
     for level in settings.LEVELS:

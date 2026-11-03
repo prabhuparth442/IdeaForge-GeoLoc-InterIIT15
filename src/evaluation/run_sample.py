@@ -10,6 +10,7 @@ from result_thresholding.decision import final_answer
 
 
 def run_correlation(testset, store, variants, dino=None):
+    assert len(variants) > 0, "need at least one variant"
     disc = {}
     seconds = []
     start = time.time()
@@ -31,6 +32,8 @@ def run_correlation(testset, store, variants, dino=None):
 
 
 def run_minima(testset, store, matcher, disc):
+    assert matcher is not None, "run_minima needs a loaded matcher"
+    assert all(int(i) in disc for i in testset.sample_ids), "disc is missing some sample photos (run run_correlation first)"
     stage2 = {}
     final = {}
     start = time.time()

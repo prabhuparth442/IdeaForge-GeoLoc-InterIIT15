@@ -8,7 +8,9 @@ CAMERA_COLUMNS = ["cam_fx", "cam_fy", "cam_cx", "cam_cy", "cam_k1", "cam_k2", "c
 
 class Camera:
     def __init__(self, table):
+        assert len(table) > 0, "metadata table is empty"
         for column in CAMERA_COLUMNS:
+            assert column in table.columns, "metadata.csv has no column " + column
             spread = table[column].max() - table[column].min()
             assert spread < 1e-6, "the camera numbers differ between photos: " + column
         self.fx, self.fy = table["cam_fx"][0], table["cam_fy"][0]
@@ -20,6 +22,7 @@ class Camera:
 
 
 def wrap_angle(angle_deg):
+    assert np.all(np.isfinite(angle_deg)), "angle must be finite (degrees)"
     return (angle_deg + 180.0) % 360.0 - 180.0
 
 
@@ -28,6 +31,10 @@ def read_metadata():
 
 
 def make_items(table):
+    assert len(table) > 0, "metadata table is empty"
+    for column in ["filename", "lat_gtruth", "lon_gtruth", "alt", "yaw", "pitch", "roll"]:
+        assert column in table.columns, "metadata.csv has no column " + column
+    assert (table["alt"] > 0).all(), "every altitude must be above 0 m"
     items = []
     for index in range(len(table)):
         row = table.iloc[index]
@@ -44,6 +51,9 @@ def make_items(table):
 
 
 def assign_flights(items):
+    assert len(items) > 0, "no photos"
+    heights = [item["rel_height"] for item in items]
+    assert min(heights) >= settings.BAND_EDGES[0] and max(heights) < settings.BAND_EDGES[-1], "a photo height lies outside BAND_EDGES %s" % settings.BAND_EDGES
     heights = np.array([item["rel_height"] for item in items])
     flight_of_frame = np.array([settings.FLIGHT_NAMES[int(np.searchsorted(settings.BAND_EDGES, h, side="right")) - 1] for h in heights])
     for item, flight in zip(items, flight_of_frame):

@@ -2,6 +2,7 @@ import time
 
 import cv2
 import torch
+import numpy as np
 
 from coarse_search.search import search_frame
 from fine_matching.second_stage import second_stage
@@ -12,6 +13,9 @@ from result_thresholding.decision import decide, final_answer
 
 
 def localise_photo(item, prior_m, camera, store, matcher=None):
+    assert len(prior_m) == 2 and np.isfinite(prior_m).all(), "prior_m must be (x east, y south) in metres"
+    assert item["rel_height"] > 0, "photo height must be above 0 m"
+    assert "levels" in store and "features" in store, "store must come from build_map_store"
     clock = time.time()
     cv2.setRNGSeed(SEED)
     level = level_for_height(item["rel_height"], camera)

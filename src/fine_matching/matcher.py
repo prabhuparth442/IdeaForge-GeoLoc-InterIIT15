@@ -34,6 +34,8 @@ def load_matcher():
 
 @torch.no_grad()
 def find_keypoints(matcher, picture):
+    assert picture.ndim == 2 and picture.shape[0] == picture.shape[1], "picture must be square and 2-D, got %s" % (picture.shape,)
+    assert picture.min() >= 0 and picture.max() <= 1 + 1e-6, "picture values must be in [0, 1], got %.3f..%.3f" % (picture.min(), picture.max())
     big = cv2.resize(picture.astype(np.float32), (MATCH_SIZE, MATCH_SIZE), interpolation=cv2.INTER_CUBIC)
     tensor = torch.from_numpy(big)[None, None].to(DEVICE)
     return matcher.keypoint_finder.extract(tensor, resize=None)
@@ -41,6 +43,8 @@ def find_keypoints(matcher, picture):
 
 @torch.no_grad()
 def match_keypoints(matcher, features_a, features_b, picture_size):
+    assert picture_size > 0, "picture_size must be positive pixels"
+    assert "keypoints" in features_a and "keypoints" in features_b, "features must come from find_keypoints"
     from lightglue.utils import rbd
 
     result = matcher.glue({"image0": features_a, "image1": features_b})

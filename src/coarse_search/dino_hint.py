@@ -56,6 +56,8 @@ class DinoHint:
 
     @torch.no_grad()
     def describe(self, images, pixel_valid):
+        assert images.ndim == 3 and images.shape[1:] == (TILE, TILE), "images must be (batch, %d, %d), got %s" % (TILE, TILE, images.shape)
+        assert pixel_valid.shape == images.shape, "pixel_valid must be shaped like images"
         batch = len(images)
         x = torch.from_numpy(images).float().to(DEVICE).unsqueeze(1).repeat(1, 3, 1, 1)
         x = (x - IMAGE_MEAN) / IMAGE_STD
@@ -74,6 +76,8 @@ class DinoHint:
         return l2_normalise(vector)[0]
 
     def tile_score_raster(self, level, canvas, valid, prior_m):
+        assert level in self.gallery, "no DINO gallery for level %s" % level
+        assert len(prior_m) == 2, "prior_m must be (x, y) metres"
         centres = self.tile_centres[level]
         tile_m = TILE * level_gsd(level)
         gap_x = centres[:, 0] - prior_m[0]
@@ -86,6 +90,7 @@ class DinoHint:
         return raster, float(np.quantile(scores, 0.3))
 
     def prior_on_grid(self, raster, geometry):
+        assert raster.ndim == 2, "raster must be 2-D"
         raster = torch.from_numpy(raster).to(DEVICE)
         gsd = level_gsd(geometry["level"])
         row_pos = (geometry["y_m"] / gsd / TILE_STEP - 1).clamp(0, raster.shape[0] - 1.001)

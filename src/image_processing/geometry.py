@@ -10,6 +10,7 @@ from image_processing.thermal import load_thermal_frame, normalise_frame
 
 
 def camera_axes(yaw_deg, pitch_deg, roll_deg):
+    assert all(math.isfinite(a) for a in (yaw_deg, pitch_deg, roll_deg)), "yaw, pitch and roll must be finite (degrees)"
     yaw = math.radians(yaw_deg)
     pitch = math.radians(pitch_deg)
     roll = math.radians(roll_deg)
@@ -24,6 +25,10 @@ def camera_axes(yaw_deg, pitch_deg, roll_deg):
 
 
 def make_query(item, camera, canvas_size=settings.TILE, pixel_size=1.0, geometry=None):
+    assert canvas_size > 0 and pixel_size > 0, "canvas_size (pixels) and pixel_size (metres) must be positive"
+    assert item["rel_height"] > 0, "photo height must be above 0 m"
+    assert camera.fx > 0 and camera.fy > 0, "camera focal lengths must be positive"
+    assert geometry is None or set(geometry) <= set(settings.GEOMETRY), "unknown geometry key: %s" % (set(geometry) - set(settings.GEOMETRY),)
     setting = dict(settings.GEOMETRY)
     if geometry is not None:
         setting.update(geometry)
@@ -66,4 +71,5 @@ def make_query(item, camera, canvas_size=settings.TILE, pixel_size=1.0, geometry
 
 
 def render_query(item, camera, level, geometry=None):
+    assert level in settings.LEVELS, "level %s is not one of %s" % (level, settings.LEVELS)
     return make_query(item, camera, settings.TILE, level_gsd(level), geometry)

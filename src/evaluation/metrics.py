@@ -5,6 +5,7 @@ from header.settings import SEED
 
 
 def auc(values, is_right):
+    assert len(values) == len(is_right) and len(values) > 0, "values and is_right must be the same non-zero length"
     values = np.asarray(values, dtype=float)
     is_right = np.asarray(is_right).astype(bool)
     n_right = is_right.sum()
@@ -16,6 +17,7 @@ def auc(values, is_right):
 
 
 def gated_curve(signal, points):
+    assert len(signal) == len(points) and len(signal) > 0, "signal and points must be the same non-zero length"
     thresholds = np.quantile(signal, np.linspace(0, 0.95, 40))
     shares, scores = [], []
     for t in thresholds:
@@ -26,6 +28,7 @@ def gated_curve(signal, points):
 
 
 def best_gate(signal, points):
+    assert len(signal) == len(points) and len(signal) > 0, "signal and points must be the same non-zero length"
     best = (-1.0, 0.0, 1.0)
     for t in np.quantile(signal, np.linspace(0, 0.95, 40)):
         answered = signal >= t
@@ -36,6 +39,8 @@ def best_gate(signal, points):
 
 
 def honest_gate(signal, points, repeats=300):
+    assert len(signal) == len(points) and len(signal) >= 4, "need at least 4 photos with one signal value and one points value each"
+    assert repeats > 0, "repeats must be positive"
     rng = np.random.default_rng(SEED + 19)
     scores, shares = [], []
     for _ in range(repeats):

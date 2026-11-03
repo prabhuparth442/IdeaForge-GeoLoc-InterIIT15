@@ -34,6 +34,10 @@ peaks ─► [4] per peak: map tile ─► keypoints ─► pairs ─► RANSAC 
 
 Package imports assume `src` is on the path: `PYTHONPATH=src python -c "..."` from the repo root, or use `python run.py` which does this itself. Only `header/`, parts of `image_processing/`, `coarse_search/correlation.py`, `fine_matching/ransac.py`, `result_thresholding/decision.py` and some of `evaluation/` run without the dataset; each README marks which.
 
+## Input checks
+
+Every function starts with `assert` lines that state what it accepts: array shapes and dtypes, value ranges, units, matching lengths, known keys. A wrong input stops at the function that received it, with a message naming the expected form (for example `valid must be a bool array shaped like canvas`), instead of producing wrong numbers several blocks later. Read the asserts at the top of a function as its input contract; the folder READMEs list the same constraints in prose. Asserts are skipped if Python runs with `-O`, so do not run the pipeline that way.
+
 ## Status of the code (honest list)
 
 * Verified on synthetic data in a test environment: scoring, FFT correlation vs slow loop, RANSAC, decision logic, prior sampling, end-to-end smoke test of the non-neural path.
