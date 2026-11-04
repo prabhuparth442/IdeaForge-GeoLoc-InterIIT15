@@ -4,6 +4,21 @@ from header.scoring import final_score
 from header.settings import SEED
 
 
+def average_ranks(values):
+    assert values.ndim == 1 and len(values) > 0, "values must be a non-empty 1-D array"
+    order = values.argsort(kind="stable")
+    sorted_values = values[order]
+    ranks = np.empty(len(values))
+    start = 0
+    while start < len(values):
+        end = start
+        while end + 1 < len(values) and sorted_values[end + 1] == sorted_values[start]:
+            end += 1
+        ranks[order[start:end + 1]] = (start + end) / 2 + 1
+        start = end + 1
+    return ranks
+
+
 def auc(values, is_right):
     assert len(values) == len(is_right) and len(values) > 0, "values and is_right must be the same non-zero length"
     values = np.asarray(values, dtype=float)
@@ -12,7 +27,7 @@ def auc(values, is_right):
     n_wrong = (~is_right).sum()
     if n_right == 0 or n_wrong == 0:
         return float("nan")
-    ranks = values.argsort().argsort() + 1
+    ranks = average_ranks(values)
     return (ranks[is_right].sum() - n_right * (n_right + 1) / 2) / (n_right * n_wrong)
 
 

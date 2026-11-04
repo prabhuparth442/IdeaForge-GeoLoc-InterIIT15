@@ -51,3 +51,9 @@ configs/local*.yaml
 
 # ---------- logs ----------
 *.log
+
+# ---------- iteration results: candidate shards and smoke runs are rebuilt, not shared ----------
+tests/Test_Iteration_1/results/**/shards_*/
+tests/Test_Iteration_1/results/*_smoke/
+tests/Test_Iteration_2/results/cache/
+tests/Test_Iteration_2/results/demo_*/

@@ -1,42 +1,78 @@
 # Honest threshold selection (split-half)
 
-Code: `best_gate`, `honest_gate` in `src/evaluation/metrics.py`.
+**Code:** [`../metrics.py`](../metrics.py) (`best_gate`, `honest_gate`).
+**You need first:** [`auc_and_confidence_signals.md`](auc_and_confidence_signals.md) (gated curves) and `result_thresholding/concepts/answer_or_skip_expected_value.md` (why a threshold exists).
 
 ---
 
-## 1. The trap
+## 1. The trap in one sentence
 
-Choose the threshold `T` that maximises the score on the evaluation photos, then report that score. The score is biased upward: `T` was tuned to fit the particular noise of these photos. With a single threshold the bias is small but real; with several knobs it can be large.
+If you pick the threshold that gives the best score on a set of photos and then report *that* score, the number is too good, because the threshold was chosen to fit the particular lucky and unlucky photos in this set.
 
-## 2. The cure: tune on one set, report on another
+Think of it as exam practice: choosing the answers that happen to match the answer key and then bragging about your marks.
 
-`honest_gate` repeats 300 times:
+## 2. A demonstration with pure noise
 
-1. shuffle photo indices randomly, split into two halves (dev, test);
-2. `best_gate` on dev: scan 40 threshold candidates (quantiles of the signal) and keep the one with the highest score;
-3. apply that `T` to test: `answered = signal[test] >= t`, compute the score of test alone.
+The clearest way to see the bias is to give the threshold something that carries **no information at all**. Take the points of 60 photos (a realistic mixture of +10, +6, +3, 0 and −20) and attach a **random number** to each photo as its "confidence". Then:
+
+| measure | score (of 60) |
+|---|---|
+| answer everything | 2.9 |
+| best threshold, tuned on the same photos (`best_gate`) | **5.9** |
+| honest split-half (`honest_gate`) | **1.9** (± 2.8) |
+
+A random number cannot predict anything, yet tuning on the same photos improves the score from 2.9 to 5.9. That gain is pure fitting of noise. The honest estimate (1.9) is, correctly, no better than answering everything. (Numbers produced with the repo's functions on a fixed seed.)
+
+With a signal that really carries information (right answers have around 14 inliers, wrong ones around 6), the same 60 photos give: tuned 26.6 (answering 53 % of the photos) versus honest 23.2 ± 6.2. The honest score is lower by about 3.4 points; that is the optimism removed. And the ± 6.2 says the final score on new photos could easily be several points higher or lower.
+
+## 3. The cure: tune on one half, score on the other
+
+`honest_gate` repeats the following 300 times:
+
+1. shuffle the photo indices and split them in two halves, **dev** and **test**;
+2. on dev, scan 40 candidate thresholds (quantiles of the signal) with `best_gate` and keep the best one, `t`;
+3. apply that `t` to **test**: answer the photos whose signal is at least `t`, count the others as 0, and compute the test half's score.
 
 ```python
 order = rng.permutation(len(points))
 dev, test = order[: len(points)//2], order[len(points)//2:]
 _, t, _ = best_gate(signal[dev], points[dev])
 answered = signal[test] >= t
+scores.append(final_score(list(np.where(answered, points[test], 0))))
 ```
 
-It returns mean score, its standard deviation across the 300 splits, and the mean answered share.
+It returns the **mean** score over the 300 splits, its **standard deviation**, and the mean share answered.
 
-## 3. How to read it
+Notes on the code:
 
-* Mean of honest scores < tuned (single-set) score: the gap is the optimism you removed.
-* Std large (e.g. several points): the threshold is unstable; the score is uncertain by that much on new data.
-* Answered share: if it swings a lot between splits, the signal's distribution is not well-behaved.
+* `rng = np.random.default_rng(SEED + 19)`: fixed, so the report is reproducible;
+* the test half's score uses `points[test]` with skipped photos as 0 **but still counted in the denominator**, exactly as the contest does. Dropping skipped photos from `N` would flatter the result;
+* it asserts at least 4 photos.
 
-The thresholds picked by the splits should be similar; if they jump around, use a fixed round number (like 12 inliers) rather than a fitted one.
+## 4. How to read the three numbers
 
-## 4. Limits
+* **Mean honest score below the tuned score.** The gap is the optimism you removed.
+* **Large standard deviation.** The score depends strongly on which photos landed in which half; the threshold is unstable and the true score is uncertain by about that much.
+* **Answered share swinging a lot between splits.** The signal's distribution is not well-behaved; consider a coarse, round threshold (like 12 inliers) instead of a fitted one.
 
-The halves overlap across repeats (they are reshuffles of the same data), so the 300 values are not independent and the std understates uncertainty. This is an honesty check, not a confidence interval. The real test is a fresh set of photos or a fresh flight.
+## 5. Limits: what this check cannot do
 
-## 5. Why scores use `final_score(list(np.where(answered, points, 0)))`
+The 300 splits are re-shuffles of the **same** photos, so they are not independent, and the standard deviation understates the true uncertainty. It is an honesty check, not a confidence interval. The real test is a fresh set of photos or a fresh flight.
 
-Skipped photos count 0 points but **stay in the denominator** `N`, just as in the contest. Dropping them from `N` would make the score look better than it is.
+Also, each half contains only half the photos, so each threshold is tuned on fewer photos than the final one would be. That makes the honest number slightly *pessimistic*. The truth lies between the honest and the tuned scores, closer to the honest.
+
+## 6. A rule of thumb
+
+Fix as few knobs as possible. One threshold fitted on 60 photos costs a few points of optimism; ten knobs fitted together could cost much more. When a setting is not clearly supported (a difference of one or two photos), keep the simple default.
+
+## 7. Common mistakes
+
+* Reporting `best_gate` as the expected score.
+* Tuning the threshold on the whole dataset, then testing the system on that same dataset and calling it validation.
+* Using the honest score with a handful of photos: with 12 photos, the halves have 6 each and the result is mostly noise.
+
+## 8. Check yourself
+
+1. A signal made of random numbers gets a tuned score of 5.9 and an honest score of 1.9. What does the 4.0 difference represent?
+2. Why are skipped photos kept in the denominator?
+3. Why can the honest score be a little too pessimistic?

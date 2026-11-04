@@ -1,30 +1,42 @@
 # Building the north-up canvas: yaw, pitch, roll and the inverse warp
 
-Code: `src/image_processing/geometry.py` (`camera_axes`, `make_query`, `render_query`).
+**Code:** `camera_axes`, `make_query` and `render_query` in `src/image_processing/geometry.py`.
 
-This is the most important geometry in the project. Read it slowly once; after that the code is just the formulas typed in.
+**What you need to know beforehand:** the pinhole model (`pinhole_camera_and_ground_sample_distance.md`), the lens distortion function (`lens_distortion.md`), and that a vector can be projected onto an axis with a dot product. Everything else is derived here.
+
+This is the most important geometry in the project. Read it slowly once. After that, the code is just these formulas typed in.
 
 ---
 
-## 1. What we want
+## 1. The big picture in plain words
 
-The satellite map is **north-up and looks straight down**. The drone photo has the drone's heading at the top, is tilted a few degrees, and is bent by the lens. To compare them we build a new picture, the **canvas**:
+The satellite map is **north-up and looks straight down**. The drone photo is different in four ways: the top of the photo is wherever the drone's nose pointed, the camera is tilted a few degrees, the lens bends the picture, and the pixel size depends on height. To compare the two we build a new picture of the ground, the **canvas**, that behaves exactly like a small piece of the map:
 
-* north is up, east is right (same as the map),
-* each pixel is `g` metres (the zoom level's pixel size, `g = level_gsd(L)`),
-* **the canvas middle is the point directly below the drone** (nadir). The competition wants the *drone's* position, which is that point, not the photo's centre; when the camera is tilted the photo centre points at ground somewhere else (offset ≈ `h·tan(tilt)`, e.g. 8.7 m for 5° at 100 m).
+* north is up, east is right (as in the map),
+* each pixel is `g` metres wide (`g` is the pixel size of the chosen zoom level),
+* **the middle of the canvas is the point directly below the drone** (the nadir point). The competition asks for the *drone's* position, which is the nadir point. When the camera is tilted, the photo's centre looks at a different ground point (see the example in Section 5); the canvas centre does not.
 
-We do not move photo pixels onto the canvas ("forward" mapping leaves holes where nothing lands and collisions where two pixels land together). Instead, for **every canvas pixel** we compute *where in the photo that spot of ground was seen*, then read the photo there. This is an **inverse warp** (pull, not push). Every canvas pixel gets exactly one value.
+### Why we pull instead of push
+
+The obvious idea is to take each photo pixel and put it on the canvas ("push", forward mapping). That leaves holes where nothing lands and collisions where two pixels land together. We do the opposite: for **every canvas pixel** we compute *where in the photo that spot of ground was seen*, then read the photo there ("pull", an **inverse warp**). Every canvas pixel gets exactly one value, and we never invert any hard formula, because pulling uses the forward camera model only.
+
+The recipe has five short steps:
+
+```
+canvas pixel → (1) ground point → (2) camera axes → (3) camera coordinates → (4) pinhole + lens → photo pixel → (5) read value
+```
 
 ## 2. Step 1: canvas pixel to a point on the ground
 
-Canvas of `S × S` pixels. The middle is `m = (S−1)/2` (for `S = 224`, `m = 111.5`). A canvas pixel in column `c` and row `r` lies
+The canvas has `S × S` pixels. Its middle is `m = (S − 1)/2` (for `S = 224`: `m = 111.5`). A canvas pixel in column `c` and row `r` lies
 
-$$E=(c-m)\,g\quad\text{metres east},\qquad N=-(r-m)\,g\quad\text{metres north}$$
+$$E=(c-m)\,g\ \text{metres east},\qquad N=-(r-m)\,g\ \text{metres north}$$
 
-of the nadir point. (The minus: rows grow downwards, north grows upwards.) Put the origin of a local world frame **at the camera**: east–north–up axes. The camera is at height `h` above the nadir point, so the ground point seen at this canvas pixel is
+of the nadir point. The minus sign: rows grow downwards, north grows upwards.
 
-$$\mathbf P=(E,\;N,\;-h).$$
+Put a local world frame at the camera, with axes east, north and up. The camera is at height `h` above the nadir point, so the ground point seen at this canvas pixel is
+
+$$\mathbf P=(E,\ N,\ -h).$$
 
 ```python
 east  = (cols - middle) * pixel_size
@@ -32,43 +44,47 @@ north = -(rows - middle) * pixel_size
 below = -height
 ```
 
-## 3. Step 2: where the camera axes point
+`cols` and `rows` come from `np.meshgrid`, so these three lines compute the ground point for all 50 176 canvas pixels at once.
 
-We need three unit vectors written in east–north–up coordinates:
+## 3. Step 2: where do the camera's axes point?
 
-* `R`: image-right,
-* `B`: image-down,
-* `D`: viewing direction (out of the lens).
+Next we need three unit vectors, written in east–north–up coordinates:
 
-### Level flight, heading ψ
+* `R`: the direction of image-right,
+* `B`: the direction of image-down,
+* `D`: the viewing direction, out of the lens.
 
-The heading `ψ` (yaw) is the compass direction of the nose, measured clockwise from north. The nose vector in (east, north, up) is
+### Level flight with heading ψ
 
-$$\mathbf F=(\sin\psi,\ \cos\psi,\ 0)$$
+The heading ψ (yaw) is the compass direction of the nose, measured clockwise from north. The nose vector is
 
-(check: `ψ = 0` → north `(0,1,0)`; `ψ = 90°` → east `(1,0,0)`). The right wing points 90° clockwise from the nose:
+$$\mathbf F=(\sin\psi,\ \cos\psi,\ 0).$$
+
+Check: ψ = 0 gives `(0, 1, 0)`, north. ψ = 90° gives `(1, 0, 0)`, east. The right wing points 90° clockwise from the nose:
 
 $$\mathbf R=(\cos\psi,\ -\sin\psi,\ 0)$$
 
-(check: `ψ = 0` → east; `ψ = 90°` → south). The camera looks straight down: `D = (0, 0, −1)`.
+Check: ψ = 0 gives east, ψ = 90° gives south. The camera looks straight down, `D = (0, 0, −1)`. A downward camera shows the nose direction at the **top** of the image, so image-down is the opposite of the nose: `B = −F`.
 
-A nadir camera shows the nose direction at the **top** of the image, so image-down `B = −F`. Orthonormal check: `R·F = cosψ sinψ − sinψ cosψ = 0`. ✓
+(Sanity check: `R·F = cosψ sinψ − sinψ cosψ = 0`. The axes are perpendicular, as they should be.)
 
-### Pitch θ (nose up positive): rotate about the right axis
+### Pitch θ (nose up is positive): rotate about the right axis
 
-The nose rises: it gains an upward component, and the viewing direction swings the same way:
+The nose rises, gaining an upward component; the viewing direction swings the same way:
 
-$$\mathbf F'=\mathbf F\cos\theta-\mathbf D\sin\theta,\qquad \mathbf D'=\mathbf D\cos\theta+\mathbf F\sin\theta.$$
+$$\mathbf F'=\mathbf F\cos\theta-\mathbf D\sin\theta,\qquad\mathbf D'=\mathbf D\cos\theta+\mathbf F\sin\theta.$$
 
-(`−D` is "up", so `F'` has an up component `sinθ`.) `F'·D' = (Fcosθ − Dsinθ)·(Dcosθ + Fsinθ) = cosθ sinθ − sinθ cosθ = 0`, so they stay perpendicular. The right axis does not change.
+(Since `−D` points up, `F'` gets an upward part `sinθ`. The right axis `R` does not change.) They stay perpendicular: `F'·D' = cosθ sinθ − sinθ cosθ = 0`.
 
-### Roll φ (right wing down positive): rotate about the new forward axis
+### Roll φ (right wing down is positive): rotate about the forward axis
 
 $$\mathbf R''=\mathbf R\cos\varphi+\mathbf D'\sin\varphi,\qquad\mathbf D''=\mathbf D'\cos\varphi-\mathbf R\sin\varphi.$$
 
-The right wing moves towards "down" (`+D'`), and the viewing direction tilts the opposite way.
+The right wing tips towards "down" (`+D'`), and the viewing direction tilts the opposite way.
 
-Pitch first, roll second, is a convention: 3-D rotations do not commute, so the order must match how the autopilot defines the angles. The code:
+**Order matters.** Three-dimensional rotations do not commute: pitch-then-roll is not the same as roll-then-pitch. The order here is a convention that must match how the autopilot defines its angles; for the small tilts in this data the difference is tiny.
+
+The code (the variable names carry the step numbers: `1` after pitch, `2` after roll):
 
 ```python
 forward1 = forward * cos(pitch) - down * sin(pitch)
@@ -78,23 +94,31 @@ down2    = down1 * cos(roll) - right * sin(roll)
 return right2, -forward1, down2        # image-right, image-down, viewing axis
 ```
 
-The three returned vectors are the rows of a rotation matrix from the world frame to the camera frame.
+## 4. Step 3: the ground point in camera coordinates
 
-## 4. Step 3: the point in camera coordinates
-
-Dot products project the vector `P` onto each camera axis:
+Project `P` onto each camera axis with a dot product:
 
 $$X_c=\mathbf R''\!\cdot\mathbf P,\qquad Y_c=\mathbf B\cdot\mathbf P,\qquad Z_c=\mathbf D''\!\cdot\mathbf P.$$
 
-Level flight check: `D'' = (0,0,−1)` so `Zc = h` (positive, in front). A canvas pixel is only valid if `Zc > 0` (otherwise the ground point would be behind the camera, which can happen for extreme tilt at the canvas edges). `in_front = z_cam > 1e-3`.
+For level flight `D'' = (0, 0, −1)`, so `Zc = h`, positive: in front of the camera. A canvas pixel is only usable when `Zc > 0` (otherwise the ground point would be behind the camera, which can happen at the canvas edges for extreme tilt):
 
-Then `x = Xc/Zc`, `y = Yc/Zc` (pinhole), pass through `distort` (`lens_distortion.md`), and `u = fx x_d + cx`, `v = fy y_d + cy`. Those `(u, v)` are the photo pixel to read for this canvas pixel: `map_x`, `map_y`.
+```python
+in_front = z_cam > 1e-3
+```
 
-### Worked example
+Then the pinhole model: `x = Xc/Zc`, `y = Yc/Zc`; the lens: `(x_d, y_d) = distort(x, y)`; the pixel: `u = fx·x_d + cx`, `v = fy·y_d + cy`. These `(u, v)` are the photo coordinates to read for this canvas pixel (`map_x`, `map_y` in the code).
 
-Level flight, heading 0 (north), height 100 m. Canvas pixel exactly 10 m east and 20 m north of the nadir point: `P = (10, 20, −100)`. `R'' = (1,0,0)` → `Xc = 10`. `B = −F = (0,−1,0)` → `Yc = −20`. `D'' = (0,0,−1)` → `Zc = 100`. So `x = 0.1`, `y = −0.2` (ignoring distortion) → `u = 159.5 + 20`, `v = 127.5 − 40`. North of the nadir is *above* the photo centre (smaller `v`), as expected for a north-facing camera. ✓
+## 5. Worked examples (computed with the real code)
 
-## 5. Step 4: one resampling
+All with the camera `fx = 200`, `cx = 159.5`, `cy = 127.5`, no distortion, height `h = 100 m`.
+
+**(a) Level flight, heading north.** Canvas pixel 10 m east and 20 m north of nadir: `P = (10, 20, −100)`. Then `Xc = 10`, `Yc = −20` (north is up in the image, so negative "down"), `Zc = 100`. `x = 0.1`, `y = −0.2`, so `u = 159.5 + 20 = 179.5`, `v = 127.5 − 40 = 87.5`. North of the nadir point is *above* the photo centre, as expected.
+
+**(b) Same ground point, but the drone flies east (ψ = 90°).** Now the photo's top is east. The ground point 20 m north of nadir appears at `(u, v) = (119.5, 127.5)`: to the **left** of centre. And the point 20 m east appears at `(159.5, 87.5)`: at the **top**. The photo is simply rotated; the canvas undoes that rotation.
+
+**(c) Why the nadir point matters: a 5° pitch.** The nadir point is `P = (0, 0, −100)`. With 5° of pitch, it is seen at `(u, v) = (159.5, 145.0)`: 17.5 pixels **below** the photo centre. The photo centre looks at the ground `h·tan 5° = 8.7 m` ahead of the drone. A 5° roll shifts it the same 17.5 pixels sideways, to `(177.0, 127.5)`. If we had centred the canvas on the photo centre instead of the nadir point, our answer would be 8.7 m wrong at 100 m (and 30.6 m wrong at 350 m), already larger than the allowed error σ (see `evaluation/concepts/sensitivity_to_errors.md`).
+
+## 6. Step 4: one resampling
 
 ```python
 canvas = cv2.remap(photo, map_x, map_y, cv2.INTER_LINEAR, borderMode=cv2.BORDER_CONSTANT, borderValue=0)
@@ -103,38 +127,50 @@ valid  = inside & in_front
 canvas = np.where(valid, canvas, photo.mean())
 ```
 
-* `cv2.remap(src, map_x, map_y)` produces `dst[i,j] = src(map_y[i,j], map_x[i,j])` with interpolation (details in `resampling_and_aliasing.md`).
-* Undistortion, tilt correction, scaling and rotation happen in this **single** lookup, so the photo is interpolated (and so slightly blurred) only once.
-* **Mask**: remapping an all-ones image gives 1 where the source was fully inside the photo, between 0 and 1 where interpolation touched the outside, 0 where fully outside. Requiring `> 0.99` keeps only pixels whose neighbours were all real. Empty corners (the rotated rectangle's missing triangles) are filled with the photo mean, so they carry no edges.
+* `cv2.remap(src, map_x, map_y)` produces `dst[i, j] = src(map_y[i, j], map_x[i, j])`, interpolating between pixels (details in `resampling_and_aliasing.md`).
+* Undistortion, tilt correction, scaling and rotation all happen in this **single** lookup, so the photo is interpolated, and therefore slightly blurred, only once.
+* **The mask.** Remapping a picture of all ones gives 1 where the source was fully inside the photo, something between 0 and 1 where the interpolation touched the outside, and 0 where it was fully outside. Requiring `> 0.99` keeps only canvas pixels whose neighbours were all real photo pixels. The empty corners (the missing triangles of the rotated rectangle) are filled with the photo's average, so they carry no edges.
 
-## 6. The settings dictionary
+## 7. The settings dictionary: six knobs found from data
 
-`settings.GEOMETRY` has six knobs. They exist because the metadata conventions are not documented, so they are *measured* (see `evaluation/concepts/geometry_hypothesis_tests.md`):
+The metadata conventions are not documented (is positive pitch nose-up? does yaw 0 mean north?), so `settings.GEOMETRY` holds six knobs that were **measured** on the data (see `evaluation/concepts/geometry_hypothesis_tests.md`):
 
 | key | meaning | value found on the official set |
 |---|---|---|
-| `attitude` | use pitch and roll (True) or pretend straight down | True |
-| `pitch_sign`, `roll_sign` | ±1: the stored angle's sign convention | −1, −1 |
-| `yaw_offset` | degrees added to the stored heading (constant mounting/convention error) | 180° |
-| `scale` | multiplies the height (corrects a height or focal length bias) | 1.04 |
-| `height_offset` | metres added to height (e.g. −4 if `alt` is above sea level) | 0 |
+| `attitude` | use pitch and roll (True) or pretend the camera looks straight down | True |
+| `pitch_sign`, `roll_sign` | ±1: the sign convention of the stored angle | −1, −1 |
+| `yaw_offset` | degrees added to the stored heading (a constant convention or mounting error) | 180° |
+| `scale` | multiplies the height (absorbs a height or focal-length bias) | 1.04 |
+| `height_offset` | metres added to the height (for example −4 if `alt` is above sea level) | 0 |
 
 ```python
 height = (item["rel_height"] + setting["height_offset"]) * setting["scale"]
 yaw    = item["yaw"] + setting["yaw_offset"]
-pitch  = setting["pitch_sign"] * item["pitch"]   # only if attitude is True
+pitch  = setting["pitch_sign"] * item["pitch"]      # only if attitude is True
 ```
 
-**These values belong to this dataset.** Another dataset (the SCC-Loc public set) needed scale 0.80 and no heading offset. Re-run the sweep on any new data.
+**These values belong to this dataset.** Another dataset (the SCC-Loc public set) needed scale 0.80 and no heading offset. Re-run `python run.py --sweep` on any new data.
 
-## 7. Function reference
+## 8. Function reference
 
-`camera_axes(yaw_deg, pitch_deg, roll_deg)` → three 3-vectors (numpy). Input degrees.
+| function | input | output |
+|---|---|---|
+| `camera_axes(yaw_deg, pitch_deg, roll_deg)` | three angles in degrees | three numpy 3-vectors: image-right, image-down, viewing axis |
+| `make_query(item, camera, canvas_size, pixel_size, geometry)` | one photo record, the camera, canvas size in pixels, metres per canvas pixel, optional overrides | `canvas` float32 `(S, S)` in `[0, 1]`, `valid` bool `(S, S)` |
+| `render_query(item, camera, level, geometry)` | the same, with the size and pixel size taken from the zoom level | the same pair, `S = 224` |
 
-`make_query(item, camera, canvas_size=224, pixel_size=1.0, geometry=None)` → `(canvas, valid)`; `canvas` float32 `(S,S)` in `[0,1]`; `valid` bool `(S,S)`.
+`geometry` is a partial dictionary of overrides merged onto `settings.GEOMETRY` (used by the sweep and the sensitivity tests). Constraints: the photo file must exist; pitch and roll are already wrapped to ±180 by `make_items`; angles are in degrees; with tilt beyond about 60° many canvas pixels have `Zc ≤ 0` and the valid area collapses.
 
-`render_query(item, camera, level, geometry=None)` → same, with `canvas_size=TILE` and `pixel_size=level_gsd(level)`.
+## 9. Mistakes to avoid
 
-`geometry` is a partial dictionary of overrides merged on top of `settings.GEOMETRY` (used by the sweep and sensitivity tests).
+* Centring the canvas on the photo centre instead of the nadir point.
+* Using radians where the code expects degrees (the conversion happens inside `camera_axes`).
+* Forgetting that rows grow downwards (the minus sign in `north`).
+* Copying the `GEOMETRY` values to a new dataset without testing them.
 
-**Constraints:** the photo file must exist at `settings.IMAGES_DIR / item["name"]`; pitch/roll should be wrapped to ±180 (done in `make_items`); heading in degrees. Tilt beyond ~60° makes `Zc ≤ 0` for many canvas pixels and the valid area collapses.
+## 10. Check yourself
+
+1. In example (b), why does the photo's top show east? *(The drone's nose points east, and the photo's top is the nose direction.)*
+2. What is `Zc` for level flight at 100 m? *(100: the depth along the viewing direction.)*
+3. Why does the mask test use `> 0.99` and not `== 1`? *(Floating-point interpolation can produce values like 0.999.)*
+4. Why does one `remap` beat "undistort, then rotate, then scale"? *(Three resamplings blur three times; one remap blurs once, and no holes appear.)*

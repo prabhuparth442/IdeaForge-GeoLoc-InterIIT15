@@ -11,3 +11,5 @@ einops
 tqdm
 h5py
 lightglue @ git+https://github.com/cvg/LightGlue.git
+scipy
+matplotlib
