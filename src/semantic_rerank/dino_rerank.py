@@ -44,7 +44,7 @@ def _peak_count(count):
 
 def shortlist_peaks(score_map, geometry, count=SHORTLIST):
     """The first `count` peaks of a coarse score map (same rules as pick_peaks). Returns (count, 5)."""
-    assert count >= NUM_PEAKS, "the shortlist must hold at least %d peaks" % NUM_PEAKS
+    assert count >= 1, "the shortlist must hold at least one peak"
     with _peak_count(count):
         return search.pick_peaks(score_map, geometry)
 
@@ -133,9 +133,16 @@ def rerank_peaks(peaks, dino_score, weight=WEIGHT, keep=NUM_PEAKS):
     return result
 
 
-def semantic_layer(encoder, score_map, geometry, canvas, valid, level, level_images, weight=WEIGHT, shortlist=SHORTLIST):
-    """The whole layer: coarse score map in, (25, 5) peaks for second_stage out (same layout as pick_peaks).
+def semantic_layer(encoder, score_map, geometry, canvas, valid, level, level_images, weight=WEIGHT, shortlist=SHORTLIST, keep=NUM_PEAKS):
+    """The whole layer: coarse score map in, the best `keep` (M) of the `shortlist` (K) places out, in the layout of pick_peaks.
+    K = how many places the coarse search returns, M = how many go on to the fine stage (M <= K).
     Also returns the DINO scores of the shortlist, for logging."""
+    assert 1 <= keep <= shortlist, "need 1 <= keep (M) <= shortlist (K), got M=%d K=%d" % (keep, shortlist)
     short = shortlist_peaks(score_map, geometry, shortlist)
     pooled, dense = dino_candidate_scores(encoder, canvas, valid, level_images, level, short)
-    return rerank_peaks(short, dense, weight), dict(shortlist=short, pooled=pooled, dense=dense)
+    return rerank_peaks(short, dense, weight, keep=keep), dict(shortlist=short, pooled=pooled, dense=dense)
+
+
+def coarse_top(score_map, geometry, keep=NUM_PEAKS):
+    """Without the layer: the first `keep` (M) peaks of the coarse score map, in coarse order."""
+    return shortlist_peaks(score_map, geometry, keep)

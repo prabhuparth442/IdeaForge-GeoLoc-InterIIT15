@@ -3,6 +3,7 @@
 dataset_temp/
 dataset/small_sat_area/
 dataset/NUDT/
+dataset/Dataset_Official_2/
 dataset/**/*.tif
 dataset/**/*.tiff
 *.pth
@@ -57,3 +58,5 @@ tests/Test_Iteration_1/results/**/shards_*/
 tests/Test_Iteration_1/results/*_smoke/
 tests/Test_Iteration_2/results/cache/
 tests/Test_Iteration_2/results/demo_*/
+.venv-geoloc/
+venv-geoloc/

@@ -16,6 +16,7 @@ class SatelliteMap:
         self.gsd = self.file.res[0]
         self.to_map_crs = Transformer.from_crs("EPSG:4326", self.file.crs, always_xy=True)
         self.pixel_from_coords = ~self.file.transform
+        self.to_gps = Transformer.from_crs(self.file.crs, "EPSG:4326", always_xy=True)
 
         overview = self.read_grey(out_shape=(self.height // 16, self.width // 16))
         self.gray_max = float(np.percentile(overview[overview > 0], 99.5))
@@ -43,3 +44,10 @@ class SatelliteMap:
         easting, northing = self.to_map_crs.transform(lon, lat)
         col, row = self.pixel_from_coords * (easting, northing)
         return row, col
+
+    def metres_to_gps(self, x_m, y_m):
+        """A position on this map in metres (x to the right, y down, from the top-left pixel) -> (lat, lon)."""
+        assert np.isfinite(x_m) and np.isfinite(y_m), "x_m and y_m must be finite metres"
+        easting, northing = self.file.transform * (x_m / self.gsd, y_m / self.gsd)
+        lon, lat = self.to_gps.transform(easting, northing)
+        return lat, lon

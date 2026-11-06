@@ -1,15 +1,44 @@
-numpy==1.23.5
-pandas==1.5.3
-opencv-python-headless==4.8.1.78
-torch==2.0.1
-timm==0.9.2
-huggingface_hub==0.17.3
-rasterio==1.3.9
-pyproj==3.6.1
-kornia==0.7.1
-einops
-tqdm
-h5py
-lightglue @ git+https://github.com/cvg/LightGlue.git
-scipy
-matplotlib
+# IdeaForge-GeoLoc-InterIIT15: Python packages.
+# Merged from ../Dependencies.md (organiser-fixed and Colab-tested versions) and from the imports found in src/, train/, tests/, run.py,
+# single_photo_pipeline.py, run_fusion.py and the notebooks. Status words are the ones used in Dependencies.md:
+#   Fixed   = stated by the organisers.   Tested = the Colab pipeline ran with it.   Confirm = not yet checked on the target stack.
+# Target stack: Python 3.10, CUDA 12.6, torch 2.8.0 / torchvision 0.23.0. Check the "Confirm" lines with `python run.py --tests` after installing.
+#
+# Install on a PC / Colab (GPU build of torch first, from the PyTorch index; on the Jetson use the starter-kit Dockerfile instead):
+#   pip install torch==2.8.0 torchvision==0.23.0 --index-url https://download.pytorch.org/whl/cu126
+#   pip install -r requirements.txt
+# Use a clean environment per project: some optional packages (fused-local-corr) pin an exact torch and replace yours.
+
+# ---- deep learning (Fixed: torch / torchvision are installed by the command above, listed here so the check below can see them)
+torch==2.8.0                    # Fixed (recommended). The Colab results were produced with 2.0.1+cu117, so rerun a fixed-seed sample on 2.8.0
+torchvision==0.23.0             # Fixed (recommended). Must match torch; a mismatch gives "operator torchvision::nms does not exist"
+timm==0.9.2                     # Tested. Loads the DINOv2 ViT-S/14 used by the semantic layer; Confirm this old version has vit_small_patch14_dinov2 (newer is likely needed, also for DINOv3)
+huggingface_hub==0.17.3         # Tested. Tied to the timm version. Download weights beforehand: there is no network at evaluation
+kornia==0.7.1                   # Tested. Needed by lightglue and romatch. Confirm with torch 2.8.0
+einops                          # Confirm. Needed by romatch
+
+# ---- matching
+lightglue @ git+https://github.com/cvg/LightGlue.git   # Confirm (SuperPoint + LightGlue; MINIMA weights are a mounted file, not a package)
+romatch==0.1.2                  # Confirm. RoMa matcher (MINIMA weights). Runs without its optional fast kernel. Its other imports: loguru below
+loguru                          # Confirm. Imported by romatch
+
+# ---- image, map and data
+numpy==1.23.5                   # Tested. Confirm it works with torch 2.8.0
+opencv-python-headless==4.8.1.78   # Tested (warping, RANSAC similarity, edges). Confirm an arm64 wheel exists
+rasterio==1.3.9                 # Tested. Confirm an arm64 wheel (needs GDAL); test the 11-bit-in-uint16, UTM 43N map product
+pyproj==3.6.1                   # Tested. Set the map CRS to EPSG:32643
+pandas==1.5.3                   # Tested (per-photo tables and CSVs)
+scipy                           # Confirm. Used in train/ (statistics)
+Pillow                          # Confirm. Imported by src/ (RoMa pictures, image IO)
+tqdm                            # Confirm
+h5py                            # Confirm (kept from the earlier list)
+
+# ---- development only (not needed on the Jetson)
+matplotlib==3.7.5               # Tested. Plots in train/ and the notebooks
+ipykernel==6.29.5               # Tested (Colab kernel)
+ipython==8.12.3                 # Tested
+traitlets==5.14.3               # Tested
+jupyter_client==8.6.1           # Tested
+nbformat                        # Confirm. Notebook running and checking
+nbconvert                       # Confirm. `jupyter nbconvert --execute`
+pytest                          # Confirm. Optional: the tests also run as plain scripts (python tests/run_all.py)

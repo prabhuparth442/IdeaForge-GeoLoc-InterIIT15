@@ -11,9 +11,17 @@ IMAGE_MEAN = torch.tensor([0.485, 0.456, 0.406], device=DEVICE).view(1, 3, 1, 1)
 IMAGE_STD = torch.tensor([0.229, 0.224, 0.225], device=DEVICE).view(1, 3, 1, 1)
 
 
-def load_encoder():
+DINO_FILE = settings.DATASET_DIR / "NUDT" / "checkpoint" / "DINO" / "dinov2_vits14_timm.safetensors"      # local copy of the weights timm would download
+
+
+def load_encoder(weights_file=DINO_FILE):
+    """DINOv2 ViT-S/14. With the local weights file there is no network call at all (the download check of timm is skipped); without it
+    timm fetches the weights from the Hugging Face hub (and caches them)."""
     import timm
-    encoder = timm.create_model("vit_small_patch14_dinov2.lvd142m", pretrained=True, img_size=TILE)
+    if weights_file is not None and weights_file.exists():
+        encoder = timm.create_model("vit_small_patch14_dinov2.lvd142m", pretrained=True, pretrained_cfg_overlay=dict(file=str(weights_file)), img_size=TILE)
+    else:
+        encoder = timm.create_model("vit_small_patch14_dinov2.lvd142m", pretrained=True, img_size=TILE)
     encoder = encoder.to(DEVICE).eval()
     if DEVICE == "cuda":
         encoder = encoder.half()
