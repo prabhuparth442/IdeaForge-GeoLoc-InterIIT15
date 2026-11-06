@@ -18,9 +18,9 @@ from evaluation.sensitivity import run_sensitivity
 from evaluation.testset import TestSet
 from fine_matching.matcher import load_matcher
 from header import settings
-from header.data import Camera, assign_flights, find_map_file, make_items, read_metadata
+from header.data import Camera, assign_flights, make_items, read_metadata
 from header.sampling import pick_sample_ids
-from header.satellite_map import SatelliteMap
+from header.map_source import load_map
 from header.scoring import check_scoring
 from image_processing.map_store import build_map_store
 
@@ -55,7 +55,7 @@ def main():
     for name in settings.FLIGHT_NAMES:
         print("%-10s: %d photos" % (name, (flight_of_frame == name).sum()))
 
-    satellite_map = SatelliteMap(find_map_file())
+    satellite_map = load_map(items)
     print("map: %d x %d pixels, %.2f m per pixel" % (satellite_map.width, satellite_map.height, satellite_map.gsd))
     if abs(satellite_map.gsd - settings.MAP_GSD) > 1e-3:
         print("WARNING: the map pixel size differs from settings.MAP_GSD (%.2f)" % settings.MAP_GSD)
