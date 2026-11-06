@@ -29,6 +29,7 @@ from image_processing.map_levels import level_for_height
 from image_processing.map_store import build_map_store
 from result_thresholding.decision import decide, final_answer
 from semantic_rerank.decision import candidate_z, choose_candidate, decide_with_dino
+from semantic_rerank import dino_rerank
 from semantic_rerank.dino_rerank import coarse_top, load_encoder, semantic_layer
 from train.coarse_methods import build_methods
 from train.coarse_methods.inputs import make_inputs
@@ -36,13 +37,16 @@ from train.features.edge import EdgeFamily
 from train.features.learned_family import LearnedFamily
 from train.features.mind import MindFamily
 
+OFFICIAL_GEOMETRY = dict(settings.GEOMETRY)      # the development-set projection values, saved at import (before NUDT changes them)
+
 STAGES = ["render", "maps", "coarse", "semantic", "fine", "decision"]
 
 
 class SinglePhotoPipeline:
     def __init__(self, data_name="official", coarse="fused", semantic_layer=True, semantic_decision=True,
                  gamma=1.0, rescue_inliers=None, rescue_z=None, minima_file=None, k_peaks=50, m_fine=25, matcher="lightglue",
-                 min_inliers=None, ransac_pixels=None, matcher_confidence=0.2, satellite=None, map_margin_m=None, loftr_coarse_threshold=None, loftr_upscale=1.0):
+                 min_inliers=None, ransac_pixels=None, matcher_confidence=0.2, satellite=None, map_margin_m=None, loftr_coarse_threshold=None, loftr_upscale=1.0,
+                 dino_weight=None, geometry=None):
         assert data_name in ("official", "nudt"), "data_name must be 'official' or 'nudt', got %r" % (data_name,)
         assert coarse in ("fused", "edge_zncc"), "coarse must be 'fused' or 'edge_zncc', got %r" % (coarse,)
         assert gamma >= 0, "gamma must be >= 0"
@@ -55,6 +59,8 @@ class SinglePhotoPipeline:
         assert 0 <= matcher_confidence < 1, "matcher_confidence must be in 0..1"
         assert loftr_coarse_threshold is None or 0 < loftr_coarse_threshold < 1, "loftr_coarse_threshold must be between 0 and 1 (or None for the kornia value 0.2)"
         assert loftr_upscale >= 1.0, "loftr_upscale must be 1 or more"
+        assert dino_weight is None or dino_weight >= 0, "dino_weight must be >= 0 (or None for the dino_rerank value)"
+        assert geometry is None or set(geometry) <= set(settings.GEOMETRY), "unknown geometry key: %s, choose from %s" % (set(geometry or {}) - set(settings.GEOMETRY), list(settings.GEOMETRY))
         self.data_name = data_name
         self.coarse = coarse
         self.use_layer = semantic_layer
@@ -73,6 +79,8 @@ class SinglePhotoPipeline:
         self.loftr_coarse_threshold = loftr_coarse_threshold    # LoFTR only: its own cut on the coarse match probability (None = 0.2); lower = more, weaker matches
         self.loftr_upscale = loftr_upscale              # LoFTR only: both pictures are enlarged by this factor first (1.0 = not; 1.5 and more were measured worse)
         self.matcher_confidence = matcher_confidence    # LoFTR only: matches below this confidence are dropped before RANSAC
+        self.dino_weight = dino_rerank.WEIGHT if dino_weight is None else dino_weight    # DINO's share in the order inside the K shortlist: 0 = coarse order, 100 = DINO decides
+        self.geometry = dict(geometry or {})            # overrides of settings.GEOMETRY for the photo-to-map projection: scale, yaw_offset, height_offset (metres), pitch_sign, roll_sign, attitude
         self.setup_seconds = {}
         self.ready = False
 
@@ -101,6 +109,9 @@ class SinglePhotoPipeline:
         self.test_set = loaded["test_set"]
         self.camera = loaded["camera"]
         self.satellite_map = loaded["satellite_map"]
+        if self.data_name == "official":
+            settings.GEOMETRY.update(OFFICIAL_GEOMETRY)         # back to the development values, so a run without overrides is not changed by an earlier one
+        settings.GEOMETRY.update(self.geometry)
 
         self.store = self._timed("map at all zoom levels + edge features", lambda: build_map_store(self.satellite_map))
         self.level_images = self.store["levels"]
@@ -175,6 +186,7 @@ class SinglePhotoPipeline:
         else:
             lines.append("semantic layer: off (the first M=%d of the K=%d coarse peaks go to the fine stage)" % (self.m_fine, self.k_peaks))
         lines.append("fine matcher: %s | answer bar: %d inliers | RANSAC %.1f px | matcher confidence %.2f | LoFTR coarse threshold %s, upscale %.1f" % (self.matcher_name, self.min_inliers, self.ransac_pixels, self.matcher_confidence, self.loftr_coarse_threshold if self.loftr_coarse_threshold is not None else "0.2 (default)", self.loftr_upscale))
+        lines.append("DINO order weight: %s | projection overrides: %s" % (self.dino_weight, self.geometry or "none (settings.GEOMETRY)"))
         lines.append("device: %s" % DEVICE)
         return lines
 
@@ -206,7 +218,7 @@ class SinglePhotoPipeline:
         if self.use_layer:
             clock = self._lap(seconds, "coarse", clock)
             peaks, details = semantic_layer(self.encoder, score_map, inputs["geometry"], canvas, valid, level, self.level_images,
-                                           shortlist=self.k_peaks, keep=self.m_fine)
+                                           shortlist=self.k_peaks, keep=self.m_fine, weight=self.dino_weight)
             z = candidate_z(peaks, details)
             clock = self._lap(seconds, "semantic", clock)
         else:

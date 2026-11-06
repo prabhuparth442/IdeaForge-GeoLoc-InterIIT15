@@ -10,4 +10,4 @@ python run.py --no-minima          # correlation only
 python run.py --dino --tests       # more switches: --sweep --sensitivity --independence
 ```
 
-Layout: `src/<section>/` (each with its own README), `dataset/` (tracked), `dataset_temp/` (never uploaded). Settings are in `src/header/settings.py`.
+Layout: `src/<section>/` (each with its own README), `dataset/` (tracked), `dataset_temp/` (never uploaded). Settings are in `src/header/settings.py`. **Where the big data files go (maps, model weights): `dataset/README.md`.**
