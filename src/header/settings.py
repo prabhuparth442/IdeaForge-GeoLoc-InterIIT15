@@ -38,7 +38,7 @@ GEOMETRY = {
 CELL = 4
 N_BINS = 8
 
-DISC_RADIUS = 5000
+DISC_RADIUS = 5500          # search disc around the hint, metres. The hint itself is within 5000 m of the truth (evaluation.testset.random_prior), so the extra 500 m keeps a photo at the edge of the hint circle inside the search
 MIN_ENERGY = 0.05
 MIN_VARIANCE = 0.005
 NUM_PEAKS = 25

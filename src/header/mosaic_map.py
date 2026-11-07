@@ -1,7 +1,7 @@
 """Block: several GeoTIFF scenes read as ONE satellite map, cut to a region of interest.
 
 The new d1 base map comes as two 11.7 GB scenes (0.28 m pixels, one band, overlapping). The pipeline wants one map in one pixel grid, and
-it only needs the area around the photos (the 5 km prior circle), so MosaicMap builds its own grid on the region of interest (ROI):
+it only needs the area around the photos (the 5.5 km search disc around the hint), so MosaicMap builds its own grid on the region of interest (ROI):
 
   * the grid is in the scenes' metric CRS (all scenes must share it), pixel size = settings.MAP_GSD (the scenes are resampled to it while reading)
   * a pixel with no data in any scene is 0 (the pipeline treats 0 as "no map"); where scenes overlap, the first scene listed wins

@@ -24,7 +24,7 @@ dataset/
 
 | You run | Needs |
 |---|---|
-| `Single_Image_Run.ipynb`, `Stage_Evaluation.ipynb`, `DATA = "official"`, `MAP = "new"` | `d1/` (in git), `Dataset_Official_2/` (both scenes), `NUDT/checkpoint/MINIMA/minima_loftr.ckpt`, `NUDT/checkpoint/DINO/` |
+| `Single_Image_Run.ipynb`, `Stage_Evaluation.ipynb`, `tests/Parameter_Test`, `tests/Heading_Queries`, `DATA = "official"`, `MAP = "new"` | `d1/` (in git), `Dataset_Official_2/` (both scenes), `NUDT/checkpoint/MINIMA/minima_loftr.ckpt`, `NUDT/checkpoint/DINO/` |
 | same with `MAP = "old"` | `small_sat_area/` instead of `Dataset_Official_2/` |
 | `MATCHER = "lightglue"` | `MINIMA/minima_lightglue.pth` |
 | `MATCHER = "roma_minima"` | `MINIMA/minima_roma.pth` and `RoMa/dinov2_vitl14_pretrain.pth` |

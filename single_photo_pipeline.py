@@ -46,7 +46,7 @@ class SinglePhotoPipeline:
     def __init__(self, data_name="official", coarse="fused", semantic_layer=True, semantic_decision=True,
                  gamma=1.0, rescue_inliers=None, rescue_z=None, minima_file=None, k_peaks=50, m_fine=25, matcher="lightglue",
                  min_inliers=None, ransac_pixels=None, matcher_confidence=0.2, satellite=None, map_margin_m=None, loftr_coarse_threshold=None, loftr_upscale=1.0,
-                 dino_weight=None, geometry=None):
+                 dino_weight=None, geometry=None, loftr_border_px=0, loftr_margin=0):
         assert data_name in ("official", "nudt"), "data_name must be 'official' or 'nudt', got %r" % (data_name,)
         assert coarse in ("fused", "edge_zncc"), "coarse must be 'fused' or 'edge_zncc', got %r" % (coarse,)
         assert gamma >= 0, "gamma must be >= 0"
@@ -59,6 +59,8 @@ class SinglePhotoPipeline:
         assert 0 <= matcher_confidence < 1, "matcher_confidence must be in 0..1"
         assert loftr_coarse_threshold is None or 0 < loftr_coarse_threshold < 1, "loftr_coarse_threshold must be between 0 and 1 (or None for the kornia value 0.2)"
         assert loftr_upscale >= 1.0, "loftr_upscale must be 1 or more"
+        assert loftr_border_px >= 0, "loftr_border_px must be 0 or more"
+        assert loftr_margin >= 0 and loftr_margin % 4 == 0, "loftr_margin must be a multiple of 4 pixels"
         assert dino_weight is None or dino_weight >= 0, "dino_weight must be >= 0 (or None for the dino_rerank value)"
         assert geometry is None or set(geometry) <= set(settings.GEOMETRY), "unknown geometry key: %s, choose from %s" % (set(geometry or {}) - set(settings.GEOMETRY), list(settings.GEOMETRY))
         self.data_name = data_name
@@ -79,6 +81,8 @@ class SinglePhotoPipeline:
         self.loftr_coarse_threshold = loftr_coarse_threshold    # LoFTR only: its own cut on the coarse match probability (None = 0.2); lower = more, weaker matches
         self.loftr_upscale = loftr_upscale              # LoFTR only: both pictures are enlarged by this factor first (1.0 = not; 1.5 and more were measured worse)
         self.matcher_confidence = matcher_confidence    # LoFTR only: matches below this confidence are dropped before RANSAC
+        self.loftr_border_px = loftr_border_px          # LoFTR only: matches this close (pixels) to the edge of the really photographed canvas area are dropped (0 = keep all)
+        self.loftr_margin = loftr_margin                # LoFTR only: grey / map pixels added around the canvas and the map window before matching (multiple of 4)
         self.dino_weight = dino_rerank.WEIGHT if dino_weight is None else dino_weight    # DINO's share in the order inside the K shortlist: 0 = coarse order, 100 = DINO decides
         self.geometry = dict(geometry or {})            # overrides of settings.GEOMETRY for the photo-to-map projection: scale, yaw_offset, height_offset (metres), pitch_sign, roll_sign, attitude
         self.setup_seconds = {}
@@ -152,7 +156,7 @@ class SinglePhotoPipeline:
             checkpoints = config.find_nudt_dir() / "checkpoint"
             if self.matcher_name == "loftr_minima":
                 from fine_matching.loftr_matcher import load_loftr_matcher
-                return load_loftr_matcher(checkpoints / "MINIMA" / "minima_loftr.ckpt", self.matcher_confidence, self.loftr_upscale, self.loftr_coarse_threshold)
+                return load_loftr_matcher(checkpoints / "MINIMA" / "minima_loftr.ckpt", self.matcher_confidence, self.loftr_upscale, self.loftr_coarse_threshold, self.loftr_border_px, self.loftr_margin)
             if self.matcher_name == "roma_minima":
                 from fine_matching.roma_matcher import load_roma_matcher
                 return load_roma_matcher(checkpoints / "MINIMA" / "minima_roma.pth", checkpoints / "RoMa" / "dinov2_vitl14_pretrain.pth")
@@ -185,7 +189,7 @@ class SinglePhotoPipeline:
                 self.k_peaks, self.m_fine, "on" if self.use_decision else "off", self.gamma, (self.rescue_inliers, self.rescue_z)))
         else:
             lines.append("semantic layer: off (the first M=%d of the K=%d coarse peaks go to the fine stage)" % (self.m_fine, self.k_peaks))
-        lines.append("fine matcher: %s | answer bar: %d inliers | RANSAC %.1f px | matcher confidence %.2f | LoFTR coarse threshold %s, upscale %.1f" % (self.matcher_name, self.min_inliers, self.ransac_pixels, self.matcher_confidence, self.loftr_coarse_threshold if self.loftr_coarse_threshold is not None else "0.2 (default)", self.loftr_upscale))
+        lines.append("fine matcher: %s | answer bar: %d inliers | RANSAC %.1f px | matcher confidence %.2f | LoFTR coarse threshold %s, upscale %.1f | border %d px, margin %d px" % (self.matcher_name, self.min_inliers, self.ransac_pixels, self.matcher_confidence, self.loftr_coarse_threshold if self.loftr_coarse_threshold is not None else "0.2 (default)", self.loftr_upscale, self.loftr_border_px, self.loftr_margin))
         lines.append("DINO order weight: %s | projection overrides: %s" % (self.dino_weight, self.geometry or "none (settings.GEOMETRY)"))
         lines.append("device: %s" % DEVICE)
         return lines
@@ -195,20 +199,14 @@ class SinglePhotoPipeline:
         seconds[label] = now - clock
         return now
 
-    def run(self, item, prior_m):
-        """item: the photo record (needs rel_height, the file, the pose). prior_m: (x east, y south) of the rough hint, metres.
-        Returns dict(x, y, answered, inliers, chosen, z_chosen, level, peaks, stage2, seconds, total, gpu_peak_mb)."""
-        assert self.ready, "call setup() first"
-        assert len(prior_m) == 2 and np.isfinite(prior_m).all(), "prior_m must be (x east, y south) in metres"
-        assert item["rel_height"] > 0, "photo height must be above 0 m"
+    def candidates_for_query(self, item, prior_m, level, geometry=None):
+        """One query picture through render, maps, coarse search, DINO layer and fine stage. geometry: overrides of settings.GEOMETRY for this
+        query only (for example another heading); None = as set. Returns dict(peaks, z, stage2, seconds, valid_fraction)."""
         seconds = {}
         cv2.setRNGSeed(SEED)
-        if DEVICE == "cuda":
-            torch.cuda.reset_peak_memory_stats()
         clock = self._now()
 
-        level = level_for_height(item["rel_height"], self.camera)
-        canvas, valid = render_query(item, self.camera, level)
+        canvas, valid = render_query(item, self.camera, level, geometry)
         clock = self._lap(seconds, "render", clock)
 
         inputs = make_inputs(canvas, valid, level, prior_m, self.families, self.names)
@@ -228,8 +226,11 @@ class SinglePhotoPipeline:
             seconds["semantic"] = 0.0
 
         stage2 = run_fine_stage(self.matcher, canvas, valid, level, peaks, self.level_images)
-        clock = self._lap(seconds, "fine", clock)
+        self._lap(seconds, "fine", clock)
+        return dict(peaks=peaks, z=z, stage2=stage2, seconds=seconds, valid_fraction=float(valid.mean()))
 
+    def decide_answer(self, peaks, stage2, z):
+        """Choose the place and decide whether to answer. Returns x, y, inliers, chosen, z_chosen, answered."""
         if self.use_decision:
             x, y, inliers, chosen, z_chosen = choose_candidate(peaks, stage2, z, self.gamma)
             answered = decide_with_dino(inliers, z_chosen, self.rescue_inliers, self.rescue_z, min_inliers=self.min_inliers)
@@ -237,6 +238,27 @@ class SinglePhotoPipeline:
             x, y, inliers, chosen = final_answer(peaks, stage2, self.min_inliers)
             answered = decide(inliers, self.min_inliers)
             z_chosen = float(z[chosen])
+        return x, y, inliers, chosen, z_chosen, answered
+
+    def run(self, item, prior_m):
+        """item: the photo record (needs rel_height, the file, the pose). prior_m: (x east, y south) of the rough hint, metres.
+        Returns dict(x, y, answered, inliers, chosen, z_chosen, level, peaks, stage2, seconds, total, gpu_peak_mb)."""
+        assert self.ready, "call setup() first"
+        assert len(prior_m) == 2 and np.isfinite(prior_m).all(), "prior_m must be (x east, y south) in metres"
+        assert item["rel_height"] > 0, "photo height must be above 0 m"
+        seconds = {}
+        cv2.setRNGSeed(SEED)
+        if DEVICE == "cuda":
+            torch.cuda.reset_peak_memory_stats()
+        clock = self._now()
+
+        level = level_for_height(item["rel_height"], self.camera)
+        found = self.candidates_for_query(item, prior_m, level)
+        peaks, z, stage2 = found["peaks"], found["z"], found["stage2"]
+        seconds.update(found["seconds"])
+        clock = self._now()
+
+        x, y, inliers, chosen, z_chosen, answered = self.decide_answer(peaks, stage2, z)
         self._lap(seconds, "decision", clock)
 
         gpu_peak_mb = 0.0

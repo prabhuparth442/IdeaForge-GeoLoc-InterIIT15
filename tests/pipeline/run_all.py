@@ -9,7 +9,7 @@ from pathlib import Path
 
 here = Path(__file__).resolve().parent
 scripts = ["test_header.py", "test_image_processing.py", "test_coarse_search.py", "test_fine_matching.py",
-           "test_result_thresholding.py", "test_evaluation.py", "test_end_to_end.py", "test_roma_and_counts.py", "test_mosaic_map.py", "test_loftr_matcher.py"]
+           "test_result_thresholding.py", "test_evaluation.py", "test_end_to_end.py", "test_roma_and_counts.py", "test_mosaic_map.py", "test_loftr_matcher.py", "test_heading_queries.py"]
 bad = []
 for script in scripts:
     print("=== %s" % script)

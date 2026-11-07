@@ -1,0 +1,5 @@
+variant,target in candidates,ceiling 1,right chosen,ceiling 2,answered and right,ceiling 3,score (/60)
+plain (heading 0),0.88,52.8,0.86,51.6,0.7,42.0,40.56
+"3 headings (-5, 0, +5)",0.99,59.4,0.92,55.2,0.77,46.2,44.76
+5 headings (step 5),1.0,60.0,0.9,54.0,0.8,48.0,46.56
+all headings,1.0,60.0,0.92,55.2,0.86,51.6,49.68

@@ -1,0 +1,84 @@
+{
+ "DRIVE": "/content/drive/MyDrive/Linux_Backups/InterIIT Tech 15/IdeaForge-GeoLoc-InterIIT15",
+ "DEST": "/content/dr/dataset",
+ "SCENES": [
+  "268234931",
+  "268234921"
+ ],
+ "PRUNE": "\\( -path ./dataset -o -path ./.git -o -path \"./venv*\" -o -name __pycache__ -o -name .pytest_cache -o -name .vscode \\) -prune -o",
+ "DATA": "official",
+ "MAP": "new",
+ "MAP_MARGIN_M": null,
+ "POOL_PHOTOS": 500,
+ "SEEDS": [
+  11,
+  22,
+  33
+ ],
+ "N_PER_SEED": 150,
+ "FOUND_SIGMA": 4.0,
+ "HEADINGS": [
+  -5.0,
+  0.0,
+  5.0
+ ],
+ "SCALE_FACTORS": [
+  1.0,
+  1.05
+ ],
+ "COARSE": "edge_zncc",
+ "USE_SEMANTIC_LAYER": true,
+ "K_PER_QUERY": 50,
+ "M_PER_QUERY": 10,
+ "DINO_WEIGHT": null,
+ "GAMMA": 1.0,
+ "MATCHER": "loftr_minima",
+ "MATCHER_CONFIDENCE": 0.21,
+ "LOFTR_COARSE_THRESHOLD": 0.21,
+ "RANSAC_PIXELS": null,
+ "MIN_INLIERS": 8,
+ "VARIANTS": {
+  "plain (heading 0)": [
+   [
+    0.0
+   ],
+   [
+    1.0
+   ]
+  ],
+  "3 headings": [
+   [
+    -5.0,
+    0.0,
+    5.0
+   ],
+   [
+    1.0
+   ]
+  ],
+  "3 scales (heading 0)": [
+   [
+    0.0
+   ],
+   [
+    1.0,
+    1.05
+   ]
+  ],
+  "3 headings x 3 scales": [
+   [
+    -5.0,
+    0.0,
+    5.0
+   ],
+   [
+    1.0,
+    1.05
+   ]
+  ]
+ },
+ "HEADING_PENALTIES": [],
+ "SRC": "/content/drive/MyDrive/Linux_Backups/InterIIT Tech 15/IdeaForge-GeoLoc-InterIIT15/train/datasets",
+ "DST": "/content/dr/train/datasets",
+ "B": "/content/dr/dataset/NUDT"
+}

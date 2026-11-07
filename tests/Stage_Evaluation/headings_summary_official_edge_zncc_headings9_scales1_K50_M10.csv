@@ -1,0 +1,6 @@
+variant,queries,score (/60),first half,second half,answered,answered right,wrong answers,target in candidates,right chosen,wrong candidate reaches bar,seconds per photo
+"this notebook's baseline (fused, K=100, M=25)",1,40.440000000000005,41.76,39.120000000000005,0.69,0.69,0,0.87,,,
+plain (heading 0),1,40.56,40.080000000000005,41.040000000000006,0.7,0.7,0,0.88,0.86,0.0,0.7019663238525391
+"3 headings (-5, 0, +5)",3,44.76,46.56,42.96,0.77,0.77,0,0.99,0.92,0.01,2.103598120212555
+5 headings (step 5),5,46.56,47.760000000000005,45.36,0.8,0.8,0,1.0,0.9,0.01,3.5085572624206542
+all headings,9,49.68,51.36,48.0,0.86,0.86,0,1.0,0.92,0.01,6.313365409374237

@@ -92,4 +92,39 @@ def test_empty_slot_is_skipped():
     assert stage2_from_matches(stored, level, 0.3)["inliers"][2] == 0
 
 
+def test_border_px_is_applied_when_fitting_and_never_adds_matches():
+    from fine_matching.loftr_matcher import candidate_matches, stage2_from_matches
+    w, canvas, valid, level, peaks = _peaks_and_world()
+    stored = candidate_matches(_setup(), canvas, valid, level, peaks[:3], w["store"]["levels"])
+    base = stage2_from_matches(stored, level, 0.3)
+    same = stage2_from_matches(stored, level, 0.3, border_px=0)
+    near = stage2_from_matches(stored, level, 0.3, border_px=10)
+    nothing = stage2_from_matches(stored, level, 0.3, border_px=200)                    # a 401 px erosion leaves no reliable pixel
+    assert np.allclose(base["inliers"], same["inliers"])
+    assert (near["inliers"] <= base["inliers"]).all() and (nothing["inliers"] == 0).all()
+
+
+def test_margin_grows_both_pictures_and_keeps_the_shift_frame():
+    from fine_matching.loftr_matcher import LoftrMatcher, candidate_matches, prepare_loftr_canvas, stage2_from_matches
+    seen = []
+
+    class Recorder(StandInLoftr):
+        def __call__(self, batch):
+            seen.append(tuple(batch["image0"].shape[2:]) + tuple(batch["image1"].shape[2:]))
+            return super().__call__(batch)
+
+    w, canvas, valid, level, peaks = _peaks_and_world()
+    padded, inside = prepare_loftr_canvas(canvas, valid, 8)
+    assert padded.shape == (240, 240) and inside[:8].sum() == 0 and inside[8:232, 8:232].sum() == valid.sum()
+    stored = candidate_matches(LoftrMatcher(Recorder(), 0.3, margin=8), canvas, valid, level, peaks[:2], w["store"]["levels"])
+    assert seen[0] == (240, 240, 240, 240) and stored["margin"] == 8
+    result = stage2_from_matches(stored, level, 0.3)
+    assert result["inliers"].shape == (2,)
+    try:
+        LoftrMatcher(StandInLoftr(), 0.3, margin=6)
+    except AssertionError:
+        return
+    raise AssertionError("a margin that is not a multiple of 4 must be refused")
+
+
 run_tests(globals())

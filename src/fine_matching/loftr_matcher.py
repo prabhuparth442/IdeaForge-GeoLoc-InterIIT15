@@ -9,6 +9,12 @@ The model is kornia's LoFTR (already a dependency). minima_loftr.ckpt is a train
 "matcher."; load_loftr_matcher strips it and requires every key to match (strict loading), so a wrong file fails loudly.
 The picture sides must be multiples of 8 (CTX = 224 is).
 
+Two settings about the query picture (both off by default, both tested in Stage_Evaluation.ipynb):
+  border_px: matches within this many pixels of the edge of the valid (really photographed) area of the canvas are dropped. 0 = keep all.
+             It is applied when the matches are fitted, so it can be swept without running the network again.
+  margin:    the canvas and the map window are both grown by this many grey / map pixels on every side before LoFTR sees them (a multiple of 4),
+             so matches near the canvas edge have context. The network must be run again for every value.
+
 Inlier counts are on a different scale from LightGlue's (measured on 100 official photos: median 30 inliers on the correct place, 0 to 4 on
 wrong places), so the answer bar (min_inliers) and the DINO decision constants (GAMMA, rescue rules) need their own values for this matcher.
 """
@@ -19,23 +25,27 @@ import numpy as np
 import torch
 
 from fine_matching.ransac import fit_transform
-from fine_matching.roma_matcher import prepare_roma_canvas
 from header.settings import CELL, CONTEXT_MARGIN, CTX, DEVICE, MAX_SHIFT_CELLS
 from image_processing.map_levels import level_gsd, map_piece
 
 
 class LoftrMatcher:
-    def __init__(self, loftr_model, min_confidence, upscale=1.0):
+    def __init__(self, loftr_model, min_confidence, upscale=1.0, border_px=0, margin=0):
         assert upscale >= 1.0, "upscale must be 1 or more (the pictures are only enlarged)"
+        assert border_px >= 0, "border_px must be 0 or more"
+        assert margin >= 0 and margin % 4 == 0, "margin must be a multiple of 4 pixels (LoFTR needs sides that are multiples of 8)"
+        self.border_px = border_px
+        self.margin = margin
         self.loftr_model = loftr_model
         self.min_confidence = min_confidence
         self.upscale = upscale
 
 
-def load_loftr_matcher(weights_file, min_confidence=0.2, upscale=1.0, coarse_threshold=None):
+def load_loftr_matcher(weights_file, min_confidence=0.2, upscale=1.0, coarse_threshold=None, border_px=0, margin=0):
     """kornia LoFTR with the MINIMA weights (read from disk, nothing is downloaded). min_confidence: matches below it are dropped.
     upscale: both pictures are enlarged by this factor before LoFTR sees them (224 px -> a 28 x 28 coarse grid, 2.0 -> 56 x 56), the matches are
              mapped back to the 224 px frame. 1.0 = as before.
+    border_px, margin: see the top of this file (0 = off).
     coarse_threshold: LoFTR's own cut on the coarse matching probability (None = kornia's 0.2). Lower = more, weaker matches."""
     from kornia.feature import LoFTR
 
@@ -49,7 +59,7 @@ def load_loftr_matcher(weights_file, min_confidence=0.2, upscale=1.0, coarse_thr
         assert 0 < coarse_threshold < 1, "coarse_threshold must be between 0 and 1"
         model.coarse_matching.thr = coarse_threshold
     model.to(DEVICE).eval()
-    return LoftrMatcher(model, min_confidence, upscale)
+    return LoftrMatcher(model, min_confidence, upscale, border_px, margin)
 
 
 def as_tensor(gray):
@@ -82,19 +92,42 @@ def loftr_pairs(loftr_matcher, picture_a, picture_b):
 
 def fit_matches(points_a, points_b, confidence, reliable, level, min_confidence, pixels=None):
     """Matches -> inliers and the position correction: drop low confidence and unreliable-border matches, RANSAC, same shift rule as check_candidate."""
+    size = reliable.shape[0]
     keep = confidence >= min_confidence
     points_a, points_b = points_a[keep], points_b[keep]
-    columns = np.clip(np.round(points_a[:, 0]).astype(int), 0, CTX - 1)
-    rows = np.clip(np.round(points_a[:, 1]).astype(int), 0, CTX - 1)
+    columns = np.clip(np.round(points_a[:, 0]).astype(int), 0, size - 1)
+    rows = np.clip(np.round(points_a[:, 1]).astype(int), 0, size - 1)
     keep = reliable[rows, columns]
     points_a, points_b = points_a[keep], points_b[keep]
     matrix, inliers = fit_transform(points_a, points_b, pixels)
     result = dict(n_pairs=len(points_a), n_inliers=int(inliers.sum()), shift=np.zeros(2), points_a=points_a, points_b=points_b, inliers=inliers)
     if matrix is not None:
-        middle = (CTX - 1) / 2
+        middle = (size - 1) / 2
         mapped = matrix @ np.array([middle, middle, 1.0])
         result["shift"] = (mapped - middle) * level_gsd(level)
     return result
+
+
+def prepare_loftr_canvas(canvas, valid, margin=0):
+    """The canvas (TILE x TILE) grown by `margin` grey pixels on every side, and the bool mask of the pixels that were really photographed."""
+    assert canvas.shape == valid.shape and valid.dtype == bool, "canvas and valid must have the same shape, valid must be bool"
+    assert margin >= 0 and margin % 4 == 0, "margin must be a multiple of 4 pixels"
+    fill = float(canvas[valid].mean()) if valid.any() else float(canvas.mean())
+    size = canvas.shape[0] + 2 * margin
+    padded = np.full((size, size), fill, dtype=np.float32)
+    inside = np.zeros((size, size), dtype=bool)
+    padded[margin:margin + canvas.shape[0], margin:margin + canvas.shape[1]] = np.where(valid, canvas, fill)
+    inside[margin:margin + canvas.shape[0], margin:margin + canvas.shape[1]] = valid
+    return padded, inside
+
+
+def reliable_mask(inside, border_px):
+    """Where a match in the canvas may lie: the photographed area, shrunk by border_px (0 = everywhere, also the grey filler)."""
+    assert border_px >= 0, "border_px must be 0 or more"
+    if border_px == 0:
+        return np.ones(inside.shape, dtype=bool)
+    side = 2 * int(border_px) + 1
+    return cv2.erode(inside.astype(np.uint8), np.ones((side, side), np.uint8)).astype(bool)
 
 
 def check_candidate_loftr(loftr_matcher, canvas_picture, reliable, level_images, level, x_m, y_m):
@@ -109,30 +142,32 @@ def check_candidate_loftr(loftr_matcher, canvas_picture, reliable, level_images,
 
 def candidate_matches(loftr_matcher, canvas, valid, level, peaks, level_images):
     """The raw LoFTR matches of every candidate, to be turned into inliers later with stage2_from_matches (any min_confidence, any RANSAC distance)
-    without running the network again. Returns dict(reliable=..., items=[dict(points_a, points_b, confidence) or None for an empty slot])."""
+    without running the network again. Returns dict(inside=..., margin=..., border_px=..., items=[dict(points_a, points_b, confidence) or None for an empty slot])."""
     assert peaks.ndim == 2 and peaks.shape[1] >= 3, "peaks must be (M, >= 3), got %s" % (peaks.shape,)
-    canvas_picture, reliable = prepare_roma_canvas(canvas, valid)
+    margin = loftr_matcher.margin
+    canvas_picture, inside = prepare_loftr_canvas(canvas, valid, margin)
     items = []
     for k in range(len(peaks)):
         if peaks[k, 1] > 1e8:
             items.append(None)
             continue
-        tile = map_piece(level_images, level, peaks[k, 1], peaks[k, 2], CTX)
+        tile = map_piece(level_images, level, peaks[k, 1], peaks[k, 2], canvas_picture.shape[0])
         points_a, points_b, confidence = loftr_matches(loftr_matcher, canvas_picture, tile)
         items.append(dict(points_a=points_a, points_b=points_b, confidence=confidence))
-    return dict(reliable=reliable, items=items)
+    return dict(inside=inside, margin=margin, border_px=loftr_matcher.border_px, items=items)
 
 
-def stage2_from_matches(stored, level, min_confidence, pixels=None):
-    """Same output as second_stage (inliers, shifts) from the matches of candidate_matches."""
+def stage2_from_matches(stored, level, min_confidence, pixels=None, border_px=None):
+    """Same output as second_stage (inliers, shifts) from the matches of candidate_matches. border_px: None = the value the matches were made with."""
+    reliable = reliable_mask(stored["inside"], stored["border_px"] if border_px is None else border_px)
     count = len(stored["items"])
     inliers = np.zeros(count)
     shifts = np.zeros((count, 2))
-    limit = (MAX_SHIFT_CELLS * CELL + CONTEXT_MARGIN // 2) * level_gsd(level)
+    limit = (MAX_SHIFT_CELLS * CELL + (CONTEXT_MARGIN + stored["margin"]) // 2) * level_gsd(level)
     for k, item in enumerate(stored["items"]):
         if item is None:
             continue
-        result = fit_matches(item["points_a"], item["points_b"], item["confidence"], stored["reliable"], level, min_confidence, pixels)
+        result = fit_matches(item["points_a"], item["points_b"], item["confidence"], reliable, level, min_confidence, pixels)
         inliers[k] = result["n_inliers"]
         if math.hypot(*result["shift"]) <= limit:
             shifts[k] = result["shift"]

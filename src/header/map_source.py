@@ -6,7 +6,7 @@ of header.satellite_map.SatelliteMap (width, height, gsd, gray_max, read_strip, 
 To use another map: pick one by name from MAPS ("new", "new_931", "new_921", "old": the MAP setting of the notebooks), add your own entry to MAPS (any number of GeoTIFFs in one CRS), or write your own load_map(items) here.
   "old"  -> the old single map: dataset/small_sat_area/*.tif (6 bands, 0.3 m), read as before
 Several files are read as one map (header.mosaic_map.MosaicMap), cut to the photos' bounding box plus MARGIN_M on every side.
-MARGIN_M: the prior circle is 5 km, so a search can reach 5 km from a photo; a smaller margin (say 2000) builds a smaller, faster map store
+MARGIN_M: the search disc (settings.DISC_RADIUS, 5.5 km) reaches that far from a photo, so the map needs more than that around the photos (6000); a smaller margin (say 2000) builds a smaller, faster map store
 but places the edge of the map closer to the photos.
 """
 import math
@@ -27,7 +27,7 @@ MAPS = {                                                # the maps you can choos
 }
 DEFAULT_MAP = "new"
 MAP_FILES = MAPS[DEFAULT_MAP]
-MARGIN_M = 5500
+MARGIN_M = 6000
 
 
 def region_of_interest(items, margin_m=MARGIN_M):

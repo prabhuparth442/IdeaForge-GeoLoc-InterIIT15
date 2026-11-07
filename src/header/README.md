@@ -60,7 +60,7 @@ There are no functions here, only values. Groups:
 | map reading | `MAP_BANDS`, `MAP_GSD`, `STRIP_ROWS` | which bands, pixel size 0.3 m, rows per strip |
 | pyramid | `LEVELS = [3,4,5,6,7]`, `TILE = 224` | zoom levels and the standard picture size |
 | geometry guess | `GEOMETRY` | yaw offset 180°, scale 1.04, tilt signs found on the dev set |
-| search | `CELL = 4`, `N_BINS = 8`, `DISC_RADIUS = 5000`, `NUM_PEAKS = 25`, `MIN_ENERGY`, `MIN_VARIANCE`, `TILE_STEP`, `DINO_BETA` | the coarse search |
+| search | `CELL = 4`, `N_BINS = 8`, `DISC_RADIUS = 5500`, `NUM_PEAKS = 25`, `MIN_ENERGY`, `MIN_VARIANCE`, `TILE_STEP`, `DINO_BETA` | the coarse search |
 | fine stage | `CONTEXT_MARGIN`, `USE_BORDER_MASK`, `CTX`, `MATCH_SIZE`, `RANSAC_PIXELS`, `MAX_SHIFT_CELLS`, `MIN_INLIERS`, `ANSWER_MIN_INLIERS` | the matcher and the decision |
 
 Rules to respect when editing: `CTX = TILE + 2·CONTEXT_MARGIN`; `MATCH_SIZE = 2·CTX`; `ANSWER_MIN_INLIERS ≥ MIN_INLIERS` (explained in `result_thresholding/concepts/choosing_the_answer.md`). Derived values are computed inside the file, so change only the base ones.

@@ -1,4 +1,4 @@
-# coarse_search: where in the 5 km disc does this photo fit?
+# coarse_search: where in the 5.5 km disc does this photo fit?
 
 ## What this section does, in plain words
 
@@ -102,7 +102,7 @@ z = correlate_everywhere(w, k, c)['zncc']; print(z.shape, divmod(int(z.argmax())
 * `correlation_maps(map_features, level, query_features, query_cells, prior_m)` returns `(maps, geometry)`.
   * `reach = DISC_RADIUS/gsd + side·CELL/2` pixels (window extends this far from the prior in every direction);
   * `geometry["x_m"]`, `["y_m"]`: the **centre** of the query at each heat-map entry, in metres (x east, y south);
-  * `geometry["inside"]`: `True` where the distance to the prior is at most 5000 m.
+  * `geometry["inside"]`: `True` where the distance to the prior is at most `DISC_RADIUS` (5500 m; the hint itself is within 5000 m).
 * `pick_peaks(score_map, geometry, prior_map=None, beta=0.0)` returns a numpy array `(25, 5)`: score, x, y, sharpness, ranking value. Missing slots: `(0, 1e9, 1e9, 0, −1)`, so check `x < 1e8` before using a row. `sharpness = score − mean of the four neighbours`. `prior_map` and `beta` add `beta·prior` to the *ranking* only; the stored score stays the correlation.
 * `search_frame(canvas, valid, level, prior_m, store, variants, dino=None)` runs the whole stage and returns `({(mode, beta): (25, 6) array}, cutoff)`; the sixth column is the DINO tile similarity (−1 without DINO).
 

@@ -1,0 +1,2 @@
+,data,map,map_margin_m,coarse,matcher,n_eval,seed,K,M,layer,weight,gamma,rescue,bar,ransac_px,confidence,loftr_threshold,border_px,margin,first_photo,score (/60),first half,second half,answered,target in K,target in M,top-1 ok,right chosen | target in M,answered and ok,wrong answers,right but skipped
+0,official,new,None,fused,loftr_minima,100,451,100,25,True,100.0,1.0,None,8,3.0,0.1,0.1,0,0,0,46.56,49.68,43.44,0.8,0.88,0.88,0.83,0.9545454545454546,0.8,0,4

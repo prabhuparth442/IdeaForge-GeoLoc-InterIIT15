@@ -1,0 +1,12 @@
+,hyperparameter,baseline,best value,score at best,score at baseline,score range over the sweep
+0,LoFTR confidence cut,0.1,0.1,46.56,46.56,37.56
+1,answer bar (inliers),8,8.0,46.56,46.56,5.640000000000001
+2,RANSAC distance (px),3.0,1.5,47.28,46.56,2.8800000000000026
+3,K: places the coarse search returns,100,50.0,46.56,46.56,2.4000000000000057
+4,M: places sent to the fine stage,25,5.0,46.56,46.56,1.2000000000000028
+5,"rescue rule (inliers, DINO z)",,"(0, 2.5)",47.52,46.56,1.2000000000000028
+6,border width (px) of the canvas,0,8.0,46.800000000000004,46.56,0.9600000000000009
+7,DINO weight (0 = coarse order),100.0,0.3,46.56,46.56,0.6000000000000014
+8,DINO layer,True,True,46.56,46.56,0.6000000000000014
+9,context margin (px) around the canvas,0,0.0,46.56,46.56,0.480000000000004
+10,gamma: DINO in the choice,1.0,0.0,46.56,46.56,0.0

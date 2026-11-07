@@ -1,0 +1,8 @@
+data: official | 379 photos available | zoom levels [3, 4, 5, 6, 7]
+photos: official | map: new
+coarse method: edge_zncc | maps: ['edge_zncc']
+semantic layer: on (best K=50 -> M=10) | DINO in the decision: on (gamma 1.00, rescue (None, None))
+fine matcher: loftr_minima | answer bar: 8 inliers | RANSAC 3.0 px | matcher confidence 0.21 | LoFTR coarse threshold 0.21, upscale 1.0 | border 0 px, margin 0 px
+DINO order weight: 100.0 | projection overrides: none (settings.GEOMETRY)
+device: cuda
+queries per photo: 9 (headings [-10.0, -7.5, -5.0, -2.5, 0.0, 2.5, 5.0, 7.5, 10.0], scale factors [1.0]); K and M are per query
