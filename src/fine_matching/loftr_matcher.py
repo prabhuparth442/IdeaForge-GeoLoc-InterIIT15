@@ -25,6 +25,7 @@ import numpy as np
 import torch
 
 from fine_matching.ransac import fit_transform
+from header import settings
 from header.settings import CELL, CONTEXT_MARGIN, CTX, DEVICE, MAX_SHIFT_CELLS
 from image_processing.map_levels import level_gsd, map_piece
 
@@ -90,16 +91,26 @@ def loftr_pairs(loftr_matcher, picture_a, picture_b):
     return points_a[keep], points_b[keep]
 
 
-def fit_matches(points_a, points_b, confidence, reliable, level, min_confidence, pixels=None):
-    """Matches -> inliers and the position correction: drop low confidence and unreliable-border matches, RANSAC, same shift rule as check_candidate."""
+def settings_pixels(pixels):
+    if pixels is None:
+        return settings.RANSAC_PIXELS
+    return pixels
+
+
+def fit_matches(points_a, points_b, confidence, reliable, level, min_confidence, pixels=None, fit=None):
+    """Matches -> inliers and the position correction: drop low confidence and unreliable-border matches, RANSAC, same shift rule as check_candidate.
+    fit: another fitting function (points_a, points_b, pixels, confidence) -> (matrix, inliers), see fine_matching.robust_fit; None = RANSAC."""
     size = reliable.shape[0]
     keep = confidence >= min_confidence
-    points_a, points_b = points_a[keep], points_b[keep]
+    points_a, points_b, confidence = points_a[keep], points_b[keep], confidence[keep]
     columns = np.clip(np.round(points_a[:, 0]).astype(int), 0, size - 1)
     rows = np.clip(np.round(points_a[:, 1]).astype(int), 0, size - 1)
     keep = reliable[rows, columns]
-    points_a, points_b = points_a[keep], points_b[keep]
-    matrix, inliers = fit_transform(points_a, points_b, pixels)
+    points_a, points_b, confidence = points_a[keep], points_b[keep], confidence[keep]
+    if fit is None:
+        matrix, inliers = fit_transform(points_a, points_b, pixels)
+    else:
+        matrix, inliers = fit(points_a, points_b, settings_pixels(pixels), confidence)
     result = dict(n_pairs=len(points_a), n_inliers=int(inliers.sum()), shift=np.zeros(2), points_a=points_a, points_b=points_b, inliers=inliers)
     if matrix is not None:
         middle = (size - 1) / 2
@@ -157,7 +168,7 @@ def candidate_matches(loftr_matcher, canvas, valid, level, peaks, level_images):
     return dict(inside=inside, margin=margin, border_px=loftr_matcher.border_px, items=items)
 
 
-def stage2_from_matches(stored, level, min_confidence, pixels=None, border_px=None):
+def stage2_from_matches(stored, level, min_confidence, pixels=None, border_px=None, fit=None):
     """Same output as second_stage (inliers, shifts) from the matches of candidate_matches. border_px: None = the value the matches were made with."""
     reliable = reliable_mask(stored["inside"], stored["border_px"] if border_px is None else border_px)
     count = len(stored["items"])
@@ -167,7 +178,7 @@ def stage2_from_matches(stored, level, min_confidence, pixels=None, border_px=No
     for k, item in enumerate(stored["items"]):
         if item is None:
             continue
-        result = fit_matches(item["points_a"], item["points_b"], item["confidence"], reliable, level, min_confidence, pixels)
+        result = fit_matches(item["points_a"], item["points_b"], item["confidence"], reliable, level, min_confidence, pixels, fit)
         inliers[k] = result["n_inliers"]
         if math.hypot(*result["shift"]) <= limit:
             shifts[k] = result["shift"]
