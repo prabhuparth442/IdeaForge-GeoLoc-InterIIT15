@@ -4,7 +4,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent                                  # the repo folder (IdeaForge-GeoLoc-InterIIT15)
-ITERATION_DIR = ROOT / "tests" / "Test_Iteration_1"
+ITERATION_DIR = ROOT / "tests" / "Test_Iteration_3_Thresholding"
 OUT_DIR = ITERATION_DIR / "results" / "overnight"   # the run on real photos: logs, shards, models, reports
 SYNTH_OUT_DIR = ITERATION_DIR / "results" / "synthetic"   # the run with pseudo-thermal photos
 

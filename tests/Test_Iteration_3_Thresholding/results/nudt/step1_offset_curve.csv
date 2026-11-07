@@ -1,0 +1,9 @@
+group,offset_px,median_raw_inliers,share_at_least_good,photos
+control,0.0,29.5,1.0,12
+control,8.0,29.0,1.0,48
+control,16.0,30.0,1.0,48
+control,32.0,29.5,1.0,48
+skipped,0.0,4.0,0.22926374650512582,3219
+skipped,8.0,4.0,0.22972972972972974,12876
+skipped,16.0,3.0,0.2271668219944082,12876
+skipped,32.0,3.0,0.2272444858651755,12876

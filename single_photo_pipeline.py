@@ -42,7 +42,8 @@ STAGES = ["render", "maps", "coarse", "semantic", "fine", "decision"]
 class SinglePhotoPipeline:
     def __init__(self, data_name="official", coarse="fused", semantic_layer=True, semantic_decision=True,
                  gamma=1.0, rescue_inliers=None, rescue_z=None, minima_file=None, k_peaks=50, m_fine=25, matcher="lightglue",
-                 min_inliers=None, ransac_pixels=None, matcher_confidence=0.2, satellite=None, map_margin_m=None, loftr_coarse_threshold=None, loftr_upscale=1.0):
+                 min_inliers=None, ransac_pixels=None, matcher_confidence=0.2, satellite=None, map_margin_m=None, loftr_coarse_threshold=None, loftr_upscale=1.0, nudt_split="test"):
+        assert nudt_split in ("test", "valid", "train", "all"), "nudt_split must be test, valid, train or all, got %r" % (nudt_split,)
         assert data_name in ("official", "nudt"), "data_name must be 'official' or 'nudt', got %r" % (data_name,)
         assert coarse in ("fused", "edge_zncc"), "coarse must be 'fused' or 'edge_zncc', got %r" % (coarse,)
         assert gamma >= 0, "gamma must be >= 0"
@@ -56,6 +57,7 @@ class SinglePhotoPipeline:
         assert loftr_coarse_threshold is None or 0 < loftr_coarse_threshold < 1, "loftr_coarse_threshold must be between 0 and 1 (or None for the kornia value 0.2)"
         assert loftr_upscale >= 1.0, "loftr_upscale must be 1 or more"
         self.data_name = data_name
+        self.nudt_split = nudt_split                    # NUDT only: which Thermal-UAV split is loaded ("all" = test + valid + train)
         self.coarse = coarse
         self.use_layer = semantic_layer
         self.use_decision = semantic_layer and semantic_decision
@@ -95,7 +97,7 @@ class SinglePhotoPipeline:
         def load_data():
             if self.data_name == "official":
                 return photo_sets.load_official_photos(n_photos, seed, map_files=self.satellite, margin_m=self.map_margin_m)
-            return photo_sets.load_nudt_photos(n_photos, seed)
+            return photo_sets.load_nudt_photos(n_photos, seed, split=self.nudt_split)
 
         loaded = self._timed("photos, camera and map", load_data)
         self.test_set = loaded["test_set"]
@@ -167,7 +169,7 @@ class SinglePhotoPipeline:
         """A few plain lines about what was set up."""
         lines = []
         lines.append("data: %s | %d photos available | zoom levels %s" % (self.data_name, len(self.test_set.items), list(settings.LEVELS)))
-        lines.append("photos: %s | map: %s" % (self.data_name, self.satellite if self.data_name == "official" else "NUDT reference map"))
+        lines.append("photos: %s | map: %s" % (self.data_name, self.satellite if self.data_name == "official" else "NUDT reference map, %s split" % self.nudt_split))
         lines.append("coarse method: %s | maps: %s" % (self.coarse_name, self.names))
         if self.use_layer:
             lines.append("semantic layer: on (best K=%d -> M=%d) | DINO in the decision: %s (gamma %.2f, rescue %s)" % (

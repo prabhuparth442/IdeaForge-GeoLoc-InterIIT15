@@ -47,7 +47,9 @@ def find_reference_map(nudt):
 
 def read_split(nudt, split):
     """All frames of one split as pipeline items, plus the flight name of each (the unit that must never be split)."""
-    assert split in ("train", "valid", "test"), "split must be train, valid or test"
+    assert split in ("train", "valid", "test", "all"), "split must be train, valid, test or all"
+    if split == "all":
+        return [item for one in ("test", "valid", "train") for item in read_split(nudt, one)]
     items = []
     for flight_dir in sorted(glob.glob(str(nudt / "Thermal-UAV" / split / "changsha" / "*"))):
         flight = os.path.basename(flight_dir)

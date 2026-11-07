@@ -44,7 +44,7 @@ def load_nudt_photos(n_photos, seed=config.SEED, split="test", geometry_file=Non
     settings.GEOMETRY.update(saved["geometry"])
     camera = nudt_data.NudtCamera()
     satellite_map = SatelliteMap(nudt_data.find_reference_map(nudt))
-    all_items = nudt_data.read_split(nudt, split)
+    all_items = nudt_data.read_split(nudt, split)       # split: "test", "valid", "train" or "all" (the three together)
     for item in all_items:
         item["yaw"] = saved["yaw_sign"] * item["yaw_raw"]
     chosen = nudt_data.spread_sample(all_items, n_photos, seed)

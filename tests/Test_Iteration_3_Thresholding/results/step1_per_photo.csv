@@ -1,0 +1,9 @@
+photo,group,candidate_offset_px,truth_raw_inliers,truth_pairs,truth_reason,candidate_raw_inliers,candidate_inliers,candidate_pairs,candidate_reason,peak0_raw_inliers,cause
+0,skipped,144.38018181311602,6,10,scale_angle_gate,0,0,0,too_few_pairs,0,weak_even_at_truth
+2,skipped,1945.371712385066,9,10,ok,0,0,0,too_few_pairs,0,candidate_too_far_from_truth
+3,skipped,37.198675629644804,6,9,ok,5,0,5,scale_angle_gate,5,weak_even_at_truth
+4,skipped,4.297864189186825,5,7,ok,6,6,6,ok,6,weak_even_at_truth
+5,skipped,24.131918791232955,4,4,ok,7,0,7,shift_gate,7,weak_even_at_truth
+301,control,1.585400535003846,33,47,ok,33,33,48,ok,33,candidate_is_fine
+683,control,4.740354610592788,12,20,ok,25,25,30,ok,25,candidate_is_fine
+835,control,2.1462962468027187,50,65,ok,39,39,57,ok,39,candidate_is_fine
