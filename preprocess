@@ -1,0 +1,11 @@
+#!/usr/bin/env python3
+"""Builds the map store from /data/map into /data/preprocess (the optional preprocessing step of the evaluation). Same as  ./run preprocess"""
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+from geoloc.cli import main
+
+if __name__ == "__main__":
+    main(["preprocess"] + sys.argv[1:])
