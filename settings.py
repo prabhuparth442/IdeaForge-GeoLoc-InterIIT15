@@ -65,6 +65,10 @@ GEOMETRY = {
 #   custom:   HEADINGS x SCALE_FACTORS below
 QUERY_SET = "standard"
 
+# Early stop: after each query the pooled best candidate is looked at; when it already has at least this many inliers the remaining queries are skipped.
+# It depends only on the photo, not on the clock. None = never stop early (run every query). 15 to 60 sensible; lower = faster but more risk of a changed answer.
+EARLY_STOP_INLIERS = None
+
 # Second pass: when the first pass ends in no_match, the photo is tried again with more drawings and all candidates (first and second pass) are pooled.
 # The second pass uses the 12 queries of the "all" set (9 headings x 1.0 / 1.05) that the first pass did not use, so a photo that needs it ends up with the same
 # 18 queries as QUERY_SET = "all". Photos that were answered in the first pass cost nothing extra.
@@ -109,6 +113,7 @@ DINO_BATCH = 25          # places sent through DINO at once. Lower if the GPU ru
 LOFTR_CONFIDENCE = 0.21       # matches below this confidence are dropped before RANSAC. 0.2 to 0.5 (LoFTR itself drops below its coarse threshold).
 #                               It changes how many inliers a place gets, so MIN_INLIERS must be chosen together with it. A higher value gives fewer inliers
 LOFTR_COARSE_THRESHOLD = 0.21  # LoFTR's own cut on its coarse matching probability. 0.1 to 0.5. Lower = more, weaker matches (0.1 produced false answers)
+LOFTR_BATCH = 1               # candidate places sent through LoFTR together. 1 = one at a time (the tested way). 2 to 10: faster on a GPU, numbers can differ slightly
 RANSAC_PIXELS = 3.0           # a match is an inlier when it is within this many canvas pixels of the fitted similarity. 1 to 4 (4 and above let a wrong answer in)
 MAX_SHIFT_CELLS = 3           # the position correction from RANSAC may move the answer at most this many cells (12 pixels) from the candidate. 1 to 6.
 #                               A larger shift is treated as a failed match (0 inliers)

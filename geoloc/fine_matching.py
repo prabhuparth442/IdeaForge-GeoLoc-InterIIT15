@@ -41,6 +41,24 @@ def loftr_matches(model, canvas_picture, tile):
     return found["keypoints0"].cpu().numpy(), found["keypoints1"].cpu().numpy(), found["confidence"].cpu().numpy()
 
 
+@torch.no_grad()
+def loftr_matches_batch(model, canvas_picture, tiles):
+    """The same for several map windows at once. Returns one (points_a, points_b, confidence) per tile."""
+    count = len(tiles)
+    first = as_tensor(canvas_picture).repeat(count, 1, 1, 1)
+    second = torch.cat([as_tensor(tile) for tile in tiles], dim=0)
+    found = model({"image0": first, "image1": second})
+    which = found["batch_indexes"].cpu().numpy()
+    points_a = found["keypoints0"].cpu().numpy()
+    points_b = found["keypoints1"].cpu().numpy()
+    confidence = found["confidence"].cpu().numpy()
+    parts = []
+    for i in range(count):
+        mine = which == i
+        parts.append((points_a[mine], points_b[mine], confidence[mine]))
+    return parts
+
+
 def fit_similarity(points_a, points_b):
     """RANSAC fit of a shift + rotation + scale. Returns the 2x3 matrix (or None) and which matches are inliers."""
     if len(points_a) < 4:
@@ -71,13 +89,27 @@ def check_places(model, canvas, valid, level, peaks, level_image):
     gsd = level_gsd(level)
     limit = settings.MAX_SHIFT_CELLS * settings.CELL * gsd
 
+    wanted = [k for k in range(len(peaks)) if peaks[k, 1] <= 1e8]
+    tiles = {}
+    for k in wanted:
+        tiles[k] = map_piece(level_image, level, peaks[k, 1], peaks[k, 2], size)
+
+    # LOFTR_BATCH windows go through the network together (1 = one at a time)
+    matches = {}
+    step = settings.LOFTR_BATCH
+    for start in range(0, len(wanted), step):
+        group = wanted[start:start + step]
+        if step == 1:
+            matches[group[0]] = loftr_matches(model, canvas_picture, tiles[group[0]])
+        else:
+            parts = loftr_matches_batch(model, canvas_picture, [tiles[k] for k in group])
+            for k, part in zip(group, parts):
+                matches[k] = part
+
     inliers = np.zeros(len(peaks))
     shifts = np.zeros((len(peaks), 2))
-    for k in range(len(peaks)):
-        if peaks[k, 1] > 1e8:
-            continue
-        tile = map_piece(level_image, level, peaks[k, 1], peaks[k, 2], size)
-        points_a, points_b, confidence = loftr_matches(model, canvas_picture, tile)
+    for k in wanted:
+        points_a, points_b, confidence = matches[k]
         keep = confidence >= settings.LOFTR_CONFIDENCE
         matrix, picked = fit_similarity(points_a[keep], points_b[keep])
         if matrix is None:

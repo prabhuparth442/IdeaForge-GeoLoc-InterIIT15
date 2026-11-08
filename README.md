@@ -40,7 +40,8 @@ preprocess          same as ./run preprocess              the optional preproces
 settings.py         every tunable value, with range and options (read this to tune)
 geoloc/             the pipeline, one small file per step
 models/             minima_loftr.ckpt, dinov2_vits14_timm.safetensors (not in git, see models/README.md)
-requirements.txt    Python packages
+requirements.txt    Python packages for a PC / dev environment
+docker/             Dockerfile of the team image for the Jetson (see docker/README.md)
 ```
 
 ## Install

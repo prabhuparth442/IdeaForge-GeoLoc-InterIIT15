@@ -1,0 +1,11 @@
+# Extra packages of the team image. torch, torchvision, numpy (1.26.4) and OpenCV (4.10.0.84) come from the Dockerfile and are frozen by
+# PIP_CONSTRAINT, so they are NOT listed here (a different numpy or torch would make the build fail on purpose).
+# Only wheels (a compile under QEMU is very slow). Check that every line has a cp310 arm64 wheel before the final build.
+
+rasterio==1.3.9                # reads the GeoTIFF map (wheel bundles GDAL); used by preprocess
+pyproj==3.6.1                  # GPS <-> map metres
+kornia==0.7.1                  # LoFTR network code (Apache-2.0)
+timm==0.9.2                    # DINOv2 ViT-S/14 network code (Apache-2.0)
+safetensors                    # timm reads the DINO weights with it
+huggingface_hub==0.17.3        # imported by timm; nothing is downloaded (HF_HUB_OFFLINE=1 is set)
+einops                         # imported by kornia's LoFTR

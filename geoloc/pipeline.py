@@ -61,13 +61,13 @@ class Localiser:
             torch.cuda.synchronize()
         return time.time()
 
-    def run_query(self, photo_picture, pose, camera, level, prior_m, query, seconds):
+    def run_query(self, photo_picture, pose, camera, level, prior_m, query, seconds, cache):
         """One query up to the fine stage. Returns dict(peaks, z, stage2)."""
         clock = self.now()
         canvas, valid = photo.draw_canvas(photo_picture, pose, camera, level, query["heading"], query["scale_factor"])
         clock = self.lap(seconds, "render", clock)
 
-        score_map, geometry = score_map_for_query(canvas, valid, level, prior_m, self.store.features)
+        score_map, geometry = score_map_for_query(canvas, valid, level, prior_m, self.store.features, cache)
         clock = self.lap(seconds, "coarse", clock)
 
         level_image = self.store.levels[level]
@@ -81,21 +81,26 @@ class Localiser:
         self.lap(seconds, "fine", clock)
         return dict(peaks=peaks, z=z, stage2=stage2)
 
-    def run_queries(self, query_list, photo_picture, pose, camera, level, prior_m, meta, seconds, results, used_queries):
+    def run_queries(self, query_list, photo_picture, pose, camera, level, prior_m, meta, seconds, results, used_queries, cache):
         for query in query_list:
             cv2.setRNGSeed(settings.SEED)
             try:
-                results.append(self.run_query(photo_picture, pose, camera, level, prior_m, query, seconds))
+                results.append(self.run_query(photo_picture, pose, camera, level, prior_m, query, seconds, cache))
                 used_queries.append(query)
             except ValueError as problem:
                 print("%s: query %s skipped: %s" % (meta.get("filename", "?"), query, problem), file=sys.stderr, flush=True)
+                continue
+            if settings.EARLY_STOP_INLIERS is not None and self.best_inliers(results) >= settings.EARLY_STOP_INLIERS:
+                break
+
+    def best_inliers(self, results):
+        if len(results) == 0:
+            return 0
+        peaks, inliers, shifts, z, owner = decision.pool_queries(results)
+        return decision.choose_candidate(peaks, inliers, shifts, z)[2]
 
     def is_answered(self, results):
-        if len(results) == 0:
-            return False
-        peaks, inliers, shifts, z, owner = decision.pool_queries(results)
-        best_inliers = decision.choose_candidate(peaks, inliers, shifts, z)[2]
-        return bool(decision.should_answer(best_inliers))
+        return bool(decision.should_answer(self.best_inliers(results)))
 
     def lap(self, seconds, label, clock):
         if not self.timed:
@@ -122,11 +127,12 @@ class Localiser:
 
         results = []
         used_queries = []
-        self.run_queries(self.queries, photo_picture, pose, camera, level, prior_m, meta, seconds, results, used_queries)
+        cache = {}          # the map window and its FFTs, shared by all queries of this photo
+        self.run_queries(self.queries, photo_picture, pose, camera, level, prior_m, meta, seconds, results, used_queries, cache)
         second_pass = False
         if len(self.extra_queries) > 0 and not self.is_answered(results):
             second_pass = True
-            self.run_queries(self.extra_queries, photo_picture, pose, camera, level, prior_m, meta, seconds, results, used_queries)
+            self.run_queries(self.extra_queries, photo_picture, pose, camera, level, prior_m, meta, seconds, results, used_queries, cache)
 
         answer = dict(answered=False, lat=None, lon=None, confidence=0.0, inliers=0)
         if len(results) == 0:

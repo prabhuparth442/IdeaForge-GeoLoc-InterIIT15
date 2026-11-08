@@ -27,30 +27,31 @@ def fast_length(n):
         n = n + 1
 
 
-def zncc_everywhere(window, kernel, cells):
-    """Masked zero-mean normalised correlation of the kernel at every position of the window (all (bins, rows, cols))."""
-    n_bins, height, width = window.shape
-    kernel_h, kernel_w = kernel.shape[1], kernel.shape[2]
-    size = (fast_length(height), fast_length(width))
-    out_h = height - kernel_h + 1
-    out_w = width - kernel_w + 1
+def window_transforms(window, size):
+    """The FFTs of the map window. They do not depend on the photo's canvas, so all queries of one photo share them."""
+    return dict(window_fft=torch.fft.rfft2(window, s=size),
+                strength_fft=torch.fft.rfft2((window ** 2).sum(dim=0), s=size))
+
+
+def zncc_everywhere(window, shared, size, kernel, cells):
+    """Masked zero-mean normalised correlation of the kernel at every position of the window.
+    window (bins, rows, cols); shared = window_transforms(window, size); kernel (bins, k_rows, k_cols); cells (k_rows, k_cols)."""
+    height, width = window.shape[1], window.shape[2]
+    out_h = height - kernel.shape[1] + 1
+    out_w = width - kernel.shape[2] + 1
     n_cells = cells.sum()
+    window_fft = shared["window_fft"]
 
-    window_fft = torch.fft.rfft2(window, s=size)
     cells_fft = torch.fft.rfft2(cells, s=size)
-
-    strength_fft = torch.fft.rfft2((window ** 2).sum(dim=0), s=size)
-    energy = torch.fft.irfft2(strength_fft * cells_fft.conj(), s=size)[:out_h, :out_w].clamp_min(0)
+    energy = torch.fft.irfft2(shared["strength_fft"] * cells_fft.conj(), s=size)[:out_h, :out_w].clamp_min(0)
 
     kernel_mean = kernel.sum(dim=(1, 2), keepdim=True) / n_cells
     kernel_zero = (kernel - kernel_mean) * cells
     zero_fft = torch.fft.rfft2(kernel_zero, s=size)
     dot_zero = torch.fft.irfft2((window_fft * zero_fft.conj()).sum(dim=0), s=size)[:out_h, :out_w]
 
-    squared_sums = torch.zeros_like(energy)
-    for b in range(n_bins):
-        local_sum = torch.fft.irfft2(window_fft[b] * cells_fft.conj(), s=size)[:out_h, :out_w]
-        squared_sums += local_sum ** 2 / n_cells
+    local_sums = torch.fft.irfft2(window_fft * cells_fft.conj()[None], s=size)[:, :out_h, :out_w]
+    squared_sums = (local_sums ** 2).sum(dim=0) / n_cells
     variance = (energy - squared_sums).clamp_min(0)
     zncc = dot_zero / (kernel_zero.pow(2).sum().sqrt() * variance.sqrt() + 1e-6)
 
@@ -72,8 +73,8 @@ def cut_map_features(features, top, left, rows, cols):
     return piece
 
 
-def score_map_for_query(canvas, valid, level, prior_m, map_features):
-    """Returns the score map and a geometry dict (level, side, x_m, y_m, inside) that says where each map cell is."""
+def score_map_for_query(canvas, valid, level, prior_m, map_features, cache):
+    """cache: an empty dict, the same one for every query of a photo (it holds the map window and its FFTs). Returns the score map and a geometry dict (level, side, x_m, y_m, inside) that says where each map cell is."""
     cell = settings.CELL
     gsd = level_gsd(level)
     query_features, query_cells = query_edge_features(canvas, valid)
@@ -85,10 +86,13 @@ def score_map_for_query(canvas, valid, level, prior_m, map_features):
     top = int(round((prior_m[1] / gsd - reach) / cell))
     left = int(round((prior_m[0] / gsd - reach) / cell))
 
-    window = torch.from_numpy(cut_map_features(map_features[level], top, left, cells_wide, cells_wide)).to(DEVICE)
+    if "window" not in cache:
+        cache["window"] = torch.from_numpy(cut_map_features(map_features[level], top, left, cells_wide, cells_wide)).to(DEVICE)
+        cache["size"] = (fast_length(cells_wide), fast_length(cells_wide))
+        cache["shared"] = window_transforms(cache["window"], cache["size"])
     kernel = torch.from_numpy(query_features).to(DEVICE)
     cells = torch.from_numpy(query_cells.astype(np.float32)).to(DEVICE)
-    zncc = zncc_everywhere(window, kernel, cells)
+    zncc = zncc_everywhere(cache["window"], cache["shared"], cache["size"], kernel, cells)
 
     row_ids = torch.arange(zncc.shape[0], device=DEVICE)
     col_ids = torch.arange(zncc.shape[1], device=DEVICE)

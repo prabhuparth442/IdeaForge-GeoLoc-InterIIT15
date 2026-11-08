@@ -24,6 +24,7 @@ def check_settings():
     need(0 < settings.LOFTR_COARSE_THRESHOLD < 1, "LOFTR_COARSE_THRESHOLD must be between 0 and 1")
     need(0 < settings.RANSAC_PIXELS <= 8, "RANSAC_PIXELS must be above 0 and at most 8")
     need(1 <= settings.MAX_SHIFT_CELLS <= 6, "MAX_SHIFT_CELLS must be 1 to 6")
+    need(1 <= settings.LOFTR_BATCH <= 25, "LOFTR_BATCH must be 1 to 25")
     need(settings.GAMMA >= 0, "GAMMA must be 0 or more")
     need(settings.MIN_INLIERS >= 1, "MIN_INLIERS must be 1 or more")
     for key in ("attitude", "pitch_sign", "roll_sign", "yaw_offset", "scale", "height_offset"):
