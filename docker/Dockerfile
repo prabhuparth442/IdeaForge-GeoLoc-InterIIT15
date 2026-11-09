@@ -1,4 +1,4 @@
-# Team image of Main_Pipeline_Headless (adapted from the starter kit's Dockerfile, with our extra packages). Optional starter team image: PyTorch 2.8.0 + torchvision 0.23.0 with
+# Team image of Main_Pipeline_Headless, adapted from the starter kit Dockerfile (torch 2.8.0 + torchvision 0.23.0 Jetson wheels, numpy, OpenCV, plus our requirements.txt).
 # GPU support, plus OpenCV, built FROM the base image. The image is only your
 # environment. The harness mounts your code (code/, with the entry point
 # code/run) and weights (models/) at run time (interface/SPEC.md). You do
