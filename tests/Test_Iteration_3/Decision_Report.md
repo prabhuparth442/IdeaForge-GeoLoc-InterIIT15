@@ -1,5 +1,57 @@
 # Decision step report: where the marks go and what helps
 
+## Update 2026-11-10 (round 2): a simpler rule, checked on unseen photos
+
+**Current best decision (0 wrong answers on all three sets):**
+
+1. Run the 6 standard queries. Answer if inliers ≥ 8 **or** at least 2 of the 6 queries' own best candidates lie within 1σ of the chosen place (each with ≥ 3 inliers). No z or low-bar condition is needed.
+2. Photos still skipped (about 10%) are re-run with 27 queries (9 headings −10…+10 step 2.5 × scales 0.95, 1.0, 1.05). Answer the 27-query choice only if it has **≥ 11 inliers** (12 gives almost the same). No agreement term at this step.
+
+| Set | Bar 8 (today) | + agreement | + escalation (bar 11) | Total gain [95%] | Wrong |
+|---|---|---|---|---|---|
+| Official 379 | 49.01 | 52.91 | 53.54 | +4.53 [+2.98, +6.17] | 0 |
+| NUDT seed 101 (300) | 53.00 | 54.04 | 55.56 | +2.56 [+1.32, +3.96] | 0 |
+| **NUDT seed 202, unseen (200)** | 55.38 | 55.68 | 57.36 | +1.98 [+0.60, +3.54] | 0 |
+
+What was learned:
+
+- **Agreement alone is the robust part of the old rescue rule.** Picking thresholds on one set and testing on the other: picked on NUDT → official +3.6 with 0 wrong; picked on official → NUDT loses (official has almost no wrong answers to learn from, so it drops agreement). Agreement ≥ 2 within 1σ needs no z condition (z ≥ 1.0–1.5 gives the same). It gains in every height band (official ≤150 m +6.0, 150–250 m +2.0, 250–400 m +2.4). Radius 2σ is slightly better (+4.15 official, +0.48 NUDT 202), 0.5σ worse. Requiring ≥ 4 inliers per query loses gain.
+- **On the 200 unseen NUDT photos** (seed 202, excluding seed 101's photos) agreement alone gains only +0.30 because the 6-query ceiling there is just +0.96; it made 0 wrong answers while "always answer" made 10.
+- **Escalation needs a higher bar, and agreement must not be used inside it.** With 27 queries the decision sees 270 candidates instead of 60, so false places collect more inliers by chance: on the escalated NUDT photos the best false place reached ≥ 8 inliers on 12% of photos (max 10). Escalation with bar 8 or agreement made 7 (NUDT 101) and 2 (NUDT 202) wrong answers. Agreement among the 27 queries is not independent evidence: neighbouring headings 2.5° apart see nearly the same image and land on the same false place (one NUDT wrong answer had 6 agreeing queries). Bar 11–12 is a plateau with 0 wrong; bar 10 gives 1 wrong on NUDT 202.
+- **Escalation recovers photos the 6 queries cannot**: winners are often at −10° or +7.5…+10° heading. On NUDT 202 the total (57.36) is above the 6-query ceiling (56.34).
+
+Tried and rejected this round:
+
+| Idea | Result |
+|---|---|
+| Vote choice (place most queries support, then answer at support ≥ 2) | 2–4 wrong answers on both sets |
+| Report the inlier-weighted mean place of agreeing queries | Official +0.19 (high-altitude median 0.75σ → 0.69σ), NUDT 0. Too small to matter. |
+| Escalated decision with bar 8 or agreement ≥ 2/3/4 | Official +3.2 more, but 2–7 wrong answers on NUDT |
+
+Caveats: the escalated bar (11) was set from the false-place inlier counts of these same photos (the largest seen was 10), not from an independent set. Cost: escalation runs 4.5× the queries on ~10% of photos, about +45% total time. Nothing is wired into `src/` (the existing `decide_with_dino` rescue hook is z-only and does not compute agreement).
+
+### Wired in (branch `prabhuparth/agreement-decision`, not committed)
+
+Only new files; no existing file was changed:
+
+- `src/semantic_rerank/agreement.py`: block with `query_best_places`, `query_agreement`, `decide_with_agreement` and the settings (2 queries, 1σ, ≥ 3 inliers per query, escalation bar 11). Unit tests: `tests/pipeline/test_agreement.py` (3 pass).
+- `agreement_query_pipeline.py`: `AgreementQueryPipeline(HeadingQueryPipeline)`. `run(item, prior)` does the 6 queries, the agreement decision, and the 27-query escalation for skipped photos (reusing the 6 queries already run). Returns the usual keys plus `agreement`, `escalated`, `stage`.
+
+End-to-end check (`notebooks/Agreement_Pipeline_Check`, executed for both sets): every photo matches the offline decision from the dumps.
+
+| Set | Score | Wrong | Stages | Seconds per photo |
+|---|---|---|---|---|
+| Official 379 | 53.54 | 0 | bar 316, agreement 25, escalation 4, skip 34 | 5.3 mean (3.8 not escalated, 18.9 escalated) |
+| NUDT 200 unseen | 57.36 | 0 | bar 186, agreement 1, escalation 6, skip 7 | 5.2 mean (4.2 not escalated, 18.9 escalated) |
+
+Measured time cost is about +25–40% over the 6-query run, below the +45% estimate.
+
+Files for this round: `train/checks/vote_decision.py`; notebooks `Decision_Dump_Run` (saves every candidate of every query; env settings for headings, scales, photo list), `Decision_Variants`, `Escalation_After_Agree` (each with executed copies); dumps in `results/fresh_run/dump_*`.
+
+---
+
+## Round 1 (2026-11-09)
+
 Date: 2026-11-09. Scope: the answer-or-skip decision at the end of the geo-localisation pipeline. Nothing in `src/` was changed and nothing was committed. Every number below comes from notebooks in `tests/Test_Iteration_3/notebooks/` and CSVs in `tests/Test_Iteration_3/results/`.
 
 ## 1. Summary
