@@ -46,7 +46,7 @@ class SinglePhotoPipeline:
     def __init__(self, data_name="official", coarse="fused", semantic_layer=True, semantic_decision=True,
                  gamma=1.0, rescue_inliers=None, rescue_z=None, minima_file=None, k_peaks=50, m_fine=25, matcher="lightglue",
                  min_inliers=None, ransac_pixels=None, matcher_confidence=0.2, satellite=None, map_margin_m=None, loftr_coarse_threshold=None, loftr_upscale=1.0,
-                 dino_weight=None, geometry=None, loftr_border_px=0, loftr_margin=0):
+                 dino_weight=None, geometry=None, loftr_border_px=0, loftr_margin=0, loftr_batch=1, dino_batch=25):
         assert data_name in ("official", "nudt"), "data_name must be 'official' or 'nudt', got %r" % (data_name,)
         assert coarse in ("fused", "edge_zncc"), "coarse must be 'fused' or 'edge_zncc', got %r" % (coarse,)
         assert gamma >= 0, "gamma must be >= 0"
@@ -56,6 +56,7 @@ class SinglePhotoPipeline:
         assert satellite is None or satellite in map_source.MAPS, "satellite must be one of %s (or None for %r), got %r" % (list(map_source.MAPS), map_source.DEFAULT_MAP, satellite)
         assert min_inliers is None or min_inliers >= 1, "min_inliers must be >= 1 (or None for the settings value)"
         assert ransac_pixels is None or ransac_pixels > 0, "ransac_pixels must be > 0 (or None for the settings value)"
+        assert loftr_batch >= 1 and dino_batch >= 1, "loftr_batch and dino_batch must be 1 or more"
         assert 0 <= matcher_confidence < 1, "matcher_confidence must be in 0..1"
         assert loftr_coarse_threshold is None or 0 < loftr_coarse_threshold < 1, "loftr_coarse_threshold must be between 0 and 1 (or None for the kornia value 0.2)"
         assert loftr_upscale >= 1.0, "loftr_upscale must be 1 or more"
@@ -80,6 +81,8 @@ class SinglePhotoPipeline:
         self.map_margin_m = map_margin_m                # metres of map around the photos (None = map_source.MARGIN_M); smaller = faster set-up, map edge closer to the photos
         self.loftr_coarse_threshold = loftr_coarse_threshold    # LoFTR only: its own cut on the coarse match probability (None = 0.2); lower = more, weaker matches
         self.loftr_upscale = loftr_upscale              # LoFTR only: both pictures are enlarged by this factor first (1.0 = not; 1.5 and more were measured worse)
+        self.loftr_batch = loftr_batch                  # LoFTR only: pairs per network call (1 = one at a time; more is faster until the GPU memory is full)
+        self.dino_batch = dino_batch                    # places per DINO call
         self.matcher_confidence = matcher_confidence    # LoFTR only: matches below this confidence are dropped before RANSAC
         self.loftr_border_px = loftr_border_px          # LoFTR only: matches this close (pixels) to the edge of the really photographed canvas area are dropped (0 = keep all)
         self.loftr_margin = loftr_margin                # LoFTR only: grey / map pixels added around the canvas and the map window before matching (multiple of 4)
@@ -156,7 +159,7 @@ class SinglePhotoPipeline:
             checkpoints = config.find_nudt_dir() / "checkpoint"
             if self.matcher_name == "loftr_minima":
                 from fine_matching.loftr_matcher import load_loftr_matcher
-                return load_loftr_matcher(checkpoints / "MINIMA" / "minima_loftr.ckpt", self.matcher_confidence, self.loftr_upscale, self.loftr_coarse_threshold, self.loftr_border_px, self.loftr_margin)
+                return load_loftr_matcher(checkpoints / "MINIMA" / "minima_loftr.ckpt", self.matcher_confidence, self.loftr_upscale, self.loftr_coarse_threshold, self.loftr_border_px, self.loftr_margin, self.loftr_batch)
             if self.matcher_name == "roma_minima":
                 from fine_matching.roma_matcher import load_roma_matcher
                 return load_roma_matcher(checkpoints / "MINIMA" / "minima_roma.pth", checkpoints / "RoMa" / "dinov2_vitl14_pretrain.pth")
@@ -191,6 +194,7 @@ class SinglePhotoPipeline:
             lines.append("semantic layer: off (the first M=%d of the K=%d coarse peaks go to the fine stage)" % (self.m_fine, self.k_peaks))
         lines.append("fine matcher: %s | answer bar: %d inliers | RANSAC %.1f px | matcher confidence %.2f | LoFTR coarse threshold %s, upscale %.1f | border %d px, margin %d px" % (self.matcher_name, self.min_inliers, self.ransac_pixels, self.matcher_confidence, self.loftr_coarse_threshold if self.loftr_coarse_threshold is not None else "0.2 (default)", self.loftr_upscale, self.loftr_border_px, self.loftr_margin))
         lines.append("DINO order weight: %s | projection overrides: %s" % (self.dino_weight, self.geometry or "none (settings.GEOMETRY)"))
+        lines.append("batches: %d LoFTR pairs and %d DINO places per call" % (self.loftr_batch, self.dino_batch))
         lines.append("device: %s" % DEVICE)
         return lines
 
@@ -199,9 +203,10 @@ class SinglePhotoPipeline:
         seconds[label] = now - clock
         return now
 
-    def candidates_for_query(self, item, prior_m, level, geometry=None):
-        """One query picture through render, maps, coarse search, DINO layer and fine stage. geometry: overrides of settings.GEOMETRY for this
-        query only (for example another heading); None = as set. Returns dict(peaks, z, stage2, seconds, valid_fraction)."""
+    def prepare_query(self, item, prior_m, level, geometry=None):
+        """One query picture through render, maps, coarse search and the DINO layer (everything before the fine stage). geometry: overrides of
+        settings.GEOMETRY for this query only (for example another heading); None = as set. Returns dict(canvas, valid, peaks, z, shortlist, seconds,
+        valid_fraction): shortlist = the K places the coarse search returned (before the DINO layer kept M of them), for the stage evaluation."""
         seconds = {}
         cv2.setRNGSeed(SEED)
         clock = self._now()
@@ -216,18 +221,25 @@ class SinglePhotoPipeline:
         if self.use_layer:
             clock = self._lap(seconds, "coarse", clock)
             peaks, details = semantic_layer(self.encoder, score_map, inputs["geometry"], canvas, valid, level, self.level_images,
-                                           shortlist=self.k_peaks, keep=self.m_fine, weight=self.dino_weight)
+                                           shortlist=self.k_peaks, keep=self.m_fine, weight=self.dino_weight, batch=self.dino_batch)
             z = candidate_z(peaks, details)
-            clock = self._lap(seconds, "semantic", clock)
+            shortlist = details["shortlist"]
+            self._lap(seconds, "semantic", clock)
         else:
             peaks = coarse_top(score_map, inputs["geometry"], self.m_fine)
+            shortlist = peaks
             z = np.zeros(len(peaks))
-            clock = self._lap(seconds, "coarse", clock)
+            self._lap(seconds, "coarse", clock)
             seconds["semantic"] = 0.0
+        return dict(canvas=canvas, valid=valid, peaks=peaks, z=z, shortlist=shortlist, seconds=seconds, valid_fraction=float(valid.mean()))
 
-        stage2 = run_fine_stage(self.matcher, canvas, valid, level, peaks, self.level_images)
-        self._lap(seconds, "fine", clock)
-        return dict(peaks=peaks, z=z, stage2=stage2, seconds=seconds, valid_fraction=float(valid.mean()))
+    def candidates_for_query(self, item, prior_m, level, geometry=None):
+        """One query picture through the whole pipeline up to the fine stage. Returns dict(peaks, z, stage2, seconds, valid_fraction, shortlist)."""
+        found = self.prepare_query(item, prior_m, level, geometry)
+        clock = self._now()
+        stage2 = run_fine_stage(self.matcher, found["canvas"], found["valid"], level, found["peaks"], self.level_images)
+        self._lap(found["seconds"], "fine", clock)
+        return dict(peaks=found["peaks"], z=found["z"], stage2=stage2, seconds=found["seconds"], valid_fraction=found["valid_fraction"], shortlist=found["shortlist"])
 
     def decide_answer(self, peaks, stage2, z):
         """Choose the place and decide whether to answer. Returns x, y, inliers, chosen, z_chosen, answered."""

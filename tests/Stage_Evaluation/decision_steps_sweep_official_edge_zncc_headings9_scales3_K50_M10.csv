@@ -1,0 +1,13 @@
+what,value,score (/60),wrong answers,answered,seconds per photo
+escalation bar,8,51.36,1,0.91,5.981661427021026
+escalation bar,9,52.56,0,0.9,5.981661427021026
+escalation bar,10,52.56,0,0.9,5.981661427021026
+escalation bar,11,52.56,0,0.9,5.981661427021026
+escalation bar,12,52.56,0,0.9,5.981661427021026
+escalation bar,13,52.56,0,0.9,5.981661427021026
+"agreement radius (sigma), queries","0.5, 2",51.36,0,0.88,6.365378015041351
+"agreement radius (sigma), queries","0.5, 3",51.12,0,0.88,6.754433376789093
+"agreement radius (sigma), queries","1.0, 2",52.56,0,0.9,5.981661427021026
+"agreement radius (sigma), queries","1.0, 3",51.12,0,0.88,6.416142053604126
+"agreement radius (sigma), queries","2.0, 2",52.56,0,0.9,5.981661427021026
+"agreement radius (sigma), queries","2.0, 3",51.12,0,0.88,6.416142053604126

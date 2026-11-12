@@ -1,0 +1,13 @@
+,"old setting (1 query, K=100, M=25)",plain (heading 0),"3 headings (-5, 0, +5)",5 headings (step 5),9 headings (step 2.5),"standard 6 (-5, 0, +5 x 1.0, 1.05)",wide 27 (9 headings x 3 scales)
+2 coarse: target in the K places,0.88,0.88,0.99,1.0,1.0,0.99,1.0
+3 DINO: target in the M kept,0.88,0.88,0.99,1.0,1.0,0.99,1.0
+3 DINO: target lost by keeping M of K,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+"4 fine: right chosen, if target in M",0.9659090909090909,0.9772727272727273,0.9292929292929293,0.9,0.92,0.9494949494949495,0.93
+5 decision: answered,0.71,0.7,0.77,0.8,0.86,0.81,0.9
+5 decision: right when answered (4 sigma),0.9859154929577465,1.0,1.0,1.0,1.0,1.0,0.9888888888888889
+5 decision: answerable photos answered,0.8235294117647058,0.813953488372093,0.8369565217391305,0.8888888888888888,0.9347826086956522,0.8709677419354839,0.967391304347826
+5 decision: wrong answers (-20),1.0,0.0,0.0,0.0,0.0,0.0,1.0
+points lost by skipping (/60),8.76,9.36,8.28,5.76,3.6,6.96,1.8
+points lost to wrong answers (/60),1.2,0.0,0.0,0.0,0.0,0.0,1.2
+score (/60),39.6,40.800000000000004,44.76,46.56,49.68,47.160000000000004,50.76
+queries per photo,1.0,1.0,3.0,5.0,9.0,6.0,27.0

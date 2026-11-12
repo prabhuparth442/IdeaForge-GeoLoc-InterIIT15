@@ -1,0 +1,9 @@
+variant,bar,points diff vs LoFTR chosen,95% low,95% high,excludes 0
+LoFTR old,8,-1.57,-2.19,-0.96,True
+LoFTR old,12,-2.04,-2.67,-1.449749999999999,True
+XoFTR default,8,-0.21,-0.735,0.33,False
+XoFTR default,12,-0.65,-1.22,-0.08,True
+XoFTR coarse 0.2,8,0.34,-0.2,0.92,False
+XoFTR coarse 0.2,12,0.48,0.0,0.97,False
+XoFTR loose 0.1/0.05,8,-0.62,-1.47,0.21,False
+XoFTR loose 0.1/0.05,12,0.12,-0.64,0.84,False

@@ -17,7 +17,9 @@ class StandInLoftr:
         confidence[60:90] = 0.35
         moved[90:] = (rng.uniform(20, 200, size=(30, 2)) * k).astype(np.float32)
         confidence[90:] = 0.25
-        return dict(keypoints0=torch.from_numpy(points), keypoints1=torch.from_numpy(moved), confidence=torch.from_numpy(confidence))
+        count = batch["image0"].shape[0]                      # every picture pair of the batch gets the same 120 matches; batch_indexes says which pair each belongs to
+        return dict(keypoints0=torch.from_numpy(points).repeat(count, 1), keypoints1=torch.from_numpy(moved).repeat(count, 1),
+                    confidence=torch.from_numpy(confidence).repeat(count), batch_indexes=torch.arange(count).repeat_interleave(120))
 
 
 def _setup():
@@ -125,6 +127,35 @@ def test_margin_grows_both_pictures_and_keeps_the_shift_frame():
     except AssertionError:
         return
     raise AssertionError("a margin that is not a multiple of 4 must be refused")
+
+
+def test_batches_give_the_same_matches_as_one_pair_per_call():
+    from fine_matching.loftr_matcher import LoftrMatcher, candidate_matches, candidate_matches_group, stage2_from_matches
+    calls = []
+
+    class Counter(StandInLoftr):
+        def __call__(self, batch):
+            calls.append(batch["image0"].shape[0])
+            return super().__call__(batch)
+
+    w, canvas, valid, level, peaks = _peaks_and_world()
+    levels = w["store"]["levels"]
+    alone = candidate_matches(LoftrMatcher(Counter(), 0.3, batch_size=1), canvas, valid, level, peaks[:5], levels)
+    assert calls == [1, 1, 1, 1, 1]
+    calls.clear()
+    together = candidate_matches(LoftrMatcher(Counter(), 0.3, batch_size=3), canvas, valid, level, peaks[:5], levels)
+    assert calls == [3, 2]                                                               # 5 pairs, 3 per call
+    assert np.allclose(stage2_from_matches(alone, level, 0.3)["inliers"], stage2_from_matches(together, level, 0.3)["inliers"])
+    calls.clear()
+    jobs = [dict(canvas=canvas, valid=valid, level=level, peaks=peaks[:3]), dict(canvas=canvas, valid=valid, level=level, peaks=peaks[3:6])]
+    group = candidate_matches_group(LoftrMatcher(Counter(), 0.3, batch_size=6), jobs, levels)
+    assert calls == [6] and len(group) == 2                                              # the pairs of both jobs went through in one call
+    assert len(group[0]["items"]) == 3 and len(group[1]["items"]) == 3
+    try:
+        LoftrMatcher(StandInLoftr(), 0.3, batch_size=0)
+    except AssertionError:
+        return
+    raise AssertionError("a batch size below 1 must be refused")
 
 
 run_tests(globals())

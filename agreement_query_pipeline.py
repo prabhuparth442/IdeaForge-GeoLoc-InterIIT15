@@ -13,10 +13,14 @@ run(item, prior) returns the keys of HeadingQueryPipeline.run plus agreement, es
 """
 import time
 
-from coarse_search.heading_queries import query_geometry, query_list
+import torch
+
+from coarse_search.heading_queries import query_list
 from header.scoring import sigma_m
+from header.settings import DEVICE
 from heading_query_pipeline import HeadingQueryPipeline
 from image_processing.map_levels import level_for_height
+from single_photo_pipeline import STAGES
 from semantic_rerank.agreement import (AGREE_MIN_QUERIES, AGREE_QUERY_INLIERS, AGREE_RADIUS_SIGMA, ESCALATION_MIN_INLIERS,
                                        decide_with_agreement, query_agreement)
 
@@ -48,22 +52,20 @@ class AgreementQueryPipeline(HeadingQueryPipeline):
         lines.append("escalation: %s; %d wide queries, answer at >= %d inliers" % ("on" if self.escalate else "off", len(self.wide_queries), self.escalation_min_inliers))
         return lines
 
-    def _run_list(self, item, prior_m, level, queries, done):
-        """Results for `queries` (ids renumbered 0..n-1); a query with the same heading and scale in `done` is reused, not run again."""
-        reuse = {(q["heading"], q["scale_factor"]): q for q in done}
-        results = []
-        for position, query in enumerate(queries):
-            key = (query["heading"], query["scale_factor"])
-            if key in reuse:
-                found = dict(reuse[key])
-            else:
-                found = self.candidates_for_query(item, prior_m, level, query_geometry(query["heading"], query["scale_factor"]))
-                found.update(query)
-            found["id"] = position
-            results.append(found)
-        return results
+    def seconds_per_stage(self, queries, decision_seconds):
+        # the time of every query that was run, added up by stage (queries that were reused from the first step count once)
+        seconds = {}
+        for label in STAGES:
+            seconds[label] = 0.0
+            for query in queries:
+                if label != "decision":
+                    seconds[label] += query["seconds"][label]
+        seconds["decision"] = decision_seconds
+        return seconds
 
     def run(self, item, prior_m):
+        if DEVICE == "cuda":
+            torch.cuda.reset_peak_memory_stats()
         start = time.perf_counter()
         found = self.run_queries(item, prior_m)
         queries = found["queries"]
@@ -72,15 +74,23 @@ class AgreementQueryPipeline(HeadingQueryPipeline):
         sigma = sigma_m(item["rel_height"], self.camera.fx)
         agreement = query_agreement(queries, ids, answer["x"], answer["y"], self.agree_radius_sigma * sigma, self.agree_query_inliers)
         answered = decide_with_agreement(answer["inliers"], agreement, self.min_inliers, self.min_agree)
+        decision_seconds = time.perf_counter() - start
+        for query in queries:
+            decision_seconds -= sum(query["seconds"].values())
         stage = ("bar" if answer["inliers"] >= self.min_inliers else "agreement") if answered else "skip"
         escalated = False
         if not answered and self.escalate:
             level = level_for_height(item["rel_height"], self.camera)
-            queries = self._run_list(item, prior_m, level, self.wide_queries, queries)
+            queries = self.run_query_list(item, prior_m, level, self.wide_queries, queries)
             answer = self.answer_for(queries, [q["id"] for q in queries])
             escalated = True
             answered = bool(answer["inliers"] >= self.escalation_min_inliers)
             stage = "escalation" if answered else "skip"
-        answer.update(answered=answered, agreement=int(agreement), escalated=escalated, stage=stage, sigma_m=float(sigma),
+        gpu_peak_mb = 0.0
+        if DEVICE == "cuda":
+            gpu_peak_mb = torch.cuda.max_memory_allocated() / 1e6
+            torch.cuda.empty_cache()
+        answer.update(seconds=self.seconds_per_stage(queries, max(decision_seconds, 0.0)), gpu_peak_mb=gpu_peak_mb,
+                      answered=answered, agreement=int(agreement), escalated=escalated, stage=stage, sigma_m=float(sigma),
                       level=int(found["level"]), queries=queries, n_queries_run=len(queries), total=time.perf_counter() - start)
         return answer

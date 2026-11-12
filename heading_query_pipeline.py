@@ -4,14 +4,18 @@ through coarse search, DINO layer and fine stage, and the answer is chosen among
 Same settings as SinglePhotoPipeline (k_peaks and m_fine are per query), plus:
   headings       degrees added to the photo's yaw, one query each (default: -10 to +10 in steps of 2.5, 9 queries)
   scale_factors  the scale of the projection is multiplied by each of these (default: only 1.0); queries = headings x scale_factors
+  query_group    how many queries have their LoFTR pairs matched together (1 = each query alone). With loftr_batch it sets how many pairs one network call gets
 run_queries(item, prior) returns every query's own candidates; answer_for(queries, ids) decides from any subset of them, without running anything again.
 run(item, prior) is run_queries + answer_for(all) and returns the same keys as SinglePhotoPipeline.run, plus the per-query results.
 """
 import numpy as np
 import torch
 
+import cv2
+
 from coarse_search.heading_queries import DEFAULT_HEADINGS, choose_with_heading_penalty, pool_queries, query_geometry, query_list
-from header.settings import DEVICE
+from fine_matching.loftr_matcher import candidate_matches_group, stage2_from_matches
+from header.settings import DEVICE, SEED
 from image_processing.map_levels import level_for_height
 from semantic_rerank.decision import decide_with_dino
 from single_photo_pipeline import SinglePhotoPipeline, STAGES
@@ -19,14 +23,16 @@ from train.coarse_methods import build_methods
 
 
 class HeadingQueryPipeline(SinglePhotoPipeline):
-    def __init__(self, *args, headings=None, scale_factors=(1.0,), **kwargs):
+    def __init__(self, *args, headings=None, scale_factors=(1.0,), query_group=1, **kwargs):
         super().__init__(*args, **kwargs)
+        assert query_group >= 1, "query_group must be 1 or more"
+        self.query_group = query_group
         self.headings = list(DEFAULT_HEADINGS if headings is None else headings)
         self.scale_factors = list(scale_factors)
         self.queries = query_list(self.headings, self.scale_factors)
 
     @classmethod
-    def from_pipeline(cls, base, headings=None, scale_factors=(1.0,), k_peaks=None, m_fine=None, coarse=None):
+    def from_pipeline(cls, base, headings=None, scale_factors=(1.0,), k_peaks=None, m_fine=None, coarse=None, query_group=1):
         """A heading pipeline that uses the parts an already set-up SinglePhotoPipeline holds (photos, map, models, matcher, DINO): nothing is loaded
         again. k_peaks / m_fine: K and M per query (None = as in `base`). coarse: None = the coarse method of `base`; "edge_zncc" = the cheap one-map
         method, even if `base` uses the fused one (the heading queries are then 9 times the cost of one query, not of six maps)."""
@@ -38,6 +44,8 @@ class HeadingQueryPipeline(SinglePhotoPipeline):
             self.k_peaks = k_peaks
         if m_fine is not None:
             self.m_fine = m_fine
+        assert query_group >= 1, "query_group must be 1 or more"
+        self.query_group = query_group
         assert 1 <= self.m_fine <= self.k_peaks, "need 1 <= M <= K, got M=%s K=%s" % (self.m_fine, self.k_peaks)
         if coarse == "edge_zncc" and base.coarse_name != "edge_zncc":
             self.coarse = "edge_zncc"
@@ -51,7 +59,7 @@ class HeadingQueryPipeline(SinglePhotoPipeline):
 
     def describe(self):
         lines = super().describe()
-        lines.append("queries per photo: %d (headings %s, scale factors %s); K and M are per query" % (len(self.queries), self.headings, self.scale_factors))
+        lines.append("queries per photo: %d (headings %s, scale factors %s); K and M are per query; %d queries matched together" % (len(self.queries), self.headings, self.scale_factors, self.query_group))
         return lines
 
     def run_queries(self, item, prior_m):
@@ -61,13 +69,63 @@ class HeadingQueryPipeline(SinglePhotoPipeline):
         assert len(prior_m) == 2 and np.isfinite(prior_m).all(), "prior_m must be (x east, y south) in metres"
         assert item["rel_height"] > 0, "photo height must be above 0 m"
         level = level_for_height(item["rel_height"], self.camera)
+        return dict(level=level, queries=self.run_query_list(item, prior_m, level, self.queries))
+
+    def run_query_list(self, item, prior_m, level, queries, done=()):
+        """Results for `queries` (ids renumbered 0..n-1). A query with the same heading and scale in `done` is reused, not run again. With
+        query_group > 1 and the LoFTR matcher, the LoFTR pairs of query_group queries are matched together (the other stages run per query)."""
+        reuse = {}
+        for old in done:
+            reuse[(old["heading"], old["scale_factor"])] = old
+        results = [None] * len(queries)
+        todo = []
+        for position, query in enumerate(queries):
+            key = (query["heading"], query["scale_factor"])
+            if key in reuse:
+                results[position] = dict(reuse[key])
+            else:
+                todo.append(position)
+        group_size = 1
+        if hasattr(self.matcher, "loftr_model"):
+            group_size = self.query_group
+        for start in range(0, len(todo), group_size):
+            positions = todo[start:start + group_size]
+            if group_size == 1:
+                found = self.candidates_for_query(item, prior_m, level, query_geometry(queries[positions[0]]["heading"], queries[positions[0]]["scale_factor"]))
+                found.update(queries[positions[0]])
+                results[positions[0]] = found
+            else:
+                found_group = self.run_group(item, prior_m, level, [queries[position] for position in positions])
+                for position, found in zip(positions, found_group):
+                    results[position] = found
+        for position in range(len(results)):
+            results[position]["id"] = position
+        return results
+
+    def run_group(self, item, prior_m, level, group):
+        """The queries of `group` through render, maps, coarse and DINO one by one, then all their LoFTR pairs together."""
+        prepared = []
+        for query in group:
+            prepared.append(self.prepare_query(item, prior_m, level, query_geometry(query["heading"], query["scale_factor"])))
+        clock = self._now()
+        jobs = []
+        for found in prepared:
+            jobs.append(dict(canvas=found["canvas"], valid=found["valid"], level=level, peaks=found["peaks"]))
+        stored = candidate_matches_group(self.matcher, jobs, self.level_images)
+        fine_seconds = self._now() - clock
+        pairs_total = 0
+        for found in prepared:
+            pairs_total += int((found["peaks"][:, 1] < 1e8).sum())
         results = []
-        for query in self.queries:
-            geometry = query_geometry(query["heading"], query["scale_factor"])
-            found = self.candidates_for_query(item, prior_m, level, geometry)
-            found.update(query)
-            results.append(found)
-        return dict(level=level, queries=results)
+        for query, found, kept in zip(group, prepared, stored):
+            cv2.setRNGSeed(SEED)
+            stage2 = stage2_from_matches(kept, level, self.matcher.min_confidence)
+            pairs = int((found["peaks"][:, 1] < 1e8).sum())
+            found["seconds"]["fine"] = fine_seconds * pairs / max(pairs_total, 1)      # the shared network time, split by the number of pairs
+            result = dict(peaks=found["peaks"], z=found["z"], stage2=stage2, seconds=found["seconds"], valid_fraction=found["valid_fraction"], shortlist=found["shortlist"])
+            result.update(query)
+            results.append(result)
+        return results
 
     def answer_for(self, results, ids, heading_penalty=0.0):
         """The decision made from the candidates of the queries `ids` only. heading_penalty: inliers per degree that a candidate pays for the heading of its

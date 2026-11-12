@@ -1,7 +1,8 @@
 """Block: turn the queries of one photo into table rows for the heading-query test (no plotting, no GPU).
 
 query_rows      one row per query: did it find the place, with how many inliers, how long it took
-variant_rows    one row per variant (a chosen subset of the queries): the answer the pipeline would give from that subset, and its points
+variant_rows    one row per variant (a chosen subset of the queries): the answer the pipeline would give from that subset, its points, and the stage flags
+                (in_K: a query's K places hold the target, in_M: the kept M places do, chosen_right: the chosen place is right, all before the fine shift)
 summarise       a table of variant rows -> score, answered, wrong answers, recall, wrong candidates that reach the bar
 """
 import math
@@ -29,6 +30,11 @@ def candidate_errors(peaks, shifts, truth, sigma):
         if peaks[k, 1] < 1e8:
             errors[k] = math.hypot(peaks[k, 1] + shifts[k, 0] - truth[0], peaks[k, 2] + shifts[k, 1] - truth[1]) / sigma
     return errors
+
+
+def peak_errors(peaks, truth, sigma):
+    """Distance in sigma of each place the search proposed (before the fine stage moves it) from the truth."""
+    return candidate_errors(peaks, np.zeros((len(peaks), 2)), truth, sigma)
 
 
 def query_rows(found, truth, sigma, found_sigma, bar):
@@ -60,12 +66,18 @@ def variant_rows(pipeline, found, variants, truth, sigma, height, focal_px, foun
         error_m = math.hypot(answer["x"] - truth[0], answer["y"] - truth[1])
         earned = points_for_error(error_m, height, focal_px)
         wrong_at_bar = bool(((errors > found_sigma) & (inliers >= bar)).any())
+        in_k = False
+        for query_id in ids:
+            if (peak_errors(found["queries"][query_id]["shortlist"], truth, sigma) <= found_sigma).any():
+                in_k = True
+        place_errors = peak_errors(answer["peaks"], truth, sigma)
         seconds = 0.0
         for query_id in ids:
             seconds += sum(found["queries"][query_id]["seconds"].values())
         row = dict(variant=name, n_queries=len(ids), x=answer["x"], y=answer["y"], answered=answer["answered"], inliers=answer["inliers"],
                    err_m=error_m, err_sigma=error_m / sigma, would_earn=earned, points=earned if answer["answered"] else 0,
                    target_found=bool((errors <= found_sigma).any()), wrong_candidate_at_bar=wrong_at_bar,
+                   in_K=in_k, in_M=bool((place_errors <= found_sigma).any()), chosen_right=bool(place_errors[answer["chosen"]] <= found_sigma),
                    winning_heading=float(found["queries"][int(answer["owner"][answer["chosen"]])]["heading"]),
                    winning_scale_factor=float(found["queries"][int(answer["owner"][answer["chosen"]])]["scale_factor"]), seconds=seconds)
         rows.append(row)

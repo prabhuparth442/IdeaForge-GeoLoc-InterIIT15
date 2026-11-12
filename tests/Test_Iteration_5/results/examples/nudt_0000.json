@@ -1,0 +1,62 @@
+{
+ "camera": {
+  "fx": 390.64089521871824,
+  "fy": 390.64089521871824,
+  "cx": 159.5,
+  "cy": 127.5,
+  "width": 320,
+  "height": 256,
+  "k1": 0.0,
+  "k2": 0.0,
+  "k3": 0.0,
+  "p1": 0.0,
+  "p2": 0.0
+ },
+ "pose": {
+  "east": 695235.639682791,
+  "north": 3125195.212597065,
+  "height": 120.0,
+  "yaw": 88.1,
+  "pitch": 0.0,
+  "roll": 0.0
+ },
+ "camera_ground_point": {
+  "east": 695235.639682791,
+  "north": 3125195.212597065,
+  "note": "point straight below the camera"
+ },
+ "image_centre_ground_point": {
+  "east": 695235.4912659125,
+  "north": 3125195.0539953304,
+  "note": "ground point seen by the pixel at the principal point"
+ },
+ "map": {
+  "name": "",
+  "crs": "EPSG:32649",
+  "gsd": 0.29999799077170775,
+  "bands": [
+   1,
+   2,
+   3
+  ]
+ },
+ "ground_model": "flat",
+ "crop_gsd_m": 0.3071875000004479,
+ "pixel_footprint_m": {
+  "median": 0.3071875000004479,
+  "min": 0.30718749994227224,
+  "max": 0.30718750023315056
+ },
+ "appearance": {
+  "name": "regional_detail",
+  "strength": 1.0
+ },
+ "sensor": "default",
+ "valid_fraction": 1.0,
+ "simulator_version": "0.1",
+ "seed": [
+  11,
+  0
+ ],
+ "index": 0
+}

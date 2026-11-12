@@ -133,13 +133,14 @@ def rerank_peaks(peaks, dino_score, weight=WEIGHT, keep=NUM_PEAKS):
     return result
 
 
-def semantic_layer(encoder, score_map, geometry, canvas, valid, level, level_images, weight=WEIGHT, shortlist=SHORTLIST, keep=NUM_PEAKS):
+def semantic_layer(encoder, score_map, geometry, canvas, valid, level, level_images, weight=WEIGHT, shortlist=SHORTLIST, keep=NUM_PEAKS, batch=25):
     """The whole layer: coarse score map in, the best `keep` (M) of the `shortlist` (K) places out, in the layout of pick_peaks.
     K = how many places the coarse search returns, M = how many go on to the fine stage (M <= K).
+    batch: places per DINO call (more = faster up to the GPU memory limit).
     Also returns the DINO scores of the shortlist, for logging."""
     assert 1 <= keep <= shortlist, "need 1 <= keep (M) <= shortlist (K), got M=%d K=%d" % (keep, shortlist)
     short = shortlist_peaks(score_map, geometry, shortlist)
-    pooled, dense = dino_candidate_scores(encoder, canvas, valid, level_images, level, short)
+    pooled, dense = dino_candidate_scores(encoder, canvas, valid, level_images, level, short, batch)
     return rerank_peaks(short, dense, weight, keep=keep), dict(shortlist=short, pooled=pooled, dense=dense)
 
 

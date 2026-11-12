@@ -1,0 +1,10 @@
+phase,queries,score (/60),wrong answers,answered,seconds per photo,over 22 s,over 30 s
+1 query (this notebook's baseline),1.0,39.6,1,0.71,1.2823542909135348,0,0
+"plain (heading 0), answer at the bar",1.0,40.800000000000004,0,0.7,0.6616381692886353,0,0
+"3 headings (-5, 0, +5), answer at the bar",3.0,44.76,0,0.77,1.984830276966095,0,0
+"5 headings (step 5), answer at the bar",5.0,46.56,0,0.8,3.3075161170959473,0,0
+"9 headings (step 2.5), answer at the bar",9.0,49.68,0,0.86,5.954536955356598,0,0
+"standard 6 (-5, 0, +5 x 1.0, 1.05), answer at the bar",6.0,47.160000000000004,0,0.81,3.9696957945823668,0,0
+"wide 27 (9 headings x 3 scales), answer at the bar",27.0,50.76,1,0.9,17.86813200712204,23,0
+standard 6 + agreement,6.0,50.76,0,0.87,3.9696957945823668,0,0
+standard 6 + escalation (27 queries),8.73,52.56,0,0.9,5.981661427021026,5,0

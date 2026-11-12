@@ -1,0 +1,3 @@
+matcher,photos,score (/60),answered,<= 1 sigma,<= 2 sigma,<= 4 sigma,answered wrong (-20),median error (m),mean inliers (chosen),mean s per photo
+LoFTR,100,56.64,0.96,0.95,0.99,0.99,0,4.677895328875878,66.42,3.9511987948417664
+XoFTR,100,50.28,0.85,0.92,0.97,0.97,0,4.710185131421385,72.1,3.581038861274719

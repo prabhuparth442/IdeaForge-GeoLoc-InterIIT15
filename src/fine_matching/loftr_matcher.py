@@ -15,6 +15,9 @@ Two settings about the query picture (both off by default, both tested in Stage_
   margin:    the canvas and the map window are both grown by this many grey / map pixels on every side before LoFTR sees them (a multiple of 4),
              so matches near the canvas edge have context. The network must be run again for every value.
 
+Batching: loftr_batch pairs go through the network in one call (1 = one pair per call, as before). A candidate list, or the candidate lists of
+several queries (candidate_matches_group), is cut into batches of that size. More pairs per call is faster on a GPU up to the memory limit.
+
 Inlier counts are on a different scale from LightGlue's (measured on 100 official photos: median 30 inliers on the correct place, 0 to 4 on
 wrong places), so the answer bar (min_inliers) and the DINO decision constants (GAMMA, rescue rules) need their own values for this matcher.
 """
@@ -31,8 +34,10 @@ from image_processing.map_levels import level_gsd, map_piece
 
 
 class LoftrMatcher:
-    def __init__(self, loftr_model, min_confidence, upscale=1.0, border_px=0, margin=0):
+    def __init__(self, loftr_model, min_confidence, upscale=1.0, border_px=0, margin=0, batch_size=1):
         assert upscale >= 1.0, "upscale must be 1 or more (the pictures are only enlarged)"
+        assert batch_size >= 1, "batch_size must be 1 or more"
+        self.batch_size = batch_size
         assert border_px >= 0, "border_px must be 0 or more"
         assert margin >= 0 and margin % 4 == 0, "margin must be a multiple of 4 pixels (LoFTR needs sides that are multiples of 8)"
         self.border_px = border_px
@@ -42,11 +47,12 @@ class LoftrMatcher:
         self.upscale = upscale
 
 
-def load_loftr_matcher(weights_file, min_confidence=0.2, upscale=1.0, coarse_threshold=None, border_px=0, margin=0):
+def load_loftr_matcher(weights_file, min_confidence=0.2, upscale=1.0, coarse_threshold=None, border_px=0, margin=0, batch_size=1):
     """kornia LoFTR with the MINIMA weights (read from disk, nothing is downloaded). min_confidence: matches below it are dropped.
     upscale: both pictures are enlarged by this factor before LoFTR sees them (224 px -> a 28 x 28 coarse grid, 2.0 -> 56 x 56), the matches are
              mapped back to the 224 px frame. 1.0 = as before.
     border_px, margin: see the top of this file (0 = off).
+    batch_size: pairs per network call (see the top of this file).
     coarse_threshold: LoFTR's own cut on the coarse matching probability (None = kornia's 0.2). Lower = more, weaker matches."""
     from kornia.feature import LoFTR
 
@@ -60,7 +66,7 @@ def load_loftr_matcher(weights_file, min_confidence=0.2, upscale=1.0, coarse_thr
         assert 0 < coarse_threshold < 1, "coarse_threshold must be between 0 and 1"
         model.coarse_matching.thr = coarse_threshold
     model.to(DEVICE).eval()
-    return LoftrMatcher(model, min_confidence, upscale, border_px, margin)
+    return LoftrMatcher(model, min_confidence, upscale, border_px, margin, batch_size)
 
 
 def as_tensor(gray):
@@ -69,19 +75,46 @@ def as_tensor(gray):
 
 
 @torch.no_grad()
-def loftr_matches(loftr_matcher, picture_a, picture_b):
-    """Every match LoFTR proposes (no confidence cut): positions in picture_a (n, 2), in picture_b (n, 2) and the confidence (n,).
-    LoFTR itself drops matches below 0.2, so a min_confidence under 0.2 changes nothing."""
-    assert picture_a.shape == picture_b.shape and picture_a.shape[0] % 8 == 0 and picture_a.shape[1] % 8 == 0, "LoFTR needs pictures with sides that are multiples of 8"
-    size = picture_a.shape[0]
+def run_loftr_chunk(loftr_matcher, chunk):
+    """One network call for the pairs in `chunk` (a list of (picture_a, picture_b), all the same square size). Returns one
+    (points_a, points_b, confidence) per pair, no confidence cut. LoFTR itself drops matches below 0.2."""
+    size = chunk[0][0].shape[0]
     big = int(round(size * loftr_matcher.upscale / 8)) * 8                     # a multiple of 8 again
-    if big != size:
-        picture_a = cv2.resize(np.asarray(picture_a, dtype=np.float32), (big, big), interpolation=cv2.INTER_CUBIC)
-        picture_b = cv2.resize(np.asarray(picture_b, dtype=np.float32), (big, big), interpolation=cv2.INTER_CUBIC)
-    found = loftr_matcher.loftr_model({"image0": as_tensor(picture_a), "image1": as_tensor(picture_b)})
+    first = []
+    second = []
+    for picture_a, picture_b in chunk:
+        assert picture_a.shape == picture_b.shape == (size, size) and size % 8 == 0, "LoFTR needs square pictures of the same size, a multiple of 8"
+        if big != size:
+            picture_a = cv2.resize(np.asarray(picture_a, dtype=np.float32), (big, big), interpolation=cv2.INTER_CUBIC)
+            picture_b = cv2.resize(np.asarray(picture_b, dtype=np.float32), (big, big), interpolation=cv2.INTER_CUBIC)
+        first.append(np.asarray(picture_a, dtype=np.float32))
+        second.append(np.asarray(picture_b, dtype=np.float32))
+    images_a = torch.from_numpy(np.clip(np.stack(first), 0.0, 1.0))[:, None].to(DEVICE)
+    images_b = torch.from_numpy(np.clip(np.stack(second), 0.0, 1.0))[:, None].to(DEVICE)
+    found = loftr_matcher.loftr_model({"image0": images_a, "image1": images_b})
     back = size / big                                                           # matches go back to the original picture frame
-    return (found["keypoints0"].cpu().numpy().astype(np.float32) * back, found["keypoints1"].cpu().numpy().astype(np.float32) * back,
-            found["confidence"].cpu().numpy().astype(np.float32))
+    points_a = found["keypoints0"].cpu().numpy().astype(np.float32) * back
+    points_b = found["keypoints1"].cpu().numpy().astype(np.float32) * back
+    confidence = found["confidence"].cpu().numpy().astype(np.float32)
+    pair_of_match = found["batch_indexes"].cpu().numpy()
+    results = []
+    for slot in range(len(chunk)):
+        mine = pair_of_match == slot
+        results.append((points_a[mine], points_b[mine], confidence[mine]))
+    return results
+
+
+def loftr_matches(loftr_matcher, picture_a, picture_b):
+    """Every match LoFTR proposes for one pair (no confidence cut): positions in picture_a (n, 2), in picture_b (n, 2) and the confidence (n,)."""
+    return run_loftr_chunk(loftr_matcher, [(picture_a, picture_b)])[0]
+
+
+def loftr_matches_many(loftr_matcher, pairs):
+    """loftr_matches for a list of pairs, loftr_matcher.batch_size pairs per network call. Returns a list, one result per pair."""
+    results = []
+    for start in range(0, len(pairs), loftr_matcher.batch_size):
+        results.extend(run_loftr_chunk(loftr_matcher, pairs[start:start + loftr_matcher.batch_size]))
+    return results
 
 
 def loftr_pairs(loftr_matcher, picture_a, picture_b):
@@ -151,21 +184,35 @@ def check_candidate_loftr(loftr_matcher, canvas_picture, reliable, level_images,
     return result
 
 
+def candidate_matches_group(loftr_matcher, jobs, level_images):
+    """The raw LoFTR matches of the candidates of one or several queries, the pairs of all jobs cut into batches together.
+    jobs: list of dict(canvas, valid, level, peaks). Returns one dict per job, the one candidate_matches gives:
+    dict(inside=..., margin=..., border_px=..., items=[dict(points_a, points_b, confidence) or None for an empty slot])."""
+    margin = loftr_matcher.margin
+    stored = []
+    pairs = []
+    places = []                       # (job number, candidate number) of every pair
+    for number, job in enumerate(jobs):
+        peaks = job["peaks"]
+        assert peaks.ndim == 2 and peaks.shape[1] >= 3, "peaks must be (M, >= 3), got %s" % (peaks.shape,)
+        canvas_picture, inside = prepare_loftr_canvas(job["canvas"], job["valid"], margin)
+        stored.append(dict(inside=inside, margin=margin, border_px=loftr_matcher.border_px, items=[None] * len(peaks)))
+        for k in range(len(peaks)):
+            if peaks[k, 1] > 1e8:
+                continue
+            tile = map_piece(level_images, job["level"], peaks[k, 1], peaks[k, 2], canvas_picture.shape[0])
+            pairs.append((canvas_picture, tile))
+            places.append((number, k))
+    found = loftr_matches_many(loftr_matcher, pairs)
+    for (number, k), (points_a, points_b, confidence) in zip(places, found):
+        stored[number]["items"][k] = dict(points_a=points_a, points_b=points_b, confidence=confidence)
+    return stored
+
+
 def candidate_matches(loftr_matcher, canvas, valid, level, peaks, level_images):
     """The raw LoFTR matches of every candidate, to be turned into inliers later with stage2_from_matches (any min_confidence, any RANSAC distance)
     without running the network again. Returns dict(inside=..., margin=..., border_px=..., items=[dict(points_a, points_b, confidence) or None for an empty slot])."""
-    assert peaks.ndim == 2 and peaks.shape[1] >= 3, "peaks must be (M, >= 3), got %s" % (peaks.shape,)
-    margin = loftr_matcher.margin
-    canvas_picture, inside = prepare_loftr_canvas(canvas, valid, margin)
-    items = []
-    for k in range(len(peaks)):
-        if peaks[k, 1] > 1e8:
-            items.append(None)
-            continue
-        tile = map_piece(level_images, level, peaks[k, 1], peaks[k, 2], canvas_picture.shape[0])
-        points_a, points_b, confidence = loftr_matches(loftr_matcher, canvas_picture, tile)
-        items.append(dict(points_a=points_a, points_b=points_b, confidence=confidence))
-    return dict(inside=inside, margin=margin, border_px=loftr_matcher.border_px, items=items)
+    return candidate_matches_group(loftr_matcher, [dict(canvas=canvas, valid=valid, level=level, peaks=peaks)], level_images)[0]
 
 
 def stage2_from_matches(stored, level, min_confidence, pixels=None, border_px=None, fit=None):
