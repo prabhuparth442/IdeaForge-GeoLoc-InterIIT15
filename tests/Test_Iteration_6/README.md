@@ -1,7 +1,8 @@
 # Test_Iteration_6: where the marks still go, and what recovers them
 
 2026-11-13, one overnight session. Brief: [`PROMPT.md`](PROMPT.md). Rules: `../../DESIGN.md` (notebook is the face, blocks do the work).
-Nothing in `src/` was edited (no `changed_src/` needed); new blocks are in `train/checks/`. Nothing committed.
+Nothing in `src/` was edited (no `changed_src/` needed); new blocks are in `train/checks/`. Committed on `palash/dev`.
+**Full detailed report: [`REPORT.md`](REPORT.md).**
 
 ## The short answer
 
