@@ -1,0 +1,5 @@
+set,model,score_before,score_after,gain,wrong_after,within_1sigma_before,within_1sigma_after
+official,GBM residual,53.54,54.17,"+0.63 [+0.13, +1.14]",0,0.951,0.98
+nudt101,GBM residual,55.56,55.64,"+0.08 [+0.00, +0.24]",0,0.989,0.993
+nudt202,GBM residual,57.36,57.48,"+0.12 [-0.24, +0.48]",0,0.984,0.99
+nudt404,GBM residual,53.43,53.31,"-0.12 [-0.72, +0.36]",4,0.958,0.953

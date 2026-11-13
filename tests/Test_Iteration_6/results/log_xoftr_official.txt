@@ -1,0 +1,2 @@
+[NbConvertApp] Converting notebook Rich_Dump_Run.ipynb to notebook
+[NbConvertApp] Writing 15865 bytes to Rich_Dump_Run_executed_xoftr_official.ipynb
