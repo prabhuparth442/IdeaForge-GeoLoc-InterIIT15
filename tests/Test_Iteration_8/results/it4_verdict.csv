@@ -1,0 +1,8 @@
+var,method,no_more_wrong,gain_nonneg,interval_above_0,counts
+pc,"T7 judge, NUDT only",True,True,True,True
+pc,two-tier,True,True,True,True
+pc,"two-tier, a_low 4",True,False,True,False
+jetson,"T7 judge, NUDT only",True,True,True,True
+jetson,"T7 judge, NUDT only + early exit",True,True,True,True
+jetson,two-tier,True,False,False,False
+jetson,two-tier + early exit,True,False,False,False

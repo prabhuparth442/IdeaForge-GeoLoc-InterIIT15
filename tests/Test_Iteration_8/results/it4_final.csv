@@ -1,0 +1,19 @@
+var,method,data,score,wrong,answered,queries,gain,above_bar,same_n_bar,bar_wrong,added_right,added_wrong,removed,removed_wrong
+pc,base: bar 8 / 11,official_test,48.619,0,160,10.005,"+0.00 [+0.00, +0.00]",0.0,8,0,0,0,0,0
+pc,base: bar 8 / 11,nudt707,54.04,3,280,7.82,"+0.00 [+0.00, +0.00]",0.0,8,3,0,0,0,0
+pc,"T7 judge, NUDT only",official_test,53.753,0,177,8.49,"+5.13 [+2.97, +7.61]",0.31,6,1,17,0,0,0
+pc,"T7 judge, NUDT only",nudt707,55.44,0,278,7.96,"+1.40 [+0.20, +3.00]",1.4,8,3,1,0,3,3
+pc,two-tier,official_test,52.392,0,173,9.139,"+3.77 [+1.11, +6.62]",1.61,7,1,18,0,5,0
+pc,two-tier,nudt707,54.64,1,277,8.1,"+0.60 [-1.00, +2.40]",0.6,8,3,1,1,5,3
+pc,"two-tier, a_low 4",official_test,53.01,0,175,8.706,"+4.39 [+1.55, +7.30]",-0.43,6,1,20,0,5,0
+pc,"two-tier, a_low 4",nudt707,53.84,3,279,8.03,"-0.20 [-2.20, +1.80]",-0.2,8,3,1,3,5,3
+jetson,base: Jetson today,official_test,49.237,0,162,6.742,"+0.00 [+0.00, +0.00]",0.0,8,0,0,0,0,0
+jetson,base: Jetson today,nudt707,54.04,2,277,6.333,"+0.00 [+0.00, +0.00]",0.0,8,2,0,0,0,0
+jetson,"T7 judge, NUDT only",official_test,52.825,0,174,6.469,"+3.59 [+1.48, +6.06]",1.11,7,1,13,0,1,0
+jetson,"T7 judge, NUDT only",nudt707,54.84,0,275,6.353,"+0.80 [+0.00, +2.00]",1.4,9,2,0,0,2,2
+jetson,"T7 judge, NUDT only + early exit",official_test,52.701,0,174,2.778,"+3.46 [+1.24, +6.00]",0.99,7,1,13,0,1,0
+jetson,"T7 judge, NUDT only + early exit",nudt707,54.84,0,275,2.027,"+0.80 [+0.00, +2.00]",1.4,9,2,0,0,2,2
+jetson,two-tier,official_test,51.155,0,169,6.531,"+1.92 [-0.31, +4.27]",-0.56,7,1,11,0,4,0
+jetson,two-tier,nudt707,53.84,2,276,6.34,"-0.20 [-0.60, +0.00]",-0.2,8,2,0,0,1,0
+jetson,two-tier + early exit,official_test,50.784,0,169,3.706,"+1.55 [-0.80, +4.02]",-0.93,7,1,11,0,4,0
+jetson,two-tier + early exit,nudt707,53.84,2,276,2.493,"-0.20 [-0.60, +0.00]",-0.2,8,2,0,0,1,0

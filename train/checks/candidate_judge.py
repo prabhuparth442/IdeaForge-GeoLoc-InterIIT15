@@ -123,9 +123,9 @@ def _pick(u, choose):
 
 def _row(data, photo, stage, c, n_queries):
     if c is None:
-        return dict(data=data, photo=photo, stage=stage, pts=0, err_sigma=np.nan, inliers=0.0, p=np.nan, n_queries=n_queries)
+        return dict(data=data, photo=photo, stage=stage, pts=0, err_sigma=np.nan, inliers=0.0, p=np.nan, n_queries=n_queries, x=np.nan, y=np.nan)
     return dict(data=data, photo=photo, stage=stage, pts=int(c["pts"]) if stage != "skip" else 0, err_sigma=float(c["err_sigma"]),
-                inliers=float(c["inliers"]), p=float(c["p"]), n_queries=n_queries)
+                inliers=float(c["inliers"]), p=float(c["p"]), n_queries=n_queries, x=float(c.get("x", np.nan)), y=float(c.get("y", np.nan)))
 
 
 def _passes(c, tau, override, bar):
