@@ -1,0 +1,2 @@
+[NbConvertApp] Converting notebook It4_Decision_Rule.ipynb to notebook
+[NbConvertApp] Writing 47514 bytes to It4_Decision_Rule_executed_all.ipynb

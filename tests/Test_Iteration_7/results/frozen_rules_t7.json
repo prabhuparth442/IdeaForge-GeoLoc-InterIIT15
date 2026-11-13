@@ -1,0 +1,59 @@
+{
+ "rule": {
+  "features": [
+   "li",
+   "z",
+   "rank",
+   "coarse",
+   "sharp",
+   "hull",
+   "cover9",
+   "spread",
+   "conf_inl",
+   "hc_ratio",
+   "scale_dev",
+   "angle",
+   "shift_px",
+   "resid",
+   "ln22",
+   "ratio",
+   "tfrac",
+   "zgap",
+   "ligap"
+  ],
+  "kind": "gbm",
+  "alpha": 0.005,
+  "tau_floor": 0.9,
+  "wide_tau": 0.95,
+  "override": 12,
+  "min_choice": 3
+ },
+ "variants": {
+  "pc": {
+   "tau": 0.9
+  },
+  "pc_early": {
+   "tau": 0.9,
+   "early_tau": 0.98
+  },
+  "jetson": {
+   "tau": 0.9,
+   "jetson": true,
+   "m": 5
+  },
+  "jetson_early": {
+   "tau": 0.9,
+   "jetson": true,
+   "m": 5,
+   "early_tau": 0.98
+  }
+ },
+ "seen_sets": [
+  "official",
+  "nudt101",
+  "nudt202",
+  "nudt404",
+  "nudt505"
+ ],
+ "note": "fixed before NUDT fresh 606 (seed 606, pool 2400, photos of fresh 404/505 excluded) was scored"
+}
