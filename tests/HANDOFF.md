@@ -24,7 +24,7 @@ For whoever continues on another machine. Everything below is on branch `palash/
   laptop's checkout stays on `prabhuparth/dev`; commits to `palash/dev` were made with a temporary git index (see section 6).
 - Notion: a page per iteration plus a summary under **InterIIT_UAV_GeoLoc** (page id `41642f5fcd9481e49ff3dd66d6fef3f6`).
 - Keep the user's email and personal details out of any external request.
-- **Open question for the user, do not assume:** is there a "satellite-only" constraint on training new learned components (no NUDT thermal
+- **Answered 2026-11-14: satellite-only** (no NUDT thermal training for learned components; see section 8).
   training)? Ask before shipping any NUDT-trained judge.
 - Time classes for a method's Jetson cost: < 4 s good, 4-6 s viable, >= 6 s slow (model: 2.2 s per LoFTR query at M = 5).
 
@@ -135,7 +135,9 @@ T6 summary + 8 iteration pages; T7 Iterations 1-6 + summary (with the team's rev
 
 ## 8. After T10: open directions
 
-- Answer the satellite-only question before shipping any NUDT-trained judge.
+- **Answered 2026-11-14: satellite-only.** Learned components must be trained on satellite imagery only, so every NUDT-trained judge of
+  T7-T10 (T8 NUDT-only judge, T10 V5 / J1 / J2) is research evidence, not shippable. Shippable now: non-learned changes (remove the 12-inlier
+  override; bars). Next: a judge trained on simulated drone views made from satellite map crops, tested on NUDT / official.
 - Remove the 12-inlier override in the submission; consider V5 (needs the running far-candidate level and the scale-augmented judge).
 - Upstream losses dominate now: NUDT "never retrieved" 8-17 photos per 300 (coarse / DINO); official "retrieved but rejected"; T9 metadata
   failures (height +20 %, heading beyond +-10 deg) and blur / resolution (relevant above 351 m, where no data exists).
