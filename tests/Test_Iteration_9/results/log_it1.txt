@@ -1,0 +1,2 @@
+[NbConvertApp] Converting notebook It1_Offline_Red_Team.ipynb to notebook
+[NbConvertApp] Writing 52177 bytes to It1_Offline_Red_Team_executed.ipynb

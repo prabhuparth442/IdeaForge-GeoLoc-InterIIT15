@@ -49,12 +49,16 @@ def add_features(table):
     return t
 
 
-def add_context(table, far_sigma=4.0):
-    """Query-local uniqueness (not agreement: it can only lower P): for every candidate, the strongest OTHER candidate of the same query that sits
+def add_context(table, far_sigma=4.0, m=None):
+    """m: only candidates of DINO rank < m take part (and get values; the others get NaN): the Jetson matches only M = 5 per query, so its
+    rivals must come from those 5, not from the 10 stored ones (T10 fix: before, the Jetson replay used context from all 10).
+    Query-local uniqueness (not agreement: it can only lower P): for every candidate, the strongest OTHER candidate of the same query that sits
     more than far_sigma sigma away. zgap = own z - that place's z; ligap = log(1 + own inliers) - log(1 + its inliers). Logic: a right place stands
     out from the rest of its own query; when a far place matches about as well, the photo is ambiguous (repeated buildings) and should be skipped."""
     parts = []
-    for _, g in table.groupby(["data", "photo", "query"], sort=False):
+    src = table if m is None else table[table["rank"] < m]
+    table = table.drop(columns=[c for c in ("zgap", "ligap") if c in table.columns])
+    for _, g in src.groupby(["data", "photo", "query"], sort=False):
         x, y, s = g["x"].to_numpy(), g["y"].to_numpy(), float(g["sigma"].iloc[0])
         li, z = g["inliers"].to_numpy(), g["z"].to_numpy()
         far = np.hypot(x[:, None] - x[None, :], y[:, None] - y[None, :]) > far_sigma * s
@@ -62,7 +66,10 @@ def add_context(table, far_sigma=4.0):
         other_li = np.where(far, li[None, :], 0).max(1)
         other_z = np.where(far, z[None, :], -5).max(1)
         parts.append(pd.DataFrame(dict(zgap=z - other_z, ligap=np.log1p(li) - np.log1p(other_li)), index=g.index))
-    return table.join(pd.concat(parts))
+    return table.join(pd.concat(parts)) if parts else table.assign(zgap=np.nan, ligap=np.nan)
+
+
+NO_ANSWER = float("inf")      # the cut when calibration fails: the rule answers nothing (no fallback cut, no override)
 
 
 FEATURES_CTX = FEATURES + ["zgap", "ligap"]
@@ -144,6 +151,11 @@ def decide(table, p, tau, choose="pipeline", override=None, jetson=False, m=None
     (saves Jetson time: each query not run is ~2.2 s); None = all 6 standard queries first.
     wide_tau: the cut after the standard queries is max(tau, wide_tau) (more queries give a look-alike more chances; today's bars do the same, 8 -> 11)."""
     t = table.assign(p=p)
+    if tau is not None and not np.isfinite(tau):        # failed calibration: skip every photo
+        keys = t[["data", "photo"]].drop_duplicates()
+        out = [_row(d, ph, "skip", None, 0) for d, ph in zip(keys["data"], keys["photo"])]
+        return pd.DataFrame(out)
+    all_keys = t[["data", "photo"]].drop_duplicates()
     if m is not None:
         t = t[t["rank"] < m]
     out = []
@@ -193,6 +205,8 @@ def decide(table, p, tau, choose="pipeline", override=None, jetson=False, m=None
             if _passes(c, tau_w, override, bars[1]):
                 out.append(_row(data, photo, "wide", c, 27)); continue
         out.append(_row(data, photo, "skip", last, 27))
+    seen = {(r["data"], r["photo"]) for r in out}       # a photo with no candidate left (empty shortlist) is a skip, never dropped
+    out += [_row(d, ph, "skip", None, 0) for d, ph in zip(all_keys["data"], all_keys["photo"]) if (d, ph) not in seen]
     return pd.DataFrame(out)
 
 
@@ -236,12 +250,13 @@ TAUS = [0.5, 0.6, 0.7, 0.75, 0.8, 0.85, 0.9, 0.925, 0.95, 0.97, 0.98, 0.99]
 def ltt_tau(scan, sets, alpha=0.005, delta=0.1):
     """Learn-then-Test style cut (Angelopoulos et al.; conformal risk control): walk the cuts from the strictest down and keep going while the
     one-sided (1 - delta) Clopper-Pearson upper bound of the wrong-answer rate among answered photos (pooled over `sets`) stays <= alpha; return
-    the last cut that passed (fixed-sequence testing, so no multiple-testing correction is needed). With 0 wrong in n answers the bound is about
+    the last cut that passed (fixed-sequence testing, so no multiple-testing correction is needed). Returns None when even the strictest cut
+    fails (T10 fix: before, it fell back to the strictest cut): the caller must then answer nothing (NO_ANSWER). With 0 wrong in n answers the bound is about
     -ln(delta) / n, so alpha = 0.5 % needs ~460 answers at 0 wrong: the rule also refuses cuts that are only 'lucky' on little data."""
     from scipy.stats import beta
     taus = sorted(scan["tau"].unique(), reverse=True)
     sub = scan[scan["data"].isin(sets)].groupby("tau")[["wrong", "n_answered"]].sum()
-    chosen = taus[0]
+    chosen = None
     for tau in taus:
         w, n = int(sub.loc[tau, "wrong"]), int(sub.loc[tau, "n_answered"])
         upper = 1.0 if n == 0 else (1.0 if w >= n else float(beta.ppf(1 - delta, w + 1, n - w)))
@@ -268,6 +283,7 @@ def leave_one_set_out(table, sets, features=FEATURES_CTX, kind="gbm", taus=TAUS,
         p = probs[held] if probs is not None else judge_probability(table, train, features, kind)[0]
         scan = scan_tau(table, p, taus, **decide_kwargs)
         tau = smallest_safe_tau(scan, train, margin_steps) if cut_rule == "zero_wrong" else ltt_tau(scan, train, alpha)
+        tau = NO_ANSWER if tau is None else tau
         if tau_floor is not None:
             tau = max(tau, tau_floor)
         result = decide(table, p, tau, **decide_kwargs)
@@ -301,8 +317,8 @@ def freeze(table, sets, variant, rule=FROZEN, taus=TAUS):
     P of the same sets (5 folds grouped by photo), then the floor. Returns (model, tau)."""
     kw = dict(override=rule["override"], min_choice=rule["min_choice"], wide_tau=rule["wide_tau"], **FROZEN_VARIANTS[variant])
     p, model = judge_probability(table, sets, rule["features"], rule["kind"])
-    tau = max(ltt_tau(scan_tau(table, p, taus, **kw), sets, rule["alpha"]), rule["tau_floor"])
-    return model, tau
+    tau = ltt_tau(scan_tau(table, p, taus, **kw), sets, rule["alpha"])
+    return model, (NO_ANSWER if tau is None else max(tau, rule["tau_floor"]))
 
 
 def judge_new(model, table, rule=FROZEN):

@@ -1,0 +1,21 @@
+factor,var,rule,wrong_official,wrong_nudt707,score_official,score_nudt707
+1.0,pc,bar 8 / 11,0,3,49.963,54.04
+1.0,jetson,Jetson today,0,2,50.28,54.04
+1.0,pc,"judge 0.9, no override",0,0,53.889,55.44
+1.0,pc,"judge 0.98, no override",0,0,51.799,55.44
+1.0,jetson,"judge 0.925, no override",0,0,52.686,54.84
+1.25,pc,bar 8 / 11,1,5,53.161,53.44
+1.25,jetson,Jetson today,1,6,52.939,52.44
+1.25,pc,"judge 0.9, no override",0,2,54.206,54.84
+1.25,pc,"judge 0.98, no override",0,0,53.224,55.44
+1.25,jetson,"judge 0.925, no override",0,1,53.161,54.64
+1.5,pc,bar 8 / 11,1,9,53.889,51.64
+1.5,jetson,Jetson today,1,7,53.414,52.04
+1.5,pc,"judge 0.9, no override",0,2,54.839,54.84
+1.5,pc,"judge 0.98, no override",0,0,53.573,55.44
+1.5,jetson,"judge 0.925, no override",0,1,53.319,54.64
+2.0,pc,bar 8 / 11,1,18,55.314,47.84
+2.0,jetson,Jetson today,1,14,55.567,49.1
+2.0,pc,"judge 0.9, no override",0,3,56.106,54.44
+2.0,pc,"judge 0.98, no override",0,0,53.889,55.44
+2.0,jetson,"judge 0.925, no override",0,1,54.681,54.64

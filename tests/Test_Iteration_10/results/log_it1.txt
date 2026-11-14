@@ -1,0 +1,2 @@
+[NbConvertApp] Converting notebook It1_Evaluation_Fixes.ipynb to notebook
+[NbConvertApp] Writing 60729 bytes to It1_Evaluation_Fixes_executed.ipynb
