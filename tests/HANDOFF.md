@@ -98,6 +98,12 @@ Venv on the old laptop: `~/Ideaforge/GeoLoc/.venv-geoloc` (Python 3.10, torch 2.
 4. Final claim: NUDT 808 dumped first (in `run_gpu.sh`), signals built, finalists pre-registered (like T8 `preregistered_t8.json`), scored once.
 5. T10 README / REPORT, Notion page per iteration + summary, push.
 
+**Why the old laptop kept dying (journal, 2026-11-14):** (1) 09:08 and 13:27 — **out of RAM** (14 GiB): the kernel OOM killer killed the
+Claude desktop app (and so every background job) 3-4 min after the scale sweep started 12 parallel processes (~1.4 GB each: full signal table
+plus scaled / augmented copies) next to a GPU dump. Run `It2_Scale_Robustness` with `n_jobs` <= 4 on a 14-16 GB machine (or 1 GB per process
+budget), and not alongside a GPU dump. (2) 01:48 — an abrupt freeze with no OOM and no shutdown log, after machine-check (MCE hardware) errors
+earlier in that boot: the known CPU fault (CPUs 10/11), not RAM or GPU. No GPU (Xid / NVRM) errors in any boot.
+
 Order on the new machine: GPU `run_perturbed_dumps.sh` -> `run_gpu.sh` (it waits for the first); meanwhile CPU `It2_Scale_Robustness`.
 Run long jobs in `tmux` / `systemd-run --user` — detached `nohup` jobs died with the Claude session twice on the old laptop.
 
