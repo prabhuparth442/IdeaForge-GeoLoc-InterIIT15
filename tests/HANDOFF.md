@@ -24,7 +24,7 @@ For whoever continues on another machine. Everything below is on branch `palash/
   laptop's checkout stays on `prabhuparth/dev`; commits to `palash/dev` were made with a temporary git index (see section 6).
 - Notion: a page per iteration plus a summary under **InterIIT_UAV_GeoLoc** (page id `41642f5fcd9481e49ff3dd66d6fef3f6`).
 - Keep the user's email and personal details out of any external request.
-- **Answered 2026-11-14: satellite-only** (no NUDT thermal training for learned components; see section 8).
+- **Answered 2026-11-14: satellite-only** (no NUDT thermal training for learned components; NUDT / official photos MAY set cut thresholds and test; see section 8).
 - Time classes for a method's Jetson cost: < 4 s good, 4-6 s viable, >= 6 s slow (model: 2.2 s per LoFTR query at M = 5).
 
 ## 2. Scoring and pipeline (for context)
