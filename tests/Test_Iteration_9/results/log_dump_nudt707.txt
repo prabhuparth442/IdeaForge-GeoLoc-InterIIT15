@@ -1,0 +1,2 @@
+[NbConvertApp] Converting notebook Rich_Dump_Perturbed.ipynb to notebook
+[NbConvertApp] Writing 11369 bytes to Rich_Dump_Perturbed_executed_nudt707.ipynb

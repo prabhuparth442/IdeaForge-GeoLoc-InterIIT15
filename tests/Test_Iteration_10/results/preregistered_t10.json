@@ -1,0 +1,102 @@
+{
+ "written": "2026-11-14T15:25:45",
+ "final_set": "nudt808",
+ "note": "NUDT fresh 808: 300 photos, pool 2400, the 500-pool and every 404/505/606/707 photo excluded; dumped by run_gpu.sh before any T10 rule was chosen; read only by It6. Official TEST and NUDT 707 are seen data (T8) and are reported only as context.",
+ "judges_trained_on": [
+  "nudt101",
+  "nudt202",
+  "nudt404",
+  "nudt505",
+  "nudt606"
+ ],
+ "features": "FEATURES_CTX (V5: li -> rli, ln22 -> rln22; prior weight 30)",
+ "jetson_context": "rank < 5",
+ "finalists": {
+  "pc": {
+   "base": "bar 8 / 11",
+   "J0": {
+    "cut": 0.9,
+    "override": 12,
+    "wide_cut": 0.95,
+    "min_choice": 3,
+    "early_exit": null
+   },
+   "J1": {
+    "cut": 0.9,
+    "override": null,
+    "wide_cut": 0.95,
+    "min_choice": 3,
+    "early_exit": null
+   },
+   "J2": {
+    "cut": 0.98,
+    "override": null,
+    "wide_cut": 0.98,
+    "min_choice": 3,
+    "early_exit": null
+   },
+   "V5": {
+    "cut": 0.9,
+    "override": null,
+    "wide_cut": 0.95,
+    "min_choice": 3,
+    "early_exit": null,
+    "augment": [
+     0.5,
+     0.75,
+     1.0,
+     1.5,
+     2.0
+    ],
+    "prior": {
+     "far_inl": 0.18524435833920716,
+     "far_n22": 6.113947356885958
+    }
+   }
+  },
+  "jetson": {
+   "base": "bar 8, cap 10, M 5",
+   "J0": {
+    "cut": 0.9,
+    "override": 12,
+    "wide_cut": 0.95,
+    "min_choice": 3,
+    "early_exit": 0.98
+   },
+   "J1": {
+    "cut": 0.9,
+    "override": null,
+    "wide_cut": 0.95,
+    "min_choice": 3,
+    "early_exit": 0.98
+   },
+   "J2": {
+    "cut": 0.98,
+    "override": null,
+    "wide_cut": 0.98,
+    "min_choice": 3,
+    "early_exit": 0.98
+   },
+   "V5": {
+    "cut": 0.9,
+    "override": null,
+    "wide_cut": 0.95,
+    "min_choice": 3,
+    "early_exit": 0.98,
+    "augment": [
+     0.5,
+     0.75,
+     1.0,
+     1.5,
+     2.0
+    ],
+    "prior": {
+     "far_inl": 0.23705313433681435,
+     "far_n22": 6.53901368354122
+    }
+   }
+  }
+ },
+ "primary": "NUDT 808 at x1: a finalist counts as a gain over its base if it has no more wrong answers than the base, 0 wrong, gain >= 0 and a paired-bootstrap 95 % interval above 0. A finalist counts as SAFER than J0 if it has fewer wrong answers on 808 over the scale range.",
+ "robustness": "NUDT 808 with every inlier-count signal scaled x0.5, 0.75, 1.25, 1.5, 2: wrong answers per scale; a variant is scale-robust only with 0 wrong at every scale."
+}
