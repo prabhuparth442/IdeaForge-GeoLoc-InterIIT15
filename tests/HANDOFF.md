@@ -142,3 +142,12 @@ T6 summary + 8 iteration pages; T7 Iterations 1-6 + summary (with the team's rev
   failures (height +20 %, heading beyond +-10 deg) and blur / resolution (relevant above 351 m, where no data exists).
 - A coarse share in the M = 10 shortlist (It7) recovered 1 NUDT photo; check on a fresh draw using the 808 cache (full K = 50 shortlist cached).
 - Any new final claim needs another fresh NUDT draw (all of 101-808 are seen) or official-like photos never used.
+
+## 9. T11 (2026-11-14 evening): satellite-only judge
+
+`tests/Test_Iteration_11`: judges trained only on 378 drone-view photos rendered from Cartosat scene B / Pleiades Neo (block
+`train/checks/sat_photos.py`). Ranking on thermal photos is nearly as good as the NUDT-trained judge (AUC 0.998 / 0.997), but the confidence is
+off: only a cut of 0.999+ gives 0 wrong on the NUDT design sets, and then there is no gain. Pre-registered final on fresh NUDT 909: primary
+S5z 1 wrong (base 2 PC / 4 Jetson), no gain; Jetson S1z 0 wrong at every inlier scale, +0.16. Satellite-only training gives safety, not
+score, so far. NUDT 909 is now seen data (dump in `tests/Test_Iteration_10/results/rich_dump/nudt_fresh909`). Disk was full (125 GB);
+~1.1 GB free after deleting regenerable caches with the user's OK.

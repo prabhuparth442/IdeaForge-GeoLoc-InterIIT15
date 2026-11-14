@@ -1,0 +1,2 @@
+[NbConvertApp] Converting notebook Rich_Dump_Cached.ipynb to notebook
+[NbConvertApp] Writing 10561 bytes to ../../Test_Iteration_11/notebooks/Rich_Dump_Cached_executed_nudt_fresh909.ipynb

@@ -1,0 +1,139 @@
+{
+ "variant": "pc",
+ "k_peaks": 50,
+ "m_fine": 10,
+ "queries": {
+  "first": [
+   [
+    -5.0,
+    1.0
+   ],
+   [
+    0.0,
+    1.0
+   ],
+   [
+    5.0,
+    1.0
+   ],
+   [
+    -5.0,
+    1.05
+   ],
+   [
+    0.0,
+    1.05
+   ],
+   [
+    5.0,
+    1.05
+   ]
+  ],
+  "second": [
+   [
+    -10.0,
+    0.95
+   ],
+   [
+    -7.5,
+    0.95
+   ],
+   [
+    -5.0,
+    0.95
+   ],
+   [
+    -2.5,
+    0.95
+   ],
+   [
+    0.0,
+    0.95
+   ],
+   [
+    2.5,
+    0.95
+   ],
+   [
+    5.0,
+    0.95
+   ],
+   [
+    7.5,
+    0.95
+   ],
+   [
+    10.0,
+    0.95
+   ],
+   [
+    -10.0,
+    1.0
+   ],
+   [
+    -7.5,
+    1.0
+   ],
+   [
+    -2.5,
+    1.0
+   ],
+   [
+    2.5,
+    1.0
+   ],
+   [
+    7.5,
+    1.0
+   ],
+   [
+    10.0,
+    1.0
+   ],
+   [
+    -10.0,
+    1.05
+   ],
+   [
+    -7.5,
+    1.05
+   ],
+   [
+    -2.5,
+    1.05
+   ],
+   [
+    2.5,
+    1.05
+   ],
+   [
+    7.5,
+    1.05
+   ],
+   [
+    10.0,
+    1.05
+   ]
+  ]
+ },
+ "cap": 27,
+ "cut": 0.998,
+ "wide_cut": null,
+ "override": null,
+ "min_choice": 3,
+ "early_exit": null,
+ "bars": null,
+ "judge_features": "S1",
+ "judge_trained_on": "satellite-made photos (T11)",
+ "calibration": null,
+ "matcher": "LoFTR (kornia) + MINIMA weights",
+ "matcher_confidence": 0.22,
+ "loftr_coarse_threshold": 0.21,
+ "ransac_px": 3,
+ "gamma": 1.0,
+ "dino_weight": 100,
+ "coarse": "edge ZNCC, cells 4 px, 8 bins",
+ "hint": "5 km random hint (evaluation.testset.random_prior), search disc 5500 m",
+ "data": "nudt909",
+ "note": "pre-registered T11"
+}

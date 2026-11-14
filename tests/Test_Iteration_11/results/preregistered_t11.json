@@ -1,0 +1,46 @@
+{
+ "written": "2026-11-14T19:18:24",
+ "final_set": "nudt909",
+ "note": "NUDT fresh 909: 300 photos, pool 2400, the 500-pool and every 404/505/606/707/808 photo excluded; dumped before any T11 rule was chosen; read only below. Judges trained on 378 satellite-made photos (Cartosat scene B, Pleiades Neo; T11 Sat_Photo_Dump); cuts on NUDT 101-606.",
+ "finalists": {
+  "pc": {
+   "S5z": {
+    "judge": "S5",
+    "cut": 0.9995
+   },
+   "S1z": {
+    "judge": "S1",
+    "cut": 0.9995
+   },
+   "S5l": {
+    "judge": "S5",
+    "cut": 0.998
+   },
+   "S1l": {
+    "judge": "S1",
+    "cut": 0.998
+   }
+  },
+  "jetson": {
+   "S5z": {
+    "judge": "S5",
+    "cut": 0.999
+   },
+   "S1z": {
+    "judge": "S1",
+    "cut": 0.9995
+   },
+   "S5l": {
+    "judge": "S5",
+    "cut": 0.995
+   },
+   "S1l": {
+    "judge": "S1",
+    "cut": 0.998
+   }
+  }
+ },
+ "decision": "override none; extra-query cut = cut; min 3 inliers; Jetson: M = 5, context from 5, early exit at max(0.98, cut)",
+ "primary": "S5z: 0 wrong and no more wrong than the base on 909; gain >= 0; interval above 0 = score gain, else safety only",
+ "robustness": "inlier signals x0.5, 0.75, 1.25, 1.5, 2 on 909: wrong answers per scale"
+}
