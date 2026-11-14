@@ -1,0 +1,9 @@
+var,rule,wrong_x1,base_wrong,gain,counts_as_gain,wrong_over_scales,scale_robust,safer_than_J0
+pc,J0,0,5,"+2.72 [+0.92, +4.92]",True,17,False,False
+pc,J1,0,5,"+2.20 [+0.28, +4.48]",True,4,False,True
+pc,J2,0,5,"+2.12 [+0.16, +4.32]",True,0,True,True
+pc,V5,0,5,"+2.40 [+0.52, +4.64]",True,0,True,True
+jetson,J0,0,2,"+0.64 [-0.48, +2.04]",False,7,False,False
+jetson,J1,0,2,"+0.32 [-0.92, +1.80]",False,0,True,True
+jetson,J2,0,2,"-0.28 [-1.64, +1.24]",False,0,True,True
+jetson,V5,0,2,"+0.32 [-0.92, +1.80]",False,0,True,True

@@ -1,4 +1,9 @@
-# Handoff: research state at 2026-11-14 13:30 IST (T6 → T10)
+# Handoff: research state at 2026-11-14 16:30 IST (T6 → T10)
+
+**Update 16:30: T9 and T10 are finished** (see their README / REPORT). Final T10 result on the fresh NUDT 808 draw (pre-registered, scored once):
+PC V5 (relative inliers + scale augmentation, no override) +2.40 [+0.52, +4.64], 0 wrong at every inlier scale x0.5-x2; Jetson V5 / J1 with
+early exit: 0 wrong at every scale, +0.32 (not proven), ~2.2 queries per photo. NUDT 808 is now seen data. Sections 4-5 below describe the
+state before the update and are kept for history. Next ideas: section 8.
 
 For whoever continues on another machine. Everything below is on branch `palash/dev` except the large data (section 3).
 
@@ -127,3 +132,12 @@ On a fresh clone simply `git checkout palash/dev` and commit normally.
 
 T6 summary + 8 iteration pages; T7 Iterations 1-6 + summary (with the team's review note and the T8 result appended); T8 Iterations 0-1, 2, 3, 4
 + summary. Not yet: T9, T10.
+
+## 8. After T10: open directions
+
+- Answer the satellite-only question before shipping any NUDT-trained judge.
+- Remove the 12-inlier override in the submission; consider V5 (needs the running far-candidate level and the scale-augmented judge).
+- Upstream losses dominate now: NUDT "never retrieved" 8-17 photos per 300 (coarse / DINO); official "retrieved but rejected"; T9 metadata
+  failures (height +20 %, heading beyond +-10 deg) and blur / resolution (relevant above 351 m, where no data exists).
+- A coarse share in the M = 10 shortlist (It7) recovered 1 NUDT photo; check on a fresh draw using the 808 cache (full K = 50 shortlist cached).
+- Any new final claim needs another fresh NUDT draw (all of 101-808 are seen) or official-like photos never used.

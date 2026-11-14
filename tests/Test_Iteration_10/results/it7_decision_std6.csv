@@ -1,0 +1,9 @@
+data,order,rule,photos,score,wrong,answered
+official_try,pipeline: DINO first 10,bar 8,185,50.4,0,0.859
+official_try,pipeline: DINO first 10,"judge 0.9, no override",185,52.216,0,0.892
+official_try,mixture: DINO 7 + coarse 3,bar 8,185,50.4,0,0.859
+official_try,mixture: DINO 7 + coarse 3,"judge 0.9, no override",185,52.216,0,0.892
+nudt101,pipeline: DINO first 10,bar 8,100,54.6,0,0.91
+nudt101,pipeline: DINO first 10,"judge 0.9, no override",100,54.6,0,0.91
+nudt101,mixture: DINO 7 + coarse 3,bar 8,100,55.2,0,0.92
+nudt101,mixture: DINO 7 + coarse 3,"judge 0.9, no override",100,55.2,0,0.92
