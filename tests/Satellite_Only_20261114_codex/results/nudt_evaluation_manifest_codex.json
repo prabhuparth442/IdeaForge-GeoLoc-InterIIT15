@@ -1,0 +1,262 @@
+{
+  "domain": "nudt",
+  "samples": [
+    {
+      "id": 1116,
+      "path": "/home/voidness/Storage/Synced Folders/InterIIT Tech 15/Code_Testing/dataset/NUDT/Thermal-UAV/test/changsha/city1_300_ortho_night/Thermal/DJI_202512212224_019_test_changsha_city1_300_ortho_night_DJI_20251221224008_0224_T.JPG",
+      "meta": {
+        "filename": "DJI_202512212224_019_test_changsha_city1_300_ortho_night_DJI_20251221224008_0224_T.JPG",
+        "alt": "272.812",
+        "yaw": "88.0",
+        "pitch": 0,
+        "roll": 0,
+        "cam_fx": 1562.563580874873,
+        "cam_fy": 1562.563580874873,
+        "cam_cx": 639.5,
+        "cam_cy": 511.5,
+        "cam_k1": 0,
+        "cam_k2": 0,
+        "cam_k3": 0,
+        "cam_p1": 0,
+        "cam_p2": 0,
+        "lat_sc": 28.233092460818806,
+        "lon_sc": 112.95553957879943
+      },
+      "truth_latlon": [
+        28.236113675,
+        112.989029994
+      ],
+      "flight": "city1_300_ortho_night",
+      "truth_xy": [
+        348.8634229811141,
+        5712.253247931134
+      ],
+      "prior_xy": [
+        -2932.4685213078997,
+        6100.596717263582
+      ]
+    },
+    {
+      "id": 1492,
+      "path": "/home/voidness/Storage/Synced Folders/InterIIT Tech 15/Code_Testing/dataset/NUDT/Thermal-UAV/test/changsha/village1_300_ortho_day/Thermal/DJI_202512171221_003_test_changsha_village1_300_ortho_day_DJI_20251217124455_0160_T.JPG",
+      "meta": {
+        "filename": "DJI_202512171221_003_test_changsha_village1_300_ortho_day_DJI_20251217124455_0160_T.JPG",
+        "alt": "300.265",
+        "yaw": "86.9",
+        "pitch": 0,
+        "roll": 0,
+        "cam_fx": 1562.563580874873,
+        "cam_fy": 1562.563580874873,
+        "cam_cx": 639.5,
+        "cam_cy": 511.5,
+        "cam_k1": 0,
+        "cam_k2": 0,
+        "cam_k3": 0,
+        "cam_p1": 0,
+        "cam_p2": 0,
+        "lat_sc": 28.27812183082756,
+        "lon_sc": 113.02407966284768
+      },
+      "truth_latlon": [
+        28.268337741,
+        113.015956476
+      ],
+      "flight": "village1_300_ortho_day",
+      "truth_xy": [
+        2931.9480440937914,
+        2097.555142285768
+      ],
+      "prior_xy": [
+        3710.7770554815406,
+        999.9896044443881
+      ]
+    },
+    {
+      "id": 1553,
+      "path": "/home/voidness/Storage/Synced Folders/InterIIT Tech 15/Code_Testing/dataset/NUDT/Thermal-UAV/test/changsha/village1_300_ortho_day/Thermal/DJI_202512171221_003_test_changsha_village1_300_ortho_day_DJI_20251217124912_0221_T.JPG",
+      "meta": {
+        "filename": "DJI_202512171221_003_test_changsha_village1_300_ortho_day_DJI_20251217124912_0221_T.JPG",
+        "alt": "294.755",
+        "yaw": "-93.0",
+        "pitch": 0,
+        "roll": 0,
+        "cam_fx": 1562.563580874873,
+        "cam_fy": 1562.563580874873,
+        "cam_cx": 639.5,
+        "cam_cy": 511.5,
+        "cam_k1": 0,
+        "cam_k2": 0,
+        "cam_k3": 0,
+        "cam_p1": 0,
+        "cam_p2": 0,
+        "lat_sc": 28.284241346018316,
+        "lon_sc": 112.99219250723762
+      },
+      "truth_latlon": [
+        28.267609518,
+        113.01141718
+      ],
+      "flight": "village1_300_ortho_day",
+      "truth_xy": [
+        2487.933043023455,
+        2185.67094211746
+      ],
+      "prior_xy": [
+        571.3952922779968,
+        373.8075797596812
+      ]
+    },
+    {
+      "id": 1973,
+      "path": "/home/voidness/Storage/Synced Folders/InterIIT Tech 15/Code_Testing/dataset/NUDT/Thermal-UAV/test/changsha/village1_300_ortho_day/Thermal/DJI_202512171302_004_test_changsha_village1_300_ortho_day_DJI_20251217132508_0274_T.JPG",
+      "meta": {
+        "filename": "DJI_202512171302_004_test_changsha_village1_300_ortho_day_DJI_20251217132508_0274_T.JPG",
+        "alt": "298.897",
+        "yaw": "87.1",
+        "pitch": 0,
+        "roll": 0,
+        "cam_fx": 1562.563580874873,
+        "cam_fy": 1562.563580874873,
+        "cam_cx": 639.5,
+        "cam_cy": 511.5,
+        "cam_k1": 0,
+        "cam_k2": 0,
+        "cam_k3": 0,
+        "cam_p1": 0,
+        "cam_p2": 0,
+        "lat_sc": 28.283723197105505,
+        "lon_sc": 113.01647182870951
+      },
+      "truth_latlon": [
+        28.264068133,
+        113.013350444
+      ],
+      "flight": "village1_300_ortho_day",
+      "truth_xy": [
+        2684.143101879512,
+        2574.9617228042334
+      ],
+      "prior_xy": [
+        2954.0725878696494,
+        391.7315934285043
+      ]
+    },
+    {
+      "id": 2080,
+      "path": "/home/voidness/Storage/Synced Folders/InterIIT Tech 15/Code_Testing/dataset/NUDT/Thermal-UAV/test/changsha/village1_300_ortho_day/Thermal/DJI_202512171302_004_test_changsha_village1_300_ortho_day_DJI_20251217133238_0381_T.JPG",
+      "meta": {
+        "filename": "DJI_202512171302_004_test_changsha_village1_300_ortho_day_DJI_20251217133238_0381_T.JPG",
+        "alt": "300.201",
+        "yaw": "87.0",
+        "pitch": 0,
+        "roll": 0,
+        "cam_fx": 1562.563580874873,
+        "cam_fy": 1562.563580874873,
+        "cam_cx": 639.5,
+        "cam_cy": 511.5,
+        "cam_k1": 0,
+        "cam_k2": 0,
+        "cam_k3": 0,
+        "cam_p1": 0,
+        "cam_p2": 0,
+        "lat_sc": 28.22328055112189,
+        "lon_sc": 113.013008795386
+      },
+      "truth_latlon": [
+        28.26280332,
+        113.008420362
+      ],
+      "flight": "village1_300_ortho_day",
+      "truth_xy": [
+        2202.753860362922,
+        2723.167220500298
+      ],
+      "prior_xy": [
+        2725.80238430204,
+        7095.480752870643
+      ]
+    },
+    {
+      "id": 2136,
+      "path": "/home/voidness/Storage/Synced Folders/InterIIT Tech 15/Code_Testing/dataset/NUDT/Thermal-UAV/test/changsha/village1_300_ortho_day/Thermal/DJI_202512171702_005_test_changsha_village1_300_ortho_day_DJI_20251217172249_0008_T.JPG",
+      "meta": {
+        "filename": "DJI_202512171702_005_test_changsha_village1_300_ortho_day_DJI_20251217172249_0008_T.JPG",
+        "alt": "301.389",
+        "yaw": "-93.0",
+        "pitch": 0,
+        "roll": 0,
+        "cam_fx": 1562.563580874873,
+        "cam_fy": 1562.563580874873,
+        "cam_cx": 639.5,
+        "cam_cy": 511.5,
+        "cam_k1": 0,
+        "cam_k2": 0,
+        "cam_k3": 0,
+        "cam_p1": 0,
+        "cam_p2": 0,
+        "lat_sc": 28.280797517291678,
+        "lon_sc": 113.02362880398073
+      },
+      "truth_latlon": [
+        28.262844263,
+        113.020563541
+      ],
+      "flight": "village1_300_ortho_day",
+      "truth_xy": [
+        3394.1259277748177,
+        2698.7857831786387
+      ],
+      "prior_xy": [
+        3661.5827875473897,
+        704.2158647523477
+      ]
+    }
+  ],
+  "settings": {
+    "LEVELS": [
+      3,
+      4
+    ],
+    "GEOMETRY": {
+      "attitude": false,
+      "pitch_sign": -1,
+      "roll_sign": -1,
+      "yaw_offset": 0.0,
+      "scale": 0.8,
+      "height_offset": 0.0
+    },
+    "DISC_RADIUS": 5500,
+    "K_PEAKS": 50,
+    "M_FINE": 5,
+    "LOFTR_CONFIDENCE": 0.21,
+    "LOFTR_COARSE_THRESHOLD": 0.21,
+    "MIN_INLIERS": 8,
+    "TIME_BUDGET_S": null,
+    "DINO_BATCH": 5,
+    "QUERY_SET": "standard",
+    "SECOND_PASS": true
+  },
+  "weights_sha256": "308cbd312c820f2fdbcb5d12b703f902bc872d8ccb78ea3f8589b673b81085cf",
+  "frozen_before_eval": 1794624554.4300404,
+  "started_at_unix": 1794624972.3342595,
+  "source_sha256": {
+    "Main_Pipeline_Headless/settings.py": "03e50df34c32b5f199bf11e1794537a9a30a080228709d03c0e02a67a0fcd7f0",
+    "Main_Pipeline_Headless/geoloc/decision.py": "44c8499f3ad185bc5255444bb3f98a3e023b927f7dd8862a2522013668c38312",
+    "Main_Pipeline_Headless/geoloc/map_reader.py": "3a3e04c1e22b1afe33a56d834c72cb9797c5057e038b76068df14760211aee53",
+    "Main_Pipeline_Headless/geoloc/check_settings.py": "3660aabf57d4cb11ebadc1b9bde6f2abfffd465048942f0a3db51222bbb7b477",
+    "Main_Pipeline_Headless/geoloc/map_store.py": "680a22ca18c943958d302343be44b03a47ad391876ac455d982ed9276a485d94",
+    "Main_Pipeline_Headless/geoloc/fine_matching.py": "cc3c9d992362ad6247065ef9fb4a5da1d0b1b4c608d28d2b0212d8310dc78834",
+    "Main_Pipeline_Headless/geoloc/fft.py": "85f7227eb459e0f85bfdc7d2fdc53dbb6a257717cad9a4e7cbd348c8c86d0093",
+    "Main_Pipeline_Headless/geoloc/levels.py": "d62ce7aea7c41a0a98b16af770a4c08046018bc4ea4ff59509bf96b708028525",
+    "Main_Pipeline_Headless/geoloc/pipeline.py": "6cf22f1821e3530ce2be702ddd28d205c6028934767c5155d0e1adff4b6275a1",
+    "Main_Pipeline_Headless/geoloc/semantic_rerank.py": "f6892d67aba251ec2ba8211dac66808302e7cc65cc598aa5d84feb61a2e44856",
+    "Main_Pipeline_Headless/geoloc/scoring.py": "446a5696963eaac101e766e62b12b84a4dbf408050ebc0cd72f436efb1227568",
+    "Main_Pipeline_Headless/geoloc/queries.py": "620adca1ebfc9ddcff91ae5a50d1a61ec85477572d5ef779f952ff620484ec40",
+    "Main_Pipeline_Headless/geoloc/edge_features.py": "2a137dae77d332a4afe81dd354a3ef1b9b465f57ccb2e3b26cd064697277df62",
+    "Main_Pipeline_Headless/geoloc/cli.py": "dae2665ba21be8547dcef37bbdfc005ef6c55a6c2d480f73235a133d9b3cb67a",
+    "Main_Pipeline_Headless/geoloc/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "Main_Pipeline_Headless/geoloc/photo.py": "c6183a5364a3d66fa12e016077f139cedd14ab5946f463c1c3789571770f2443",
+    "Main_Pipeline_Headless/geoloc/coarse_search.py": "4d92a885c1928a5a549182071dda066ccb86069e09810f526ace7fcb21e5fb8d",
+    "Main_Pipeline_Headless/docker/gpu_check.py": "d0d720b13e8a7553aaa24f3a943c4d770869137a0cf78b195c5f9ed6737dd78e"
+  }
+}

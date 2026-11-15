@@ -1,0 +1,33 @@
+[
+  {
+    "job": "nudt_components",
+    "exit_code": 0,
+    "seconds": 82.80092740058899
+  },
+  {
+    "job": "nudt_pipeline",
+    "exit_code": 0,
+    "seconds": 504.8280758857727
+  },
+  {
+    "job": "native_benchmark",
+    "exit_code": 0,
+    "seconds": 2.268209934234619
+  },
+  {
+    "job": "judge_benchmark",
+    "exit_code": 0,
+    "seconds": 4.022215843200684
+  },
+  {
+    "job": "compile_benchmark",
+    "exit_code": 1,
+    "seconds": 11.78884243965149
+  },
+  {
+    "job": "compile_retry",
+    "exit_code": 0,
+    "seconds": 23.512381076812744,
+    "workaround": "Temporary no-space aliases for venv and experiment-owned compiler cache; source and packages unchanged."
+  }
+]

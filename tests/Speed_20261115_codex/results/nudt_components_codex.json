@@ -1,0 +1,103 @@
+{
+  "domain": "nudt",
+  "photo": 1116,
+  "render": {
+    "original": {
+      "median": 0.3626571770000737,
+      "samples": [
+        0.40898045300127706,
+        0.3626571770000737,
+        0.3519376420008484
+      ]
+    },
+    "cached": {
+      "median": 0.0962568579998333,
+      "samples": [
+        0.09457092299999204,
+        0.0962568579998333,
+        0.09628894399793353
+      ]
+    },
+    "exact": true
+  },
+  "dino": {
+    "original": {
+      "median": 3.16523629799849,
+      "samples": [
+        3.1540063379979983,
+        3.2323998940009915,
+        3.16523629799849
+      ]
+    },
+    "vectorised": {
+      "median": 3.1956048879983427,
+      "samples": [
+        3.186348810999334,
+        3.1956048879983427,
+        3.238119335997908
+      ]
+    },
+    "max_abs": 0.0,
+    "rank_exact": true
+  },
+  "loftr": {
+    "original": {
+      "median": 5.870711889998347,
+      "samples": [
+        6.0248655319992395,
+        5.870711889998347,
+        5.860846939001931
+      ]
+    },
+    "cached": {
+      "median": 3.6404605110001285,
+      "samples": [
+        3.6404605110001285,
+        3.6570526420000533,
+        3.613862963000429
+      ]
+    },
+    "cached_encoded_images": 11,
+    "parity": {
+      "raw_exact": true,
+      "raw_shapes_same": true,
+      "raw_max_abs": 0.0,
+      "inliers_same": true,
+      "shifts_same": true
+    },
+    "batches": {
+      "2": {
+        "timing": {
+          "median": 6.1313741029989615,
+          "samples": [
+            6.055991840999923,
+            6.206756364998
+          ]
+        },
+        "parity": {
+          "raw_exact": false,
+          "raw_shapes_same": true,
+          "raw_max_abs": 1.52587890625e-05,
+          "inliers_same": true,
+          "shifts_same": true
+        }
+      },
+      "4": {
+        "timing": {
+          "median": 6.649657823001689,
+          "samples": [
+            6.534511837002356,
+            6.764803809001023
+          ]
+        },
+        "parity": {
+          "raw_exact": false,
+          "raw_shapes_same": true,
+          "raw_max_abs": 1.52587890625e-05,
+          "inliers_same": true,
+          "shifts_same": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+         47900 function calls (47738 primitive calls) in 0.050 seconds
+
+   Ordered by: cumulative time
+   List reduced from 135 to 20 due to restriction <20>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        5    0.002    0.000    0.050    0.010 /home/voidness/Storage/Synced Folders/InterIIT Tech 15/IdeaForge-GeoLoc-InterIIT15/train/checks/decision_signals.py:161(photo_signal_table)
+      300    0.005    0.000    0.047    0.000 /home/voidness/Storage/Synced Folders/InterIIT Tech 15/IdeaForge-GeoLoc-InterIIT15/train/checks/decision_signals.py:107(candidate_signals)
+      801    0.010    0.000    0.021    0.000 /home/voidness/Storage/Synced Folders/InterIIT Tech 15/IdeaForge-GeoLoc-InterIIT15/train/checks/decision_signals.py:55(translation_consensus)
+1981/1819    0.001    0.000    0.010    0.000 {built-in method numpy.core._multiarray_umath.implement_array_function}
+      296    0.000    0.000    0.009    0.000 /home/voidness/Storage/Synced Folders/InterIIT Tech 15/IdeaForge-GeoLoc-InterIIT15/train/checks/decision_signals.py:47(log10_nfa)
+       75    0.001    0.000    0.009    0.000 /home/voidness/Storage/Synced Folders/InterIIT Tech 15/venv-geoloc/lib/python3.10/site-packages/scipy/stats/_distn_infrastructure.py:3662(logsf)
+     1141    0.003    0.000    0.007    0.000 /home/voidness/Storage/Synced Folders/InterIIT Tech 15/venv-geoloc/lib/python3.10/site-packages/numpy/core/_methods.py:163(_mean)
+     1083    0.000    0.000    0.007    0.000 {method 'mean' of 'numpy.ndarray' objects}
+       29    0.002    0.000    0.006    0.000 /home/voidness/Storage/Synced Folders/InterIIT Tech 15/IdeaForge-GeoLoc-InterIIT15/train/checks/decision_signals.py:68(_coverage)
+     3613    0.005    0.000    0.005    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+       75    0.000    0.000    0.004    0.000 /home/voidness/Storage/Synced Folders/InterIIT Tech 15/venv-geoloc/lib/python3.10/site-packages/scipy/stats/_distn_infrastructure.py:600(argsreduce)
+       97    0.001    0.000    0.003    0.000 /home/voidness/Storage/Synced Folders/InterIIT Tech 15/IdeaForge-GeoLoc-InterIIT15/src/fine_matching/ransac.py:9(fit_transform)
+     1777    0.001    0.000    0.003    0.000 {method 'sum' of 'numpy.ndarray' objects}
+       75    0.000    0.000    0.003    0.000 <__array_function__ internals>:177(broadcast_arrays)
+     1777    0.000    0.000    0.003    0.000 /home/voidness/Storage/Synced Folders/InterIIT Tech 15/venv-geoloc/lib/python3.10/site-packages/numpy/core/_methods.py:46(_sum)
+       75    0.000    0.000    0.003    0.000 /home/voidness/Storage/Synced Folders/InterIIT Tech 15/venv-geoloc/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:480(broadcast_arrays)
+      793    0.000    0.000    0.002    0.000 <__array_function__ internals>:177(argmax)
+       97    0.002    0.000    0.002    0.000 {estimateAffinePartial2D}
+       75    0.000    0.000    0.002    0.000 /home/voidness/Storage/Synced Folders/InterIIT Tech 15/venv-geoloc/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:546(<listcomp>)
+      300    0.001    0.000    0.002    0.000 /home/voidness/Storage/Synced Folders/InterIIT Tech 15/venv-geoloc/lib/python3.10/site-packages/numpy/lib/stride_tricks.py:340(_broadcast_to)
+
+

@@ -1,0 +1,1397 @@
+[
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/README.md",
+    "sha256": "27fc291b92f5d723c8041108f5fd0b408cf7612288290666eda10614ac28f169",
+    "bytes": 7831
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/coarse_search/README.md",
+    "sha256": "ebf9240fc6042eab1c3ccf26e52f7d0bb410a2f2d1ed108ac7d7162118f982aa",
+    "bytes": 9152
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/coarse_search/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/coarse_search/concepts/dino_descriptor_hint.md",
+    "sha256": "1244204e1bc609fc839f32c589b4cc1db58f12187b8cc92872401b40bb53b560",
+    "bytes": 9508
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/coarse_search/concepts/fft_cross_correlation.md",
+    "sha256": "6d4489ed1643c4a14d4cc214a19a6ff8e4e66d23ffe1ffd45286e56a0ac3730b",
+    "bytes": 12612
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/coarse_search/concepts/peaks_ratio_and_the_search_disc.md",
+    "sha256": "df5e26cbcbde6411d016601e8842c102addf235e0145e026c98449d2b6966413",
+    "bytes": 11695
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/coarse_search/concepts/template_matching_cosine_and_zncc.md",
+    "sha256": "ed5d26acb927a426f1db1c8824f1ef57473f07211a0336f4529fdb8112034828",
+    "bytes": 10861
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/coarse_search/correlation.py",
+    "sha256": "e8c9cc3e911df4a144a2af2598302a48c1db8bf2ab892b891843b1593a5f8687",
+    "bytes": 2577
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/coarse_search/dino_hint.py",
+    "sha256": "e6dad439d4da0c129effea0fa4663c29e66487cc4c4f86b652fbdc677e336364",
+    "bytes": 5353
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/coarse_search/fusion.py",
+    "sha256": "a8bf7748687b3c9d2618a6bb3e2b882f7bdeb22b39db6ac6abd581e057c4d84a",
+    "bytes": 10079
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/coarse_search/heading_queries.py",
+    "sha256": "b92a5ab110746647eb820b06d5d5120f60889b4f3df47f7914d66d463fc0f653",
+    "bytes": 4785
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/coarse_search/search.py",
+    "sha256": "fa243043f2e5e2b0fb190529de27a8de9024fda7615df466b6a4a05355949fa0",
+    "bytes": 6024
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/coarse_search/self_tests.py",
+    "sha256": "a44656d9db15498dd47013739590a6ef1dfb777516edffece65c37557835e59f",
+    "bytes": 4662
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/evaluation/README.md",
+    "sha256": "cf80f446b4aa027cbf93866ab4e8b93f30cbaddc68c5f9fa8b28936923a59572",
+    "bytes": 7185
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/evaluation/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/evaluation/concepts/auc_and_confidence_signals.md",
+    "sha256": "0dce59d2d3cabd0e096caffc46ae0bfddbdd3080c36ae924e124235d91bc97ea",
+    "bytes": 6472
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/evaluation/concepts/geometry_hypothesis_tests.md",
+    "sha256": "83bd8dc258052931c4fd7ade0516c9f3bcc1cb8b81e924f0d57c0d05cc52e76a",
+    "bytes": 4936
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/evaluation/concepts/honest_threshold_selection.md",
+    "sha256": "8cbcc49a481776d0cd843e4683bd17500100e7a65f3421882e88cf72fbee0c80",
+    "bytes": 4836
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/evaluation/concepts/measuring_in_sigma_units.md",
+    "sha256": "2f2eabe69a64c9226e6e0ac96a0ad8dea11bc35f355a3fa549137c25dcc9b6ec",
+    "bytes": 5637
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/evaluation/concepts/sensitivity_to_errors.md",
+    "sha256": "4f22ad95dda5abb91208c7f92fbc40e27f1645e9d018ea7ab2d79e0d52a93f71",
+    "bytes": 5340
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/evaluation/concepts/simulating_the_prior.md",
+    "sha256": "def9facf384b3e2de2eba2f4a565e78ee3404cbc10c447530012fb1c2083d2ee",
+    "bytes": 5856
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/evaluation/geometry_sweep.py",
+    "sha256": "f98ab5daa7ab392d250e718f423bd499e8860afb0c855e81ac17eca6867f2675",
+    "bytes": 4194
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/evaluation/independence_check.py",
+    "sha256": "7e0cb18c9a64155479f4481604f4e5d0346490c9f4ff53d181aa80663ee1dd78",
+    "bytes": 1790
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/evaluation/metrics.py",
+    "sha256": "69247adf821452fc7e4cda902650b01a94b528356d930ce11b6c8241813556cc",
+    "bytes": 2656
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/evaluation/report.py",
+    "sha256": "2f58a863b035af2f218a79e8e23aa0e9a295e6b7884efd6fc0edc9133894d1a9",
+    "bytes": 7326
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/evaluation/run_sample.py",
+    "sha256": "70f53033138da1a8bc14e56ef8004994e0f84338e8953f425f63bb8d9efa62cf",
+    "bytes": 2227
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/evaluation/sensitivity.py",
+    "sha256": "2db3b7a77e5e05e53bc97a0beb0d094896d3dc832ef1d9d7028deaa2f293b869",
+    "bytes": 1443
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/evaluation/testset.py",
+    "sha256": "6986dcfdec0aed547ef2bf8b4aa054ef87281cc388a11aad70d6d1a65c61f08a",
+    "bytes": 1937
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/fine_matching/README.md",
+    "sha256": "5b7e182e5f06a4cb5da82a91c2c47a6477f17f70a1fc6f2e62d6edb13d51dfec",
+    "bytes": 6690
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/fine_matching/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/fine_matching/concepts/candidate_refinement_and_context.md",
+    "sha256": "6ca4ec80456174a3d3878814d9147559ffe4350977f81e97c2ef6f9e6ae4180a",
+    "bytes": 9031
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/fine_matching/concepts/keypoint_matching_superpoint_lightglue_minima.md",
+    "sha256": "c4997ef29324120d233e2f7743adb27d1cb7168647769a1a01815c90416c8794",
+    "bytes": 10160
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/fine_matching/concepts/similarity_transform_and_ransac.md",
+    "sha256": "25f3f83d5b8773c984f3c5e972c2fc46093f3352c741b9b36ea22f58f4f5f4a3",
+    "bytes": 9116
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/fine_matching/loftr_matcher.py",
+    "sha256": "735a5febb990ef646c20db885106bb909bfea5647770216807063ed76fa5431e",
+    "bytes": 14433
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/fine_matching/matcher.py",
+    "sha256": "9c64ff6b02da9401580fafc38c0b470a7ae7a281e44210a8acc25ab84062cb08",
+    "bytes": 2950
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/fine_matching/ransac.py",
+    "sha256": "2c8b3869986315a4f61e7fef51ab1805a2923d4614d0e138ff4a46d223d1d518",
+    "bytes": 1234
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/fine_matching/robust_fit.py",
+    "sha256": "3429103404a3f9be195e15187bb83ff239a012e5cbcf56593c5dd5995bb153c9",
+    "bytes": 5592
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/fine_matching/roma_matcher.py",
+    "sha256": "fc8a7bee3dd6ea79815b04ce53c71bcbbda2f3bef9f67edbe3e4c93cc55624bc",
+    "bytes": 6564
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/fine_matching/second_stage.py",
+    "sha256": "00ed789f08d75843218796c319e06d2461ef164222b7d54f261f8000c4e89678",
+    "bytes": 3394
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/fine_matching/second_stage_any.py",
+    "sha256": "af1052cf7414f47ee505b09c5a01d037576ecbfcff8d9a37eb11a35443eaf7f7",
+    "bytes": 2085
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/fine_matching/xoftr_matcher.py",
+    "sha256": "4dd09b1e6f833c0b91efe029bc80b311a3d6c2c57cec1d568486133313b5f36e",
+    "bytes": 4251
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/header/README.md",
+    "sha256": "3d20a5a1289a15b83bbd032e4cf3285d5b4086b78e269c43a3e2e1017a65e9b8",
+    "bytes": 8028
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/header/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/header/concepts/geographic_coordinates_and_map_reading.md",
+    "sha256": "3445a9d2a962e9bd21c6f97469eeb2cd61c27581a00e89f1ed7f91fa46972125",
+    "bytes": 9138
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/header/concepts/scoring_rule.md",
+    "sha256": "25f76e2ef349a2f1ab3833390383141da010e4aecdc2affb11ba053859b5c2a0",
+    "bytes": 9237
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/header/concepts/stratified_sampling_and_seeds.md",
+    "sha256": "3b03fa52ef4665ca10a3367045610106faa7baf98fce09a518c6a3737726a4d4",
+    "bytes": 7724
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/header/data.py",
+    "sha256": "dd9a712febb5f15ab51aaaa3d5af57f09df63b8d328d84e685a7ad8582e59b4f",
+    "bytes": 2683
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/header/map_source.py",
+    "sha256": "4e39df60ec11053eeb148f357233d820ee846b31d1fee7ca1bf8e9ca00f25265",
+    "bytes": 3215
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/header/mosaic_map.py",
+    "sha256": "3f138553f8b1b15d8090df86b3779cd241194b2f2b3f280a672c3c1139eca8d3",
+    "bytes": 6168
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/header/sampling.py",
+    "sha256": "56cec2f153af1620145e5f45692b7d41a602438e9cb7e6ae6ace38998a5d85bc",
+    "bytes": 766
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/header/satellite_map.py",
+    "sha256": "d3250b7a38576bc350a4e4964abd18863839875ac961ba18f96c9e72bde13f7e",
+    "bytes": 2536
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/header/scoring.py",
+    "sha256": "a4507fafecb096d348a8705ef27e265094d7aa702342487dc88ad9011651c2be",
+    "bytes": 1345
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/header/settings.py",
+    "sha256": "7987bfdd634a29b921b432d6d32631f2ed3e479d8baed8bcda93916ed3dfef6d",
+    "bytes": 1370
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/image_processing/README.md",
+    "sha256": "9309c78c3cd60bf37a06eef74f1f0ed81df37d37ab78ab202ddde11084bc5185",
+    "bytes": 10042
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/image_processing/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/image_processing/camera.py",
+    "sha256": "3f01cb19f965600a8ea2e5abcea8669195b4fa4dfb77be3daa15ff8171f8b8ae",
+    "bytes": 400
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/image_processing/concepts/edge_direction_features.md",
+    "sha256": "9a6facfab2afe4fe7b55566769b42f2b4959f2d6b34543674d95ba511f700d58",
+    "bytes": 11262
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/image_processing/concepts/lens_distortion.md",
+    "sha256": "78df0afec9a2908d6bc8b6575cc430eb6a16ff2804716c0b591ace893ed917bd",
+    "bytes": 6274
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/image_processing/concepts/map_zoom_levels.md",
+    "sha256": "a19ceaad178cda7a474d2d2ab9b4fb8638647af718b42808add1d899b76d43fc",
+    "bytes": 7426
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/image_processing/concepts/pinhole_camera_and_ground_sample_distance.md",
+    "sha256": "06a84dd18ea408b103135e83522c3a25b19d101b699f13fd534ca417707544a9",
+    "bytes": 6501
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/image_processing/concepts/resampling_and_aliasing.md",
+    "sha256": "4fd854fd9b9dad0c4df14989f59b816f2d95b2be6915bca83086d812ac4f022e",
+    "bytes": 7541
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/image_processing/concepts/rotations_and_the_north_up_canvas.md",
+    "sha256": "63b150fbf80685bf8f4b3ae6b27909cceda65dee68caa9f668a45257c54aba6b",
+    "bytes": 11378
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/image_processing/concepts/thermal_normalisation.md",
+    "sha256": "33b9cf4aab3b037bb5cd55d255ea0e7c6dd00afa7bf990badab0885f8fbadc06",
+    "bytes": 6714
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/image_processing/edge_features.py",
+    "sha256": "151810ff11fc767396bbd0c129b08b76d10e9340db80ed0497edf49637098670",
+    "bytes": 3958
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/image_processing/geometry.py",
+    "sha256": "11add055981f99d5c0e18294ac9629d27060211764f72f4b881ea5231c25dea6",
+    "bytes": 3397
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/image_processing/map_levels.py",
+    "sha256": "f6852329641a86cdc5becc7b0eb1fafe45895998faaa155abf75152e86e2f7a8",
+    "bytes": 3324
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/image_processing/map_store.py",
+    "sha256": "adffb2b07f85629b6cce9d46d4062a0fa17cb6ab5531a531dd1eae81ea1286a5",
+    "bytes": 887
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/image_processing/thermal.py",
+    "sha256": "ed4c34589b72263e8fb975cd95a64301757ff6e67e6ecbf0e4899667bb2b074e",
+    "bytes": 1044
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/result_thresholding/README.md",
+    "sha256": "8e775ad49b9096cf2d8c5def854bf6f04d2ff40084dc56fde788502ed28b4e72",
+    "bytes": 4725
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/result_thresholding/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/result_thresholding/concepts/answer_or_skip_expected_value.md",
+    "sha256": "bdf4cb310baedc655f070d07dd57dba6d561e0a4205f8e1d7a2d35f85cd03c48",
+    "bytes": 5532
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/result_thresholding/concepts/choosing_the_answer.md",
+    "sha256": "9068af63634660ad863c5d70dd2298de18f7ecbf9354c31507cf006774754a46",
+    "bytes": 6735
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/result_thresholding/concepts/one_photo_at_a_time.md",
+    "sha256": "5142ec32683174f728109c2cc89a40919cc36c1c5b6c4d444cd175309127ec48",
+    "bytes": 6360
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/result_thresholding/decision.py",
+    "sha256": "29e2784b0c2be614202dfb76aae0aa135c357bf9c9f864e80e526ea2864cc467",
+    "bytes": 1297
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/result_thresholding/pipeline.py",
+    "sha256": "d7bcd4a4e416d65c6a17fdeae28238acdc08aa08b9258d30c040b7a5edc1e2e2",
+    "bytes": 1584
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/semantic_rerank/README.md",
+    "sha256": "c39b4a5cb9a2d12958e137fcf25c0e67bb29a36c97817f593a71701ab2b0a2e7",
+    "bytes": 3028
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/semantic_rerank/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/semantic_rerank/agreement.py",
+    "sha256": "c47ebfbb5fe60622754a8bc113e68a81122319b77028178716a78deb5903bcc0",
+    "bytes": 3107
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/semantic_rerank/decision.py",
+    "sha256": "4b7cf4ef7091b30474a7df774a7d0382c559022e61773b85495b7d05d8659ac5",
+    "bytes": 3935
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/src/semantic_rerank/dino_rerank.py",
+    "sha256": "75880b85373b5eccc15d8ba6f62a900c161a390e9cce0c9257d757f7bac95c9a",
+    "bytes": 7030
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/README.md",
+    "sha256": "ea0a29c590552821ea41ca8932804c09f5ce07411e35f280d5fa0d3bafb33f70",
+    "bytes": 3250
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/checks/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/checks/candidate_judge.py",
+    "sha256": "5a49fa0b00d33ee5f44b6c298c88d5b9f7a9eb03e27c0832c19f7ed568e0be5d",
+    "bytes": 19918
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/checks/decision_gate.py",
+    "sha256": "458b49d48bb1bd5b5cbdbd8301f2950440e26d82307fa0ec982c5407cf2e4e45",
+    "bytes": 3845
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/checks/decision_signals.py",
+    "sha256": "3f5ad040ecdfe8504a17aa449259a7910b3f116af206658323f86db289158682",
+    "bytes": 12019
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/checks/eval_tools.py",
+    "sha256": "75ca493ed5c91b50e55904d68f0bcdf0345d5285c65c85119744c40f371cfee1",
+    "bytes": 7366
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/checks/full_eval.py",
+    "sha256": "ec6d283703c765185ef1d4f12df746c7fdeba675cf321e2e9a999ef04ae38570",
+    "bytes": 3996
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/checks/gate_features.py",
+    "sha256": "b996c285c9bfdcd48dbb5f4ad6333aefa8179e923fea70e3fe9597af64d9cb12",
+    "bytes": 3218
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/checks/heading_results.py",
+    "sha256": "0156ee2356f4ef796cd64183201ca4c6368ea2af1dd846193350ad126482fb19",
+    "bytes": 5659
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/checks/holdout.py",
+    "sha256": "2ebc3ea26e8e001fa0473ff867f83d1e1cb997609973275f40f0e677b1a26c7f",
+    "bytes": 8620
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/checks/overnight_report.py",
+    "sha256": "d72bab846c384e74787eb9a31c7d8f65c90f18181b3eacb41405cd179b0f4a16",
+    "bytes": 5540
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/checks/perturb.py",
+    "sha256": "295e57b97986f89ec034b32953f38f58520b301c7d5333822a3603d271bef82a",
+    "bytes": 3435
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/checks/pose_bias.py",
+    "sha256": "264c63cc3b7dfe71d4a6faa40a34cdc27218da128a743c27dda9a2e2dc288010",
+    "bytes": 2993
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/checks/query_policy.py",
+    "sha256": "d3e39c6a58ae580319be53442e1df24bcdbef9dbb7b9ccde20e1ea901e355ba7",
+    "bytes": 5277
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/checks/replay.py",
+    "sha256": "b924fcc95461b64e74e4b659e4efac73d2ae8fa6bb90cba33a50c188c0ea8fd5",
+    "bytes": 10435
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/checks/rich_dump.py",
+    "sha256": "73d55ffd7387f94891c14d786930ba6475131482cb441dbde6dd6c6dd2ed5e1e",
+    "bytes": 6771
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/checks/sat_photos.py",
+    "sha256": "3aeb47a41ed9110d01e7390ddb39132479dd9196145b03eb5d44d24c0556447c",
+    "bytes": 7951
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/checks/scale_robust.py",
+    "sha256": "f6d2e17db2c90032a67c63ad5ddd7b233f63c23f7f070f40087dc76c40043b69",
+    "bytes": 6711
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/checks/second_look.py",
+    "sha256": "4dfa40d10719037adbd6e01a8fdfa75a25d1aec0899fb3226e480010541cfbbe",
+    "bytes": 3762
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/checks/stage_cache.py",
+    "sha256": "f70a075dd5a21c36e310a2d1e333a32e5c90595c6a8be432e9aceb2a5480e55d",
+    "bytes": 7880
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/checks/synthetic_report.py",
+    "sha256": "58aba4921d1bb2d45410f7cd6c5599fe5747018eec0da089f939045b43f0ab0b",
+    "bytes": 4077
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/checks/two_tier.py",
+    "sha256": "725041ec42a54664c928f3828a133e81cce0139b732cb0a4d7384f4d091cc419",
+    "bytes": 5292
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/checks/vote_decision.py",
+    "sha256": "90aade3c0aae6d953f27d8840716d59b7ae578c999247f42c0d87b9d61c7bd27",
+    "bytes": 4698
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/coarse_methods/__init__.py",
+    "sha256": "d3181f833a07f7a9c0bee0fe3f98464b9310c097fd3a208d7a9cb9cd84043c55",
+    "bytes": 1324
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/coarse_methods/dino_rerank.py",
+    "sha256": "f0edb7642a5833dca0d08fbc61994cab11bc9365562374738462580cc3af6b79",
+    "bytes": 333
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/coarse_methods/fused.py",
+    "sha256": "8701552ecce3c6d12081780c947108b394540a4bfcb5848370f481c1facc5e30",
+    "bytes": 994
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/coarse_methods/hint.py",
+    "sha256": "396eba31fe83c0d19e623b36e891864987d3c4b988f289c1f89fcd102bdd9009",
+    "bytes": 560
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/coarse_methods/inputs.py",
+    "sha256": "1c031ae2a75fb1c549e359c4b03aaa43e0b9d213be9273b35407448f0c26946e",
+    "bytes": 1415
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/coarse_methods/single_map.py",
+    "sha256": "76d256ab214418a65eeef05c08746f4c62ee7b77454a914ed3e10cd05ca9c19d",
+    "bytes": 383
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/config.py",
+    "sha256": "8065861565877b80d861af9915b2485e39543a20a562f400b4e625cf75aaa83e",
+    "bytes": 4010
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/datasets/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/datasets/candidates.py",
+    "sha256": "9b53703af7103cd8b036f3c398a220aad9961ca216a4adc0116cdae1513ccf99",
+    "bytes": 7067
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/datasets/nudt_data.py",
+    "sha256": "8ccf09546a4c8b431426a1c4f8c918815b60e58cce8476bf96fb10f7739d83f0",
+    "bytes": 3838
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/datasets/photo_sets.py",
+    "sha256": "1cbb03d3d3b886fa3181879b50f322942d311ed2a8cd89266938a028e2b914d0",
+    "bytes": 2677
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/datasets/place_picker.py",
+    "sha256": "9f53e68077e5c98a6d206eebb043e36586af25df180b2a7e2da4a2e67ea1f986",
+    "bytes": 2476
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/datasets/pseudo_thermal.py",
+    "sha256": "6a4d70a06588aeb35a13cfb7362b6f8dd4d5e3830e79157efea17bf3843a556d",
+    "bytes": 7196
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/datasets/smoke_world.py",
+    "sha256": "ce9707a37b634df2810ce7ed8907cdc8fb32665803b8600c26bb0e5ad6e69d4b",
+    "bytes": 5017
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/datasets/synthetic_candidates.py",
+    "sha256": "2044d627a85c379a1dbe4ae35c81accb6026bd6bac8fdeb9beb3037deecbd3bb",
+    "bytes": 6956
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/features/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/features/base.py",
+    "sha256": "f4157b1d69fc9951ace6f1e52c87a42c65a38ef5524e5000de9aea5f7908dd56",
+    "bytes": 739
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/features/dino_dense.py",
+    "sha256": "e3e6489f076bbb59049ba213173f7b6d3f94f8d3233a57237ff17894eef98ece",
+    "bytes": 9857
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/features/dino_tokens.py",
+    "sha256": "bbcf63d7e9e6bda6faf3d29a8010556ed698ea810863cd109fe7603014ab0250",
+    "bytes": 1684
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/features/edge.py",
+    "sha256": "24dca67324c89950bb3ebb0278558e7309e49a718bc7a7a027a3d0390a9999be",
+    "bytes": 499
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/features/learned_family.py",
+    "sha256": "6cf485c1da422f5c122750e877432da7a2d3ee2c29ab3f5806af8194a95afcfb",
+    "bytes": 2857
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/features/learned_net.py",
+    "sha256": "ed1a8f40920032c8dfb899bee93b4ec634daf0d3ab4e7b1efacfe0415718fccf",
+    "bytes": 11735
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/features/mind.py",
+    "sha256": "383f4c21a3389fdb7275666f2be55a10e23eeada63bb59fe94b46755224c3ea6",
+    "bytes": 3531
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/features/whitening.py",
+    "sha256": "9a9174d8841df3e3a2608815a43bb26c9ed56b0123baff1e7b392d844f1fc153",
+    "bytes": 3238
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/maps/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/maps/dino_similarity.py",
+    "sha256": "3c5edd02220b144aa3c301d9ef1b61bb1b18a5c4662f8b9c6caf6dd6fd750d83",
+    "bytes": 1200
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/maps/map_bank.py",
+    "sha256": "7cfb1f0d43ed79d13db8c9fe9405d92f210f7b4b08b3a6f4cb9014ebe32180a0",
+    "bytes": 5795
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/models/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/models/fusion_ablation.py",
+    "sha256": "0c7aa07c185ca188771260937ab864980e46405e1d59513a89c9578bdea0ee2a",
+    "bytes": 3462
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/models/ranker.py",
+    "sha256": "b5b21b7388c4ea7e0dc50a57530ca48a35aac47309d77b1a342b7b78554d11d8",
+    "bytes": 3097
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/simulate.py",
+    "sha256": "23025a2a0acb3ce67f0f854cf1eb48c39c95af4780c6149f744f6f15b12d3922",
+    "bytes": 866
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/simulation/__init__.py",
+    "sha256": "7be85d9202cb74b2933ddbf0bb193ab859656f0ec7980dd92474a20aaf9de620",
+    "bytes": 914
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/simulation/appearance.py",
+    "sha256": "519d5d493c03c38ccd86b777de3a1d5c2ab857170954f405040ee84725137744",
+    "bytes": 6438
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/simulation/camera_model.py",
+    "sha256": "25ff929bdfd9bd5f5473be899f0d59287654fd550bbcc2e7dd77ab43a29c74ef",
+    "bytes": 1697
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/simulation/compare.py",
+    "sha256": "967f3981022f8eee3438acef830d22ee132f6efa8abd2e29fa7ccfa3797faf4a",
+    "bytes": 7708
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/simulation/dataset.py",
+    "sha256": "cbbe6062167ac550ecf700d01cdf06552d81b265a80fe1c9c4c6361ca6a9596a",
+    "bytes": 1865
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/simulation/downstream.py",
+    "sha256": "0fa4e5a2a73bd49d39bc85cad8a2083a8d2fc7e3765b62d71a226b46d023248a",
+    "bytes": 2014
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/simulation/ground_rays.py",
+    "sha256": "4e008b96f3ab85981802be949e39e5ded76f34e0ccbfd69df91ae71b603f2911",
+    "bytes": 3881
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/simulation/map_sampler.py",
+    "sha256": "a2e4a685d1d94271c31bb2f71588970ae3d18e7a9203fba28676cd965c7f8d2f",
+    "bytes": 5339
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/simulation/pose.py",
+    "sha256": "577e31770cee2c9914995439f4fd201b6d853888912a987446e6aa6d545bfc88",
+    "bytes": 2110
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/simulation/realism.py",
+    "sha256": "94fcf1131bcd8cccd34cb55a652e97d8ab98b31e85fcfaa5201136fdac4bfa3e",
+    "bytes": 1280
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/simulation/render.py",
+    "sha256": "435b2cf2b30a5fd08dbb0913e7d1f3236839e51ab12a5cc3f17935cc2cbdc53b",
+    "bytes": 3910
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/simulation/sensor.py",
+    "sha256": "0eb79e1757c99c7c949ba687c38936aff7b9b976d787e2015fe59d5746a3c99a",
+    "bytes": 3161
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/train/train_fusion.py",
+    "sha256": "e0fc9487e5b93ef5f9479b1b5ea8a3ac930602b81cc85bf942b1255271f91527",
+    "bytes": 3194
+  },
+  {
+    "path": "Main_Pipeline_Headless/README.md",
+    "sha256": "75c0a8b603238dbe8ef4405529db4eb12f494f46358c1e174f18d385daf539af",
+    "bytes": 9407
+  },
+  {
+    "path": "Main_Pipeline_Headless/docker/README.md",
+    "sha256": "94c6f7590c42fda7410b60f57b37a7b69c1d7edfe57103841844a468876d73c7",
+    "bytes": 1426
+  },
+  {
+    "path": "Main_Pipeline_Headless/docker/gpu_check.py",
+    "sha256": "d0d720b13e8a7553aaa24f3a943c4d770869137a0cf78b195c5f9ed6737dd78e",
+    "bytes": 1728
+  },
+  {
+    "path": "Main_Pipeline_Headless/geoloc/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "path": "Main_Pipeline_Headless/geoloc/check_settings.py",
+    "sha256": "3660aabf57d4cb11ebadc1b9bde6f2abfffd465048942f0a3db51222bbb7b477",
+    "bytes": 2354
+  },
+  {
+    "path": "Main_Pipeline_Headless/geoloc/cli.py",
+    "sha256": "dae2665ba21be8547dcef37bbdfc005ef6c55a6c2d480f73235a133d9b3cb67a",
+    "bytes": 11054
+  },
+  {
+    "path": "Main_Pipeline_Headless/geoloc/coarse_search.py",
+    "sha256": "4d92a885c1928a5a549182071dda066ccb86069e09810f526ace7fcb21e5fb8d",
+    "bytes": 6138
+  },
+  {
+    "path": "Main_Pipeline_Headless/geoloc/decision.py",
+    "sha256": "44c8499f3ad185bc5255444bb3f98a3e023b927f7dd8862a2522013668c38312",
+    "bytes": 1954
+  },
+  {
+    "path": "Main_Pipeline_Headless/geoloc/edge_features.py",
+    "sha256": "2a137dae77d332a4afe81dd354a3ef1b9b465f57ccb2e3b26cd064697277df62",
+    "bytes": 3042
+  },
+  {
+    "path": "Main_Pipeline_Headless/geoloc/fft.py",
+    "sha256": "85f7227eb459e0f85bfdc7d2fdc53dbb6a257717cad9a4e7cbd348c8c86d0093",
+    "bytes": 7305
+  },
+  {
+    "path": "Main_Pipeline_Headless/geoloc/fine_matching.py",
+    "sha256": "cc3c9d992362ad6247065ef9fb4a5da1d0b1b4c608d28d2b0212d8310dc78834",
+    "bytes": 5371
+  },
+  {
+    "path": "Main_Pipeline_Headless/geoloc/levels.py",
+    "sha256": "d62ce7aea7c41a0a98b16af770a4c08046018bc4ea4ff59509bf96b708028525",
+    "bytes": 1364
+  },
+  {
+    "path": "Main_Pipeline_Headless/geoloc/map_reader.py",
+    "sha256": "3a3e04c1e22b1afe33a56d834c72cb9797c5057e038b76068df14760211aee53",
+    "bytes": 4706
+  },
+  {
+    "path": "Main_Pipeline_Headless/geoloc/map_store.py",
+    "sha256": "680a22ca18c943958d302343be44b03a47ad391876ac455d982ed9276a485d94",
+    "bytes": 4555
+  },
+  {
+    "path": "Main_Pipeline_Headless/geoloc/photo.py",
+    "sha256": "c6183a5364a3d66fa12e016077f139cedd14ab5946f463c1c3789571770f2443",
+    "bytes": 4711
+  },
+  {
+    "path": "Main_Pipeline_Headless/geoloc/pipeline.py",
+    "sha256": "6cf22f1821e3530ce2be702ddd28d205c6028934767c5155d0e1adff4b6275a1",
+    "bytes": 9095
+  },
+  {
+    "path": "Main_Pipeline_Headless/geoloc/queries.py",
+    "sha256": "620adca1ebfc9ddcff91ae5a50d1a61ec85477572d5ef779f952ff620484ec40",
+    "bytes": 1581
+  },
+  {
+    "path": "Main_Pipeline_Headless/geoloc/scoring.py",
+    "sha256": "446a5696963eaac101e766e62b12b84a4dbf408050ebc0cd72f436efb1227568",
+    "bytes": 1168
+  },
+  {
+    "path": "Main_Pipeline_Headless/geoloc/semantic_rerank.py",
+    "sha256": "f6892d67aba251ec2ba8211dac66808302e7cc65cc598aa5d84feb61a2e44856",
+    "bytes": 4604
+  },
+  {
+    "path": "Main_Pipeline_Headless/models/README.md",
+    "sha256": "ccc61f6110c7429313138c9c3d33af1657b35d3aa2a07007487ca65001ee0185",
+    "bytes": 778
+  },
+  {
+    "path": "Main_Pipeline_Headless/settings.py",
+    "sha256": "03e50df34c32b5f199bf11e1794537a9a30a080228709d03c0e02a67a0fcd7f0",
+    "bytes": 12191
+  },
+  {
+    "path": "Submission_Files/myteam/code/README.md",
+    "sha256": "75c0a8b603238dbe8ef4405529db4eb12f494f46358c1e174f18d385daf539af",
+    "bytes": 9407
+  },
+  {
+    "path": "Submission_Files/myteam/code/geoloc/__init__.py",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "path": "Submission_Files/myteam/code/geoloc/check_settings.py",
+    "sha256": "3660aabf57d4cb11ebadc1b9bde6f2abfffd465048942f0a3db51222bbb7b477",
+    "bytes": 2354
+  },
+  {
+    "path": "Submission_Files/myteam/code/geoloc/cli.py",
+    "sha256": "dae2665ba21be8547dcef37bbdfc005ef6c55a6c2d480f73235a133d9b3cb67a",
+    "bytes": 11054
+  },
+  {
+    "path": "Submission_Files/myteam/code/geoloc/coarse_search.py",
+    "sha256": "4d92a885c1928a5a549182071dda066ccb86069e09810f526ace7fcb21e5fb8d",
+    "bytes": 6138
+  },
+  {
+    "path": "Submission_Files/myteam/code/geoloc/decision.py",
+    "sha256": "44c8499f3ad185bc5255444bb3f98a3e023b927f7dd8862a2522013668c38312",
+    "bytes": 1954
+  },
+  {
+    "path": "Submission_Files/myteam/code/geoloc/edge_features.py",
+    "sha256": "2a137dae77d332a4afe81dd354a3ef1b9b465f57ccb2e3b26cd064697277df62",
+    "bytes": 3042
+  },
+  {
+    "path": "Submission_Files/myteam/code/geoloc/fft.py",
+    "sha256": "85f7227eb459e0f85bfdc7d2fdc53dbb6a257717cad9a4e7cbd348c8c86d0093",
+    "bytes": 7305
+  },
+  {
+    "path": "Submission_Files/myteam/code/geoloc/fine_matching.py",
+    "sha256": "cc3c9d992362ad6247065ef9fb4a5da1d0b1b4c608d28d2b0212d8310dc78834",
+    "bytes": 5371
+  },
+  {
+    "path": "Submission_Files/myteam/code/geoloc/levels.py",
+    "sha256": "d62ce7aea7c41a0a98b16af770a4c08046018bc4ea4ff59509bf96b708028525",
+    "bytes": 1364
+  },
+  {
+    "path": "Submission_Files/myteam/code/geoloc/map_reader.py",
+    "sha256": "3a3e04c1e22b1afe33a56d834c72cb9797c5057e038b76068df14760211aee53",
+    "bytes": 4706
+  },
+  {
+    "path": "Submission_Files/myteam/code/geoloc/map_store.py",
+    "sha256": "680a22ca18c943958d302343be44b03a47ad391876ac455d982ed9276a485d94",
+    "bytes": 4555
+  },
+  {
+    "path": "Submission_Files/myteam/code/geoloc/photo.py",
+    "sha256": "c6183a5364a3d66fa12e016077f139cedd14ab5946f463c1c3789571770f2443",
+    "bytes": 4711
+  },
+  {
+    "path": "Submission_Files/myteam/code/geoloc/pipeline.py",
+    "sha256": "6cf22f1821e3530ce2be702ddd28d205c6028934767c5155d0e1adff4b6275a1",
+    "bytes": 9095
+  },
+  {
+    "path": "Submission_Files/myteam/code/geoloc/queries.py",
+    "sha256": "620adca1ebfc9ddcff91ae5a50d1a61ec85477572d5ef779f952ff620484ec40",
+    "bytes": 1581
+  },
+  {
+    "path": "Submission_Files/myteam/code/geoloc/scoring.py",
+    "sha256": "446a5696963eaac101e766e62b12b84a4dbf408050ebc0cd72f436efb1227568",
+    "bytes": 1168
+  },
+  {
+    "path": "Submission_Files/myteam/code/geoloc/semantic_rerank.py",
+    "sha256": "f6892d67aba251ec2ba8211dac66808302e7cc65cc598aa5d84feb61a2e44856",
+    "bytes": 4604
+  },
+  {
+    "path": "Submission_Files/myteam/code/settings.py",
+    "sha256": "03e50df34c32b5f199bf11e1794537a9a30a080228709d03c0e02a67a0fcd7f0",
+    "bytes": 12191
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_8/README.md",
+    "sha256": "f12e38ac5392b1f8cf676bca08fceeddb0ad28a529468d6074f0d949afcaa281",
+    "bytes": 6753
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_8/REPORT.md",
+    "sha256": "3a87fac6c8853837bf8b6a94f104072448f85f596ee4d260f55d69b6affc2d77",
+    "bytes": 8511
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_8/notebooks/It1_Blind_Signal_Table.ipynb",
+    "sha256": "806d117d34919966e32f4b404c6a3add971775988c98664d3a82a5aeba991a8c",
+    "bytes": 2009
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_8/notebooks/It1_Blind_Signal_Table_executed.ipynb",
+    "sha256": "de5176befee6f0c575c07ac90573848eb9a4765b6cea7fcf10b3a58457c68092",
+    "bytes": 3079
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_8/notebooks/It2_Audit.ipynb",
+    "sha256": "34e643e35a5ac123d5537e1273ed8ee950b4c160398ca808fc4a313755c3ee6d",
+    "bytes": 10886
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_8/notebooks/It2_Audit_executed.ipynb",
+    "sha256": "06e1b22998e2657253001c9481df0d990511151cde5f3a9153d727f9f11d5ca6",
+    "bytes": 94742
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_8/notebooks/It3_Two_Tier_Rule.ipynb",
+    "sha256": "346d1b823aece4f82d1646331b39630435dbb8fcdf8b246d2c1a481967d11c8b",
+    "bytes": 14159
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_8/notebooks/It3_Two_Tier_Rule_executed.ipynb",
+    "sha256": "2a52061eed17831000a9f0fedd29f99d626c578db1d54bfebd9ce896ba6cf210",
+    "bytes": 63749
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_8/notebooks/It4_Final_Test.ipynb",
+    "sha256": "51058c235dee82ad2ab013f8cb65306932fc2fa4e29b03eb3fffefef04c81691",
+    "bytes": 8038
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_8/notebooks/It4_Final_Test_executed.ipynb",
+    "sha256": "a9f7a94835e32d857ef06f67c3f7847a6e60b05f284ef7d8e8600b13feb27041",
+    "bytes": 34830
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_8/notebooks/Rich_Dump_Run_executed_nudt_fresh707.ipynb",
+    "sha256": "6a3e29426ccffb2acab57075dbcbae6c8a585c3b8dcfea8f3c36304f5f956f23",
+    "bytes": 19477
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_8/results/preregistered_t8.json",
+    "sha256": "3911f559238b4e20b324cb8fb2b3a087108283725f2f1645ecd2677865315957",
+    "bytes": 2525
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_8/run_blind_dump.sh",
+    "sha256": "bfea702299fdc33fbe62934c2406dbba34ad195d635599bc9bfb350a8205e6e8",
+    "bytes": 874
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_9/README.md",
+    "sha256": "c6202707583ec6096a3f4a237afdd2fc139f06076ecff6f1f15485f64ce21526",
+    "bytes": 4290
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_9/REPORT.md",
+    "sha256": "5b4accafbd59c91d1b5563a96dfc920c12ddea05fd232c56687bc0016e49ead5",
+    "bytes": 5589
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_9/notebooks/It1_Offline_Red_Team.ipynb",
+    "sha256": "4e922600ad000cb2a28d48556a9690d3ba632c34ad9029899b22c19a4e7e5511",
+    "bytes": 9732
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_9/notebooks/It1_Offline_Red_Team_executed.ipynb",
+    "sha256": "69a1774f8a4d790ba7af8763afb0b62a18d49c79b0a6f8580724eb0ba89defcd",
+    "bytes": 52177
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_9/notebooks/It2_Hardening.ipynb",
+    "sha256": "e038c01f9f8ccc38db10ef3e61d06a24559f0c7aff179639e4a87787135e93c3",
+    "bytes": 8838
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_9/notebooks/It2_Hardening_executed.ipynb",
+    "sha256": "be5e4a8d224a5850e06e781823407cda33aeeddd117512b12623b4ea926998c1",
+    "bytes": 31721
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_9/notebooks/It3_Altered_Photos.ipynb",
+    "sha256": "5d0ded7d4454de92c30962d838d44ed4895f3042e5cd77389a44b5d295e32f46",
+    "bytes": 9903
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_9/notebooks/It3_Altered_Photos_executed.ipynb",
+    "sha256": "f80a6f2679c6b491f888e6fb40f65f48d9abe39533fe6e45a45cb248c7a79561",
+    "bytes": 40136
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_9/notebooks/Rich_Dump_Perturbed.ipynb",
+    "sha256": "b955f1c44bea6e14b03d804cd249ce75e64926796f6e64f45fb7b64e5479ac99",
+    "bytes": 4843
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_9/notebooks/Rich_Dump_Perturbed_executed_nudt707.ipynb",
+    "sha256": "f313f46a8486c4fc93c00c8cf0ba5f2e6de0494ddf9aebc1595d224f509a76fd",
+    "bytes": 11369
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_9/notebooks/Rich_Dump_Perturbed_executed_official.ipynb",
+    "sha256": "111da45c3bb113a2a276702ea35dc0dab9f53ee37e81e21b8172f716e617756f",
+    "bytes": 11578
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_9/run_perturbed_dumps.sh",
+    "sha256": "4048b26172bacd7adc2555fce112424961dc38675b334b1ade8e12e8561b7923",
+    "bytes": 827
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/README.md",
+    "sha256": "c2ed28f59560d93eceab78620188284aa826e4f8fe9827636678f5f2c4234525",
+    "bytes": 2855
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/REPORT.md",
+    "sha256": "23c00da9c97059c47d0b246ad670cebc68a1ec1edfb0db87144fdeaddde18d46",
+    "bytes": 8741
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/notebooks/It1_Evaluation_Fixes.ipynb",
+    "sha256": "c98342b3a3705c9ced00dccb404f9802745b686a49137863ab07243d1fb28929",
+    "bytes": 9593
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/notebooks/It1_Evaluation_Fixes_executed.ipynb",
+    "sha256": "2b69151a11eec2f6047ea269aeb8f8b07712a181814cdbb363c1b2e7026be70d",
+    "bytes": 60729
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/notebooks/It2_Scale_Robustness.ipynb",
+    "sha256": "4feab49a4032201dfbc4e442fae6c0a9e274f667e262f11eec3bf37cb09bb88a",
+    "bytes": 8365
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/notebooks/It2_Scale_Robustness_executed.ipynb",
+    "sha256": "9c8f45b8b20cf59a64b4d3e37d1e2c7df7e98df1132ca68f732a591cebbf923e",
+    "bytes": 38400
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/notebooks/It3_Targeted_Verification.ipynb",
+    "sha256": "251d8f6cefb5f42fd44f401113393fff34247fc9b308b8971e9b1894c34df21e",
+    "bytes": 4284
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/notebooks/It3_Targeted_Verification_executed.ipynb",
+    "sha256": "16de3c13fdde9a9b46b9de2da2d5f3e76c4bb844df64a87aa11fbcf1eb682969",
+    "bytes": 20314
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/notebooks/It4_Stage_Cache.ipynb",
+    "sha256": "a90ed85b92f8eab63cbc0b65302fa8cfa7e10feb20cee25fef4b0633211a11ce",
+    "bytes": 3450
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/notebooks/It4_Stage_Cache_executed.ipynb",
+    "sha256": "20bcd4695d5010ad4603c677781f7cdada30e521af4ca86249909e72e6276dcd",
+    "bytes": 6763
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/notebooks/It5_Preregister.ipynb",
+    "sha256": "14230cf15a6bd3ab97c44eb3a5a4258cf253080011462a9f393f3fb6ab123ca8",
+    "bytes": 6190
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/notebooks/It5_Preregister_executed.ipynb",
+    "sha256": "2af8c0ed75097e67e90412f27d7d0db9e5ae63e57108659ff14f8112ac105611",
+    "bytes": 11397
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/notebooks/It6_Final_808.ipynb",
+    "sha256": "c823d07b61f99753b1df81eacdfdcc439003664ec74c1708d70853bf53440412",
+    "bytes": 9528
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/notebooks/It6_Final_808_executed.ipynb",
+    "sha256": "57d471fdcbbc9a6ae9aba21f574f81029844a682c53c8e7d190583bb61bbf072",
+    "bytes": 38532
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/notebooks/It7_Coarse_DINO_Mixture.ipynb",
+    "sha256": "99a7e41d133aa8539b95d3ef9df8be35530563c12e4525ba7bd6fe8515acf9a2",
+    "bytes": 6041
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/notebooks/It7_Coarse_DINO_Mixture_executed.ipynb",
+    "sha256": "82b2362147cd3277958acaa7d5994d51eb9ad4fd9dd62914800471e04fc94136",
+    "bytes": 14306
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/notebooks/Rich_Dump_Cached.ipynb",
+    "sha256": "dc35a6fbc8279a05fa851f8df98250e6fdeacbc375fc7e75c5653994a37c146e",
+    "bytes": 5819
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/notebooks/Rich_Dump_Cached_executed_cache_fft.ipynb",
+    "sha256": "135fb15fda4c20f6f25a1c6dce086f89bf5302476cc375c2cbf73516556bb134",
+    "bytes": 9075
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/notebooks/Rich_Dump_Cached_executed_cache_first.ipynb",
+    "sha256": "ec52f5240274f2ef54a38e2f28d9c7adf3eab269edcf239fc257811ab3afda34",
+    "bytes": 9069
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/notebooks/Rich_Dump_Cached_executed_cache_reuse.ipynb",
+    "sha256": "006084fea3f9b5f798eca7ade34dab47fcaf4414a81fb5939b16728bce5a6cdc",
+    "bytes": 9067
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/notebooks/Rich_Dump_Cached_executed_mix_nudt101.ipynb",
+    "sha256": "3c8fbbaa5226c59a530fd39ba5ccba34d8e90cffdd1bab4a33832eff677f2fd3",
+    "bytes": 9347
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/notebooks/Rich_Dump_Cached_executed_mix_official_try.ipynb",
+    "sha256": "1bf3af8f29f65a270b7ee764200701c2f76661961d020b4c88f22e0e5ba10a60",
+    "bytes": 10212
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/notebooks/Rich_Dump_Cached_executed_nudt_fresh808.ipynb",
+    "sha256": "a228b2e812dc09e7b5df47c25babda03927d16ee893a93b286736a8691fc9d9e",
+    "bytes": 10622
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/results/it1_jetson_context_fix.csv.manifest.json",
+    "sha256": "2cb8dfaf4d5fac7e784a34851fa73798edc680cc82f962b6f171ac98dea0a1bd",
+    "bytes": 1500
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/results/it2_scale_sweep.csv.manifest.json",
+    "sha256": "7c357961a4d62ac093e368fc4f804eaf5ed4a9b17e96de7a5eebbf99dfb3772b",
+    "bytes": 1568
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/results/it6_808_jetson_J0.csv.manifest.json",
+    "sha256": "3b0e5b1a4f814c4e1aac7718739a45575b054cc258e409e251985d9118bac2b6",
+    "bytes": 1234
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/results/it6_808_jetson_J1.csv.manifest.json",
+    "sha256": "11b82da04ceb62d15268e3bb3c6f01460be1d3a7d6c725c215620a5ee7783659",
+    "bytes": 1236
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/results/it6_808_jetson_J2.csv.manifest.json",
+    "sha256": "7d27fdf666269d6b23f336525b32eb2b407d71f25de9d9c6660c2059674e3399",
+    "bytes": 1237
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/results/it6_808_jetson_V5.csv.manifest.json",
+    "sha256": "26389fb7cb0eb080aab221dcc8959840dcf7080fc1b6a70c77ba39fe07bc58aa",
+    "bytes": 1247
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/results/it6_808_jetson_base.csv.manifest.json",
+    "sha256": "f902f64d2ad74ffce1e28ae62bc655e8817734c48485639786d9daf34178a049",
+    "bytes": 1172
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/results/it6_808_pc_J0.csv.manifest.json",
+    "sha256": "63ad2b26dd1936a3928d0aa5eb413b84661c65a2025107ab505caa0e584bbad3",
+    "bytes": 1498
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/results/it6_808_pc_J1.csv.manifest.json",
+    "sha256": "1adc646b4993925ce35e8074780e9dc1f2877d33266cd4aae104eba18411da5b",
+    "bytes": 1500
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/results/it6_808_pc_J2.csv.manifest.json",
+    "sha256": "11787739c44f2d69f3622c36549dcdf7fc13bbb4de908120d7a01c8ee791708b",
+    "bytes": 1501
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/results/it6_808_pc_V5.csv.manifest.json",
+    "sha256": "adcfa37575937a3d55f313f721f9ead43be1ea60cf23eb64ec1e1991b918d10b",
+    "bytes": 1511
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/results/it6_808_pc_base.csv.manifest.json",
+    "sha256": "770e0981bb5af76fb91208fd12b1c50c046c81aae325d76d231d0a3cd98d802c",
+    "bytes": 1437
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/results/preregistered_t10.json",
+    "sha256": "00708852de3751a226443dcf785b2e5f70924305a96c2537375add8aba460f6b",
+    "bytes": 2382
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_10/run_gpu.sh",
+    "sha256": "fb457c72c3569ef3af81d8eba453a1e7339c018de33a4933eb5bbcc2e28f61c2",
+    "bytes": 1643
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_11/README.md",
+    "sha256": "a893e86b5762e4102dbe1c6edf70a51a4a5a5d5c6e5640f72266572759adc640",
+    "bytes": 4058
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_11/REPORT.md",
+    "sha256": "a893e86b5762e4102dbe1c6edf70a51a4a5a5d5c6e5640f72266572759adc640",
+    "bytes": 4058
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_11/notebooks/It1_Sat_Judge.ipynb",
+    "sha256": "18a76b2b42a3e226bfadd9e5b925eeeec07d3b6fcadf106e838e4eabe63a768c",
+    "bytes": 13198
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_11/notebooks/It1_Sat_Judge_executed.ipynb",
+    "sha256": "057d32df796c336a39aeee27bcd008ff8b6bf20b8c519176f0b2f567ac0580d3",
+    "bytes": 55762
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_11/notebooks/It2_Preregister_and_Final_909.ipynb",
+    "sha256": "5df4f6f552e57a1313337bbb75720db62b8701848f3111266dfb3b02eb9528f2",
+    "bytes": 9404
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_11/notebooks/It2_Preregister_and_Final_909_executed.ipynb",
+    "sha256": "bfa53cff92872902f63a389df3d9e2b7723fdad5ab6b897c50b35adc680e3200",
+    "bytes": 31525
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_11/notebooks/Rich_Dump_Cached_executed_nudt_fresh909.ipynb",
+    "sha256": "f2da8f3374f0af8ef3b416781ec528078fa945f0e3a02a306ebcf68549b9594e",
+    "bytes": 10561
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_11/notebooks/Sat_Photo_Dump.ipynb",
+    "sha256": "ccb765416d42299ca7631997d9b0656c47b9146e2cbe63809497bd9ed0f8f951",
+    "bytes": 5761
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_11/notebooks/Sat_Photo_Dump_executed_sat_train.ipynb",
+    "sha256": "1119dd8a312da5b5b2ab97bc3377ff6f56625c91486539565094f3ef38924f57",
+    "bytes": 12168
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_11/notebooks/Sat_Photo_Dump_executed_strength1.ipynb",
+    "sha256": "92272b4d1f6bdd9c2f01616770de217319dd6eb9be9bcbaf4f3685b447995bb7",
+    "bytes": 10300
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_11/notebooks/Sat_Photo_Dump_executed_strength2.ipynb",
+    "sha256": "39081006162fe23c6e12074059ab75f6bc56d43edddf402bf4304a42339d5ce6",
+    "bytes": 10300
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_11/notebooks/Sat_Photo_Dump_executed_strength3.ipynb",
+    "sha256": "b14b237116d22c70270d43f27d6d877a9310ad99682b9ee3f026581608c42e24",
+    "bytes": 10301
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_11/results/it2_909_jetson_S1l.csv.manifest.json",
+    "sha256": "c8ad63cd487bc18b5623097b705fbaa3556e4e1c2fe8a943e8e863453f8c8f2d",
+    "bytes": 1189
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_11/results/it2_909_jetson_S1z.csv.manifest.json",
+    "sha256": "b9d8668b686b83e1f0c261974dcd37b7d2d1d4aaafc6aee4e66213bfad352281",
+    "bytes": 1190
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_11/results/it2_909_jetson_S5l.csv.manifest.json",
+    "sha256": "477ce3e1a85d8566a44fce51cc4ddbf2818617507bd506f1b9ba8dc3b83ec89f",
+    "bytes": 1189
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_11/results/it2_909_jetson_S5z.csv.manifest.json",
+    "sha256": "0d91394cd3b9cbfa31d849c9163b748be802853aceb0e9ba91a6aa49d77f1d76",
+    "bytes": 1189
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_11/results/it2_909_jetson_base.csv.manifest.json",
+    "sha256": "17d315068b7bcdf018c32e74fd4d8125a5b60acce83fa5a0ae526b31cd27a701",
+    "bytes": 1163
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_11/results/it2_909_pc_S1l.csv.manifest.json",
+    "sha256": "14578a0634bd1376aea47e3072d4061390fdc822beee78572fd25c87a197657a",
+    "bytes": 1453
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_11/results/it2_909_pc_S1z.csv.manifest.json",
+    "sha256": "3f063b33b4b07eb6884587f7c7397c58c41e9a8df979d9b8693ad63c0b1669d9",
+    "bytes": 1454
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_11/results/it2_909_pc_S5l.csv.manifest.json",
+    "sha256": "c9bec254e0c40d681b9bb3edb43e2b7b19df8c75b8594e9617b99a1ab102d5ae",
+    "bytes": 1453
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_11/results/it2_909_pc_S5z.csv.manifest.json",
+    "sha256": "ef6324cde2645c6d89d5daff4d37073486548deb217cba90976ca1793f2726e1",
+    "bytes": 1454
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_11/results/it2_909_pc_base.csv.manifest.json",
+    "sha256": "fcb280afe69f0194652e10ad3bd035108d86b0b45257bc48f3121474a620326f",
+    "bytes": 1427
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_11/results/preregistered_t11.json",
+    "sha256": "e1b696c5464d6a1fdb397ac9398d096526c10519255d34115d323e8f272ccf8d",
+    "bytes": 1180
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_11/run_fresh909.sh",
+    "sha256": "6054b19fc48ec7cbc2fcd06d892ff2e31c37028f1513428002ab14b6c0dd24b5",
+    "bytes": 863
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_11/run_strength.sh",
+    "sha256": "08b3fce32b18909658b5ad1cdb477adedd77299973fa5ea9ab070a77e4b05542",
+    "bytes": 630
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/agreement_query_pipeline.py",
+    "sha256": "b22da52e8bc9bccf42359b8e3e0522a5775d45afa97505fd3aa581eb3a3b2674",
+    "bytes": 5721
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/single_photo_pipeline.py",
+    "sha256": "c8422297dc642b54aaf7f8f05af2cf3fc78e4a7e31e5221f8ebb419232c78cba",
+    "bytes": 18408
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/heading_query_pipeline.py",
+    "sha256": "134bc19d1256957e5dba7d9ef7d5a367402000dce436cbea59095a5678e1d2f4",
+    "bytes": 10139
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/run_fusion.py",
+    "sha256": "0eee73ca4398aa9540b7c123c66bdd3059ae3831d56203af03bea530f46bf4d5",
+    "bytes": 2476
+  },
+  {
+    "path": "IdeaForge-GeoLoc-InterIIT15/run.py",
+    "sha256": "87fd6e48a00fb88ebb8cd63001c6fc460d7de87cc2d705360d5108b2615beb63",
+    "bytes": 5050
+  }
+]

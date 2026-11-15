@@ -1,0 +1,2 @@
+[NbConvertApp] Converting notebook It3_Two_Tier_Rule.ipynb to notebook
+[NbConvertApp] Writing 63749 bytes to It3_Two_Tier_Rule_executed.ipynb

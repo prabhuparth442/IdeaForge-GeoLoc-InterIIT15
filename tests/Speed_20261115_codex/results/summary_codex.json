@@ -1,0 +1,116 @@
+[
+  {
+    "domain": "official",
+    "variant": "baseline",
+    "completed": 3,
+    "planned": 3,
+    "mean_seconds": 58.645985619001294,
+    "score60": 60.0,
+    "answers": 3,
+    "final_outputs_exact": true,
+    "stage_mean": {
+      "render": 0.05564244588216146,
+      "maps": 4.476493676503499,
+      "coarse": 0.0232849915822347,
+      "semantic": 19.73097078005473,
+      "fine": 34.34532848993937,
+      "decision": 0.014256259038423499
+    },
+    "process_peak_rss_mb": 2591.34375
+  },
+  {
+    "domain": "official",
+    "variant": "optimised",
+    "completed": 3,
+    "planned": 3,
+    "mean_seconds": 57.10210825066679,
+    "score60": 60.0,
+    "answers": 3,
+    "final_outputs_exact": true,
+    "stage_mean": {
+      "render": 0.020542628939438146,
+      "maps": 2.155560572942098,
+      "coarse": 0.023018042246500652,
+      "semantic": 19.98324195543925,
+      "fine": 34.90874703725179,
+      "decision": 0.0018648141788920232
+    },
+    "process_peak_rss_mb": 2591.34375
+  },
+  {
+    "domain": "official",
+    "variant": "backbone",
+    "completed": 3,
+    "planned": 3,
+    "mean_seconds": 45.13882579866671,
+    "score60": 60.0,
+    "answers": 3,
+    "final_outputs_exact": true,
+    "stage_mean": {
+      "render": 0.021385895740725875,
+      "maps": 2.2636121114095054,
+      "coarse": 0.02276150385538737,
+      "semantic": 20.23520588874817,
+      "fine": 22.582530339558918,
+      "decision": 0.00404001601782511
+    },
+    "process_peak_rss_mb": 2591.34375
+  },
+  {
+    "domain": "nudt",
+    "variant": "baseline",
+    "completed": 3,
+    "planned": 3,
+    "mean_seconds": 63.22725419733373,
+    "score60": 52.0,
+    "answers": 3,
+    "final_outputs_exact": true,
+    "stage_mean": {
+      "render": 0.358765443166097,
+      "maps": 5.829238255818685,
+      "coarse": 0.031053781509399414,
+      "semantic": 20.63771891593933,
+      "fine": 36.3240335782369,
+      "decision": 0.04643496366406907
+    },
+    "process_peak_rss_mb": 2336.32421875
+  },
+  {
+    "domain": "nudt",
+    "variant": "optimised",
+    "completed": 3,
+    "planned": 3,
+    "mean_seconds": 57.82165787133393,
+    "score60": 52.0,
+    "answers": 3,
+    "final_outputs_exact": true,
+    "stage_mean": {
+      "render": 0.09691675844927279,
+      "maps": 3.048777977625529,
+      "coarse": 0.030701875686645508,
+      "semantic": 19.79622220993042,
+      "fine": 34.80288521448771,
+      "decision": 0.03272062582012344
+    },
+    "process_peak_rss_mb": 2336.32421875
+  },
+  {
+    "domain": "nudt",
+    "variant": "backbone",
+    "completed": 3,
+    "planned": 3,
+    "mean_seconds": 46.20982593100052,
+    "score60": 52.0,
+    "answers": 3,
+    "final_outputs_exact": true,
+    "stage_mean": {
+      "render": 0.09702966439120549,
+      "maps": 3.0488228797912598,
+      "coarse": 0.030719518661499023,
+      "semantic": 20.113800048828125,
+      "fine": 22.876612345377605,
+      "decision": 0.029150230618445978
+    },
+    "process_peak_rss_mb": 2336.32421875
+  }
+]

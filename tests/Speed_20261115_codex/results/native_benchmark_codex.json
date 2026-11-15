@@ -1,0 +1,1569 @@
+{
+  "command": [
+    "g++",
+    "-O3",
+    "-std=c++17",
+    "-shared",
+    "-fPIC",
+    "/home/voidness/Storage/Synced Folders/InterIIT Tech 15/IdeaForge-GeoLoc-InterIIT15/tests/Speed_20261115_codex/translation_codex.cpp",
+    "-o",
+    "/home/voidness/Storage/Synced Folders/InterIIT Tech 15/IdeaForge-GeoLoc-InterIIT15/tests/Speed_20261115_codex/results/translation_codex.so"
+  ],
+  "cases": 194,
+  "mismatches": [],
+  "measurements": [
+    {
+      "name": "synthetic_0",
+      "n": 0,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 3.81001882487908e-07,
+      "cpp": 7.471000571968034e-06
+    },
+    {
+      "name": "synthetic_0",
+      "n": 0,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 3.749992174562067e-07,
+      "cpp": 7.3119990702252835e-06
+    },
+    {
+      "name": "synthetic_1",
+      "n": 1,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.280899959965609e-05,
+      "cpp": 7.1260001277551055e-06
+    },
+    {
+      "name": "synthetic_1",
+      "n": 1,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.281200093217194e-05,
+      "cpp": 7.5600000855047256e-06
+    },
+    {
+      "name": "synthetic_2",
+      "n": 2,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.3866003428120166e-05,
+      "cpp": 7.1639988163951784e-06
+    },
+    {
+      "name": "synthetic_2",
+      "n": 2,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4523000572808087e-05,
+      "cpp": 7.495000318158418e-06
+    },
+    {
+      "name": "synthetic_4",
+      "n": 4,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.3871998817194253e-05,
+      "cpp": 6.788999598938972e-06
+    },
+    {
+      "name": "synthetic_4",
+      "n": 4,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.5214001905405894e-05,
+      "cpp": 7.316000846913084e-06
+    },
+    {
+      "name": "synthetic_10",
+      "n": 10,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4745997759746388e-05,
+      "cpp": 7.620001269970089e-06
+    },
+    {
+      "name": "synthetic_10",
+      "n": 10,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4676999853691086e-05,
+      "cpp": 9.521998435957357e-06
+    },
+    {
+      "name": "synthetic_50",
+      "n": 50,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 3.5799999750452116e-05,
+      "cpp": 1.8352999177295715e-05
+    },
+    {
+      "name": "synthetic_50",
+      "n": 50,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 3.617200127337128e-05,
+      "cpp": 1.7729002138366923e-05
+    },
+    {
+      "name": "synthetic_200",
+      "n": 200,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 0.00041711199810379185,
+      "cpp": 0.0002940119993581902
+    },
+    {
+      "name": "synthetic_200",
+      "n": 200,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 0.00042151099842158146,
+      "cpp": 0.000293830998998601
+    },
+    {
+      "name": "synthetic_500",
+      "n": 500,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 0.004139276999922004,
+      "cpp": 0.0019633269985206425
+    },
+    {
+      "name": "synthetic_500",
+      "n": 500,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 0.004094045998499496,
+      "cpp": 0.00196213299932424
+    },
+    {
+      "name": "boundary_2.0",
+      "n": 6,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.5087000065250322e-05,
+      "cpp": 8.777002221904695e-06
+    },
+    {
+      "name": "boundary_2.0",
+      "n": 6,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.5997000446077436e-05,
+      "cpp": 7.84499934525229e-06
+    },
+    {
+      "name": "boundary_3.0",
+      "n": 6,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4428998838411644e-05,
+      "cpp": 7.778999133734033e-06
+    },
+    {
+      "name": "boundary_3.0",
+      "n": 6,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4896999346092343e-05,
+      "cpp": 7.5169991760049015e-06
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 2,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4233999536372721e-05,
+      "cpp": 7.200000254670158e-06
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 2,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4331999409478158e-05,
+      "cpp": 7.744998583802953e-06
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 25,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 2.03909985430073e-05,
+      "cpp": 1.0909003322012722e-05
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 25,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 2.0354000298539177e-05,
+      "cpp": 1.0001996997743845e-05
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 8,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.5237001207424328e-05,
+      "cpp": 7.700997230131179e-06
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 8,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4690998796140775e-05,
+      "cpp": 7.927999831736088e-06
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 3,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4396002370631322e-05,
+      "cpp": 7.717997505096719e-06
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 3,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4080997061682865e-05,
+      "cpp": 7.429996912833303e-06
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 3,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4224999176803976e-05,
+      "cpp": 7.231999916257337e-06
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 3,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4139000995783135e-05,
+      "cpp": 6.89500302542001e-06
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 6,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4666999049950391e-05,
+      "cpp": 1.0111998562933877e-05
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 6,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4655997802037746e-05,
+      "cpp": 7.570000889245421e-06
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 3,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4086999726714566e-05,
+      "cpp": 7.713002560194582e-06
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 3,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4252000255510211e-05,
+      "cpp": 7.31000181986019e-06
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 8,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.6448000678792596e-05,
+      "cpp": 7.912000000942498e-06
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 8,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4650002412963659e-05,
+      "cpp": 7.638998795300722e-06
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 3,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4378998457686976e-05,
+      "cpp": 8.256000000983477e-06
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 3,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.3938999472884461e-05,
+      "cpp": 7.43000055081211e-06
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 1,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.3690001651411876e-05,
+      "cpp": 7.293001544894651e-06
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 1,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.3379001757130027e-05,
+      "cpp": 7.484999514417723e-06
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 27,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 2.2748998162569478e-05,
+      "cpp": 1.1519998224684969e-05
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 27,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 2.152600063709542e-05,
+      "cpp": 1.0659998224582523e-05
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 1,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.3658001989824697e-05,
+      "cpp": 8.241000614361838e-06
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 1,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.3321001461008564e-05,
+      "cpp": 7.669001206522807e-06
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 2,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4075001672608778e-05,
+      "cpp": 8.73200042406097e-06
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 2,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.41119999170769e-05,
+      "cpp": 7.320999429794028e-06
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 2,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4083001588005573e-05,
+      "cpp": 7.940998330013826e-06
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 2,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 2.472999767633155e-05,
+      "cpp": 7.456001185346395e-06
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 5,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4190998626872897e-05,
+      "cpp": 7.491002179449424e-06
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 5,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4181001461111009e-05,
+      "cpp": 7.58600072003901e-06
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 2,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4184999599820003e-05,
+      "cpp": 7.287002517841756e-06
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 2,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4380999346030876e-05,
+      "cpp": 7.190999895101413e-06
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 6,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.460000203223899e-05,
+      "cpp": 7.790000381646678e-06
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 6,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4498000382445753e-05,
+      "cpp": 7.677001121919602e-06
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 3,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.5839999832678586e-05,
+      "cpp": 7.582999387523159e-06
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 3,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4193999959388748e-05,
+      "cpp": 8.01599890110083e-06
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 1,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.3013999705435708e-05,
+      "cpp": 7.483999070245773e-06
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 1,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.3070999557385221e-05,
+      "cpp": 7.369999366346747e-06
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 2,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4582998119294643e-05,
+      "cpp": 7.755999831715599e-06
+    },
+    {
+      "name": "photo_1.npz",
+      "n": 2,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4114997611613944e-05,
+      "cpp": 7.853999704821035e-06
+    },
+    {
+      "name": "photo_10.npz",
+      "n": 5,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4445999113377184e-05,
+      "cpp": 7.728001946816221e-06
+    },
+    {
+      "name": "photo_10.npz",
+      "n": 5,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.402400084771216e-05,
+      "cpp": 7.610000466229394e-06
+    },
+    {
+      "name": "photo_10.npz",
+      "n": 1,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.3486998795997351e-05,
+      "cpp": 7.476999599020928e-06
+    },
+    {
+      "name": "photo_10.npz",
+      "n": 1,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.3168002624297515e-05,
+      "cpp": 7.127000571927056e-06
+    },
+    {
+      "name": "photo_10.npz",
+      "n": 1,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.2927001080242917e-05,
+      "cpp": 7.055001333355904e-06
+    },
+    {
+      "name": "photo_10.npz",
+      "n": 1,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.3198998203733936e-05,
+      "cpp": 7.580998499179259e-06
+    },
+    {
+      "name": "photo_10.npz",
+      "n": 4,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4498000382445753e-05,
+      "cpp": 7.3310002335347235e-06
+    },
+    {
+      "name": "photo_10.npz",
+      "n": 4,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4361001376528293e-05,
+      "cpp": 7.526999979745597e-06
+    },
+    {
+      "name": "photo_10.npz",
+      "n": 0,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 4.270004865247756e-07,
+      "cpp": 7.537000783486292e-06
+    },
+    {
+      "name": "photo_10.npz",
+      "n": 0,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 4.0099985199049115e-07,
+      "cpp": 7.043003279250115e-06
+    },
+    {
+      "name": "photo_10.npz",
+      "n": 1,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.3192002370487899e-05,
+      "cpp": 7.27099904906936e-06
+    },
+    {
+      "name": "photo_10.npz",
+      "n": 1,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.3629996828967705e-05,
+      "cpp": 7.009002729319036e-06
+    },
+    {
+      "name": "photo_10.npz",
+      "n": 3,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.3845001376466826e-05,
+      "cpp": 7.516002369811758e-06
+    },
+    {
+      "name": "photo_10.npz",
+      "n": 3,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.6010999388527125e-05,
+      "cpp": 7.181999535532668e-06
+    },
+    {
+      "name": "photo_10.npz",
+      "n": 1,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.3092998415231705e-05,
+      "cpp": 7.377002475550398e-06
+    },
+    {
+      "name": "photo_10.npz",
+      "n": 1,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.324299955740571e-05,
+      "cpp": 7.319998985622078e-06
+    },
+    {
+      "name": "photo_10.npz",
+      "n": 1,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4601999282604083e-05,
+      "cpp": 7.15100031811744e-06
+    },
+    {
+      "name": "photo_10.npz",
+      "n": 1,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.3061999197816476e-05,
+      "cpp": 7.137998181860894e-06
+    },
+    {
+      "name": "photo_10.npz",
+      "n": 2,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4171997463563457e-05,
+      "cpp": 1.0487998224562034e-05
+    },
+    {
+      "name": "photo_10.npz",
+      "n": 2,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4396999176824465e-05,
+      "cpp": 7.267000910360366e-06
+    },
+    {
+      "name": "photo_10.npz",
+      "n": 4,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4519002434099093e-05,
+      "cpp": 7.524999091401696e-06
+    },
+    {
+      "name": "photo_10.npz",
+      "n": 4,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4310000551631674e-05,
+      "cpp": 7.74500222178176e-06
+    },
+    {
+      "name": "photo_10.npz",
+      "n": 4,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.584699930390343e-05,
+      "cpp": 7.472001016139984e-06
+    },
+    {
+      "name": "photo_10.npz",
+      "n": 4,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4273002307163551e-05,
+      "cpp": 7.476999599020928e-06
+    },
+    {
+      "name": "photo_10.npz",
+      "n": 4,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4101002307143062e-05,
+      "cpp": 7.777998689562082e-06
+    },
+    {
+      "name": "photo_10.npz",
+      "n": 4,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.438899926142767e-05,
+      "cpp": 7.213999197119847e-06
+    },
+    {
+      "name": "photo_10.npz",
+      "n": 6,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.428399991709739e-05,
+      "cpp": 7.365997589658946e-06
+    },
+    {
+      "name": "photo_10.npz",
+      "n": 6,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4535999071085826e-05,
+      "cpp": 7.421000191243365e-06
+    },
+    {
+      "name": "photo_10.npz",
+      "n": 4,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4056000509299338e-05,
+      "cpp": 7.727998308837414e-06
+    },
+    {
+      "name": "photo_10.npz",
+      "n": 4,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4354998711496592e-05,
+      "cpp": 7.334998372243717e-06
+    },
+    {
+      "name": "photo_10.npz",
+      "n": 2,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4180001016939059e-05,
+      "cpp": 7.82599818194285e-06
+    },
+    {
+      "name": "photo_10.npz",
+      "n": 2,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4187000488163903e-05,
+      "cpp": 7.910999556770548e-06
+    },
+    {
+      "name": "photo_10.npz",
+      "n": 1,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.3352000678423792e-05,
+      "cpp": 7.0450005296152085e-06
+    },
+    {
+      "name": "photo_10.npz",
+      "n": 1,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.3214998034527525e-05,
+      "cpp": 7.282997103175148e-06
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 42,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 2.8545000532176346e-05,
+      "cpp": 1.655899905017577e-05
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 42,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 2.7625999791780487e-05,
+      "cpp": 1.5577999874949455e-05
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 4,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4156001270748675e-05,
+      "cpp": 7.950999133754522e-06
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 4,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4305998774943873e-05,
+      "cpp": 7.299997378140688e-06
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 1,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.3353001122595742e-05,
+      "cpp": 7.299997378140688e-06
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 1,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.3957000192021951e-05,
+      "cpp": 7.295002433238551e-06
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 9,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.5189998521236703e-05,
+      "cpp": 8.242001058533788e-06
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 9,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.525299740023911e-05,
+      "cpp": 8.148999768309295e-06
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 3,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.6427999071311206e-05,
+      "cpp": 7.495000318158418e-06
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 3,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4428002032218501e-05,
+      "cpp": 7.622998964507133e-06
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 4,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4826997357886285e-05,
+      "cpp": 7.441998604917899e-06
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 4,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.5268000424839556e-05,
+      "cpp": 7.434999133693054e-06
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 4,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4094999642111361e-05,
+      "cpp": 7.296999683603644e-06
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 4,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.438599792891182e-05,
+      "cpp": 7.6060023275204e-06
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 3,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4139000995783135e-05,
+      "cpp": 7.665999874006957e-06
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 3,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.409399919793941e-05,
+      "cpp": 7.939001079648733e-06
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 8,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4873003237880766e-05,
+      "cpp": 7.41099938750267e-06
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 8,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4970999473007396e-05,
+      "cpp": 7.501999789383262e-06
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 49,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 3.447500057518482e-05,
+      "cpp": 2.0316001609899104e-05
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 49,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 3.2656000257702544e-05,
+      "cpp": 1.883600270957686e-05
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 3,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.3941000361228362e-05,
+      "cpp": 7.296002877410501e-06
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 3,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4050001482246444e-05,
+      "cpp": 7.956001354614273e-06
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 3,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4847999409539625e-05,
+      "cpp": 7.293001544894651e-06
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 3,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.3937999028712511e-05,
+      "cpp": 7.382001058431342e-06
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 1,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.3263997971080244e-05,
+      "cpp": 7.27299993741326e-06
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 1,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.3093002053210512e-05,
+      "cpp": 7.415001164190471e-06
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 5,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.5256999176926911e-05,
+      "cpp": 7.521000952692702e-06
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 5,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4889999874867499e-05,
+      "cpp": 7.620001269970089e-06
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 1,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.2923999747727066e-05,
+      "cpp": 7.762999302940443e-06
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 1,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4171000657370314e-05,
+      "cpp": 7.320002623600885e-06
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 1,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.3216998922871426e-05,
+      "cpp": 7.414000720018521e-06
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 1,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.3041997590335086e-05,
+      "cpp": 8.238999726017937e-06
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 4,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4085999282542616e-05,
+      "cpp": 7.390000973828137e-06
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 4,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4427998394239694e-05,
+      "cpp": 7.749000360490754e-06
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 3,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4299999747890979e-05,
+      "cpp": 7.327998901018873e-06
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 3,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.418400279362686e-05,
+      "cpp": 6.985999789321795e-06
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 1,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.3100001524435356e-05,
+      "cpp": 7.84299845690839e-06
+    },
+    {
+      "name": "photo_100.npz",
+      "n": 1,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4476998330792412e-05,
+      "cpp": 7.247999747050926e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 7,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4618999557569623e-05,
+      "cpp": 7.4549971031956375e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 7,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4576002286048606e-05,
+      "cpp": 7.6120013545732945e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 1,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.2820000847568735e-05,
+      "cpp": 7.1880022005643696e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 1,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.2755001080222428e-05,
+      "cpp": 7.2500006353948265e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 5,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4417000784305856e-05,
+      "cpp": 7.349000952672213e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 5,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4206001651473343e-05,
+      "cpp": 7.763999747112393e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 1,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.3494998711394146e-05,
+      "cpp": 7.398000889224932e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 1,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.3157998182578012e-05,
+      "cpp": 8.089002221822739e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 2,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4081000699661672e-05,
+      "cpp": 7.061000360408798e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 2,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.3949000276625156e-05,
+      "cpp": 7.561000529676676e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 2,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4008997823111713e-05,
+      "cpp": 7.222999556688592e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 2,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4328001270769164e-05,
+      "cpp": 7.079001079546288e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 3,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.3951001164969057e-05,
+      "cpp": 7.872997230151668e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 3,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4198001736076549e-05,
+      "cpp": 7.205999281723052e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 3,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4515000657411292e-05,
+      "cpp": 7.40799805498682e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 3,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4306999219115824e-05,
+      "cpp": 7.298000127775595e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 1,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.2753000191878527e-05,
+      "cpp": 7.267000910360366e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 1,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.3021999620832503e-05,
+      "cpp": 7.2830007411539555e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 16,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.7672999092610553e-05,
+      "cpp": 8.4550010797102e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 16,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.7195001419167966e-05,
+      "cpp": 8.851002348819748e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 3,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4241002645576373e-05,
+      "cpp": 7.425001967931166e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 3,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4187000488163903e-05,
+      "cpp": 7.360999006778002e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 1,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.2836997484555468e-05,
+      "cpp": 7.331997039727867e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 1,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.2897999113192782e-05,
+      "cpp": 7.086000550771132e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 1,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.3098997442284599e-05,
+      "cpp": 7.284001185325906e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 1,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.3351000234251842e-05,
+      "cpp": 7.124999683583155e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 5,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4688001101603732e-05,
+      "cpp": 7.213999197119847e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 5,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4395001926459372e-05,
+      "cpp": 7.693997758906335e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 1,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.298400093219243e-05,
+      "cpp": 7.692000508541241e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 1,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.3113996828906238e-05,
+      "cpp": 7.200000254670158e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 2,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.471799987484701e-05,
+      "cpp": 7.041999197099358e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 2,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.367399818263948e-05,
+      "cpp": 7.4359995778650045e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 1,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.3303997548064217e-05,
+      "cpp": 7.377999281743541e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 1,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4510998880723491e-05,
+      "cpp": 7.385999197140336e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 3,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4194996765581891e-05,
+      "cpp": 7.099999493220821e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 3,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4158002159092575e-05,
+      "cpp": 7.463000656571239e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 2,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4141001884127036e-05,
+      "cpp": 7.329999789362773e-06
+    },
+    {
+      "name": "photo_105.npz",
+      "n": 2,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4033001207280904e-05,
+      "cpp": 7.147998985601589e-06
+    },
+    {
+      "name": "photo_106.npz",
+      "n": 2,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.6963000234682113e-05,
+      "cpp": 7.46700243325904e-06
+    },
+    {
+      "name": "photo_106.npz",
+      "n": 2,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.3786000636173412e-05,
+      "cpp": 7.258997356984764e-06
+    },
+    {
+      "name": "photo_106.npz",
+      "n": 1,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.2913998943986371e-05,
+      "cpp": 7.277001714101061e-06
+    },
+    {
+      "name": "photo_106.npz",
+      "n": 1,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.3046999811194837e-05,
+      "cpp": 1.0722000297391787e-05
+    },
+    {
+      "name": "photo_106.npz",
+      "n": 1,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.432100179954432e-05,
+      "cpp": 7.25399877410382e-06
+    },
+    {
+      "name": "photo_106.npz",
+      "n": 1,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.3197000953368843e-05,
+      "cpp": 7.124999683583155e-06
+    },
+    {
+      "name": "photo_106.npz",
+      "n": 2,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4312001439975575e-05,
+      "cpp": 7.438000466208905e-06
+    },
+    {
+      "name": "photo_106.npz",
+      "n": 2,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4238998119253665e-05,
+      "cpp": 7.280999852810055e-06
+    },
+    {
+      "name": "photo_106.npz",
+      "n": 1,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.2958000297658145e-05,
+      "cpp": 7.155998900998384e-06
+    },
+    {
+      "name": "photo_106.npz",
+      "n": 1,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.2979002349311486e-05,
+      "cpp": 7.29100065655075e-06
+    },
+    {
+      "name": "photo_106.npz",
+      "n": 1,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.3034998119110242e-05,
+      "cpp": 7.386999641312286e-06
+    },
+    {
+      "name": "photo_106.npz",
+      "n": 1,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.300100120715797e-05,
+      "cpp": 7.2169968916568905e-06
+    },
+    {
+      "name": "photo_106.npz",
+      "n": 3,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4028999430593103e-05,
+      "cpp": 7.1340000431519e-06
+    },
+    {
+      "name": "photo_106.npz",
+      "n": 3,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.3933000445831567e-05,
+      "cpp": 7.214999641291797e-06
+    },
+    {
+      "name": "photo_106.npz",
+      "n": 15,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.681900175753981e-05,
+      "cpp": 8.478000381728634e-06
+    },
+    {
+      "name": "photo_106.npz",
+      "n": 15,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.6599999071331695e-05,
+      "cpp": 8.6090003605932e-06
+    },
+    {
+      "name": "photo_106.npz",
+      "n": 1,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.4044999261386693e-05,
+      "cpp": 8.249000529758632e-06
+    },
+    {
+      "name": "photo_106.npz",
+      "n": 1,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.280599826714024e-05,
+      "cpp": 7.595001079607755e-06
+    },
+    {
+      "name": "photo_106.npz",
+      "n": 1,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.3027998647885397e-05,
+      "cpp": 7.2830007411539555e-06
+    },
+    {
+      "name": "photo_106.npz",
+      "n": 1,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.2936001439811662e-05,
+      "cpp": 7.132002792786807e-06
+    },
+    {
+      "name": "photo_106.npz",
+      "n": 1,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.2734999472741038e-05,
+      "cpp": 6.861002475488931e-06
+    },
+    {
+      "name": "photo_106.npz",
+      "n": 1,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.3090997526887804e-05,
+      "cpp": 7.192000339273363e-06
+    },
+    {
+      "name": "photo_106.npz",
+      "n": 2,
+      "radius": 2.0,
+      "same": true,
+      "numpy": 1.3921999197918922e-05,
+      "cpp": 7.161997928051278e-06
+    },
+    {
+      "name": "photo_106.npz",
+      "n": 2,
+      "radius": 3.0,
+      "same": true,
+      "numpy": 1.4566001482307911e-05,
+      "cpp": 7.122998795239255e-06
+    }
+  ],
+  "caution": "CPU kernel-only timings, ctypes overhead included. No full-pipeline speed claim or production replacement."
+}

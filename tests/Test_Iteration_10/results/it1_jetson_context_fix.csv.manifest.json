@@ -1,0 +1,129 @@
+{
+ "variant": "jetson",
+ "k_peaks": 50,
+ "m_fine": 5,
+ "queries": {
+  "first": [
+   [
+    -5.0,
+    1.0
+   ],
+   [
+    0.0,
+    1.0
+   ],
+   [
+    5.0,
+    1.0
+   ],
+   [
+    -5.0,
+    1.05
+   ],
+   [
+    0.0,
+    1.05
+   ],
+   [
+    5.0,
+    1.05
+   ]
+  ],
+  "second": [
+   [
+    -10.0,
+    1.0
+   ],
+   [
+    -7.5,
+    1.0
+   ],
+   [
+    -2.5,
+    1.0
+   ],
+   [
+    2.5,
+    1.0
+   ],
+   [
+    7.5,
+    1.0
+   ],
+   [
+    10.0,
+    1.0
+   ],
+   [
+    -10.0,
+    1.05
+   ],
+   [
+    -7.5,
+    1.05
+   ],
+   [
+    -2.5,
+    1.05
+   ],
+   [
+    2.5,
+    1.05
+   ],
+   [
+    7.5,
+    1.05
+   ],
+   [
+    10.0,
+    1.05
+   ]
+  ]
+ },
+ "cap": 10,
+ "cut": 0.9,
+ "wide_cut": 0.95,
+ "override": 12,
+ "min_choice": 3,
+ "early_exit": 0.98,
+ "bars": null,
+ "judge_features": [
+  "li",
+  "z",
+  "rank",
+  "coarse",
+  "sharp",
+  "hull",
+  "cover9",
+  "spread",
+  "conf_inl",
+  "hc_ratio",
+  "scale_dev",
+  "angle",
+  "shift_px",
+  "resid",
+  "ln22",
+  "ratio",
+  "tfrac",
+  "zgap",
+  "ligap"
+ ],
+ "judge_trained_on": [
+  "nudt101",
+  "nudt202",
+  "nudt404",
+  "nudt505",
+  "nudt606"
+ ],
+ "calibration": "Learn-then-Test alpha 0.005 on NUDT design, floor 0.9",
+ "matcher": "LoFTR (kornia) + MINIMA weights",
+ "matcher_confidence": 0.22,
+ "loftr_coarse_threshold": 0.21,
+ "ransac_px": 3,
+ "gamma": 1.0,
+ "dino_weight": 100,
+ "coarse": "edge ZNCC, cells 4 px, 8 bins",
+ "hint": "5 km random hint (evaluation.testset.random_prior), search disc 5500 m",
+ "data": null,
+ "note": "context (zgap, ligap) from rank < 5"
+}

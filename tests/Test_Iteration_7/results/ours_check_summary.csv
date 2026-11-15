@@ -1,0 +1,17 @@
+rule,data,score,wrong,answered,queries,n
+ours (agree+escal),official150,52.8,0,0.893,8.38,150
+ours (agree+escal),nudt707,53.84,1,0.92,7.82,150
+ours + z-veto,official150,52.8,0,0.893,8.247,150
+ours + z-veto,nudt707,53.44,1,0.913,7.847,150
+bars only (no agree),official150,50.0,0,0.847,9.36,150
+bars only (no agree),nudt707,53.04,1,0.907,8.1,150
+judge pc,official150,56.8,0,0.96,7.26,150
+judge pc,nudt707,53.44,1,0.913,8.1,150
+judge pc + early exit,official150,55.4,0,0.96,3.2,150
+judge pc + early exit,nudt707,53.28,1,0.913,3.753,150
+"bars only, Jetson",official150,51.2,0,0.867,6.613,150
+"bars only, Jetson",nudt707,53.04,1,0.907,6.4,150
+judge Jetson,official150,56.8,0,0.96,6.207,150
+judge Jetson,nudt707,53.44,1,0.913,6.38,150
+judge Jetson + early exit,official150,55.4,0,0.96,2.147,150
+judge Jetson + early exit,nudt707,53.28,1,0.913,2.033,150

@@ -1,0 +1,2 @@
+[NbConvertApp] Converting notebook Idea0_Oracle_Low_Altitude.ipynb to notebook
+[NbConvertApp] Writing 27280 bytes to Idea0_Oracle_Low_Altitude_executed.ipynb

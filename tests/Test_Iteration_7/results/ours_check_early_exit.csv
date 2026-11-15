@@ -1,0 +1,5 @@
+rule,data,score,wrong,answered,queries,n
+ours + judge early exit,official150,53.0,0,0.92,3.76,150
+ours + judge early exit,nudt707,53.68,1,0.92,3.473,150
+ours,official150,52.8,0,0.893,8.38,150
+ours,nudt707,53.84,1,0.92,7.82,150

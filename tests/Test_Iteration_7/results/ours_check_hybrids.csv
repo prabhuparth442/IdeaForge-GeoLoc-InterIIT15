@@ -1,0 +1,9 @@
+rule,data,score,wrong,answered,queries,n
+ours AND judge pc,official150,52.4,0,0.887,8.38,150
+ours AND judge pc,nudt707,53.04,1,0.907,7.82,150
+ours OR judge pc,official150,57.2,0,0.967,8.38,150
+ours OR judge pc,nudt707,54.24,1,0.927,7.82,150
+ours+veto AND judge pc,official150,52.4,0,0.887,8.247,150
+ours+veto AND judge pc,nudt707,53.04,1,0.907,7.847,150
+ours+veto OR judge pc,official150,57.2,0,0.967,8.247,150
+ours+veto OR judge pc,nudt707,53.84,1,0.92,7.847,150

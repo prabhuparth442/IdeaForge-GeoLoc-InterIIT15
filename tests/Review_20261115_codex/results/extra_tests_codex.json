@@ -1,0 +1,42 @@
+[
+  {
+    "test": "test_agreement",
+    "exit_code": 0,
+    "tail": [
+      "PASS  test_decision_answers_at_the_bar_or_with_two_agreeing_queries",
+      "3 passed, 0 failed"
+    ]
+  },
+  {
+    "test": "test_inflation_guard",
+    "exit_code": 0,
+    "tail": [
+      "PASS  test_running_level_starts_at_the_prior_and_moves_slowly",
+      "0 failed"
+    ]
+  },
+  {
+    "test": "test_iteration7_blocks",
+    "exit_code": 0,
+    "tail": [
+      "PASS  test_signed_fit_reads_angle_scale_and_shift",
+      "10 passed, 0 failed"
+    ]
+  },
+  {
+    "test": "test_iteration8_blocks",
+    "exit_code": 0,
+    "tail": [
+      "PASS  test_two_tier_answers_weak_places_only_when_dino_agrees",
+      "3 passed, 0 failed"
+    ]
+  },
+  {
+    "test": "test_iteration10_blocks",
+    "exit_code": 0,
+    "tail": [
+      "PASS  test_failure_log_outcomes",
+      "4 passed, 0 failed"
+    ]
+  }
+]

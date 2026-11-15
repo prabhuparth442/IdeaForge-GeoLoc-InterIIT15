@@ -9,4 +9,13 @@
 | `Test_Iteration_2/` | adding DINO (patch v0.5.5): blocks, notebook and a finding about the dense map. See its README | see its README |
 | `Test_Iteration_1/` | the first round of experiments on real data (seven coarse methods, fine matching, pseudo-thermal training): runners, stages, notebooks, results, report. Needs the datasets and a GPU. See its README | see its README |
 
+| `Single_Image_Run/`, `Stage_Evaluation/`, `Batch_Speed_Check/`, `Fine_Fit_Methods/` | the saved tables of the root notebooks of the same names (per-photo results, stage tables, decision-step sweeps, batch-size timings, fit-method comparison) | open the notebook at the repo root |
+| `Test_Iteration_3/` | the decision after the queries: agreement and escalation (`Decision_Report.md`), dumps and notebooks | see the report |
+| `Test_Iteration_4/` | XoFTR against LoFTR as the fine matcher (`XoFTR_vs_LoFTR*.ipynb`, results) | open the notebooks |
+| `Test_Iteration_5/` | drone-view simulator: map in, simulated thermal photo out (`README.md`) | see its README |
+| `Test_Iteration_6/` | the prompt of the round that made the rich dump (every candidate of every query with its matches); the dump code is `train/checks/rich_dump.py` | `PROMPT.md` |
+| `Test_Iteration_7/` | the decision after fine matching: Palash's judge checked on our dumps, early exit, swapped training, fresh draws, the inflation guard, and the ideas-planner tests (ideas 0, 1, 5, 6, 7, 8, 9). Start with `OURS_CHECK.md`; Palash's write-up is `REPORT.md`; launchers are in `scripts/`, logs in `results/logs/` | `OURS_CHECK.md` |
+| `Test_Iteration_8/`, `Test_Iteration_9/`, `Test_Iteration_10/`, `Test_Iteration_11/` | Palash's later rounds (imported 2026-11-15): honest hold-outs (T8), red team with altered photos (T9), evaluation fixes and inlier-scale robustness (T10), a judge trained on satellite imagery only (T11). Each has `README.md` and `REPORT.md` | see the folders |
+| `*_codex/` (`Review_20261113_codex`, `Decision_Ideas_20261114_codex`, `Satellite_Only_20261114_codex`, `Review_20261115_codex`, `Speed_20261115_codex`) | isolated reviews and experiments made by another tool; each folder is self-contained (`README_codex.md`, `PROTOCOL_codex.md`, `REPORT_codex.md`) and can be deleted alone without affecting anything else. `Satellite_Only_20261114_codex` is 612 MB | see each README |
+
 Everything at once (pipeline and train tests, a few minutes): `python tests/run_all.py`.

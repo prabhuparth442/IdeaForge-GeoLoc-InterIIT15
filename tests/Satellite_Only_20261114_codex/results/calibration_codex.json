@@ -1,0 +1,9 @@
+{
+  "cosine": 0.79,
+  "margin": 0.065,
+  "retained_correct": 216,
+  "calibration_positive_sets": 256,
+  "calibration_null_sets": 256,
+  "empirical_false_accepts": 0,
+  "caveat": "Finite satellite calibration only; no thermal error-rate guarantee."
+}

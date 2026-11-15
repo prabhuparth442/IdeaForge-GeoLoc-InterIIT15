@@ -1,0 +1,2 @@
+[NbConvertApp] Converting notebook It5_Blind_606.ipynb to notebook
+[NbConvertApp] Writing 19457 bytes to It5_Blind_606_executed.ipynb

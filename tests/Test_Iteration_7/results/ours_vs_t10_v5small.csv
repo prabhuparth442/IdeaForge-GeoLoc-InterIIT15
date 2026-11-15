@@ -1,0 +1,9 @@
+trained_on,test,scale,score,wrong,answered,queries
+official150,nudt707,1.0,51.68,3,0.927,8.1
+official150,nudt707,1.25,51.68,3,0.927,8.1
+official150,nudt707,1.5,51.68,3,0.927,8.1
+official150,nudt707,2.0,51.68,3,0.927,8.1
+nudt707,official150,1.0,54.0,0,0.913,8.38
+nudt707,official150,1.25,54.0,0,0.913,8.38
+nudt707,official150,1.5,54.0,0,0.913,8.38
+nudt707,official150,2.0,54.24,0,0.92,8.38

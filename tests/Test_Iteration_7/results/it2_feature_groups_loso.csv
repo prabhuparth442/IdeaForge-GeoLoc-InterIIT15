@@ -1,0 +1,31 @@
+held,tau,score,wrong,answered,queries,features,cell
+official,0.95,49.9,0,0.85,10.04,inliers + z,49.90 / 0w / t0.95
+nudt101,0.98,54.84,0,0.917,8.66,inliers + z,54.84 / 0w / t0.98
+nudt202,0.97,56.46,0,0.95,7.89,inliers + z,56.46 / 0w / t0.97
+nudt404,0.98,55.74,0,0.935,8.1,inliers + z,55.74 / 0w / t0.98
+nudt505,0.95,55.56,0,0.93,8.31,inliers + z,55.56 / 0w / t0.95
+official,0.925,51.42,0,0.876,9.49,"+ geometry (hull, cover9, spread)",51.42 / 0w / t0.925
+nudt101,0.925,55.64,0,0.93,8.38,"+ geometry (hull, cover9, spread)",55.64 / 0w / t0.925
+nudt202,0.925,56.46,0,0.95,7.68,"+ geometry (hull, cover9, spread)",56.46 / 0w / t0.925
+nudt404,0.925,56.34,0,0.945,7.78,"+ geometry (hull, cover9, spread)",56.34 / 0w / t0.925
+nudt505,0.925,55.96,0,0.937,8.1,"+ geometry (hull, cover9, spread)",55.96 / 0w / t0.925
+official,0.9,51.42,0,0.876,9.55,"+ fit (scale, angle, shift, resid)",51.42 / 0w / t0.9
+nudt101,0.925,55.44,0,0.927,8.45,"+ fit (scale, angle, shift, resid)",55.44 / 0w / t0.925
+nudt202,0.925,56.46,0,0.95,7.68,"+ fit (scale, angle, shift, resid)",56.46 / 0w / t0.925
+nudt404,0.9,56.7,0,0.955,7.68,"+ fit (scale, angle, shift, resid)",56.70 / 0w / t0.9
+nudt505,0.925,56.16,0,0.94,8.03,"+ fit (scale, angle, shift, resid)",56.16 / 0w / t0.925
+official,0.9,52.53,0,0.894,9.21,+ counts and confidence,52.53 / 0w / t0.9
+nudt101,0.85,55.64,0,0.93,8.31,+ counts and confidence,55.64 / 0w / t0.85
+nudt202,0.8,56.46,0,0.95,7.68,+ counts and confidence,56.46 / 0w / t0.8
+nudt404,0.9,56.7,0,0.955,7.68,+ counts and confidence,56.70 / 0w / t0.9
+nudt505,0.95,55.76,0,0.933,8.17,+ counts and confidence,55.76 / 0w / t0.95
+official,0.97,52.81,0,0.897,8.99,"all (+ rank, coarse, sharpness)",52.81 / 0w / t0.97
+nudt101,0.925,55.72,0,0.93,8.24,"all (+ rank, coarse, sharpness)",55.72 / 0w / t0.925
+nudt202,0.925,56.46,0,0.95,7.78,"all (+ rank, coarse, sharpness)",56.46 / 0w / t0.925
+nudt404,0.95,56.7,0,0.955,7.68,"all (+ rank, coarse, sharpness)",56.70 / 0w / t0.95
+nudt505,0.925,56.08,0,0.94,8.1,"all (+ rank, coarse, sharpness)",56.08 / 0w / t0.925
+official,0.95,54.36,0,0.926,8.49,all + query-local uniqueness,54.36 / 0w / t0.95
+nudt101,0.97,55.72,0,0.93,8.31,all + query-local uniqueness,55.72 / 0w / t0.97
+nudt202,0.97,56.46,0,0.95,7.78,all + query-local uniqueness,56.46 / 0w / t0.97
+nudt404,0.97,56.7,0,0.955,7.47,all + query-local uniqueness,56.70 / 0w / t0.97
+nudt505,0.97,55.96,0,0.937,8.03,all + query-local uniqueness,55.96 / 0w / t0.97

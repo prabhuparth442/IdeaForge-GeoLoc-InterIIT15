@@ -1,0 +1,50 @@
+{
+  "cache_key_collision": {
+    "reproduced": true,
+    "key": "b1c927c90e814c31daed",
+    "inputs": [
+      {
+        "name": "/flight_a/frame.png",
+        "rel_height": 100,
+        "yaw": 0
+      },
+      {
+        "name": "/flight_b/frame.png",
+        "rel_height": 200,
+        "yaw": 90
+      }
+    ],
+    "consequence": "Different physical image and pose resolve to the same persistent cache entry."
+  },
+  "fft_collision": {
+    "reproduced": true,
+    "initial_max_error": 0.0,
+    "changed_window_max_error": 0.017955049872398376,
+    "consequence": "Distinct equal-sum windows reuse stale FFTs and return incorrect score maps."
+  },
+  "relative_unavailable_queries": {
+    "reproduced": true,
+    "first_query_feature_before": 2.194296317557131,
+    "first_query_feature_after": 2.130580503171023,
+    "consequence": "A feature for an early decision depends on fine matches of an unexecuted query."
+  },
+  "unsafe_zero_wrong_fallback": {
+    "reproduced": true,
+    "returned_threshold": 0.99,
+    "wrong_at_returned_threshold": 1,
+    "consequence": "The zero-wrong selector returns an unsafe finite threshold when no threshold meets its condition."
+  },
+  "early_exit_bypasses_main_cut": {
+    "reproduced": true,
+    "policy_tau": 0.9995,
+    "early_tau": 0.98,
+    "accepted_probability": 0.985,
+    "consequence": "API permits early acceptance below the main calibrated cut; T11 final caller guards this with max()."
+  },
+  "augmented_context_reintroduces_unavailable_candidates": {
+    "reproduced": true,
+    "matched_only_zgap": 7.5,
+    "augmented_zgap": 0.10000000000000009,
+    "consequence": "Jetson scale-augmented training copies rebuild context with ranks >=5 despite m=5 base features."
+  }
+}

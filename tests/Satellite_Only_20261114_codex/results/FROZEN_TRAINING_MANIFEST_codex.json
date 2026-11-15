@@ -1,0 +1,98 @@
+{
+  "seed": 141126,
+  "initial_validation_loss": 2.0851131677627563,
+  "epochs": [
+    {
+      "epoch": 1,
+      "train_loss": 0.5745043810456991,
+      "validation_loss": 0.31619808077812195,
+      "seconds": 1.528141736984253
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.1760007105767727,
+      "validation_loss": 0.13710441254079342,
+      "seconds": 1.5562362670898438
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.11858209827914834,
+      "validation_loss": 0.11695845983922482,
+      "seconds": 1.5146048069000244
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.09509929921478033,
+      "validation_loss": 0.09237587824463844,
+      "seconds": 1.5513334274291992
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.09626081050373614,
+      "validation_loss": 0.08340703509747982,
+      "seconds": 1.6368780136108398
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.08947932813316584,
+      "validation_loss": 0.08461766317486763,
+      "seconds": 1.5057899951934814
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.07453288254328072,
+      "validation_loss": 0.08821024000644684,
+      "seconds": 1.5414748191833496
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.07479670527391136,
+      "validation_loss": 0.08538395073264837,
+      "seconds": 1.6315577030181885
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.07653559395112097,
+      "validation_loss": 0.08566119335591793,
+      "seconds": 1.6086955070495605
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.06702886405400932,
+      "validation_loss": 0.07573997136205435,
+      "seconds": 1.6736021041870117
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.05347129167057574,
+      "validation_loss": 0.06953610386699438,
+      "seconds": 1.7517940998077393
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.05978695093654096,
+      "validation_loss": 0.06776932720094919,
+      "seconds": 1.6108696460723877
+    }
+  ],
+  "parameters": 117952,
+  "calibration": {
+    "cosine": 0.79,
+    "margin": 0.065,
+    "retained_correct": 216,
+    "calibration_positive_sets": 256,
+    "calibration_null_sets": 256,
+    "empirical_false_accepts": 0,
+    "caveat": "Finite satellite calibration only; no thermal error-rate guarantee."
+  },
+  "provenance": "Random initialisation; only raw satellite raster pixels and metadata; no drone inputs.",
+  "files": {
+    "PROTOCOL_codex.md": "d62d90fccee75cfade01056603405d578de92809d6895d701d720fea689af3a1",
+    "encoder_codex.py": "c46d12c44d1425bf4dec114de8defd2114da7f3f6b1adb391c7f01b24d77f469",
+    "train_satellite_codex.py": "dfa4a1154772f8220276839430d0891d730b2164ffbf1de71b48f8fab1d9b6ea",
+    "encoder_satellite_codex.pt": "308cbd312c820f2fdbcb5d12b703f902bc872d8ccb78ea3f8589b673b81085cf",
+    "calibration_codex.json": "f7498c805e7ebf903d7c4dceb21ceb20dc7c0ac7286a2b642a29ab72bdfc338f",
+    "map_windows_codex.json": "a30e58e9db8cac31ab9b772e59c9b25e5b78dfdf02b45508547a1e02c792f774"
+  },
+  "frozen_at_unix": 1794624554.4300404
+}

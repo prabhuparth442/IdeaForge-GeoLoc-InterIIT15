@@ -1,0 +1,3586 @@
+[
+  {
+    "query": 0,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8229900002479553,
+    "margin": 0.2377508282661438
+  },
+  {
+    "query": 0,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5852391719818115,
+    "margin": 0.016828835010528564
+  },
+  {
+    "query": 1,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8601690530776978,
+    "margin": 0.2676851749420166
+  },
+  {
+    "query": 1,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5924838781356812,
+    "margin": 0.016548991203308105
+  },
+  {
+    "query": 2,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8948789834976196,
+    "margin": 0.30510276556015015
+  },
+  {
+    "query": 2,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5897762179374695,
+    "margin": 0.01464080810546875
+  },
+  {
+    "query": 3,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8386659622192383,
+    "margin": 0.1985783576965332
+  },
+  {
+    "query": 3,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6400876045227051,
+    "margin": 0.1018146276473999
+  },
+  {
+    "query": 4,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9204986095428467,
+    "margin": 0.22742342948913574
+  },
+  {
+    "query": 4,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6930751800537109,
+    "margin": 0.060211360454559326
+  },
+  {
+    "query": 5,
+    "present": true,
+    "correct": true,
+    "cosine": 0.7628226280212402,
+    "margin": 0.12548112869262695
+  },
+  {
+    "query": 5,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6373414993286133,
+    "margin": 0.048039376735687256
+  },
+  {
+    "query": 6,
+    "present": true,
+    "correct": true,
+    "cosine": 0.892890214920044,
+    "margin": 0.32825803756713867
+  },
+  {
+    "query": 6,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5646321773529053,
+    "margin": 0.07957357168197632
+  },
+  {
+    "query": 7,
+    "present": true,
+    "correct": true,
+    "cosine": 0.7088724374771118,
+    "margin": 0.15737903118133545
+  },
+  {
+    "query": 7,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5514934062957764,
+    "margin": 0.03972417116165161
+  },
+  {
+    "query": 8,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8942643404006958,
+    "margin": 0.22963106632232666
+  },
+  {
+    "query": 8,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6646332740783691,
+    "margin": 0.12368166446685791
+  },
+  {
+    "query": 9,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9230974912643433,
+    "margin": 0.2575021982192993
+  },
+  {
+    "query": 9,
+    "present": false,
+    "correct": false,
+    "cosine": 0.665595293045044,
+    "margin": 0.05289351940155029
+  },
+  {
+    "query": 10,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8150798678398132,
+    "margin": 0.18554604053497314
+  },
+  {
+    "query": 10,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6295338273048401,
+    "margin": 0.042494356632232666
+  },
+  {
+    "query": 11,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8484776020050049,
+    "margin": 0.37663644552230835
+  },
+  {
+    "query": 11,
+    "present": false,
+    "correct": false,
+    "cosine": 0.47184115648269653,
+    "margin": 0.038487255573272705
+  },
+  {
+    "query": 12,
+    "present": true,
+    "correct": true,
+    "cosine": 0.882287859916687,
+    "margin": 0.163690447807312
+  },
+  {
+    "query": 12,
+    "present": false,
+    "correct": false,
+    "cosine": 0.718597412109375,
+    "margin": 0.0006065964698791504
+  },
+  {
+    "query": 13,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8026121854782104,
+    "margin": 0.24853748083114624
+  },
+  {
+    "query": 13,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5540747046470642,
+    "margin": 0.02415698766708374
+  },
+  {
+    "query": 14,
+    "present": true,
+    "correct": true,
+    "cosine": 0.7864658832550049,
+    "margin": 0.31469863653182983
+  },
+  {
+    "query": 14,
+    "present": false,
+    "correct": false,
+    "cosine": 0.47176724672317505,
+    "margin": 0.015527307987213135
+  },
+  {
+    "query": 15,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9361144304275513,
+    "margin": 0.42856693267822266
+  },
+  {
+    "query": 15,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5075474977493286,
+    "margin": 0.0015141963958740234
+  },
+  {
+    "query": 16,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8688774108886719,
+    "margin": 0.2106751799583435
+  },
+  {
+    "query": 16,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6582022309303284,
+    "margin": 0.030304133892059326
+  },
+  {
+    "query": 17,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9180607795715332,
+    "margin": 0.3268945813179016
+  },
+  {
+    "query": 17,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5911661982536316,
+    "margin": 0.07551735639572144
+  },
+  {
+    "query": 18,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8500806093215942,
+    "margin": 0.10862886905670166
+  },
+  {
+    "query": 18,
+    "present": false,
+    "correct": false,
+    "cosine": 0.7414517402648926,
+    "margin": 0.0351298451423645
+  },
+  {
+    "query": 19,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8866574764251709,
+    "margin": 0.2658016085624695
+  },
+  {
+    "query": 19,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6208558678627014,
+    "margin": 0.04743015766143799
+  },
+  {
+    "query": 20,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8293720483779907,
+    "margin": 0.2687833309173584
+  },
+  {
+    "query": 20,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5605887174606323,
+    "margin": 0.04151099920272827
+  },
+  {
+    "query": 21,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9291433095932007,
+    "margin": 0.39769959449768066
+  },
+  {
+    "query": 21,
+    "present": false,
+    "correct": false,
+    "cosine": 0.53144371509552,
+    "margin": 0.009166300296783447
+  },
+  {
+    "query": 22,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9031691551208496,
+    "margin": 0.3323662281036377
+  },
+  {
+    "query": 22,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5708029270172119,
+    "margin": 0.04596465826034546
+  },
+  {
+    "query": 23,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9063947796821594,
+    "margin": 0.35735028982162476
+  },
+  {
+    "query": 23,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5490444898605347,
+    "margin": 0.05403304100036621
+  },
+  {
+    "query": 24,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9343560934066772,
+    "margin": 0.28930890560150146
+  },
+  {
+    "query": 24,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6450471878051758,
+    "margin": 0.13251423835754395
+  },
+  {
+    "query": 25,
+    "present": true,
+    "correct": true,
+    "cosine": 0.7875281572341919,
+    "margin": 0.24113798141479492
+  },
+  {
+    "query": 25,
+    "present": false,
+    "correct": false,
+    "cosine": 0.546390175819397,
+    "margin": 0.07615676522254944
+  },
+  {
+    "query": 26,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9025506377220154,
+    "margin": 0.28314822912216187
+  },
+  {
+    "query": 26,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6194024085998535,
+    "margin": 0.08456134796142578
+  },
+  {
+    "query": 27,
+    "present": true,
+    "correct": true,
+    "cosine": 0.7953152656555176,
+    "margin": 0.1976093053817749
+  },
+  {
+    "query": 27,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5977059602737427,
+    "margin": 0.012917518615722656
+  },
+  {
+    "query": 28,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8553380370140076,
+    "margin": 0.3422386050224304
+  },
+  {
+    "query": 28,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5130994319915771,
+    "margin": 0.030752599239349365
+  },
+  {
+    "query": 29,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9239462614059448,
+    "margin": 0.2826186418533325
+  },
+  {
+    "query": 29,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6413276195526123,
+    "margin": 0.06457078456878662
+  },
+  {
+    "query": 30,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8761416673660278,
+    "margin": 0.27902036905288696
+  },
+  {
+    "query": 30,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5971212983131409,
+    "margin": 0.07401371002197266
+  },
+  {
+    "query": 31,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8542972803115845,
+    "margin": 0.28166818618774414
+  },
+  {
+    "query": 31,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5726290941238403,
+    "margin": 0.0004062652587890625
+  },
+  {
+    "query": 32,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8004802465438843,
+    "margin": 0.30728980898857117
+  },
+  {
+    "query": 32,
+    "present": false,
+    "correct": false,
+    "cosine": 0.4931904375553131,
+    "margin": 0.07073354721069336
+  },
+  {
+    "query": 33,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9577139616012573,
+    "margin": 0.24775105714797974
+  },
+  {
+    "query": 33,
+    "present": false,
+    "correct": false,
+    "cosine": 0.7099629044532776,
+    "margin": 0.05618715286254883
+  },
+  {
+    "query": 34,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9391864538192749,
+    "margin": 0.28354865312576294
+  },
+  {
+    "query": 34,
+    "present": false,
+    "correct": false,
+    "cosine": 0.655637800693512,
+    "margin": 0.07041937112808228
+  },
+  {
+    "query": 35,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8530408143997192,
+    "margin": 0.3513750433921814
+  },
+  {
+    "query": 35,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5016657710075378,
+    "margin": 0.03664755821228027
+  },
+  {
+    "query": 36,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8953117728233337,
+    "margin": 0.33226436376571655
+  },
+  {
+    "query": 36,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5630474090576172,
+    "margin": 0.020933151245117188
+  },
+  {
+    "query": 37,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9704859852790833,
+    "margin": 0.3298436999320984
+  },
+  {
+    "query": 37,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6406422853469849,
+    "margin": 0.033905088901519775
+  },
+  {
+    "query": 38,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8949008584022522,
+    "margin": 0.35518157482147217
+  },
+  {
+    "query": 38,
+    "present": false,
+    "correct": false,
+    "cosine": 0.53971928358078,
+    "margin": 0.012054443359375
+  },
+  {
+    "query": 39,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8884351849555969,
+    "margin": 0.23172903060913086
+  },
+  {
+    "query": 39,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6567061543464661,
+    "margin": 0.009620964527130127
+  },
+  {
+    "query": 40,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9147225022315979,
+    "margin": 0.43293818831443787
+  },
+  {
+    "query": 40,
+    "present": false,
+    "correct": false,
+    "cosine": 0.48178431391716003,
+    "margin": 0.002016991376876831
+  },
+  {
+    "query": 41,
+    "present": true,
+    "correct": true,
+    "cosine": 0.6753730773925781,
+    "margin": 0.17424345016479492
+  },
+  {
+    "query": 41,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5011296272277832,
+    "margin": 0.00828447937965393
+  },
+  {
+    "query": 42,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9323230385780334,
+    "margin": 0.29998624324798584
+  },
+  {
+    "query": 42,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6323367953300476,
+    "margin": 0.037860095500946045
+  },
+  {
+    "query": 43,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8741787672042847,
+    "margin": 0.3035569190979004
+  },
+  {
+    "query": 43,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5706218481063843,
+    "margin": 0.0330127477645874
+  },
+  {
+    "query": 44,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8254641890525818,
+    "margin": 0.1463305950164795
+  },
+  {
+    "query": 44,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6791335940361023,
+    "margin": 0.03454464673995972
+  },
+  {
+    "query": 45,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8045087456703186,
+    "margin": 0.1948530077934265
+  },
+  {
+    "query": 45,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6096557378768921,
+    "margin": 0.06347215175628662
+  },
+  {
+    "query": 46,
+    "present": true,
+    "correct": true,
+    "cosine": 0.7637211084365845,
+    "margin": 0.2233337163925171
+  },
+  {
+    "query": 46,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5403873920440674,
+    "margin": 0.0647803246974945
+  },
+  {
+    "query": 47,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9457612037658691,
+    "margin": 0.3341097831726074
+  },
+  {
+    "query": 47,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6116514205932617,
+    "margin": 0.01822495460510254
+  },
+  {
+    "query": 48,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8438370227813721,
+    "margin": 0.30282628536224365
+  },
+  {
+    "query": 48,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5410107374191284,
+    "margin": 0.06070011854171753
+  },
+  {
+    "query": 49,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9338182210922241,
+    "margin": 0.34500253200531006
+  },
+  {
+    "query": 49,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5888156890869141,
+    "margin": 0.038058340549468994
+  },
+  {
+    "query": 50,
+    "present": true,
+    "correct": true,
+    "cosine": 0.7738757133483887,
+    "margin": 0.12907356023788452
+  },
+  {
+    "query": 50,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6448021531105042,
+    "margin": 0.07501012086868286
+  },
+  {
+    "query": 51,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9414950609207153,
+    "margin": 0.36168956756591797
+  },
+  {
+    "query": 51,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5798054933547974,
+    "margin": 0.0259552001953125
+  },
+  {
+    "query": 52,
+    "present": true,
+    "correct": true,
+    "cosine": 0.7415446639060974,
+    "margin": 0.2466457486152649
+  },
+  {
+    "query": 52,
+    "present": false,
+    "correct": false,
+    "cosine": 0.4948989152908325,
+    "margin": 0.044018834829330444
+  },
+  {
+    "query": 53,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9081740975379944,
+    "margin": 0.3354038596153259
+  },
+  {
+    "query": 53,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5727702379226685,
+    "margin": 0.06842011213302612
+  },
+  {
+    "query": 54,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8784276843070984,
+    "margin": 0.408565878868103
+  },
+  {
+    "query": 54,
+    "present": false,
+    "correct": false,
+    "cosine": 0.46986180543899536,
+    "margin": 0.006357908248901367
+  },
+  {
+    "query": 55,
+    "present": true,
+    "correct": true,
+    "cosine": 0.960259199142456,
+    "margin": 0.38597822189331055
+  },
+  {
+    "query": 55,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5742809772491455,
+    "margin": 0.022957026958465576
+  },
+  {
+    "query": 56,
+    "present": true,
+    "correct": true,
+    "cosine": 0.6782606840133667,
+    "margin": 0.12908011674880981
+  },
+  {
+    "query": 56,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5491805672645569,
+    "margin": 0.007615864276885986
+  },
+  {
+    "query": 57,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9086343050003052,
+    "margin": 0.3119083642959595
+  },
+  {
+    "query": 57,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5967259407043457,
+    "margin": 0.0062122344970703125
+  },
+  {
+    "query": 58,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8650957345962524,
+    "margin": 0.07568228244781494
+  },
+  {
+    "query": 58,
+    "present": false,
+    "correct": false,
+    "cosine": 0.7894134521484375,
+    "margin": 0.05390369892120361
+  },
+  {
+    "query": 59,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9588145017623901,
+    "margin": 0.22762954235076904
+  },
+  {
+    "query": 59,
+    "present": false,
+    "correct": false,
+    "cosine": 0.7311849594116211,
+    "margin": 0.04142874479293823
+  },
+  {
+    "query": 60,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8820986747741699,
+    "margin": 0.24855327606201172
+  },
+  {
+    "query": 60,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6335453987121582,
+    "margin": 0.04191935062408447
+  },
+  {
+    "query": 61,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8111139535903931,
+    "margin": 0.2956528663635254
+  },
+  {
+    "query": 61,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5154610872268677,
+    "margin": 0.03713938593864441
+  },
+  {
+    "query": 62,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8855919241905212,
+    "margin": 0.28262001276016235
+  },
+  {
+    "query": 62,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6029719114303589,
+    "margin": 0.12219119071960449
+  },
+  {
+    "query": 63,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8576457500457764,
+    "margin": 0.26692748069763184
+  },
+  {
+    "query": 63,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5907182693481445,
+    "margin": 0.010296940803527832
+  },
+  {
+    "query": 64,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8891903162002563,
+    "margin": 0.26830780506134033
+  },
+  {
+    "query": 64,
+    "present": false,
+    "correct": false,
+    "cosine": 0.620882511138916,
+    "margin": 0.053353965282440186
+  },
+  {
+    "query": 65,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9324905276298523,
+    "margin": 0.4065616726875305
+  },
+  {
+    "query": 65,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5259288549423218,
+    "margin": 0.012185156345367432
+  },
+  {
+    "query": 66,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8080143928527832,
+    "margin": 0.16619133949279785
+  },
+  {
+    "query": 66,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6418230533599854,
+    "margin": 0.012444078922271729
+  },
+  {
+    "query": 67,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9397729635238647,
+    "margin": 0.22500097751617432
+  },
+  {
+    "query": 67,
+    "present": false,
+    "correct": false,
+    "cosine": 0.7147719860076904,
+    "margin": 0.00040328502655029297
+  },
+  {
+    "query": 68,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9064379930496216,
+    "margin": 0.3676844835281372
+  },
+  {
+    "query": 68,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5387535095214844,
+    "margin": 0.05113297700881958
+  },
+  {
+    "query": 69,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9296512603759766,
+    "margin": 0.28658008575439453
+  },
+  {
+    "query": 69,
+    "present": false,
+    "correct": false,
+    "cosine": 0.643071174621582,
+    "margin": 0.0899357795715332
+  },
+  {
+    "query": 70,
+    "present": true,
+    "correct": true,
+    "cosine": 0.7912487983703613,
+    "margin": 0.12694787979125977
+  },
+  {
+    "query": 70,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6643009185791016,
+    "margin": 0.01783919334411621
+  },
+  {
+    "query": 71,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9052258729934692,
+    "margin": 0.20872509479522705
+  },
+  {
+    "query": 71,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6965007781982422,
+    "margin": 0.028723299503326416
+  },
+  {
+    "query": 72,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8844206929206848,
+    "margin": 0.34946566820144653
+  },
+  {
+    "query": 72,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5349550247192383,
+    "margin": 0.012090563774108887
+  },
+  {
+    "query": 73,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9495306015014648,
+    "margin": 0.3631707429885864
+  },
+  {
+    "query": 73,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5863598585128784,
+    "margin": 0.014475464820861816
+  },
+  {
+    "query": 74,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8855956792831421,
+    "margin": 0.22272765636444092
+  },
+  {
+    "query": 74,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6628680229187012,
+    "margin": 0.05562138557434082
+  },
+  {
+    "query": 75,
+    "present": true,
+    "correct": true,
+    "cosine": 0.7433242797851562,
+    "margin": 0.1715260148048401
+  },
+  {
+    "query": 75,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5717982649803162,
+    "margin": 0.01075655221939087
+  },
+  {
+    "query": 76,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9578264951705933,
+    "margin": 0.4096614718437195
+  },
+  {
+    "query": 76,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5481650233268738,
+    "margin": 0.02645796537399292
+  },
+  {
+    "query": 77,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8541343212127686,
+    "margin": 0.24119895696640015
+  },
+  {
+    "query": 77,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6129353642463684,
+    "margin": 0.06371170282363892
+  },
+  {
+    "query": 78,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8403579592704773,
+    "margin": 0.1599523425102234
+  },
+  {
+    "query": 78,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6804056167602539,
+    "margin": 0.0423283576965332
+  },
+  {
+    "query": 79,
+    "present": true,
+    "correct": true,
+    "cosine": 0.852036714553833,
+    "margin": 0.2996227741241455
+  },
+  {
+    "query": 79,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5524139404296875,
+    "margin": 0.006795704364776611
+  },
+  {
+    "query": 80,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9333857297897339,
+    "margin": 0.35105210542678833
+  },
+  {
+    "query": 80,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5823336243629456,
+    "margin": 0.03402775526046753
+  },
+  {
+    "query": 81,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8343003392219543,
+    "margin": 0.18874937295913696
+  },
+  {
+    "query": 81,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6455509662628174,
+    "margin": 0.01583343744277954
+  },
+  {
+    "query": 82,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9199445247650146,
+    "margin": 0.3547845482826233
+  },
+  {
+    "query": 82,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5651599764823914,
+    "margin": 0.04271727800369263
+  },
+  {
+    "query": 83,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8351818323135376,
+    "margin": 0.14930999279022217
+  },
+  {
+    "query": 83,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6858718395233154,
+    "margin": 0.031811296939849854
+  },
+  {
+    "query": 84,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9214497804641724,
+    "margin": 0.19678092002868652
+  },
+  {
+    "query": 84,
+    "present": false,
+    "correct": false,
+    "cosine": 0.7246688604354858,
+    "margin": 0.10926634073257446
+  },
+  {
+    "query": 85,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8666810989379883,
+    "margin": 0.24515318870544434
+  },
+  {
+    "query": 85,
+    "present": false,
+    "correct": false,
+    "cosine": 0.621527910232544,
+    "margin": 0.03890317678451538
+  },
+  {
+    "query": 86,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8325297832489014,
+    "margin": 0.16360998153686523
+  },
+  {
+    "query": 86,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6689198017120361,
+    "margin": 0.020637989044189453
+  },
+  {
+    "query": 87,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8482125997543335,
+    "margin": 0.27045321464538574
+  },
+  {
+    "query": 87,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5777593851089478,
+    "margin": 0.04126250743865967
+  },
+  {
+    "query": 88,
+    "present": true,
+    "correct": true,
+    "cosine": 0.867944061756134,
+    "margin": 0.19661515951156616
+  },
+  {
+    "query": 88,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6713289022445679,
+    "margin": 0.06061863899230957
+  },
+  {
+    "query": 89,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8498542904853821,
+    "margin": 0.22923940420150757
+  },
+  {
+    "query": 89,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6206148862838745,
+    "margin": 0.06086993217468262
+  },
+  {
+    "query": 90,
+    "present": true,
+    "correct": true,
+    "cosine": 0.7856179475784302,
+    "margin": 0.2680472135543823
+  },
+  {
+    "query": 90,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5175707340240479,
+    "margin": 0.03307086229324341
+  },
+  {
+    "query": 91,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9326189160346985,
+    "margin": 0.37547075748443604
+  },
+  {
+    "query": 91,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5571481585502625,
+    "margin": 0.02565300464630127
+  },
+  {
+    "query": 92,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9646162986755371,
+    "margin": 0.22603023052215576
+  },
+  {
+    "query": 92,
+    "present": false,
+    "correct": false,
+    "cosine": 0.7385860681533813,
+    "margin": 0.1510242223739624
+  },
+  {
+    "query": 93,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8621687889099121,
+    "margin": 0.16040414571762085
+  },
+  {
+    "query": 93,
+    "present": false,
+    "correct": false,
+    "cosine": 0.7017646431922913,
+    "margin": 0.049030840396881104
+  },
+  {
+    "query": 94,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9316822290420532,
+    "margin": 0.21873807907104492
+  },
+  {
+    "query": 94,
+    "present": false,
+    "correct": false,
+    "cosine": 0.7129441499710083,
+    "margin": 0.0650365948677063
+  },
+  {
+    "query": 95,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8205709457397461,
+    "margin": 0.26261579990386963
+  },
+  {
+    "query": 95,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5579551458358765,
+    "margin": 0.007107377052307129
+  },
+  {
+    "query": 96,
+    "present": true,
+    "correct": true,
+    "cosine": 0.859871506690979,
+    "margin": 0.17114806175231934
+  },
+  {
+    "query": 96,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6887234449386597,
+    "margin": 0.0269925594329834
+  },
+  {
+    "query": 97,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8540604114532471,
+    "margin": 0.2091360092163086
+  },
+  {
+    "query": 97,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6449244022369385,
+    "margin": 0.004527628421783447
+  },
+  {
+    "query": 98,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8765683174133301,
+    "margin": 0.25279730558395386
+  },
+  {
+    "query": 98,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6237710118293762,
+    "margin": 0.023982107639312744
+  },
+  {
+    "query": 99,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8982052803039551,
+    "margin": 0.3362460136413574
+  },
+  {
+    "query": 99,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5619592666625977,
+    "margin": 0.03316164016723633
+  },
+  {
+    "query": 100,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8754529356956482,
+    "margin": 0.47028112411499023
+  },
+  {
+    "query": 100,
+    "present": false,
+    "correct": false,
+    "cosine": 0.40517181158065796,
+    "margin": 0.014631211757659912
+  },
+  {
+    "query": 101,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8450320959091187,
+    "margin": 0.12638550996780396
+  },
+  {
+    "query": 101,
+    "present": false,
+    "correct": false,
+    "cosine": 0.7186465859413147,
+    "margin": 0.07262718677520752
+  },
+  {
+    "query": 102,
+    "present": true,
+    "correct": true,
+    "cosine": 0.6876510381698608,
+    "margin": 0.06062108278274536
+  },
+  {
+    "query": 102,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6270299553871155,
+    "margin": 0.004631459712982178
+  },
+  {
+    "query": 103,
+    "present": true,
+    "correct": true,
+    "cosine": 0.862342357635498,
+    "margin": 0.2539139986038208
+  },
+  {
+    "query": 103,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6084283590316772,
+    "margin": 0.03657972812652588
+  },
+  {
+    "query": 104,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9210354089736938,
+    "margin": 0.2216559648513794
+  },
+  {
+    "query": 104,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6993794441223145,
+    "margin": 0.15444159507751465
+  },
+  {
+    "query": 105,
+    "present": true,
+    "correct": true,
+    "cosine": 0.6819145679473877,
+    "margin": 0.07062655687332153
+  },
+  {
+    "query": 105,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6112880110740662,
+    "margin": 0.003724038600921631
+  },
+  {
+    "query": 106,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8564292192459106,
+    "margin": 0.16885852813720703
+  },
+  {
+    "query": 106,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6875706911087036,
+    "margin": 0.15632331371307373
+  },
+  {
+    "query": 107,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9226281642913818,
+    "margin": 0.304969847202301
+  },
+  {
+    "query": 107,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6176583170890808,
+    "margin": 0.013344883918762207
+  },
+  {
+    "query": 108,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9162817597389221,
+    "margin": 0.2783415913581848
+  },
+  {
+    "query": 108,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6379401683807373,
+    "margin": 0.03448551893234253
+  },
+  {
+    "query": 109,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9282660484313965,
+    "margin": 0.40685123205184937
+  },
+  {
+    "query": 109,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5214148163795471,
+    "margin": 0.03463008999824524
+  },
+  {
+    "query": 110,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9086436033248901,
+    "margin": 0.3065221309661865
+  },
+  {
+    "query": 110,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6021214723587036,
+    "margin": 0.014450371265411377
+  },
+  {
+    "query": 111,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8927697539329529,
+    "margin": 0.12578725814819336
+  },
+  {
+    "query": 111,
+    "present": false,
+    "correct": false,
+    "cosine": 0.7669824957847595,
+    "margin": 0.23371082544326782
+  },
+  {
+    "query": 112,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9478871822357178,
+    "margin": 0.2826884984970093
+  },
+  {
+    "query": 112,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6651986837387085,
+    "margin": 0.1640228033065796
+  },
+  {
+    "query": 113,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8734487295150757,
+    "margin": 0.31912660598754883
+  },
+  {
+    "query": 113,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5543221235275269,
+    "margin": 0.04986846446990967
+  },
+  {
+    "query": 114,
+    "present": true,
+    "correct": true,
+    "cosine": 0.684717059135437,
+    "margin": 0.024070918560028076
+  },
+  {
+    "query": 114,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6606461405754089,
+    "margin": 0.004916131496429443
+  },
+  {
+    "query": 115,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8588621616363525,
+    "margin": 0.15115821361541748
+  },
+  {
+    "query": 115,
+    "present": false,
+    "correct": false,
+    "cosine": 0.7077039480209351,
+    "margin": 0.05962526798248291
+  },
+  {
+    "query": 116,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8948861956596375,
+    "margin": 0.291456937789917
+  },
+  {
+    "query": 116,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6034292578697205,
+    "margin": 0.040725529193878174
+  },
+  {
+    "query": 117,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8976110219955444,
+    "margin": 0.32215452194213867
+  },
+  {
+    "query": 117,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5754565000534058,
+    "margin": 0.03914594650268555
+  },
+  {
+    "query": 118,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8763906955718994,
+    "margin": 0.20559126138687134
+  },
+  {
+    "query": 118,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6707994341850281,
+    "margin": 0.0028560757637023926
+  },
+  {
+    "query": 119,
+    "present": true,
+    "correct": true,
+    "cosine": 0.7604471445083618,
+    "margin": 0.18425583839416504
+  },
+  {
+    "query": 119,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5761913061141968,
+    "margin": 0.02283942699432373
+  },
+  {
+    "query": 120,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8590711951255798,
+    "margin": 0.1824842095375061
+  },
+  {
+    "query": 120,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6765869855880737,
+    "margin": 0.0409855842590332
+  },
+  {
+    "query": 121,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8461514711380005,
+    "margin": 0.2385658621788025
+  },
+  {
+    "query": 121,
+    "present": false,
+    "correct": false,
+    "cosine": 0.607585608959198,
+    "margin": 0.1553649604320526
+  },
+  {
+    "query": 122,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8785567283630371,
+    "margin": 0.2114173173904419
+  },
+  {
+    "query": 122,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6671394109725952,
+    "margin": 0.046306610107421875
+  },
+  {
+    "query": 123,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8568109273910522,
+    "margin": 0.206384539604187
+  },
+  {
+    "query": 123,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6504263877868652,
+    "margin": 0.06278377771377563
+  },
+  {
+    "query": 124,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9195210933685303,
+    "margin": 0.2895018458366394
+  },
+  {
+    "query": 124,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6300192475318909,
+    "margin": 0.0011417269706726074
+  },
+  {
+    "query": 125,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8682030439376831,
+    "margin": 0.24590957164764404
+  },
+  {
+    "query": 125,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6222934722900391,
+    "margin": 0.05700463056564331
+  },
+  {
+    "query": 126,
+    "present": true,
+    "correct": true,
+    "cosine": 0.900840699672699,
+    "margin": 0.2900386452674866
+  },
+  {
+    "query": 126,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6108020544052124,
+    "margin": 0.017871856689453125
+  },
+  {
+    "query": 127,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9324277639389038,
+    "margin": 0.28672271966934204
+  },
+  {
+    "query": 127,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6457050442695618,
+    "margin": 0.0026963353157043457
+  },
+  {
+    "query": 128,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9297921657562256,
+    "margin": 0.45973894000053406
+  },
+  {
+    "query": 128,
+    "present": false,
+    "correct": false,
+    "cosine": 0.47005322575569153,
+    "margin": 0.0140170156955719
+  },
+  {
+    "query": 129,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9059832692146301,
+    "margin": 0.4179175794124603
+  },
+  {
+    "query": 129,
+    "present": false,
+    "correct": false,
+    "cosine": 0.4880656898021698,
+    "margin": 0.025677770376205444
+  },
+  {
+    "query": 130,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8615657687187195,
+    "margin": 0.23665183782577515
+  },
+  {
+    "query": 130,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6249139308929443,
+    "margin": 0.003656148910522461
+  },
+  {
+    "query": 131,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8475017547607422,
+    "margin": 0.33526086807250977
+  },
+  {
+    "query": 131,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5122408866882324,
+    "margin": 0.010910630226135254
+  },
+  {
+    "query": 132,
+    "present": true,
+    "correct": true,
+    "cosine": 0.7680526375770569,
+    "margin": 0.21174699068069458
+  },
+  {
+    "query": 132,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5563056468963623,
+    "margin": 0.017773747444152832
+  },
+  {
+    "query": 133,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9635896682739258,
+    "margin": 0.3220556378364563
+  },
+  {
+    "query": 133,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6415340304374695,
+    "margin": 0.055886924266815186
+  },
+  {
+    "query": 134,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9164681434631348,
+    "margin": 0.36296308040618896
+  },
+  {
+    "query": 134,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5535050630569458,
+    "margin": 0.0013722777366638184
+  },
+  {
+    "query": 135,
+    "present": true,
+    "correct": true,
+    "cosine": 0.932811975479126,
+    "margin": 0.35463249683380127
+  },
+  {
+    "query": 135,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5781794786453247,
+    "margin": 0.011217713356018066
+  },
+  {
+    "query": 136,
+    "present": true,
+    "correct": true,
+    "cosine": 0.839353084564209,
+    "margin": 0.2290494441986084
+  },
+  {
+    "query": 136,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6103036403656006,
+    "margin": 0.003512263298034668
+  },
+  {
+    "query": 137,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8571557402610779,
+    "margin": 0.16587799787521362
+  },
+  {
+    "query": 137,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6912777423858643,
+    "margin": 0.032246947288513184
+  },
+  {
+    "query": 138,
+    "present": true,
+    "correct": true,
+    "cosine": 0.7366812229156494,
+    "margin": 0.19075548648834229
+  },
+  {
+    "query": 138,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5459257364273071,
+    "margin": 0.00930774211883545
+  },
+  {
+    "query": 139,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9380006790161133,
+    "margin": 0.24583172798156738
+  },
+  {
+    "query": 139,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6921689510345459,
+    "margin": 0.054100632667541504
+  },
+  {
+    "query": 140,
+    "present": true,
+    "correct": true,
+    "cosine": 0.7410361170768738,
+    "margin": 0.17306071519851685
+  },
+  {
+    "query": 140,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5679754018783569,
+    "margin": 0.04109221696853638
+  },
+  {
+    "query": 141,
+    "present": true,
+    "correct": true,
+    "cosine": 0.873014509677887,
+    "margin": 0.1578400731086731
+  },
+  {
+    "query": 141,
+    "present": false,
+    "correct": false,
+    "cosine": 0.7151744365692139,
+    "margin": 0.010612070560455322
+  },
+  {
+    "query": 142,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9202423095703125,
+    "margin": 0.3522357940673828
+  },
+  {
+    "query": 142,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5680065155029297,
+    "margin": 0.032368600368499756
+  },
+  {
+    "query": 143,
+    "present": true,
+    "correct": true,
+    "cosine": 0.7994023561477661,
+    "margin": 0.24664592742919922
+  },
+  {
+    "query": 143,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5527564287185669,
+    "margin": 0.0030776262283325195
+  },
+  {
+    "query": 144,
+    "present": true,
+    "correct": true,
+    "cosine": 0.896548867225647,
+    "margin": 0.20771849155426025
+  },
+  {
+    "query": 144,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6888303756713867,
+    "margin": 0.03508567810058594
+  },
+  {
+    "query": 145,
+    "present": true,
+    "correct": true,
+    "cosine": 0.7242496013641357,
+    "margin": 0.15534090995788574
+  },
+  {
+    "query": 145,
+    "present": false,
+    "correct": false,
+    "cosine": 0.56890869140625,
+    "margin": 0.05079853534698486
+  },
+  {
+    "query": 146,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9554611444473267,
+    "margin": 0.41775190830230713
+  },
+  {
+    "query": 146,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5377092361450195,
+    "margin": 0.007962346076965332
+  },
+  {
+    "query": 147,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9199568033218384,
+    "margin": 0.16715490818023682
+  },
+  {
+    "query": 147,
+    "present": false,
+    "correct": false,
+    "cosine": 0.7528018951416016,
+    "margin": 0.08300614356994629
+  },
+  {
+    "query": 148,
+    "present": true,
+    "correct": true,
+    "cosine": 0.7766226530075073,
+    "margin": 0.31574344635009766
+  },
+  {
+    "query": 148,
+    "present": false,
+    "correct": false,
+    "cosine": 0.46087920665740967,
+    "margin": 0.005324631929397583
+  },
+  {
+    "query": 149,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8959952592849731,
+    "margin": 0.3623126149177551
+  },
+  {
+    "query": 149,
+    "present": false,
+    "correct": false,
+    "cosine": 0.533682644367218,
+    "margin": 0.012679874897003174
+  },
+  {
+    "query": 150,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8644158840179443,
+    "margin": 0.22463226318359375
+  },
+  {
+    "query": 150,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6397836208343506,
+    "margin": 0.025878071784973145
+  },
+  {
+    "query": 151,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8676404356956482,
+    "margin": 0.27730005979537964
+  },
+  {
+    "query": 151,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5903403759002686,
+    "margin": 0.04103201627731323
+  },
+  {
+    "query": 152,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9342662692070007,
+    "margin": 0.33710092306137085
+  },
+  {
+    "query": 152,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5971653461456299,
+    "margin": 0.061457157135009766
+  },
+  {
+    "query": 153,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9195822477340698,
+    "margin": 0.2496250867843628
+  },
+  {
+    "query": 153,
+    "present": false,
+    "correct": false,
+    "cosine": 0.669957160949707,
+    "margin": 0.025896906852722168
+  },
+  {
+    "query": 154,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8851156830787659,
+    "margin": 0.29860037565231323
+  },
+  {
+    "query": 154,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5865153074264526,
+    "margin": 0.039441585540771484
+  },
+  {
+    "query": 155,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8796548843383789,
+    "margin": 0.2670660614967346
+  },
+  {
+    "query": 155,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6125888228416443,
+    "margin": 0.08941954374313354
+  },
+  {
+    "query": 156,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8966656923294067,
+    "margin": 0.40206795930862427
+  },
+  {
+    "query": 156,
+    "present": false,
+    "correct": false,
+    "cosine": 0.49459773302078247,
+    "margin": 0.00423741340637207
+  },
+  {
+    "query": 157,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8553849458694458,
+    "margin": 0.20341676473617554
+  },
+  {
+    "query": 157,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6519681811332703,
+    "margin": 0.006038546562194824
+  },
+  {
+    "query": 158,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8066726922988892,
+    "margin": 0.4142396152019501
+  },
+  {
+    "query": 158,
+    "present": false,
+    "correct": false,
+    "cosine": 0.3924330770969391,
+    "margin": 0.011566847562789917
+  },
+  {
+    "query": 159,
+    "present": true,
+    "correct": true,
+    "cosine": 0.5539188981056213,
+    "margin": 0.027966082096099854
+  },
+  {
+    "query": 159,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5259528160095215,
+    "margin": 0.016485095024108887
+  },
+  {
+    "query": 160,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9423052668571472,
+    "margin": 0.2929927706718445
+  },
+  {
+    "query": 160,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6493124961853027,
+    "margin": 0.01618945598602295
+  },
+  {
+    "query": 161,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8347563743591309,
+    "margin": 0.24173331260681152
+  },
+  {
+    "query": 161,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5930230617523193,
+    "margin": 0.06173807382583618
+  },
+  {
+    "query": 162,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9060869812965393,
+    "margin": 0.3565165400505066
+  },
+  {
+    "query": 162,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5495704412460327,
+    "margin": 0.054710447788238525
+  },
+  {
+    "query": 163,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8196505308151245,
+    "margin": 0.30120527744293213
+  },
+  {
+    "query": 163,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5184452533721924,
+    "margin": 0.014721393585205078
+  },
+  {
+    "query": 164,
+    "present": true,
+    "correct": true,
+    "cosine": 0.7593014240264893,
+    "margin": 0.18337321281433105
+  },
+  {
+    "query": 164,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5759282112121582,
+    "margin": 0.01967930793762207
+  },
+  {
+    "query": 165,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8261958360671997,
+    "margin": 0.21822583675384521
+  },
+  {
+    "query": 165,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6079699993133545,
+    "margin": 0.027950584888458252
+  },
+  {
+    "query": 166,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8671901226043701,
+    "margin": 0.3958662152290344
+  },
+  {
+    "query": 166,
+    "present": false,
+    "correct": false,
+    "cosine": 0.4713239073753357,
+    "margin": 0.0032115280628204346
+  },
+  {
+    "query": 167,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9124148488044739,
+    "margin": 0.3285449147224426
+  },
+  {
+    "query": 167,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5838699340820312,
+    "margin": 0.016797423362731934
+  },
+  {
+    "query": 168,
+    "present": true,
+    "correct": true,
+    "cosine": 0.7283254861831665,
+    "margin": 0.24533435702323914
+  },
+  {
+    "query": 168,
+    "present": false,
+    "correct": false,
+    "cosine": 0.48299112915992737,
+    "margin": 0.019685029983520508
+  },
+  {
+    "query": 169,
+    "present": true,
+    "correct": true,
+    "cosine": 0.7917084693908691,
+    "margin": 0.008800387382507324
+  },
+  {
+    "query": 169,
+    "present": false,
+    "correct": false,
+    "cosine": 0.7829080820083618,
+    "margin": 0.25456076860427856
+  },
+  {
+    "query": 170,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8851224184036255,
+    "margin": 0.2273697853088379
+  },
+  {
+    "query": 170,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6577526330947876,
+    "margin": 0.11284196376800537
+  },
+  {
+    "query": 171,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8717770576477051,
+    "margin": 0.2609105110168457
+  },
+  {
+    "query": 171,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6108665466308594,
+    "margin": 0.037599802017211914
+  },
+  {
+    "query": 172,
+    "present": true,
+    "correct": true,
+    "cosine": 0.976325273513794,
+    "margin": 0.34686505794525146
+  },
+  {
+    "query": 172,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6294602155685425,
+    "margin": 0.0582653284072876
+  },
+  {
+    "query": 173,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9048758149147034,
+    "margin": 0.2647539973258972
+  },
+  {
+    "query": 173,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6401218175888062,
+    "margin": 0.02525383234024048
+  },
+  {
+    "query": 174,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8470320701599121,
+    "margin": 0.17217934131622314
+  },
+  {
+    "query": 174,
+    "present": false,
+    "correct": false,
+    "cosine": 0.674852728843689,
+    "margin": 0.05530226230621338
+  },
+  {
+    "query": 175,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8941805362701416,
+    "margin": 0.501725435256958
+  },
+  {
+    "query": 175,
+    "present": false,
+    "correct": false,
+    "cosine": 0.3924551010131836,
+    "margin": 0.0022413134574890137
+  },
+  {
+    "query": 176,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8936421275138855,
+    "margin": 0.3180926442146301
+  },
+  {
+    "query": 176,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5755494832992554,
+    "margin": 0.02192068099975586
+  },
+  {
+    "query": 177,
+    "present": true,
+    "correct": true,
+    "cosine": 0.5994127988815308,
+    "margin": 0.15130746364593506
+  },
+  {
+    "query": 177,
+    "present": false,
+    "correct": false,
+    "cosine": 0.4481053352355957,
+    "margin": 0.02419009804725647
+  },
+  {
+    "query": 178,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9398386478424072,
+    "margin": 0.2190743088722229
+  },
+  {
+    "query": 178,
+    "present": false,
+    "correct": false,
+    "cosine": 0.7207643389701843,
+    "margin": 0.047419071197509766
+  },
+  {
+    "query": 179,
+    "present": true,
+    "correct": true,
+    "cosine": 0.7990334033966064,
+    "margin": 0.155539870262146
+  },
+  {
+    "query": 179,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6434935331344604,
+    "margin": 0.05984300374984741
+  },
+  {
+    "query": 180,
+    "present": true,
+    "correct": true,
+    "cosine": 0.7591307759284973,
+    "margin": 0.3159690499305725
+  },
+  {
+    "query": 180,
+    "present": false,
+    "correct": false,
+    "cosine": 0.4431617259979248,
+    "margin": 0.005198091268539429
+  },
+  {
+    "query": 181,
+    "present": true,
+    "correct": true,
+    "cosine": 0.746444821357727,
+    "margin": 0.1232725977897644
+  },
+  {
+    "query": 181,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6231722235679626,
+    "margin": 0.11277651786804199
+  },
+  {
+    "query": 182,
+    "present": true,
+    "correct": true,
+    "cosine": 0.779289722442627,
+    "margin": 0.09771662950515747
+  },
+  {
+    "query": 182,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6815730929374695,
+    "margin": 0.12135618925094604
+  },
+  {
+    "query": 183,
+    "present": true,
+    "correct": true,
+    "cosine": 0.6612433195114136,
+    "margin": 0.1655731201171875
+  },
+  {
+    "query": 183,
+    "present": false,
+    "correct": false,
+    "cosine": 0.4956701993942261,
+    "margin": 0.006396353244781494
+  },
+  {
+    "query": 184,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9092996716499329,
+    "margin": 0.16200107336044312
+  },
+  {
+    "query": 184,
+    "present": false,
+    "correct": false,
+    "cosine": 0.7472985982894897,
+    "margin": 0.024545371532440186
+  },
+  {
+    "query": 185,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9259068369865417,
+    "margin": 0.30286896228790283
+  },
+  {
+    "query": 185,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6230378746986389,
+    "margin": 0.01108860969543457
+  },
+  {
+    "query": 186,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9174600839614868,
+    "margin": 0.16414451599121094
+  },
+  {
+    "query": 186,
+    "present": false,
+    "correct": false,
+    "cosine": 0.7533155679702759,
+    "margin": 0.04328495264053345
+  },
+  {
+    "query": 187,
+    "present": true,
+    "correct": true,
+    "cosine": 0.886838972568512,
+    "margin": 0.14071989059448242
+  },
+  {
+    "query": 187,
+    "present": false,
+    "correct": false,
+    "cosine": 0.7461190819740295,
+    "margin": 0.0018349289894104004
+  },
+  {
+    "query": 188,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8881303071975708,
+    "margin": 0.23796319961547852
+  },
+  {
+    "query": 188,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6501671075820923,
+    "margin": 0.1251622438430786
+  },
+  {
+    "query": 189,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8913424611091614,
+    "margin": 0.2970767021179199
+  },
+  {
+    "query": 189,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5942657589912415,
+    "margin": 0.09180402755737305
+  },
+  {
+    "query": 190,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8883358836174011,
+    "margin": 0.2377442717552185
+  },
+  {
+    "query": 190,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6505916118621826,
+    "margin": 0.03372049331665039
+  },
+  {
+    "query": 191,
+    "present": true,
+    "correct": true,
+    "cosine": 0.910554826259613,
+    "margin": 0.2969833016395569
+  },
+  {
+    "query": 191,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6135715246200562,
+    "margin": 0.07921981811523438
+  },
+  {
+    "query": 192,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8752752542495728,
+    "margin": 0.28294670581817627
+  },
+  {
+    "query": 192,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5923285484313965,
+    "margin": 0.021347641944885254
+  },
+  {
+    "query": 193,
+    "present": true,
+    "correct": true,
+    "cosine": 0.6794500350952148,
+    "margin": 0.10646951198577881
+  },
+  {
+    "query": 193,
+    "present": false,
+    "correct": false,
+    "cosine": 0.572980523109436,
+    "margin": 0.05670875310897827
+  },
+  {
+    "query": 194,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8932697772979736,
+    "margin": 0.3068270683288574
+  },
+  {
+    "query": 194,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5864427089691162,
+    "margin": 0.0035779476165771484
+  },
+  {
+    "query": 195,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8924993872642517,
+    "margin": 0.3837509751319885
+  },
+  {
+    "query": 195,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5087484121322632,
+    "margin": 0.027358591556549072
+  },
+  {
+    "query": 196,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9049230813980103,
+    "margin": 0.21323895454406738
+  },
+  {
+    "query": 196,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6916841268539429,
+    "margin": 0.19192487001419067
+  },
+  {
+    "query": 197,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8579971194267273,
+    "margin": 0.16460168361663818
+  },
+  {
+    "query": 197,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6933954358100891,
+    "margin": 0.046646177768707275
+  },
+  {
+    "query": 198,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9328363537788391,
+    "margin": 0.19751125574111938
+  },
+  {
+    "query": 198,
+    "present": false,
+    "correct": false,
+    "cosine": 0.7353250980377197,
+    "margin": 0.03117305040359497
+  },
+  {
+    "query": 199,
+    "present": true,
+    "correct": true,
+    "cosine": 0.890478789806366,
+    "margin": 0.25746434926986694
+  },
+  {
+    "query": 199,
+    "present": false,
+    "correct": false,
+    "cosine": 0.633014440536499,
+    "margin": 0.0034380555152893066
+  },
+  {
+    "query": 200,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8116817474365234,
+    "margin": 0.3092707395553589
+  },
+  {
+    "query": 200,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5024110078811646,
+    "margin": 0.01768648624420166
+  },
+  {
+    "query": 201,
+    "present": true,
+    "correct": true,
+    "cosine": 0.7873069643974304,
+    "margin": 0.018863379955291748
+  },
+  {
+    "query": 201,
+    "present": false,
+    "correct": false,
+    "cosine": 0.7684435844421387,
+    "margin": 0.20888638496398926
+  },
+  {
+    "query": 202,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9433674812316895,
+    "margin": 0.3979591131210327
+  },
+  {
+    "query": 202,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5454083681106567,
+    "margin": 0.03052288293838501
+  },
+  {
+    "query": 203,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8944641947746277,
+    "margin": 0.18049263954162598
+  },
+  {
+    "query": 203,
+    "present": false,
+    "correct": false,
+    "cosine": 0.7139715552330017,
+    "margin": 0.014321684837341309
+  },
+  {
+    "query": 204,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8022086024284363,
+    "margin": 0.26533180475234985
+  },
+  {
+    "query": 204,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5368767976760864,
+    "margin": 0.008522629737854004
+  },
+  {
+    "query": 205,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9680657386779785,
+    "margin": 0.3203779458999634
+  },
+  {
+    "query": 205,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6476877927780151,
+    "margin": 0.03887593746185303
+  },
+  {
+    "query": 206,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8176666498184204,
+    "margin": 0.16702008247375488
+  },
+  {
+    "query": 206,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6506465673446655,
+    "margin": 0.04926252365112305
+  },
+  {
+    "query": 207,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8408195972442627,
+    "margin": 0.2013319730758667
+  },
+  {
+    "query": 207,
+    "present": false,
+    "correct": false,
+    "cosine": 0.639487624168396,
+    "margin": 0.07841527462005615
+  },
+  {
+    "query": 208,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8919418454170227,
+    "margin": 0.32343465089797974
+  },
+  {
+    "query": 208,
+    "present": false,
+    "correct": false,
+    "cosine": 0.568507194519043,
+    "margin": 0.06936883926391602
+  },
+  {
+    "query": 209,
+    "present": true,
+    "correct": true,
+    "cosine": 0.7785758376121521,
+    "margin": 0.2929578423500061
+  },
+  {
+    "query": 209,
+    "present": false,
+    "correct": false,
+    "cosine": 0.485617995262146,
+    "margin": 0.007641404867172241
+  },
+  {
+    "query": 210,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8925306797027588,
+    "margin": 0.33640360832214355
+  },
+  {
+    "query": 210,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5561270713806152,
+    "margin": 0.03310835361480713
+  },
+  {
+    "query": 211,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8918962478637695,
+    "margin": 0.34378206729888916
+  },
+  {
+    "query": 211,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5481141805648804,
+    "margin": 0.024092435836791992
+  },
+  {
+    "query": 212,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8405671119689941,
+    "margin": 0.2046639323234558
+  },
+  {
+    "query": 212,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6359031796455383,
+    "margin": 0.03282743692398071
+  },
+  {
+    "query": 213,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9031167030334473,
+    "margin": 0.3023521304130554
+  },
+  {
+    "query": 213,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6007645726203918,
+    "margin": 0.053331971168518066
+  },
+  {
+    "query": 214,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9089300036430359,
+    "margin": 0.36025363206863403
+  },
+  {
+    "query": 214,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5486763715744019,
+    "margin": 0.025982260704040527
+  },
+  {
+    "query": 215,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9182027578353882,
+    "margin": 0.2685673236846924
+  },
+  {
+    "query": 215,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6496354341506958,
+    "margin": 0.040635526180267334
+  },
+  {
+    "query": 216,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8808832168579102,
+    "margin": 0.2867499589920044
+  },
+  {
+    "query": 216,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5941332578659058,
+    "margin": 0.020463109016418457
+  },
+  {
+    "query": 217,
+    "present": true,
+    "correct": true,
+    "cosine": 0.801732063293457,
+    "margin": 0.32129061222076416
+  },
+  {
+    "query": 217,
+    "present": false,
+    "correct": false,
+    "cosine": 0.48044145107269287,
+    "margin": 0.0703294575214386
+  },
+  {
+    "query": 218,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8159874677658081,
+    "margin": 0.3329191505908966
+  },
+  {
+    "query": 218,
+    "present": false,
+    "correct": false,
+    "cosine": 0.4830683171749115,
+    "margin": 0.04431653022766113
+  },
+  {
+    "query": 219,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9295741319656372,
+    "margin": 0.36834412813186646
+  },
+  {
+    "query": 219,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5612300038337708,
+    "margin": 0.04244333505630493
+  },
+  {
+    "query": 220,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9146778583526611,
+    "margin": 0.29968148469924927
+  },
+  {
+    "query": 220,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6149963736534119,
+    "margin": 0.03841155767440796
+  },
+  {
+    "query": 221,
+    "present": true,
+    "correct": true,
+    "cosine": 0.948489785194397,
+    "margin": 0.3614152669906616
+  },
+  {
+    "query": 221,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5870745182037354,
+    "margin": 0.013285219669342041
+  },
+  {
+    "query": 222,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9039971828460693,
+    "margin": 0.4071606695652008
+  },
+  {
+    "query": 222,
+    "present": false,
+    "correct": false,
+    "cosine": 0.49683651328086853,
+    "margin": 0.008552521467208862
+  },
+  {
+    "query": 223,
+    "present": true,
+    "correct": true,
+    "cosine": 0.7381126284599304,
+    "margin": 0.11769789457321167
+  },
+  {
+    "query": 223,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6204147338867188,
+    "margin": 0.07319748401641846
+  },
+  {
+    "query": 224,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8651891350746155,
+    "margin": 0.32303184270858765
+  },
+  {
+    "query": 224,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5421572923660278,
+    "margin": 0.005781352519989014
+  },
+  {
+    "query": 225,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9433401823043823,
+    "margin": 0.1330873966217041
+  },
+  {
+    "query": 225,
+    "present": false,
+    "correct": false,
+    "cosine": 0.8102527856826782,
+    "margin": 0.06319046020507812
+  },
+  {
+    "query": 226,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9001445770263672,
+    "margin": 0.2661830186843872
+  },
+  {
+    "query": 226,
+    "present": false,
+    "correct": false,
+    "cosine": 0.63396155834198,
+    "margin": 0.01113593578338623
+  },
+  {
+    "query": 227,
+    "present": true,
+    "correct": true,
+    "cosine": 0.859961986541748,
+    "margin": 0.35221731662750244
+  },
+  {
+    "query": 227,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5077446699142456,
+    "margin": 0.02680283784866333
+  },
+  {
+    "query": 228,
+    "present": true,
+    "correct": true,
+    "cosine": 0.7771446704864502,
+    "margin": 0.1705365777015686
+  },
+  {
+    "query": 228,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6066080927848816,
+    "margin": 0.03528487682342529
+  },
+  {
+    "query": 229,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8479199409484863,
+    "margin": 0.36828386783599854
+  },
+  {
+    "query": 229,
+    "present": false,
+    "correct": false,
+    "cosine": 0.4796360731124878,
+    "margin": 0.0028491318225860596
+  },
+  {
+    "query": 230,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9135677814483643,
+    "margin": 0.3502570390701294
+  },
+  {
+    "query": 230,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5633107423782349,
+    "margin": 0.03216755390167236
+  },
+  {
+    "query": 231,
+    "present": true,
+    "correct": true,
+    "cosine": 0.854442834854126,
+    "margin": 0.30922025442123413
+  },
+  {
+    "query": 231,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5452225804328918,
+    "margin": 0.0008968114852905273
+  },
+  {
+    "query": 232,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9065883755683899,
+    "margin": 0.14263194799423218
+  },
+  {
+    "query": 232,
+    "present": false,
+    "correct": false,
+    "cosine": 0.7639564275741577,
+    "margin": 0.04007595777511597
+  },
+  {
+    "query": 233,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8731520771980286,
+    "margin": 0.24409323930740356
+  },
+  {
+    "query": 233,
+    "present": false,
+    "correct": false,
+    "cosine": 0.629058837890625,
+    "margin": 0.07677114009857178
+  },
+  {
+    "query": 234,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8151665925979614,
+    "margin": 0.1834203600883484
+  },
+  {
+    "query": 234,
+    "present": false,
+    "correct": false,
+    "cosine": 0.631746232509613,
+    "margin": 0.040426552295684814
+  },
+  {
+    "query": 235,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8892198204994202,
+    "margin": 0.3859463334083557
+  },
+  {
+    "query": 235,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5032734870910645,
+    "margin": 0.03528314828872681
+  },
+  {
+    "query": 236,
+    "present": true,
+    "correct": true,
+    "cosine": 0.7403687834739685,
+    "margin": 0.09814029932022095
+  },
+  {
+    "query": 236,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6422284841537476,
+    "margin": 0.0206947922706604
+  },
+  {
+    "query": 237,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8747217655181885,
+    "margin": 0.26966845989227295
+  },
+  {
+    "query": 237,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6050533056259155,
+    "margin": 0.0596468448638916
+  },
+  {
+    "query": 238,
+    "present": true,
+    "correct": true,
+    "cosine": 0.937579870223999,
+    "margin": 0.2363072633743286
+  },
+  {
+    "query": 238,
+    "present": false,
+    "correct": false,
+    "cosine": 0.7012726068496704,
+    "margin": 0.1326810121536255
+  },
+  {
+    "query": 239,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9274052381515503,
+    "margin": 0.39109015464782715
+  },
+  {
+    "query": 239,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5363150835037231,
+    "margin": 0.0843658447265625
+  },
+  {
+    "query": 240,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8951654434204102,
+    "margin": 0.23829984664916992
+  },
+  {
+    "query": 240,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6568655967712402,
+    "margin": 0.027019858360290527
+  },
+  {
+    "query": 241,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8704252243041992,
+    "margin": 0.028498530387878418
+  },
+  {
+    "query": 241,
+    "present": false,
+    "correct": false,
+    "cosine": 0.8419266939163208,
+    "margin": 0.06213247776031494
+  },
+  {
+    "query": 242,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9022786617279053,
+    "margin": 0.3937246799468994
+  },
+  {
+    "query": 242,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5085539817810059,
+    "margin": 0.008692532777786255
+  },
+  {
+    "query": 243,
+    "present": true,
+    "correct": true,
+    "cosine": 0.879301130771637,
+    "margin": 0.2903199791908264
+  },
+  {
+    "query": 243,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5889811515808105,
+    "margin": 0.01618337631225586
+  },
+  {
+    "query": 244,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8781757950782776,
+    "margin": 0.37981218099594116
+  },
+  {
+    "query": 244,
+    "present": false,
+    "correct": false,
+    "cosine": 0.4983636140823364,
+    "margin": 0.03411829471588135
+  },
+  {
+    "query": 245,
+    "present": true,
+    "correct": true,
+    "cosine": 0.7908051013946533,
+    "margin": 0.27753978967666626
+  },
+  {
+    "query": 245,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5132653117179871,
+    "margin": 0.03630036115646362
+  },
+  {
+    "query": 246,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9116624593734741,
+    "margin": 0.34604090452194214
+  },
+  {
+    "query": 246,
+    "present": false,
+    "correct": false,
+    "cosine": 0.565621554851532,
+    "margin": 0.019687354564666748
+  },
+  {
+    "query": 247,
+    "present": true,
+    "correct": true,
+    "cosine": 0.7703010439872742,
+    "margin": 0.3416593074798584
+  },
+  {
+    "query": 247,
+    "present": false,
+    "correct": false,
+    "cosine": 0.42864173650741577,
+    "margin": 0.010056614875793457
+  },
+  {
+    "query": 248,
+    "present": true,
+    "correct": true,
+    "cosine": 0.7874377369880676,
+    "margin": 0.1806713342666626
+  },
+  {
+    "query": 248,
+    "present": false,
+    "correct": false,
+    "cosine": 0.606766402721405,
+    "margin": 0.013836026191711426
+  },
+  {
+    "query": 249,
+    "present": true,
+    "correct": true,
+    "cosine": 0.7682948708534241,
+    "margin": 0.2233772873878479
+  },
+  {
+    "query": 249,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5449175834655762,
+    "margin": 0.048230528831481934
+  },
+  {
+    "query": 250,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8861994743347168,
+    "margin": 0.2892913222312927
+  },
+  {
+    "query": 250,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5969081521034241,
+    "margin": 0.1368790864944458
+  },
+  {
+    "query": 251,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8381554484367371,
+    "margin": 0.3233646750450134
+  },
+  {
+    "query": 251,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5147907733917236,
+    "margin": 0.011938929557800293
+  },
+  {
+    "query": 252,
+    "present": true,
+    "correct": true,
+    "cosine": 0.852702260017395,
+    "margin": 0.2576228976249695
+  },
+  {
+    "query": 252,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5950793623924255,
+    "margin": 0.007298111915588379
+  },
+  {
+    "query": 253,
+    "present": true,
+    "correct": true,
+    "cosine": 0.9155491590499878,
+    "margin": 0.3493414521217346
+  },
+  {
+    "query": 253,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5662077069282532,
+    "margin": 0.0016332268714904785
+  },
+  {
+    "query": 254,
+    "present": true,
+    "correct": true,
+    "cosine": 0.8787001371383667,
+    "margin": 0.28674519062042236
+  },
+  {
+    "query": 254,
+    "present": false,
+    "correct": false,
+    "cosine": 0.5919549465179443,
+    "margin": 0.03758549690246582
+  },
+  {
+    "query": 255,
+    "present": true,
+    "correct": true,
+    "cosine": 0.7203258872032166,
+    "margin": 0.07839637994766235
+  },
+  {
+    "query": 255,
+    "present": false,
+    "correct": false,
+    "cosine": 0.6419295072555542,
+    "margin": 0.17243564128875732
+  }
+]

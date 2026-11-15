@@ -1,0 +1,17 @@
+{
+ "written": "2026-11-15T12:01:02",
+ "what": "Label-free inflation guard for the agreement + escalation rule (Ours_Inflation_Guard.ipynb), now with a dead zone.",
+ "rule": "per photo: level = running mean (weight 30, started at the prior) of the mean inliers of the candidates more than 4 sigma from the choice (train.checks.scale_robust.far_levels / running_level); ratio = level / prior; factor = ratio if ratio > 1.5 else 1.0; bar 8, escalation bar 11 and the agreement per-query floor 3 are each multiplied by factor and rounded.",
+ "prior": "0.157 = the larger of the far levels of official150 (0.030) and nudt707 (0.157), measured before the new draw; official stays below it so it is never scaled",
+ "dead_zone": 1.5,
+ "dead_zone_reason": "between-set spread of NUDT wrong-place levels is about 1.3x (his T10 priors 0.185 PC / 0.237 Jetson); a guard must stay silent inside that spread. 1.5 chosen from that spread and written before the new draw was read; not tuned on nudt1010 (clean cost -0.72 there with no dead zone).",
+ "test_set": "NUDT VALID split (other flights than the test split used by every earlier draw), seed 1212, 150 photos, dumped with the unchanged rich-dump pipeline (27 queries) before any rule is scored",
+ "stress": "every inlier count x 1, 1.25, 1.5, 2 for ours with and without the guard",
+ "adopt_if": [
+  "x1: wrong answers not higher than unguarded and score difference >= -0.30 (paired)",
+  "x2: wrong answers lower than unguarded",
+  "x1.5: wrong answers not higher than unguarded"
+ ],
+ "otherwise": "not adopted; written up as a negative or inconclusive result",
+ "no_labels": "nothing in the guard uses truth; only inlier counts and candidate positions"
+}

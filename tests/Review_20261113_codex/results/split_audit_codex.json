@@ -1,0 +1,23 @@
+{
+  "total_test_pool": 2350,
+  "selected": 150,
+  "old_pool": 500,
+  "exact_id_overlap_old": 0,
+  "exact_id_overlap_fresh": 0,
+  "selected_flights": {
+    "city1_300_ortho_day": 21,
+    "city1_300_ortho_night": 58,
+    "village1_300_ortho_day": 59,
+    "village1_300_ortho_night": 12
+  },
+  "old_pool_flights": {
+    "village1_300_ortho_day": 182,
+    "city1_300_ortho_day": 92,
+    "village1_300_ortho_night": 34,
+    "city1_300_ortho_night": 192
+  },
+  "nearest_seen_m_median": 30.552378738011367,
+  "within_50m": 139,
+  "within_100m": 150,
+  "note": "No listed frame overlap, but shared flights and nearby scenes. Unlisted frames are not certified blind."
+}

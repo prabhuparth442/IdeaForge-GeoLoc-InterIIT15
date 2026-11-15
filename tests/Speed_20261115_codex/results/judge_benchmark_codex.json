@@ -1,0 +1,41 @@
+{
+  "rows": [
+    {
+      "photo": "photo_1.npz",
+      "prefixes": 6,
+      "probabilities_exact": true,
+      "original": 0.03728422000131104,
+      "incremental": 0.030051309000555193
+    },
+    {
+      "photo": "photo_10.npz",
+      "prefixes": 6,
+      "probabilities_exact": true,
+      "original": 0.029957807000755565,
+      "incremental": 0.023478049999539508
+    },
+    {
+      "photo": "photo_100.npz",
+      "prefixes": 6,
+      "probabilities_exact": true,
+      "original": 0.036135407997790026,
+      "incremental": 0.030118385999230668
+    },
+    {
+      "photo": "photo_105.npz",
+      "prefixes": 6,
+      "probabilities_exact": true,
+      "original": 0.0380153900005098,
+      "incremental": 0.028394797998771537
+    },
+    {
+      "photo": "photo_106.npz",
+      "prefixes": 6,
+      "probabilities_exact": true,
+      "original": 0.034515198996814433,
+      "incremental": 0.028211842000018805
+    }
+  ],
+  "all_exact": true,
+  "warning": "Frozen thermal-trained T7 model used as historical baseline only. No fitting. Raw signal extraction and neural inference excluded; compares repeated live-prefix Pandas/prediction overhead."
+}

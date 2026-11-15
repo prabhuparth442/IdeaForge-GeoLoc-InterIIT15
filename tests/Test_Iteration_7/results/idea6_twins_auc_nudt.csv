@@ -1,0 +1,6 @@
+group,n_right,n_wrong,auc_twins05,auc_twins02,auc_margin,auc_inliers
+all nudt,404,417,0.5,0.5,0.639,0.978
+set nudt_valid1212,139,146,0.5,0.5,0.647,0.975
+set nudt_fresh1010,124,126,0.5,0.5,0.655,0.985
+set nudt_fresh707,141,145,0.5,0.5,0.62,0.974
+inliers 3-11,20,386,0.5,0.5,0.666,0.656

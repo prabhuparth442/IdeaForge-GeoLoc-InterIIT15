@@ -1,0 +1,141 @@
+{
+  "domain": "nudt",
+  "samples": [
+    {
+      "id": 1116,
+      "path": "/home/voidness/Storage/Synced Folders/InterIIT Tech 15/Code_Testing/dataset/NUDT/Thermal-UAV/test/changsha/city1_300_ortho_night/Thermal/DJI_202512212224_019_test_changsha_city1_300_ortho_night_DJI_20251221224008_0224_T.JPG",
+      "meta": {
+        "filename": "DJI_202512212224_019_test_changsha_city1_300_ortho_night_DJI_20251221224008_0224_T.JPG",
+        "alt": "272.812",
+        "yaw": "88.0",
+        "pitch": 0,
+        "roll": 0,
+        "cam_fx": 1562.563580874873,
+        "cam_fy": 1562.563580874873,
+        "cam_cx": 639.5,
+        "cam_cy": 511.5,
+        "cam_k1": 0,
+        "cam_k2": 0,
+        "cam_k3": 0,
+        "cam_p1": 0,
+        "cam_p2": 0,
+        "lat_sc": 28.233092460818806,
+        "lon_sc": 112.95553957879943
+      },
+      "truth_latlon": [
+        28.236113675,
+        112.989029994
+      ],
+      "flight": "city1_300_ortho_night",
+      "truth_xy": [
+        348.8634229811141,
+        5712.253247931134
+      ],
+      "prior_xy": [
+        -2932.4685213078997,
+        6100.596717263582
+      ]
+    },
+    {
+      "id": 1492,
+      "path": "/home/voidness/Storage/Synced Folders/InterIIT Tech 15/Code_Testing/dataset/NUDT/Thermal-UAV/test/changsha/village1_300_ortho_day/Thermal/DJI_202512171221_003_test_changsha_village1_300_ortho_day_DJI_20251217124455_0160_T.JPG",
+      "meta": {
+        "filename": "DJI_202512171221_003_test_changsha_village1_300_ortho_day_DJI_20251217124455_0160_T.JPG",
+        "alt": "300.265",
+        "yaw": "86.9",
+        "pitch": 0,
+        "roll": 0,
+        "cam_fx": 1562.563580874873,
+        "cam_fy": 1562.563580874873,
+        "cam_cx": 639.5,
+        "cam_cy": 511.5,
+        "cam_k1": 0,
+        "cam_k2": 0,
+        "cam_k3": 0,
+        "cam_p1": 0,
+        "cam_p2": 0,
+        "lat_sc": 28.27812183082756,
+        "lon_sc": 113.02407966284768
+      },
+      "truth_latlon": [
+        28.268337741,
+        113.015956476
+      ],
+      "flight": "village1_300_ortho_day",
+      "truth_xy": [
+        2931.9480440937914,
+        2097.555142285768
+      ],
+      "prior_xy": [
+        3710.7770554815406,
+        999.9896044443881
+      ]
+    },
+    {
+      "id": 1553,
+      "path": "/home/voidness/Storage/Synced Folders/InterIIT Tech 15/Code_Testing/dataset/NUDT/Thermal-UAV/test/changsha/village1_300_ortho_day/Thermal/DJI_202512171221_003_test_changsha_village1_300_ortho_day_DJI_20251217124912_0221_T.JPG",
+      "meta": {
+        "filename": "DJI_202512171221_003_test_changsha_village1_300_ortho_day_DJI_20251217124912_0221_T.JPG",
+        "alt": "294.755",
+        "yaw": "-93.0",
+        "pitch": 0,
+        "roll": 0,
+        "cam_fx": 1562.563580874873,
+        "cam_fy": 1562.563580874873,
+        "cam_cx": 639.5,
+        "cam_cy": 511.5,
+        "cam_k1": 0,
+        "cam_k2": 0,
+        "cam_k3": 0,
+        "cam_p1": 0,
+        "cam_p2": 0,
+        "lat_sc": 28.284241346018316,
+        "lon_sc": 112.99219250723762
+      },
+      "truth_latlon": [
+        28.267609518,
+        113.01141718
+      ],
+      "flight": "village1_300_ortho_day",
+      "truth_xy": [
+        2487.933043023455,
+        2185.67094211746
+      ],
+      "prior_xy": [
+        571.3952922779968,
+        373.8075797596812
+      ]
+    }
+  ],
+  "kinds": [
+    "baseline",
+    "optimised",
+    "backbone"
+  ],
+  "geometry": {
+    "attitude": false,
+    "pitch_sign": -1,
+    "roll_sign": -1,
+    "yaw_offset": 0.0,
+    "scale": 0.8,
+    "height_offset": 0.0
+  },
+  "levels": [
+    3,
+    4
+  ],
+  "k": 50,
+  "m": 10,
+  "confidence": 0.21,
+  "dino_batch": 5,
+  "device": "cpu",
+  "threads": 2,
+  "queries": "6/agreement then27/bar11",
+  "dependencies": {
+    "tensorrt": false,
+    "onnx": false,
+    "onnxruntime": false,
+    "numba": false,
+    "torch_tensorrt": false
+  }
+}

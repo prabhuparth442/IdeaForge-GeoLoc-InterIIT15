@@ -1,0 +1,49 @@
+var,judge,cut,data,score,wrong,answered,queries,gain,added_right,added_wrong
+pc,S1 sat-trained,inf,official_try,0.0,0,0,0.0,"-51.37 [-54.16, -48.32]",0.0,0.0
+pc,S1 sat-trained,inf,nudt101,0.0,0,0,0.0,"-54.84 [-56.60, -52.92]",0.0,0.0
+pc,S1 sat-trained,inf,nudt202,0.0,0,0,0.0,"-57.06 [-58.68, -55.26]",0.0,0.0
+pc,S1 sat-trained,inf,nudt404,0.0,0,0,0.0,"-54.24 [-57.06, -50.88]",0.0,0.0
+pc,S1 sat-trained,inf,nudt505,0.0,0,0,0.0,"-54.24 [-56.32, -51.96]",0.0,0.0
+pc,S1 sat-trained,inf,nudt606,0.0,0,0,0.0,"-55.08 [-57.12, -52.72]",0.0,0.0
+pc,"S5 sat-trained, relative + augmentation",inf,official_try,0.0,0,0,0.0,"-51.37 [-54.16, -48.32]",0.0,0.0
+pc,"S5 sat-trained, relative + augmentation",inf,nudt101,0.0,0,0,0.0,"-54.84 [-56.60, -52.92]",0.0,0.0
+pc,"S5 sat-trained, relative + augmentation",inf,nudt202,0.0,0,0,0.0,"-57.06 [-58.68, -55.26]",0.0,0.0
+pc,"S5 sat-trained, relative + augmentation",inf,nudt404,0.0,0,0,0.0,"-54.24 [-57.06, -50.88]",0.0,0.0
+pc,"S5 sat-trained, relative + augmentation",inf,nudt505,0.0,0,0,0.0,"-54.24 [-56.32, -51.96]",0.0,0.0
+pc,"S5 sat-trained, relative + augmentation",inf,nudt606,0.0,0,0,0.0,"-55.08 [-57.12, -52.72]",0.0,0.0
+pc,reference: NUDT-trained (not shippable),0.9,official_try,54.032,0,171,8.27,"+2.66 [+1.17, +4.48]",9.0,0.0
+pc,reference: NUDT-trained (not shippable),0.9,nudt101,55.52,0,278,8.17,"+0.68 [-0.04, +1.56]",4.0,0.0
+pc,reference: NUDT-trained (not shippable),0.9,nudt202,55.86,1,191,7.575,"-1.20 [-3.60, +0.00]",0.0,0.0
+pc,reference: NUDT-trained (not shippable),0.9,nudt404,56.52,0,190,7.47,"+2.28 [+0.30, +4.80]",3.0,0.0
+pc,reference: NUDT-trained (not shippable),0.9,nudt505,56.56,0,284,7.82,"+2.32 [+0.92, +3.92]",11.0,0.0
+pc,reference: NUDT-trained (not shippable),0.9,nudt606,56.4,1,288,7.54,"+1.32 [+0.40, +2.60]",5.0,0.0
+pc,base,,official_try,51.373,0,162,8.951,,,
+pc,base,,nudt101,54.84,0,275,8.45,,,
+pc,base,,nudt202,57.06,0,192,7.47,,,
+pc,base,,nudt404,54.24,2,188,7.575,,,
+pc,base,,nudt505,54.24,1,275,8.38,,,
+pc,base,,nudt606,55.08,2,285,7.54,,,
+jetson,S1 sat-trained,inf,official_try,0.0,0,0,0.0,"-51.37 [-54.16, -48.32]",0.0,0.0
+jetson,S1 sat-trained,inf,nudt101,0.0,0,0,0.0,"-54.24 [-56.12, -52.24]",0.0,0.0
+jetson,S1 sat-trained,inf,nudt202,0.0,0,0,0.0,"-55.26 [-57.30, -52.98]",0.0,0.0
+jetson,S1 sat-trained,inf,nudt404,0.0,0,0,0.0,"-55.44 [-57.42, -53.34]",0.0,0.0
+jetson,S1 sat-trained,inf,nudt505,0.0,0,0,0.0,"-54.68 [-56.68, -52.52]",0.0,0.0
+jetson,S1 sat-trained,inf,nudt606,0.0,0,0,0.0,"-54.42 [-56.62, -51.92]",0.0,0.0
+jetson,"S5 sat-trained, relative + augmentation",inf,official_try,0.0,0,0,0.0,"-51.37 [-54.16, -48.32]",0.0,0.0
+jetson,"S5 sat-trained, relative + augmentation",inf,nudt101,0.0,0,0,0.0,"-54.24 [-56.12, -52.24]",0.0,0.0
+jetson,"S5 sat-trained, relative + augmentation",inf,nudt202,0.0,0,0,0.0,"-55.26 [-57.30, -52.98]",0.0,0.0
+jetson,"S5 sat-trained, relative + augmentation",inf,nudt404,0.0,0,0,0.0,"-55.44 [-57.42, -53.34]",0.0,0.0
+jetson,"S5 sat-trained, relative + augmentation",inf,nudt505,0.0,0,0,0.0,"-54.68 [-56.68, -52.52]",0.0,0.0
+jetson,"S5 sat-trained, relative + augmentation",inf,nudt606,0.0,0,0,0.0,"-54.42 [-56.62, -51.92]",0.0,0.0
+jetson,reference: NUDT-trained (not shippable),0.9,official_try,51.503,0,167,2.341,"+0.13 [-1.59, +2.01]",5.0,0.0
+jetson,reference: NUDT-trained (not shippable),0.9,nudt101,54.64,0,274,2.14,"+0.40 [-0.48, +1.32]",4.0,0.0
+jetson,reference: NUDT-trained (not shippable),0.9,nudt202,54.48,0,184,1.94,"-0.78 [-1.92, +0.30]",1.0,0.0
+jetson,reference: NUDT-trained (not shippable),0.9,nudt404,57.66,0,193,1.765,"+2.22 [+0.96, +3.66]",7.0,0.0
+jetson,reference: NUDT-trained (not shippable),0.9,nudt505,55.12,0,278,1.993,"+0.44 [-0.52, +1.60]",2.0,0.0
+jetson,reference: NUDT-trained (not shippable),0.9,nudt606,54.5,1,279,1.89,"+0.08 [-0.80, +1.16]",1.0,0.0
+jetson,base,,official_try,51.373,0,162,6.53,,,
+jetson,base,,nudt101,54.24,0,272,6.433,,,
+jetson,base,,nudt202,55.26,0,186,6.3,,,
+jetson,base,,nudt404,55.44,0,186,6.31,,,
+jetson,base,,nudt505,54.68,1,278,6.387,,,
+jetson,base,,nudt606,54.42,2,280,6.293,,,

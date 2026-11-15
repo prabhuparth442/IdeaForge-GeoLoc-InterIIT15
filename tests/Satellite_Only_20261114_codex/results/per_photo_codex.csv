@@ -1,0 +1,13 @@
+domain,id,flight,baseline_points,veto_points,select_points,seconds,queries,failure
+official,237,official_unknown,10,0,0,38.93584955199913,6,
+official,315,official_unknown,10,10,10,45.012527019993286,6,
+official,330,official_unknown,10,0,0,47.07307714900526,6,
+official,416,official_unknown,10,0,0,51.44921526599501,6,
+official,441,official_unknown,10,0,0,54.8501754750032,6,
+official,451,official_unknown,10,0,0,57.993269343001884,6,
+nudt,1116,city1_300_ortho_night,6,0,0,44.57630859699566,6,
+nudt,1492,village1_300_ortho_day,10,0,0,41.06545020900376,6,
+nudt,1553,village1_300_ortho_day,10,0,10,41.03412536800897,6,
+nudt,1973,village1_300_ortho_day,10,0,0,41.56429658000707,6,
+nudt,2080,village1_300_ortho_day,10,0,0,41.550016420005704,6,
+nudt,2136,village1_300_ortho_day,0,0,0,130.46626105900214,18,

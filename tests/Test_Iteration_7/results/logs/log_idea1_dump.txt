@@ -1,0 +1,2 @@
+[NbConvertApp] Converting notebook Idea1_Scale_Coverage_Dump.ipynb to notebook
+[NbConvertApp] Writing 9319 bytes to Idea1_Scale_Coverage_Dump_executed.ipynb

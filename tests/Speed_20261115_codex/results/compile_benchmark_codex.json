@@ -1,0 +1,80 @@
+{
+  "backend": "CPU TorchInductor",
+  "device": "cpu",
+  "batch": 2,
+  "input_shape": [
+    2,
+    1,
+    224,
+    224
+  ],
+  "eager": {
+    "median": 0.4900343099980091,
+    "samples": [
+      0.5148075860015524,
+      0.5020802350009035,
+      0.4632945710000058,
+      0.4526349500010838,
+      0.4900343099980091
+    ]
+  },
+  "compiled": {
+    "median": 0.42157298600068316,
+    "samples": [
+      0.42157298600068316,
+      0.41203610799857415,
+      0.420716196000285,
+      0.42533512199952384,
+      0.44341660699865315
+    ]
+  },
+  "cold_compile_seconds": 13.048589212001389,
+  "feature_max_abs": [
+    3.337860107421875e-06,
+    1.0967254638671875e-05
+  ],
+  "feature_allclose": [
+    true,
+    true
+  ],
+  "full_match_probe": {
+    "eager": {
+      "median": 0.580342051001935,
+      "samples": [
+        0.6094028459992842,
+        0.56602366199877,
+        0.580342051001935
+      ]
+    },
+    "compiled": {
+      "median": 0.5265769010002259,
+      "samples": [
+        0.5698128869989887,
+        0.5265769010002259,
+        0.5205403189975186
+      ]
+    },
+    "match_counts": [
+      47,
+      47
+    ],
+    "differences": {
+      "points_a": {
+        "shape_same": true,
+        "max_abs": 0.0
+      },
+      "points_b": {
+        "shape_same": true,
+        "max_abs": 1.52587890625e-05
+      },
+      "confidence": {
+        "shape_same": true,
+        "max_abs": 6.496906280517578e-06
+      }
+    },
+    "inliers_same": true,
+    "shifts_same": false,
+    "max_shift_delta_m": 4.3662063148874886e-06
+  },
+  "warning": "Backbone benchmark plus one complete matching-pair probe; not multi-photo deployment validation. Compiled variant excluded from main comparison."
+}

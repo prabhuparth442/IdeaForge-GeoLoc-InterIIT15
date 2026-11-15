@@ -1,0 +1,13 @@
+kind,rule,bar,score,wrong,answered,queries
+clean,STD6,8,54.8,0,0.933,6.0
+clean,ALL15,8,47.8,0,0.817,15.0
+clean,ALL15,10,45.8,0,0.783,15.0
+clean,ALL15,11,44.8,0,0.767,15.0
+clean,ALL15,12,44.8,0,0.767,15.0
+clean,STD6_then_15,11,54.8,0,0.933,6.6
+height20,STD6,8,18.8,0,0.333,6.0
+height20,ALL15,8,44.5,0,0.8,15.0
+height20,ALL15,10,43.5,0,0.783,15.0
+height20,ALL15,11,42.5,0,0.767,15.0
+height20,ALL15,12,41.5,0,0.75,15.0
+height20,STD6_then_15,11,43.6,0,0.767,12.0

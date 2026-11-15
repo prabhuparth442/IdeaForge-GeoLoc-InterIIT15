@@ -1,0 +1,81 @@
+{
+  "timing_source": "/home/voidness/Storage/Synced Folders/InterIIT Tech 15/IdeaForge-GeoLoc-InterIIT15/tests/Stage_Evaluation/time_per_query_official_edge_zncc_headings9_scales3_K50_M10.csv",
+  "timing_source_sha256": "bd14ab62c8d96d5c8fb4c16d24836319cdb70089f98f3025ed3d5cc451c9f652",
+  "all_queries": 2700,
+  "warmup_excluded_queries": 2673,
+  "photos": 99,
+  "means_seconds": {
+    "render": 0.005859906067796423,
+    "maps": 0.19046175966002368,
+    "coarse": 0.0007876343732463044,
+    "semantic": 0.10700291557968483,
+    "fine": 0.3548585647864151,
+    "total": 0.6589707804671665
+  },
+  "shares": {
+    "render": 0.008892512750932809,
+    "maps": 0.2890291425744233,
+    "coarse": 0.0011952493139193879,
+    "semantic": 0.16237884706181793,
+    "fine": 0.5385042482989063,
+    "total": 1.0
+  },
+  "hypothetical_amdahl": {
+    "fine_2x": {
+      "seconds_per_query": 0.4815414980739588,
+      "overall_speedup": 1.36846104251218
+    },
+    "fine_4x": {
+      "seconds_per_query": 0.392826856877355,
+      "overall_speedup": 1.6775094903271968
+    },
+    "fine_and_semantic_2x": {
+      "seconds_per_query": 0.42804004028411635,
+      "overall_speedup": 1.5395073321406272
+    }
+  },
+  "cpu_signal_profiles": [
+    {
+      "file": "photo_1.npz",
+      "sha256": "9c05a41eb850a7a49dfc0e4c0fe96f3f5ce5164e0469621e23c7f6c3cc6f3ad3",
+      "queries": 6,
+      "candidates": 60,
+      "median_seconds": 0.010389473998657195,
+      "max_seconds": 0.011321940997731872
+    },
+    {
+      "file": "photo_10.npz",
+      "sha256": "d6bd379d701f3ae818eae4b6e0c2382f80da68290c17178d4e36582bdb44e8c8",
+      "queries": 6,
+      "candidates": 60,
+      "median_seconds": 0.005153649002750171,
+      "max_seconds": 0.005507690999365877
+    },
+    {
+      "file": "photo_100.npz",
+      "sha256": "cc0ec3cd906186d9d1a2405b04c36588d710192c7b2d3fead289b79f1d7e7f07",
+      "queries": 6,
+      "candidates": 60,
+      "median_seconds": 0.009788396000658395,
+      "max_seconds": 0.010005813997850055
+    },
+    {
+      "file": "photo_105.npz",
+      "sha256": "e6c724f55f49fc5058831e106e2850aac8f2c72dc7c79555160c21b68624f4a1",
+      "queries": 6,
+      "candidates": 60,
+      "median_seconds": 0.007397962999675656,
+      "max_seconds": 0.007660629999008961
+    },
+    {
+      "file": "photo_106.npz",
+      "sha256": "f875801ecb5280765011cd262d615d318fff4cf235ed59229a035e10f48847e3",
+      "queries": 6,
+      "candidates": 60,
+      "median_seconds": 0.005064486002083868,
+      "max_seconds": 0.005287994998070644
+    }
+  ],
+  "cuda_available": false,
+  "caveat": "Historical CUDA stages, not current board timings; CPU profiles use old raw matches without inference/pandas/model cost."
+}

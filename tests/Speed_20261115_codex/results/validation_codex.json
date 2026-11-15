@@ -1,0 +1,29 @@
+{
+  "original_files_checked": 279,
+  "original_files_changed": [],
+  "full_pipeline_runs": 18,
+  "domains": {
+    "official": {
+      "frames": 3,
+      "all_exact": true
+    },
+    "nudt": {
+      "frames": 3,
+      "all_exact": true
+    }
+  },
+  "native_cases": 194,
+  "native_mismatches": 0,
+  "new_source_hashes": {
+    "summarise_codex.py": "39aef944fb82a915d29c5dca5e769375aa3c2c36d67e0b4f8d76b4e11625f119",
+    "test_optimisations_codex.py": "f2da41ad462b60918a6fa78c61474993ebf89df3fc3d8ffe78b870b7ec6ba696",
+    "native_benchmark_codex.py": "81a4e2cfcf9687055a52aae19dbdc729e9a3c8fe37ded0cf9123788c594e67f7",
+    "run_speed_codex.py": "d74420d6076221b70f07440b97c136ec6b3615d205e0879a0a6c5f53ea5a2219",
+    "judge_benchmark_codex.py": "dfcd3956fa4cd8cda15785c5cf67d1b534e4e6eb5f2b0ed6cc022731a994f181",
+    "compile_benchmark_codex.py": "c67ea986a63e126f80186584cdb41bce53168b2808906daae31796000d547493",
+    "optimisations_codex.py": "31d776ee341a6a63c7935650e619635f98b0cf0505c64b11ae106985686a9dbb",
+    "run_remaining_codex.py": "525df260d8fcf9abb4234c75875e7c9ec1a8867811c8a4fa345be3d4ebefb324",
+    "run_compile_retry_codex.py": "11fd5e7c40bb6bc1cad94539f7174c12e27166a1fcd1eb7f4f89d1e2c2b5eb3e"
+  },
+  "compiler_retry_passed": true
+}

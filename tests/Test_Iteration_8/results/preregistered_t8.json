@@ -1,0 +1,109 @@
+{
+ "written": "2026-11-14T01:47:03",
+ "final_sets": [
+  "official_test",
+  "nudt707"
+ ],
+ "note": "Scored once in It4. official_test: 194 official photos in places never used to build or check anything here (split by place). nudt707: 300 fresh NUDT photos (seed 707, pool 2400, the 500-pool and every 404/505/606 photo excluded), dumped before any T8 rule.",
+ "disclosure": "During exploration one printout showed official_test scores of three NUDT-only judge variants (feature sets) before the test half was locked; no choice in T8 used it. Every earlier method (T6/T7) was designed while looking at all 379 official photos.",
+ "pc": {
+  "base": {
+   "bars": [
+    8,
+    11
+   ]
+  },
+  "two_tier": {
+   "a_low": 5,
+   "z0": 2.0,
+   "g0": 0.0,
+   "i_hi": 12,
+   "dz_wide": 0.0,
+   "z_hi": null
+  },
+  "two_tier_a4": {
+   "a_low": 4,
+   "z0": 2.0,
+   "g0": 0.0,
+   "i_hi": 12,
+   "dz_wide": 0.0,
+   "z_hi": null
+  },
+  "judge_nudt_only": {
+   "features": "FEATURES_CTX",
+   "kind": "gbm",
+   "trained_on": [
+    "nudt101",
+    "nudt202",
+    "nudt404",
+    "nudt505",
+    "nudt606"
+   ],
+   "tau": 0.9,
+   "override": 12,
+   "min_choice": 3,
+   "wide_tau": 0.95
+  }
+ },
+ "jetson": {
+  "base": {
+   "bar": 8,
+   "cap": 10,
+   "m": 5
+  },
+  "two_tier": {
+   "a_low": 5,
+   "z0": 2.0,
+   "g0": 0.0,
+   "i_hi": 10,
+   "dz_wide": 0.0,
+   "z_hi": null
+  },
+  "two_tier_early": {
+   "a_low": 5,
+   "z0": 2.0,
+   "g0": 0.0,
+   "i_hi": 10,
+   "dz_wide": 0.0,
+   "z_hi": null,
+   "early": 20
+  },
+  "judge_nudt_only": {
+   "features": "FEATURES_CTX",
+   "kind": "gbm",
+   "trained_on": [
+    "nudt101",
+    "nudt202",
+    "nudt404",
+    "nudt505",
+    "nudt606"
+   ],
+   "tau": 0.925,
+   "override": 12,
+   "min_choice": 3,
+   "wide_tau": 0.95
+  },
+  "judge_nudt_only_early": {
+   "early_tau": 0.98
+  }
+ },
+ "attitude": {
+  "terms": [
+   "angle"
+  ],
+  "coef": [
+   0.018034500960661455,
+   0.000862344813149658
+  ],
+  "mirror": false,
+  "fitted_on": "official_try answers of bar 8 / 11",
+  "applies_to": "official answers only (needs the official camera attitude)"
+ },
+ "report": [
+  "score /60, wrong answers, answered, queries per photo",
+  "paired bootstrap gain over the base of the same machine (95 %)",
+  "the plain bar answering as many photos (versus_frontier)",
+  "answer_change: added right / wrong, removed"
+ ],
+ "success": "a finalist counts as a gain if on BOTH official_test and nudt707 it has 0 wrong answers (or no more than its base) and a gain >= 0, and on at least one of them a paired-bootstrap interval above 0"
+}

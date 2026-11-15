@@ -1,0 +1,13 @@
+data,policy,score,wrong,answers,n,queries,gain,ci_low,ci_high
+official150,agreement22,52.8,0,134,150,8.38,0.0,0.0,0.0
+official150,frozen_judge,56.8,0,144,150,7.26,4.0,1.6,6.8
+official150,strict_judge,54.0,0,137,150,8.8,1.2,-1.2,3.6
+official150,unique_location,54.08,0,138,150,8.66,1.28,-0.88,3.68
+official150,heldout_geometry,45.36,0,115,150,12.02,-7.44,-10.8,-4.48
+official150,unique_geometry,42.96,0,109,150,13.56,-9.84,-13.52,-6.4
+nudt707,agreement22,53.84,1,138,150,7.82,0.0,0.0,0.0
+nudt707,frozen_judge,53.44,1,137,150,8.1,-0.4,-1.6,0.8
+nudt707,strict_judge,54.24,0,136,150,8.24,0.4,-1.6,2.8
+nudt707,unique_location,53.84,0,135,150,8.24,0.0,-1.6,2.4
+nudt707,heldout_geometry,50.0,0,125,150,10.76,-3.84,-6.72,-0.8
+nudt707,unique_geometry,50.0,0,125,150,11.32,-3.84,-6.801999999999999,-0.8

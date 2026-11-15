@@ -1,0 +1,2 @@
+[NbConvertApp] Converting notebook It2_Candidate_Judge.ipynb to notebook
+[NbConvertApp] Writing 70572 bytes to It2_Candidate_Judge_executed_all.ipynb

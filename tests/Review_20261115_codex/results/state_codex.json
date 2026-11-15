@@ -1,0 +1,18 @@
+{
+  "git": {
+    "IdeaForge-GeoLoc-InterIIT15": {
+      "branch": "prabhuparth/dev",
+      "head": "f914ca50d2799a3f8b27c70380742a93f2e915d4",
+      "status": "?? tests/Decision_Ideas_20261114_codex/\n?? tests/Review_20261113_codex/\n?? tests/Review_20261115_codex/\n?? tests/Satellite_Only_20261114_codex/\n?? tests/Test_Iteration_10/\n?? tests/Test_Iteration_11/\n?? tests/Test_Iteration_6/\n?? tests/Test_Iteration_7/\n?? tests/Test_Iteration_8/\n?? tests/Test_Iteration_9/\n?? tests/pipeline/test_inflation_guard.py\n?? tests/pipeline/test_iteration10_blocks.py\n?? tests/pipeline/test_iteration7_blocks.py\n?? tests/pipeline/test_iteration8_blocks.py\n?? tools/run_capped.sh\n?? train/checks/candidate_judge.py\n?? train/checks/decision_signals.py\n?? train/checks/eval_tools.py\n?? train/checks/holdout.py\n?? train/checks/perturb.py\n?? train/checks/pose_bias.py\n?? train/checks/query_policy.py\n?? train/checks/replay.py\n?? train/checks/rich_dump.py\n?? train/checks/sat_photos.py\n?? train/checks/scale_robust.py\n?? train/checks/second_look.py\n?? train/checks/stage_cache.py\n?? train/checks/two_tier.py"
+    },
+    "Main_Pipeline_Headless": {
+      "branch": "master",
+      "head": "e5e0fd3cb59c2cf2a3755371812b8d539931a6b2",
+      "status": "M geoloc/check_settings.py\n M geoloc/coarse_search.py\n M geoloc/pipeline.py\n M settings.py\n?? geoloc/fft.py"
+    }
+  },
+  "previous_manifest_files": 147,
+  "changed_since_previous": [
+    "IdeaForge-GeoLoc-InterIIT15/train/checks/candidate_judge.py"
+  ]
+}

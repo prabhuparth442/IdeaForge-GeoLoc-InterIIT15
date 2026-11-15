@@ -1,0 +1,122 @@
+[
+  {
+    "domain": "official",
+    "policy": "baseline",
+    "photos": 6,
+    "answers": 6,
+    "wrong_over4sigma": 0,
+    "penalised_over8sigma": 0,
+    "failures": 0,
+    "score60": 60.0,
+    "paired_delta": 0.0,
+    "paired_photo_se": 0.0,
+    "paired_photo_bootstrap95": [
+      0.0,
+      0.0
+    ],
+    "wall_seconds_mean": 49.21901896749963,
+    "cpu_over30s": 6,
+    "encoder_seconds_mean": 0.0464740409879596,
+    "warning": "n=6 correlated regression frames; photo-level SE/bootstrap are descriptive, not cross-flight/domain uncertainty"
+  },
+  {
+    "domain": "official",
+    "policy": "sat_veto",
+    "photos": 6,
+    "answers": 1,
+    "wrong_over4sigma": 0,
+    "penalised_over8sigma": 0,
+    "failures": 0,
+    "score60": 10.0,
+    "paired_delta": -50.0,
+    "paired_photo_se": 10.0,
+    "paired_photo_bootstrap95": [
+      -60.0,
+      -30.0
+    ],
+    "wall_seconds_mean": 49.21901896749963,
+    "cpu_over30s": 6,
+    "encoder_seconds_mean": 0.0464740409879596,
+    "warning": "n=6 correlated regression frames; photo-level SE/bootstrap are descriptive, not cross-flight/domain uncertainty"
+  },
+  {
+    "domain": "official",
+    "policy": "sat_select",
+    "photos": 6,
+    "answers": 1,
+    "wrong_over4sigma": 0,
+    "penalised_over8sigma": 0,
+    "failures": 0,
+    "score60": 10.0,
+    "paired_delta": -50.0,
+    "paired_photo_se": 10.0,
+    "paired_photo_bootstrap95": [
+      -60.0,
+      -30.0
+    ],
+    "wall_seconds_mean": 49.21901896749963,
+    "cpu_over30s": 6,
+    "encoder_seconds_mean": 0.0464740409879596,
+    "warning": "n=6 correlated regression frames; photo-level SE/bootstrap are descriptive, not cross-flight/domain uncertainty"
+  },
+  {
+    "domain": "nudt",
+    "policy": "baseline",
+    "photos": 6,
+    "answers": 5,
+    "wrong_over4sigma": 0,
+    "penalised_over8sigma": 0,
+    "failures": 0,
+    "score60": 46.0,
+    "paired_delta": 0.0,
+    "paired_photo_se": 0.0,
+    "paired_photo_bootstrap95": [
+      0.0,
+      0.0
+    ],
+    "wall_seconds_mean": 56.70940970550388,
+    "cpu_over30s": 6,
+    "encoder_seconds_mean": 0.059925354825584996,
+    "warning": "n=6 correlated regression frames; photo-level SE/bootstrap are descriptive, not cross-flight/domain uncertainty"
+  },
+  {
+    "domain": "nudt",
+    "policy": "sat_veto",
+    "photos": 6,
+    "answers": 0,
+    "wrong_over4sigma": 0,
+    "penalised_over8sigma": 0,
+    "failures": 0,
+    "score60": 0.0,
+    "paired_delta": -46.0,
+    "paired_photo_se": 10.0,
+    "paired_photo_bootstrap95": [
+      -60.0,
+      -26.0
+    ],
+    "wall_seconds_mean": 56.70940970550388,
+    "cpu_over30s": 6,
+    "encoder_seconds_mean": 0.059925354825584996,
+    "warning": "n=6 correlated regression frames; photo-level SE/bootstrap are descriptive, not cross-flight/domain uncertainty"
+  },
+  {
+    "domain": "nudt",
+    "policy": "sat_select",
+    "photos": 6,
+    "answers": 1,
+    "wrong_over4sigma": 0,
+    "penalised_over8sigma": 0,
+    "failures": 0,
+    "score60": 10.0,
+    "paired_delta": -36.0,
+    "paired_photo_se": 12.000000000000002,
+    "paired_photo_bootstrap95": [
+      -56.0,
+      -16.0
+    ],
+    "wall_seconds_mean": 56.70940970550388,
+    "cpu_over30s": 6,
+    "encoder_seconds_mean": 0.059925354825584996,
+    "warning": "n=6 correlated regression frames; photo-level SE/bootstrap are descriptive, not cross-flight/domain uncertainty"
+  }
+]

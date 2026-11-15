@@ -1,0 +1,86 @@
+[
+  {
+    "domain": "official",
+    "id": 237,
+    "highest_cosine": 0.83939528465271,
+    "highest_cosine_error_m": 3577.179833057095,
+    "highest_cosine_wrong_over4sigma": true
+  },
+  {
+    "domain": "official",
+    "id": 315,
+    "highest_cosine": 0.8254398703575134,
+    "highest_cosine_error_m": 3.2999399421018674,
+    "highest_cosine_wrong_over4sigma": false
+  },
+  {
+    "domain": "official",
+    "id": 330,
+    "highest_cosine": 0.6467831134796143,
+    "highest_cosine_error_m": 4.384865076224815,
+    "highest_cosine_wrong_over4sigma": false
+  },
+  {
+    "domain": "official",
+    "id": 416,
+    "highest_cosine": 0.6625738143920898,
+    "highest_cosine_error_m": 5495.688532382084,
+    "highest_cosine_wrong_over4sigma": true
+  },
+  {
+    "domain": "official",
+    "id": 441,
+    "highest_cosine": 0.8215545415878296,
+    "highest_cosine_error_m": 7.95590157847784,
+    "highest_cosine_wrong_over4sigma": false
+  },
+  {
+    "domain": "official",
+    "id": 451,
+    "highest_cosine": 0.739026665687561,
+    "highest_cosine_error_m": 5051.942127834554,
+    "highest_cosine_wrong_over4sigma": true
+  },
+  {
+    "domain": "nudt",
+    "id": 1116,
+    "highest_cosine": 0.7964740991592407,
+    "highest_cosine_error_m": 2544.7510811934235,
+    "highest_cosine_wrong_over4sigma": true
+  },
+  {
+    "domain": "nudt",
+    "id": 1492,
+    "highest_cosine": 0.7714557647705078,
+    "highest_cosine_error_m": 1903.3757121783408,
+    "highest_cosine_wrong_over4sigma": true
+  },
+  {
+    "domain": "nudt",
+    "id": 1553,
+    "highest_cosine": 0.8682003021240234,
+    "highest_cosine_error_m": 2.0349161275508307,
+    "highest_cosine_wrong_over4sigma": false
+  },
+  {
+    "domain": "nudt",
+    "id": 1973,
+    "highest_cosine": 0.8052603006362915,
+    "highest_cosine_error_m": 699.9711155946078,
+    "highest_cosine_wrong_over4sigma": true
+  },
+  {
+    "domain": "nudt",
+    "id": 2080,
+    "highest_cosine": 0.9473250508308411,
+    "highest_cosine_error_m": 1.1183543710864638,
+    "highest_cosine_wrong_over4sigma": false
+  },
+  {
+    "domain": "nudt",
+    "id": 2136,
+    "highest_cosine": 0.9831949472427368,
+    "highest_cosine_error_m": 3226.829692036067,
+    "highest_cosine_wrong_over4sigma": true
+  }
+]

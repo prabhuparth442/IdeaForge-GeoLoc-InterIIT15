@@ -1,0 +1,11 @@
+# Isolated speed experiment, 15 November 2026
+
+No weight fitting, thresholds, candidate budgets or query policies will be tuned. Original source/submission files stay unchanged. New adapters, timing logs and progress live here.
+
+Compare actual research AgreementQueryPipeline with an opt-in subclass: edge-ZNCC K50/M10, DINO weight100, MINIMA confidence/coarse threshold.21, bar8/agreement then wide27/bar11, full5.5km search and deterministic displaced hints. Reuse six preselected frames (first three official and first three NUDT) from the previous pilot manifests; use exactly the same map stores and hints for each side. These are regression/timing inputs, not an independent accuracy test. No CPU deadline; report no Jetson speed claim.
+
+Test separately: per-photo image load/normalisation reuse; safe photo-scoped edge window/FFT reuse with unused cosine/fusion work removed (previous tested adapter); vectorised per-batch DINO score reductions/transfers; per-query LoFTR CNN feature reuse before pair-dependent cross-attention. Fine batching2/4 and PyTorch compilation are additional isolated experiments, not silently folded into the primary comparison. DINO batching5 on CPU for bounded memory, identical across primary variants. TensorRT/ONNX runtime availability will be recorded; unsupported acceleration is marked untested, not estimated as a measured gain.
+
+Validate per-stage tensor/score differences, shortlist/rank identity, raw matches, RANSAC inliers, winner/answer identity and score. A changed output is reported, never fixed by adjusting thresholds. Benchmark LoFTR query reuse separately even if parity fails; exclude a failed optimisation from the combined accuracy-preserving comparison and state why. Compare matched cold-per-photo algorithmic work; repeated warm persistent-result caches are not counted as fresh pipeline inference.
+
+Record stage timing, wall time and process peak RSS; RSS is a cumulative process high-water mark, so it is not an isolated allocation delta. Save per-photo outputs as they finish. Record source/weight hashes and verify originals at completion. GPU is currently unavailable; compile cold start and repeated inference are separate. Run heavy jobs sequentially with two CPU threads; do not install dependencies or replace the system GPU driver.

@@ -1,0 +1,7 @@
+group,variant,mean_best,median_best,n_ge8,n,mean_shift_sigma
+control,A_level3,16.0,13.0,6,8,0.56
+control,B_level3_blur1.5,2.5,2.0,0,8,0.89
+control,C_level2,6.75,5.0,3,8,0.56
+skipped,A_level3,4.58,4.5,2,12,0.71
+skipped,B_level3_blur1.5,0.0,0.0,0,12,
+skipped,C_level2,2.5,0.0,1,12,0.34

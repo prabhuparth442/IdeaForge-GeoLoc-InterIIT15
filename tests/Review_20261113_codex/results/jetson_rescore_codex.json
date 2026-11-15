@@ -1,0 +1,3538 @@
+{
+ "images": 500,
+ "total_points": 4131,
+ "accuracy": 0.8262,
+ "accuracy_ci95": [
+  0.794,
+  0.856
+ ],
+ "final_score_60": 49.572,
+ "overall": {
+  "images": 500,
+  "availability": 0.846,
+  "points": 4131,
+  "points_per_answer": 9.76595744680851,
+  "median_error_m": 4.557383147447661,
+  "p90_error_m": 7.828704757241711
+ },
+ "by_altitude": {
+  "0-300 m": {
+   "images": 410,
+   "availability": 0.8390243902439024,
+   "points": 3417,
+   "points_per_answer": 9.93313953488372,
+   "median_error_m": 4.238968457425397,
+   "p90_error_m": 6.910438304604478
+  },
+  "300-1000 m": {
+   "images": 90,
+   "availability": 0.8777777777777778,
+   "points": 714,
+   "points_per_answer": 9.037974683544304,
+   "median_error_m": 6.473704730455522,
+   "p90_error_m": 11.064539951796661
+  }
+ },
+ "per_image": [
+  {
+   "filename": "9053fd836a714cdc880ff0267d0607ed.png",
+   "alt": 105.099998,
+   "sigma_m": 8.153436869957478,
+   "error_m": 2.4138643872960848,
+   "points": 10
+  },
+  {
+   "filename": "2029f1fd97eb4cf491ea016599c62834.png",
+   "alt": 126.5,
+   "sigma_m": 8.221351902396277,
+   "error_m": 4.264238665579252,
+   "points": 10
+  },
+  {
+   "filename": "e6d3b177381e43b0a015011a94983b31.png",
+   "alt": 300.399994,
+   "sigma_m": 9.178688606646448,
+   "error_m": 4.941964587998057,
+   "points": 10
+  },
+  {
+   "filename": "764e3a5eb51644fcbf48a21c27d12209.png",
+   "alt": 146.100006,
+   "sigma_m": 8.293943270081872,
+   "error_m": 7.378676409842471,
+   "points": 10
+  },
+  {
+   "filename": "5d7d243d8d624d249e25f0b586803323.png",
+   "alt": 100.099998,
+   "sigma_m": 8.139306862878149,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "0abd483ed91644199348690a513bee61.png",
+   "alt": 279.899994,
+   "sigma_m": 9.032111328398589,
+   "error_m": 8.446303350312684,
+   "points": 10
+  },
+  {
+   "filename": "57696ba4349a40108ba1692810873c6b.png",
+   "alt": 139.699997,
+   "sigma_m": 8.26916390036834,
+   "error_m": 3.242341308694797,
+   "points": 10
+  },
+  {
+   "filename": "be5b8f3c7c774fa39fc3a439081694b9.png",
+   "alt": 109.400002,
+   "sigma_m": 8.166118558594839,
+   "error_m": 4.218278121699213,
+   "points": 10
+  },
+  {
+   "filename": "cef4c0883a2a49d4b04bda90e01c3af1.png",
+   "alt": 100.300003,
+   "sigma_m": 8.139859316301974,
+   "error_m": 5.687516951474972,
+   "points": 10
+  },
+  {
+   "filename": "f4ea3027a0874083b1828960e3570beb.png",
+   "alt": 350.200012,
+   "sigma_m": 9.56651963081934,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "2fdebb6b16504dbba9abfa5319a1d5e2.png",
+   "alt": 149.699997,
+   "sigma_m": 8.308335269970202,
+   "error_m": 9.240135313115468,
+   "points": 6
+  },
+  {
+   "filename": "f36d7c5dce834947abc6dd935364b513.png",
+   "alt": 300.5,
+   "sigma_m": 9.179423102759852,
+   "error_m": 6.330753727174192,
+   "points": 10
+  },
+  {
+   "filename": "f1d38859dab343b58ab1a6891449a331.png",
+   "alt": 150.300003,
+   "sigma_m": 8.310765562650841,
+   "error_m": 0.38745390387204304,
+   "points": 10
+  },
+  {
+   "filename": "bd2ab5512a37472a810332549ae9e49b.png",
+   "alt": 107.699997,
+   "sigma_m": 8.161046450599827,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "284ebe6e1d004384b17cf03dc3673a22.png",
+   "alt": 350.200012,
+   "sigma_m": 9.56651963081934,
+   "error_m": 6.769596330154361,
+   "points": 10
+  },
+  {
+   "filename": "2694f0e924f348a9be0357cc5676a3fe.png",
+   "alt": 124.300003,
+   "sigma_m": 8.213818959829881,
+   "error_m": 3.67939378143937,
+   "points": 10
+  },
+  {
+   "filename": "54467b3fe4cb420d9757cac80544910f.png",
+   "alt": 249.899994,
+   "sigma_m": 8.832479688463662,
+   "error_m": 9.778534085337544,
+   "points": 6
+  },
+  {
+   "filename": "b2a59efa706b4bd880e6b52d4d6e7530.png",
+   "alt": 103.300003,
+   "sigma_m": 8.148273596892713,
+   "error_m": 1.76652630790892,
+   "points": 10
+  },
+  {
+   "filename": "3fc5b8d3dbb6441fab73278f3d5674ef.png",
+   "alt": 299.899994,
+   "sigma_m": 9.175019132933311,
+   "error_m": 6.345224493028807,
+   "points": 10
+  },
+  {
+   "filename": "441ba4129428448bb16470237a813a84.png",
+   "alt": 123.5,
+   "sigma_m": 8.21111077278444,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "6b24123cc12a47fc8f3ba8810064c029.png",
+   "alt": 100.199997,
+   "sigma_m": 8.139582946768288,
+   "error_m": 0.9321874683350421,
+   "points": 10
+  },
+  {
+   "filename": "844cbf2266ad49b1944a7525ed2f8b94.png",
+   "alt": 149.600006,
+   "sigma_m": 8.30793113778418,
+   "error_m": 5.433828963973386,
+   "points": 10
+  },
+  {
+   "filename": "a2d2b0d50d724d7797373850e2a6ff93.png",
+   "alt": 279.899994,
+   "sigma_m": 9.032111328398589,
+   "error_m": 6.564703846091906,
+   "points": 10
+  },
+  {
+   "filename": "34abf6392a8d4865bd96af0d96cb2363.png",
+   "alt": 150.300003,
+   "sigma_m": 8.310765562650841,
+   "error_m": 2.462472647945041,
+   "points": 10
+  },
+  {
+   "filename": "ad75bc09fdd24bca9780b2b2de5a2789.png",
+   "alt": 110.300003,
+   "sigma_m": 8.168834650228067,
+   "error_m": 2.664325459791433,
+   "points": 10
+  },
+  {
+   "filename": "f29a841fe0394afba520788f355900a4.png",
+   "alt": 350.299988,
+   "sigma_m": 9.567340909493714,
+   "error_m": 9.405082136019201,
+   "points": 10
+  },
+  {
+   "filename": "d3fef25803b84caabd8d5c299482886d.png",
+   "alt": 170.199997,
+   "sigma_m": 8.396423349586316,
+   "error_m": 4.950186651328082,
+   "points": 10
+  },
+  {
+   "filename": "271f7a48e1dd4342bb96c7cffe86bdc4.png",
+   "alt": 120.5,
+   "sigma_m": 8.20110309838627,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "7bc4ccb8d9f94fce864dad5bc63c11ba.png",
+   "alt": 300.200012,
+   "sigma_m": 9.177220391847163,
+   "error_m": 4.948909136127576,
+   "points": 10
+  },
+  {
+   "filename": "6daf1d3db9b9481badc7c8885baf28b7.png",
+   "alt": 120.400002,
+   "sigma_m": 8.200773546478576,
+   "error_m": 1.5149610928672579,
+   "points": 10
+  },
+  {
+   "filename": "52b8e6321eaa4ef89139fcd91aee6488.png",
+   "alt": 104.400002,
+   "sigma_m": 8.151418727205678,
+   "error_m": 4.765317234325291,
+   "points": 10
+  },
+  {
+   "filename": "ead7ba2bcd034bc588f37e219737b259.png",
+   "alt": 349.700012,
+   "sigma_m": 9.562414712782823,
+   "error_m": 12.955072224091873,
+   "points": 6
+  },
+  {
+   "filename": "f0255d7f75a8428b89002245e4e61af3.png",
+   "alt": 150.199997,
+   "sigma_m": 8.31035986792662,
+   "error_m": 3.529921488132957,
+   "points": 10
+  },
+  {
+   "filename": "0fb31891e7fb446ab11481e3da4412fa.png",
+   "alt": 250.100006,
+   "sigma_m": 8.833749886510942,
+   "error_m": 4.703073763085861,
+   "points": 10
+  },
+  {
+   "filename": "6d139d6dda3e43f68d3e6555a91036e2.png",
+   "alt": 107.800003,
+   "sigma_m": 8.161342714582545,
+   "error_m": 6.585555618265869,
+   "points": 10
+  },
+  {
+   "filename": "c65114793ce240e9ad4a0e796f3dd618.png",
+   "alt": 149.600006,
+   "sigma_m": 8.30793113778418,
+   "error_m": 5.382122184611019,
+   "points": 10
+  },
+  {
+   "filename": "dcb189f692674ad0aeab3931b4c2bfd0.png",
+   "alt": 125.0,
+   "sigma_m": 8.216202209783148,
+   "error_m": 4.647586386627091,
+   "points": 10
+  },
+  {
+   "filename": "5c7071dfce984fa9bd46ffc93bbd5e7c.png",
+   "alt": 338.399994,
+   "sigma_m": 9.470748565718374,
+   "error_m": 2.3655123862886747,
+   "points": 10
+  },
+  {
+   "filename": "ddf6a031b3de46bcaab3a1dba7d1ca21.png",
+   "alt": 279.899994,
+   "sigma_m": 9.032111328398589,
+   "error_m": 4.514097176285123,
+   "points": 10
+  },
+  {
+   "filename": "04d7bb81af1640ea906b2a6f9daab927.png",
+   "alt": 100.599998,
+   "sigma_m": 8.140689958816985,
+   "error_m": 7.095033715683059,
+   "points": 10
+  },
+  {
+   "filename": "0fc5c9d2e92f484483140a9f1282e7c2.png",
+   "alt": 120.400002,
+   "sigma_m": 8.200773546478576,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "5272f17f1ae04c7db761f16ecf0c0be6.png",
+   "alt": 109.699997,
+   "sigma_m": 8.167021534077422,
+   "error_m": 4.583225511091469,
+   "points": 10
+  },
+  {
+   "filename": "f1816b440c7a46099ae0be202b6f80cd.png",
+   "alt": 350.200012,
+   "sigma_m": 9.56651963081934,
+   "error_m": 5.7272396072434395,
+   "points": 10
+  },
+  {
+   "filename": "e6ee105c1ac24b068f97e25d92e4cb20.png",
+   "alt": 219.800003,
+   "sigma_m": 8.651033659697898,
+   "error_m": 4.621012812692843,
+   "points": 10
+  },
+  {
+   "filename": "1b9ee7a460764438a8f9fbb15dc0862a.png",
+   "alt": 120.5,
+   "sigma_m": 8.20110309838627,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "ad244f72d23d490382932599a8c39df3.png",
+   "alt": 110.599998,
+   "sigma_m": 8.169744740967424,
+   "error_m": 4.247067204859912,
+   "points": 10
+  },
+  {
+   "filename": "7e94590d08cc4597af054368f02d8cc1.png",
+   "alt": 299.899994,
+   "sigma_m": 9.175019132933311,
+   "error_m": 1.6616770434155752,
+   "points": 10
+  },
+  {
+   "filename": "43d773661c8b455b9fa119cad093259e.png",
+   "alt": 120.800003,
+   "sigma_m": 8.202093345744883,
+   "error_m": 2.5897718557764984,
+   "points": 10
+  },
+  {
+   "filename": "30720c1da9244b199437ba133820487a.png",
+   "alt": 129.0,
+   "sigma_m": 8.230063882766554,
+   "error_m": 2.9097585599248683,
+   "points": 10
+  },
+  {
+   "filename": "cdbde25867a64f329d22e304dcc18d49.png",
+   "alt": 109.099998,
+   "sigma_m": 8.16521792941597,
+   "error_m": 4.557383147447661,
+   "points": 10
+  },
+  {
+   "filename": "144a782facec49df945aa832e9af20be.png",
+   "alt": 279.899994,
+   "sigma_m": 9.032111328398589,
+   "error_m": 9.017025908823314,
+   "points": 10
+  },
+  {
+   "filename": "425e9c904fce4213997dd572c9616073.png",
+   "alt": 119.5,
+   "sigma_m": 8.197819234206706,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "e6cb1e5cf49a4d11b4d097e2cd777080.png",
+   "alt": 109.599998,
+   "sigma_m": 8.166720276592407,
+   "error_m": 4.325230103095466,
+   "points": 10
+  },
+  {
+   "filename": "e644b638ba1a441697475d8adc6bf0d7.png",
+   "alt": 100.199997,
+   "sigma_m": 8.139582946768288,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "f235dc83ba974c0bb999e7b669f19440.png",
+   "alt": 350.200012,
+   "sigma_m": 9.56651963081934,
+   "error_m": 6.150559508105691,
+   "points": 10
+  },
+  {
+   "filename": "bcc71972a4df4d8fbc1687ef79b9c460.png",
+   "alt": 145.800003,
+   "sigma_m": 8.292758623187003,
+   "error_m": 3.9133493024530064,
+   "points": 10
+  },
+  {
+   "filename": "0b96b7c1957f449691f7f505533a5dd2.png",
+   "alt": 300.0,
+   "sigma_m": 9.175752700012245,
+   "error_m": 6.918265606091905,
+   "points": 10
+  },
+  {
+   "filename": "e9eaba9e617343ec9f63e0cd93bdd014.png",
+   "alt": 149.899994,
+   "sigma_m": 8.309144346077307,
+   "error_m": 4.034165602519632,
+   "points": 10
+  },
+  {
+   "filename": "c27ef2185d434dc8a705debd87822863.png",
+   "alt": 106.5,
+   "sigma_m": 8.157512120740295,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "3931537b475f4724a8ddfebad62939c2.png",
+   "alt": 350.100006,
+   "sigma_m": 9.565698269721272,
+   "error_m": 6.468298236393702,
+   "points": 10
+  },
+  {
+   "filename": "6f80da1681af4ec791966200fa3b7d1d.png",
+   "alt": 139.199997,
+   "sigma_m": 8.267271705506106,
+   "error_m": 6.245162322831852,
+   "points": 10
+  },
+  {
+   "filename": "148855c2a8dd4870a68d694d4fd2924a.png",
+   "alt": 249.800003,
+   "sigma_m": 8.831844997268643,
+   "error_m": 5.472237732517353,
+   "points": 10
+  },
+  {
+   "filename": "a8e18b3e3c0d4a1a977434ad2a664e5c.png",
+   "alt": 100.5,
+   "sigma_m": 8.140412812688448,
+   "error_m": 2.7206257559035367,
+   "points": 10
+  },
+  {
+   "filename": "9dd22ab45dc941d8a026f08bcf0eb202.png",
+   "alt": 300.299988,
+   "sigma_m": 9.177954296261921,
+   "error_m": 6.2560981361682035,
+   "points": 10
+  },
+  {
+   "filename": "3d24b87ecc0a48598a1c00343cd107eb.png",
+   "alt": 138.899994,
+   "sigma_m": 8.266139426745664,
+   "error_m": 2.271441089737009,
+   "points": 10
+  },
+  {
+   "filename": "bf7ec0f02ca14795aeee02658d2dad9a.png",
+   "alt": 100.199997,
+   "sigma_m": 8.139582946768288,
+   "error_m": 3.3103571354542147,
+   "points": 10
+  },
+  {
+   "filename": "702954de6b94423fbde1350ea60f5ff9.png",
+   "alt": 142.5,
+   "sigma_m": 8.279877413715635,
+   "error_m": 2.6699459587896217,
+   "points": 10
+  },
+  {
+   "filename": "c27a61d69cd548a395801dc03cd50c78.png",
+   "alt": 279.899994,
+   "sigma_m": 9.032111328398589,
+   "error_m": 6.910438304604478,
+   "points": 10
+  },
+  {
+   "filename": "6d54491a90314302859b3f8d2cab1795.png",
+   "alt": 149.5,
+   "sigma_m": 8.30752719541657,
+   "error_m": 2.2574787841413873,
+   "points": 10
+  },
+  {
+   "filename": "992b73ee5a2244e9a6404b97718cffe2.png",
+   "alt": 109.599998,
+   "sigma_m": 8.166720276592407,
+   "error_m": 2.518595077959247,
+   "points": 10
+  },
+  {
+   "filename": "5e981802f8da4f309506c903f4af0349.png",
+   "alt": 350.0,
+   "sigma_m": 9.564877072709121,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "551d39804d9642f3b4d70e9d82c10ad5.png",
+   "alt": 189.0,
+   "sigma_m": 8.486175362795437,
+   "error_m": 4.27458225709943,
+   "points": 10
+  },
+  {
+   "filename": "cc3ae0fc470a45c9a03ce5b971d46faa.png",
+   "alt": 149.699997,
+   "sigma_m": 8.308335269970202,
+   "error_m": 3.663752709159884,
+   "points": 10
+  },
+  {
+   "filename": "d4b0e0e30e734e879897bf8ea1f8c27b.png",
+   "alt": 300.600006,
+   "sigma_m": 9.180157784557554,
+   "error_m": 4.945698476206789,
+   "points": 10
+  },
+  {
+   "filename": "a4e01c46178c4061b46c7b71c4f9e4f2.png",
+   "alt": 120.300003,
+   "sigma_m": 8.200444251647074,
+   "error_m": 3.2363728161660026,
+   "points": 10
+  },
+  {
+   "filename": "9ff4d7e4dfd7454b9b5754a21b19b7e2.png",
+   "alt": 101.900002,
+   "sigma_m": 8.144317154761847,
+   "error_m": 4.4843352506974075,
+   "points": 10
+  },
+  {
+   "filename": "9dea0f844ea44c6a98ba3fdcc545aabb.png",
+   "alt": 269.299988,
+   "sigma_m": 8.959508151948842,
+   "error_m": 4.5452579635221495,
+   "points": 10
+  },
+  {
+   "filename": "affe257234824d2ea56cf64954f15f33.png",
+   "alt": 149.600006,
+   "sigma_m": 8.30793113778418,
+   "error_m": 3.245715001144595,
+   "points": 10
+  },
+  {
+   "filename": "7d968361d8694acebd1025c8309eb51d.png",
+   "alt": 257.200012,
+   "sigma_m": 8.879376436089801,
+   "error_m": 4.4173535243174955,
+   "points": 10
+  },
+  {
+   "filename": "fd9783d839144dad89823e3e97ef57f6.png",
+   "alt": 109.599998,
+   "sigma_m": 8.166720276592407,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "8e8987de0662442a98c1ccc02d567c84.png",
+   "alt": 141.600006,
+   "sigma_m": 8.276412143566452,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "5fb6cb185643441ab48c322058837555.png",
+   "alt": 350.600006,
+   "sigma_m": 9.569806468610778,
+   "error_m": 8.580903627384878,
+   "points": 10
+  },
+  {
+   "filename": "1d6b7814500947ec8df451715585ad21.png",
+   "alt": 100.599998,
+   "sigma_m": 8.140689958816985,
+   "error_m": 7.6655887783872565,
+   "points": 10
+  },
+  {
+   "filename": "67800c634b43469896387e2cb927986a.png",
+   "alt": 150.300003,
+   "sigma_m": 8.310765562650841,
+   "error_m": 4.3602876902273,
+   "points": 10
+  },
+  {
+   "filename": "f33d810b23ed4d39b0051e2c9ab804f7.png",
+   "alt": 280.299988,
+   "sigma_m": 9.03489424148264,
+   "error_m": 7.697298331239554,
+   "points": 10
+  },
+  {
+   "filename": "6678d61113c14bd3b205dc4618d3cd29.png",
+   "alt": 119.699997,
+   "sigma_m": 8.198473912935365,
+   "error_m": 7.828704757241711,
+   "points": 10
+  },
+  {
+   "filename": "586921f20f334c439a88cc65b4199139.png",
+   "alt": 109.400002,
+   "sigma_m": 8.166118558594839,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "40758301d38d46dc846f990eee4b19bc.png",
+   "alt": 350.299988,
+   "sigma_m": 9.567340909493714,
+   "error_m": 10.193349194060854,
+   "points": 6
+  },
+  {
+   "filename": "a68a436e040e4799ace09930ac01288d.png",
+   "alt": 219.899994,
+   "sigma_m": 8.651603816512626,
+   "error_m": 7.7224394287963,
+   "points": 10
+  },
+  {
+   "filename": "294bf5da7c29412d808c8a785fe777df.png",
+   "alt": 119.5,
+   "sigma_m": 8.197819234206706,
+   "error_m": 5.640982296189839,
+   "points": 10
+  },
+  {
+   "filename": "22d0316494774e20806cdb4441bbf7f5.png",
+   "alt": 109.400002,
+   "sigma_m": 8.166118558594839,
+   "error_m": 2.4198213474303842,
+   "points": 10
+  },
+  {
+   "filename": "fb42971ec682460cbf8e69f671975791.png",
+   "alt": 299.899994,
+   "sigma_m": 9.175019132933311,
+   "error_m": 6.363510849925871,
+   "points": 10
+  },
+  {
+   "filename": "1cb2481a9a96400f9ab61fde6cf8085c.png",
+   "alt": 100.0,
+   "sigma_m": 8.139031048061502,
+   "error_m": 3.07549190337358,
+   "points": 10
+  },
+  {
+   "filename": "b407c418cedb4778a4ee20681e2744e9.png",
+   "alt": 129.0,
+   "sigma_m": 8.230063882766554,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "b0caa48130834d4db28bb8cdaee78c6c.png",
+   "alt": 150.100006,
+   "sigma_m": 8.3099544842396,
+   "error_m": 5.1952241100560625,
+   "points": 10
+  },
+  {
+   "filename": "fd560c6206a64517b67c24dafb91d956.png",
+   "alt": 279.899994,
+   "sigma_m": 9.032111328398589,
+   "error_m": 7.041918969794258,
+   "points": 10
+  },
+  {
+   "filename": "e914d20649d9431ebe9f81c062fc2189.png",
+   "alt": 144.600006,
+   "sigma_m": 8.28804276732863,
+   "error_m": 4.125374931812071,
+   "points": 10
+  },
+  {
+   "filename": "2aaff0f28484488b81b906dc418b8427.png",
+   "alt": 109.0,
+   "sigma_m": 8.164918257239037,
+   "error_m": 1.1306071135353923,
+   "points": 10
+  },
+  {
+   "filename": "7de48d4876f54e20a9dc1e49f51799c2.png",
+   "alt": 350.700012,
+   "sigma_m": 9.570628649455493,
+   "error_m": 9.906579975809096,
+   "points": 6
+  },
+  {
+   "filename": "2624bd333b56419d8b13a5f25e08affb.png",
+   "alt": 100.599998,
+   "sigma_m": 8.140689958816985,
+   "error_m": 4.461201172355474,
+   "points": 10
+  },
+  {
+   "filename": "0469b52594f24c9a8599ced284edb7b5.png",
+   "alt": 148.5,
+   "sigma_m": 8.303501795979024,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "496fbceae3d14828828984e2ed7d0397.png",
+   "alt": 300.0,
+   "sigma_m": 9.175752700012245,
+   "error_m": 6.182779371875993,
+   "points": 10
+  },
+  {
+   "filename": "3e60f2145bf74d4b9ad3a24f9906c7e0.png",
+   "alt": 133.800003,
+   "sigma_m": 8.247241777231926,
+   "error_m": 4.696325546653095,
+   "points": 10
+  },
+  {
+   "filename": "c24cd250c6ac484d80670908918674ab.png",
+   "alt": 104.900002,
+   "sigma_m": 8.152858940885578,
+   "error_m": 6.1335970286696035,
+   "points": 10
+  },
+  {
+   "filename": "4af120e438ed4c7e9619fa4120e994dc.png",
+   "alt": 349.600006,
+   "sigma_m": 9.561594172487789,
+   "error_m": 8.768020623207077,
+   "points": 10
+  },
+  {
+   "filename": "a73c89fefbcc45dfb506257853dc221b.png",
+   "alt": 150.199997,
+   "sigma_m": 8.31035986792662,
+   "error_m": 2.928900434132389,
+   "points": 10
+  },
+  {
+   "filename": "82f6cf739db344b29960b09dd7c79dba.png",
+   "alt": 250.0,
+   "sigma_m": 8.833114683291615,
+   "error_m": 6.828277394156245,
+   "points": 10
+  },
+  {
+   "filename": "b2970093307c466687e30b8fecfb47bd.png",
+   "alt": 106.5,
+   "sigma_m": 8.157512120740295,
+   "error_m": 4.244758109837647,
+   "points": 10
+  },
+  {
+   "filename": "33708e0d9e7b46c78804295675f2a587.png",
+   "alt": 150.199997,
+   "sigma_m": 8.31035986792662,
+   "error_m": 7.7054138969419865,
+   "points": 10
+  },
+  {
+   "filename": "32c502548a2949408280a51ae2c81668.png",
+   "alt": 100.099998,
+   "sigma_m": 8.139306862878149,
+   "error_m": 2.9963857015107402,
+   "points": 10
+  },
+  {
+   "filename": "996c14a176c740ba91350140b749a6e3.png",
+   "alt": 330.799988,
+   "sigma_m": 9.410307400277443,
+   "error_m": 5.482294948186047,
+   "points": 10
+  },
+  {
+   "filename": "36d96c6403584d23bd85da87d3dcf90e.png",
+   "alt": 120.599998,
+   "sigma_m": 8.201432910630448,
+   "error_m": 4.611770372518068,
+   "points": 10
+  },
+  {
+   "filename": "11aca9365f404895b2eefdab41e23344.png",
+   "alt": 279.899994,
+   "sigma_m": 9.032111328398589,
+   "error_m": 6.535597409097508,
+   "points": 10
+  },
+  {
+   "filename": "4cf5a7381cc04f538ba7e132449e86b6.png",
+   "alt": 133.300003,
+   "sigma_m": 8.2454248301623,
+   "error_m": 1.4612557400844712,
+   "points": 10
+  },
+  {
+   "filename": "a07d672e3b62487aab2740d9de633268.png",
+   "alt": 109.199997,
+   "sigma_m": 8.16551786837768,
+   "error_m": 3.195061991735753,
+   "points": 10
+  },
+  {
+   "filename": "330d8ce20f9f4923904dd2d9ce945519.png",
+   "alt": 350.299988,
+   "sigma_m": 9.567340909493714,
+   "error_m": 3.8097630762058325,
+   "points": 10
+  },
+  {
+   "filename": "930d80f74f834b339679ddeab2ff6340.png",
+   "alt": 209.699997,
+   "sigma_m": 8.594592609846964,
+   "error_m": 4.926733588431431,
+   "points": 10
+  },
+  {
+   "filename": "2d88c5fc009f45e3a5e603b68b21ed86.png",
+   "alt": 142.600006,
+   "sigma_m": 8.280263734881398,
+   "error_m": 3.6171712130662597,
+   "points": 10
+  },
+  {
+   "filename": "fd40f7be19f54ff3ac05da63b8f6465f.png",
+   "alt": 108.900002,
+   "sigma_m": 8.164618848875186,
+   "error_m": 3.2104399035484863,
+   "points": 10
+  },
+  {
+   "filename": "35cfb9b83bc647d69c922fe070448a80.png",
+   "alt": 300.100006,
+   "sigma_m": 9.176486452998393,
+   "error_m": 5.2301471181558945,
+   "points": 10
+  },
+  {
+   "filename": "da20c60eb75f4de9b59b52f4ad4fbe5e.png",
+   "alt": 148.5,
+   "sigma_m": 8.303501795979024,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "54e5d75372094b85ad604ad8d424dfa4.png",
+   "alt": 127.199997,
+   "sigma_m": 8.223774987488829,
+   "error_m": 1.5095759379128586,
+   "points": 10
+  },
+  {
+   "filename": "373f17af3dc0409999f029901cee3226.png",
+   "alt": 100.400002,
+   "sigma_m": 8.140135932762675,
+   "error_m": 5.273479941487726,
+   "points": 10
+  },
+  {
+   "filename": "2421707bd5f14ac0b0394e689e4ac475.png",
+   "alt": 279.899994,
+   "sigma_m": 9.032111328398589,
+   "error_m": 7.170036847306096,
+   "points": 10
+  },
+  {
+   "filename": "edb1df793c6b4a6f9e75f89e27adf35f.png",
+   "alt": 120.400002,
+   "sigma_m": 8.200773546478576,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "0399d30607ec441cb2e18088f714377a.png",
+   "alt": 109.699997,
+   "sigma_m": 8.167021534077422,
+   "error_m": 6.342201547436072,
+   "points": 10
+  },
+  {
+   "filename": "a15f911d148e4714b3459d37a72a5358.png",
+   "alt": 101.0,
+   "sigma_m": 8.141801232649653,
+   "error_m": 6.248636368549056,
+   "points": 10
+  },
+  {
+   "filename": "0a487bfbbf0144d3a72d7522adc5cf8e.png",
+   "alt": 350.100006,
+   "sigma_m": 9.565698269721272,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "ce5c44a8dbf74a24ae9bfea7a4ea50bf.png",
+   "alt": 149.5,
+   "sigma_m": 8.30752719541657,
+   "error_m": 6.461498664296103,
+   "points": 10
+  },
+  {
+   "filename": "452a0f5fd8a9482ba8478fc8379d9d2e.png",
+   "alt": 300.600006,
+   "sigma_m": 9.180157784557554,
+   "error_m": 6.2211243837831836,
+   "points": 10
+  },
+  {
+   "filename": "15e68694cdf64dec84562317e1102dda.png",
+   "alt": 150.5,
+   "sigma_m": 8.311577641737168,
+   "error_m": 4.321519351510726,
+   "points": 10
+  },
+  {
+   "filename": "325e2578fa9049a0866b90d70d616997.png",
+   "alt": 107.400002,
+   "sigma_m": 8.160159312076647,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "c03149fbf7cc44e3b1ba66f5f1bf0ade.png",
+   "alt": 350.0,
+   "sigma_m": 9.564877072709121,
+   "error_m": 10.313673146288629,
+   "points": 6
+  },
+  {
+   "filename": "35ef6751b785444192dee4cfd9f0bc82.png",
+   "alt": 130.199997,
+   "sigma_m": 8.234302843320561,
+   "error_m": 4.365380737053705,
+   "points": 10
+  },
+  {
+   "filename": "fdbf6fe7edad4096821ee86598cef29b.png",
+   "alt": 250.0,
+   "sigma_m": 8.833114683291615,
+   "error_m": 5.194097906314799,
+   "points": 10
+  },
+  {
+   "filename": "c709a4416edd4c428819c9b7c93767f3.png",
+   "alt": 100.300003,
+   "sigma_m": 8.139859316301974,
+   "error_m": 3.030329596513352,
+   "points": 10
+  },
+  {
+   "filename": "46d4b57cc428484ea85ba9e0178b023e.png",
+   "alt": 299.799988,
+   "sigma_m": 9.174285751806185,
+   "error_m": 6.700163221080439,
+   "points": 10
+  },
+  {
+   "filename": "882b1bfdd26f4059be26b692f357d80c.png",
+   "alt": 129.600006,
+   "sigma_m": 8.232178756187276,
+   "error_m": 4.233879304800719,
+   "points": 10
+  },
+  {
+   "filename": "cd673cef16904f86b4ca0529b1d8383b.png",
+   "alt": 100.0,
+   "sigma_m": 8.139031048061502,
+   "error_m": 0.5054634530791476,
+   "points": 10
+  },
+  {
+   "filename": "fe0bbdc9c7a74b6bae6c1cc89d0db01d.png",
+   "alt": 149.600006,
+   "sigma_m": 8.30793113778418,
+   "error_m": 4.115179070056447,
+   "points": 10
+  },
+  {
+   "filename": "f2b4d68b4caf4800abd1d4f35545c450.png",
+   "alt": 279.899994,
+   "sigma_m": 9.032111328398589,
+   "error_m": 6.525328912103751,
+   "points": 10
+  },
+  {
+   "filename": "a686a2a5b0dc40d3b7f9bcbe08356ae8.png",
+   "alt": 149.899994,
+   "sigma_m": 8.309144346077307,
+   "error_m": 1.715084289700565,
+   "points": 10
+  },
+  {
+   "filename": "e5426d681dac44b08169c1a5a0bfe8b8.png",
+   "alt": 108.900002,
+   "sigma_m": 8.164618848875186,
+   "error_m": 2.763541978791083,
+   "points": 10
+  },
+  {
+   "filename": "567435558ac94083bd0e09a65f66c5e8.png",
+   "alt": 349.799988,
+   "sigma_m": 9.563235171111646,
+   "error_m": 10.218562571192443,
+   "points": 6
+  },
+  {
+   "filename": "1ec2b4ec037d41a4b0278ef0b128b105.png",
+   "alt": 169.699997,
+   "sigma_m": 8.394152204747135,
+   "error_m": 3.6318955577792904,
+   "points": 10
+  },
+  {
+   "filename": "0f45be50961f47a2b0a918094bf95cc4.png",
+   "alt": 147.0,
+   "sigma_m": 8.297510739407866,
+   "error_m": 6.626683961491858,
+   "points": 10
+  },
+  {
+   "filename": "8b1c49c47bf145a5b99932b45cbae618.png",
+   "alt": 300.100006,
+   "sigma_m": 9.176486452998393,
+   "error_m": 2.589296110850016,
+   "points": 10
+  },
+  {
+   "filename": "6abd632a0f264610a37f6675086ac063.png",
+   "alt": 119.699997,
+   "sigma_m": 8.198473912935365,
+   "error_m": 4.645758633959662,
+   "points": 10
+  },
+  {
+   "filename": "1cf5a1c7907f40629f2d22206e8cb1c9.png",
+   "alt": 103.5,
+   "sigma_m": 8.148843042833894,
+   "error_m": 4.369090947067315,
+   "points": 10
+  },
+  {
+   "filename": "c45af30812cd415dae78f8f12f555fbc.png",
+   "alt": 349.899994,
+   "sigma_m": 9.564056039825156,
+   "error_m": 11.357354824171416,
+   "points": 6
+  },
+  {
+   "filename": "a187ec9e528f4da99766c2e2b5eeb0c1.png",
+   "alt": 149.600006,
+   "sigma_m": 8.30793113778418,
+   "error_m": 2.176391244100972,
+   "points": 10
+  },
+  {
+   "filename": "d5c59efb983f4eb6a4634ce7e6ce28c6.png",
+   "alt": 250.0,
+   "sigma_m": 8.833114683291615,
+   "error_m": 6.172321941529501,
+   "points": 10
+  },
+  {
+   "filename": "9300621296d24c30adfaf15f9bca34c6.png",
+   "alt": 108.599998,
+   "sigma_m": 8.163722177103196,
+   "error_m": 3.741875403754932,
+   "points": 10
+  },
+  {
+   "filename": "dda59b59984242379e2ba5494bc8b698.png",
+   "alt": 149.399994,
+   "sigma_m": 8.307123503547976,
+   "error_m": 4.940125919768364,
+   "points": 10
+  },
+  {
+   "filename": "2af00a7ec9c240d8b2566bc99db969d1.png",
+   "alt": 145.899994,
+   "sigma_m": 8.29315321424342,
+   "error_m": 5.307206652531214,
+   "points": 10
+  },
+  {
+   "filename": "124eaa29330f4570974d7ca70bb114a1.png",
+   "alt": 350.0,
+   "sigma_m": 9.564877072709121,
+   "error_m": 12.742589265748071,
+   "points": 6
+  },
+  {
+   "filename": "61f63004d1da45ddaaf94707e3404cc5.png",
+   "alt": 280.200012,
+   "sigma_m": 9.034198377620015,
+   "error_m": 5.062102933986769,
+   "points": 10
+  },
+  {
+   "filename": "b0b4e74b2c63458b9231759bf4a9ecad.png",
+   "alt": 100.5,
+   "sigma_m": 8.140412812688448,
+   "error_m": 3.8771170594135476,
+   "points": 10
+  },
+  {
+   "filename": "8d4dae3a1fa142f989e9ef81543ffa3a.png",
+   "alt": 120.699997,
+   "sigma_m": 8.201762986481802,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "1f5143dfdb4646b78923ecc1c982bc93.png",
+   "alt": 109.300003,
+   "sigma_m": 8.165818092123267,
+   "error_m": 3.525511303870775,
+   "points": 10
+  },
+  {
+   "filename": "df6798ee5b064bda9a65f49f2cf73cce.png",
+   "alt": 350.299988,
+   "sigma_m": 9.567340909493714,
+   "error_m": 4.760847795406833,
+   "points": 10
+  },
+  {
+   "filename": "1451d0385e99407bbac9fd05e4b5441a.png",
+   "alt": 220.100006,
+   "sigma_m": 8.652744966481313,
+   "error_m": 3.8013108763913,
+   "points": 10
+  },
+  {
+   "filename": "8225db0517084b3392e0c2a9f68f7cf1.png",
+   "alt": 120.199997,
+   "sigma_m": 8.200115194196497,
+   "error_m": 17.679033490636424,
+   "points": 3
+  },
+  {
+   "filename": "6b0a00c513414872ac5c73559f1ef40a.png",
+   "alt": 109.900002,
+   "sigma_m": 8.167624860996382,
+   "error_m": 1.3343136652153023,
+   "points": 10
+  },
+  {
+   "filename": "71cd1c622c4047db8f2734df2bddb457.png",
+   "alt": 299.899994,
+   "sigma_m": 9.175019132933311,
+   "error_m": 4.341394892615835,
+   "points": 10
+  },
+  {
+   "filename": "997aa27af5864d12b4ea7e0a74d8281f.png",
+   "alt": 141.699997,
+   "sigma_m": 8.276796128836812,
+   "error_m": 3.402333699759352,
+   "points": 10
+  },
+  {
+   "filename": "f5472f32818f4ea2a398a431eb9738e8.png",
+   "alt": 145.300003,
+   "sigma_m": 8.290789268127504,
+   "error_m": 2.0085104440677526,
+   "points": 10
+  },
+  {
+   "filename": "f780df0bd2854a3f85a228bf01986f00.png",
+   "alt": 110.099998,
+   "sigma_m": 8.168229214993614,
+   "error_m": 5.103669880100844,
+   "points": 10
+  },
+  {
+   "filename": "d5aee90881b64bb29d4f38942b415fe9.png",
+   "alt": 279.899994,
+   "sigma_m": 9.032111328398589,
+   "error_m": 5.868766880689398,
+   "points": 10
+  },
+  {
+   "filename": "a804c33d18ad4ce799e3086f41aefd62.png",
+   "alt": 125.599998,
+   "sigma_m": 8.218255095401075,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "5bb87dc824484a2392a11285e5857451.png",
+   "alt": 109.5,
+   "sigma_m": 8.166419285759803,
+   "error_m": 2.18906109174935,
+   "points": 10
+  },
+  {
+   "filename": "a0c0b0fa17114f0fba2c8759344994b4.png",
+   "alt": 100.0,
+   "sigma_m": 8.139031048061502,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "1a12572caa3b4836b6c9778a71d2e1da.png",
+   "alt": 350.200012,
+   "sigma_m": 9.56651963081934,
+   "error_m": 5.030762498909426,
+   "points": 10
+  },
+  {
+   "filename": "6ddde580c02f41f3b79244f289d83fcd.png",
+   "alt": 300.0,
+   "sigma_m": 9.175752700012245,
+   "error_m": 5.338327814595095,
+   "points": 10
+  },
+  {
+   "filename": "15f9d9ba3b7741228259b28e922a0a3a.png",
+   "alt": 134.800003,
+   "sigma_m": 8.250894867261676,
+   "error_m": 2.8907990952541947,
+   "points": 10
+  },
+  {
+   "filename": "4ce17df404ed45be84c27594983054a7.png",
+   "alt": 149.600006,
+   "sigma_m": 8.30793113778418,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "4dc1e131b63346c98e499c360883b0a3.png",
+   "alt": 105.400002,
+   "sigma_m": 8.154305779466235,
+   "error_m": 2.8285390577453504,
+   "points": 10
+  },
+  {
+   "filename": "845cc8a76d4742a0bc7e09a244c22e96.png",
+   "alt": 350.0,
+   "sigma_m": 9.564877072709121,
+   "error_m": 9.850003217650142,
+   "points": 6
+  },
+  {
+   "filename": "34c7816cde064b5895e5fced4f5edd30.png",
+   "alt": 144.899994,
+   "sigma_m": 8.28921828436545,
+   "error_m": 4.080366019623602,
+   "points": 10
+  },
+  {
+   "filename": "a6cc93105b1d4f4eb63b89f9c2bf03a6.png",
+   "alt": 249.5,
+   "sigma_m": 8.82994198417007,
+   "error_m": 7.478200347908217,
+   "points": 10
+  },
+  {
+   "filename": "33f237569cbf438f9fbecd60da584034.png",
+   "alt": 100.699997,
+   "sigma_m": 8.140967373896613,
+   "error_m": 5.6207217359699015,
+   "points": 10
+  },
+  {
+   "filename": "4fa650a665f24bf7b6cd48c8bd349175.png",
+   "alt": 299.799988,
+   "sigma_m": 9.174285751806185,
+   "error_m": 5.269285491814069,
+   "points": 10
+  },
+  {
+   "filename": "673f328291914d29b91649ce332c21e1.png",
+   "alt": 145.199997,
+   "sigma_m": 8.29039612935977,
+   "error_m": 5.549049193809548,
+   "points": 10
+  },
+  {
+   "filename": "b1b2bfac459c4cd4a7ffebc5840ff592.png",
+   "alt": 100.199997,
+   "sigma_m": 8.139582946768288,
+   "error_m": 4.052407266670514,
+   "points": 10
+  },
+  {
+   "filename": "1829b2fbcf914f7dbdfe9d5ce96627e2.png",
+   "alt": 132.0,
+   "sigma_m": 8.240730739542519,
+   "error_m": 2.40088750860294,
+   "points": 10
+  },
+  {
+   "filename": "4c17852a791e41f4bb2367fd60829245.png",
+   "alt": 279.899994,
+   "sigma_m": 9.032111328398589,
+   "error_m": 6.236839231998672,
+   "points": 10
+  },
+  {
+   "filename": "86f09bac5ee24d98a6d0d494de5b00c8.png",
+   "alt": 144.100006,
+   "sigma_m": 8.286088539088828,
+   "error_m": 1.0382365388350419,
+   "points": 10
+  },
+  {
+   "filename": "72a70b33be444dacaa0ceb96a19fcad5.png",
+   "alt": 110.099998,
+   "sigma_m": 8.168229214993614,
+   "error_m": 4.7502938775047605,
+   "points": 10
+  },
+  {
+   "filename": "c2709578f9354751997212a9753ceb40.png",
+   "alt": 350.200012,
+   "sigma_m": 9.56651963081934,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "ab3525b88230446b9405e859919ebf01.png",
+   "alt": 194.899994,
+   "sigma_m": 8.516067207758114,
+   "error_m": 5.711372830125262,
+   "points": 10
+  },
+  {
+   "filename": "54a533ad669d4c3a80a9083121c8c4ac.png",
+   "alt": 149.100006,
+   "sigma_m": 8.305914052138638,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "2ab6f41eec6944dda3887cec55247151.png",
+   "alt": 300.100006,
+   "sigma_m": 9.176486452998393,
+   "error_m": 3.797930001094347,
+   "points": 10
+  },
+  {
+   "filename": "43507064a8e340c79ae5793fc5f458e1.png",
+   "alt": 125.800003,
+   "sigma_m": 8.218941480161869,
+   "error_m": 3.1172660768113154,
+   "points": 10
+  },
+  {
+   "filename": "92b00ce6a30645989739d12aa27b0fca.png",
+   "alt": 100.599998,
+   "sigma_m": 8.140689958816985,
+   "error_m": 3.8347318197711813,
+   "points": 10
+  },
+  {
+   "filename": "3bb1c80917704877b555a50058f030f4.png",
+   "alt": 207.0,
+   "sigma_m": 8.579893457786607,
+   "error_m": 5.328752194332101,
+   "points": 10
+  },
+  {
+   "filename": "9e97b64e3b7b433a9c48e212e7e19639.png",
+   "alt": 145.100006,
+   "sigma_m": 8.290003301557705,
+   "error_m": 4.124178874262816,
+   "points": 10
+  },
+  {
+   "filename": "1bf39428949e4242ab000ee3d12e0a48.png",
+   "alt": 279.799988,
+   "sigma_m": 9.031416035102144,
+   "error_m": 8.08109044090464,
+   "points": 10
+  },
+  {
+   "filename": "532d401b7c144eb285a06fdd005ca053.png",
+   "alt": 109.099998,
+   "sigma_m": 8.16521792941597,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "439c1690407a4e71b70bd69f1e7acb7f.png",
+   "alt": 125.900002,
+   "sigma_m": 8.219285048531445,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "46666b12954f4d52b39872d5e41c67aa.png",
+   "alt": 350.600006,
+   "sigma_m": 9.569806468610778,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "f174ef6720424a3b9bf1878614f4d5b9.png",
+   "alt": 100.400002,
+   "sigma_m": 8.140135932762675,
+   "error_m": 3.613742231080363,
+   "points": 10
+  },
+  {
+   "filename": "e62d89592b454bfdb20d3c2ca7f73662.png",
+   "alt": 150.100006,
+   "sigma_m": 8.3099544842396,
+   "error_m": 6.612466927773347,
+   "points": 10
+  },
+  {
+   "filename": "1e28e2b920754482b6cd8485bba7d092.png",
+   "alt": 279.799988,
+   "sigma_m": 9.031416035102144,
+   "error_m": 4.838573827897674,
+   "points": 10
+  },
+  {
+   "filename": "ec2aae3cc4a142ad9dd17f0cae9c8f8b.png",
+   "alt": 150.100006,
+   "sigma_m": 8.3099544842396,
+   "error_m": 1.4778252327942618,
+   "points": 10
+  },
+  {
+   "filename": "3ed64e70171d46ac8023f7b60180ed71.png",
+   "alt": 108.199997,
+   "sigma_m": 8.162530323017306,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "6d09a9f4a5104dd29e38c2fc44948755.png",
+   "alt": 350.200012,
+   "sigma_m": 9.56651963081934,
+   "error_m": 9.808287012966945,
+   "points": 6
+  },
+  {
+   "filename": "109507d8301240afbc043b87705fd6f5.png",
+   "alt": 121.300003,
+   "sigma_m": 8.203748946157084,
+   "error_m": 4.140075291693777,
+   "points": 10
+  },
+  {
+   "filename": "a9927ff259b24d05bf69257adbd287a5.png",
+   "alt": 250.600006,
+   "sigma_m": 8.836928836011703,
+   "error_m": 5.688437858231931,
+   "points": 10
+  },
+  {
+   "filename": "4bdc4fe01e2244de897a16f7ae9b45d2.png",
+   "alt": 107.199997,
+   "sigma_m": 8.159569183163967,
+   "error_m": 1.9585238022870408,
+   "points": 10
+  },
+  {
+   "filename": "7a9e95d8254a403d9b49c30510180dbc.png",
+   "alt": 299.799988,
+   "sigma_m": 9.174285751806185,
+   "error_m": 6.669772379700968,
+   "points": 10
+  },
+  {
+   "filename": "77392dcd5fa8492f994a70492e3ed2cd.png",
+   "alt": 120.0,
+   "sigma_m": 8.199457910001437,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "5b2c12a5ea374bb1acf5fb5ce2301c65.png",
+   "alt": 100.099998,
+   "sigma_m": 8.139306862878149,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "b050503595a1478c9545d320a37d0421.png",
+   "alt": 149.899994,
+   "sigma_m": 8.309144346077307,
+   "error_m": 5.735650149235646,
+   "points": 10
+  },
+  {
+   "filename": "df8243548427488297e283b488b841f1.png",
+   "alt": 280.0,
+   "sigma_m": 9.032806816613729,
+   "error_m": 6.674010219067134,
+   "points": 10
+  },
+  {
+   "filename": "e99dde2a23894a77be410b7c89cd4b15.png",
+   "alt": 149.899994,
+   "sigma_m": 8.309144346077307,
+   "error_m": 2.10452190693601,
+   "points": 10
+  },
+  {
+   "filename": "46639cbf89a24a2cade35129c36934b4.png",
+   "alt": 110.199997,
+   "sigma_m": 8.168531790272569,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "ef18ed2e6e7a4298a1a5e0a298786399.png",
+   "alt": 350.600006,
+   "sigma_m": 9.569806468610778,
+   "error_m": 7.565954894229805,
+   "points": 10
+  },
+  {
+   "filename": "68ed521f9ec741749f9e3d90fea23625.png",
+   "alt": 170.399994,
+   "sigma_m": 8.397333492320401,
+   "error_m": 5.2256852553563125,
+   "points": 10
+  },
+  {
+   "filename": "9991a5d9e42c4fe5b9acd954112ea673.png",
+   "alt": 120.5,
+   "sigma_m": 8.20110309838627,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "0a79349dd0c14b6482bfaefe5ec75980.png",
+   "alt": 300.200012,
+   "sigma_m": 9.177220391847163,
+   "error_m": 5.260499982888524,
+   "points": 10
+  },
+  {
+   "filename": "e393ee93cfd54cc9bc1f2bc4562efd1e.png",
+   "alt": 120.099998,
+   "sigma_m": 8.199786420223472,
+   "error_m": 3.026217089975024,
+   "points": 10
+  },
+  {
+   "filename": "93d1effc9ca84cdd9ef3ee60a9f847cc.png",
+   "alt": 104.400002,
+   "sigma_m": 8.151418727205678,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "3d73b5e6971845faaddc1fd51c53cad6.png",
+   "alt": 349.600006,
+   "sigma_m": 9.561594172487789,
+   "error_m": 12.322229571900722,
+   "points": 6
+  },
+  {
+   "filename": "533ef3424dbc4c06a114608f71bca381.png",
+   "alt": 150.300003,
+   "sigma_m": 8.310765562650841,
+   "error_m": 4.549717888587117,
+   "points": 10
+  },
+  {
+   "filename": "73855976b833419889d0bae02242f4a9.png",
+   "alt": 250.100006,
+   "sigma_m": 8.833749886510942,
+   "error_m": 3.244024033185914,
+   "points": 10
+  },
+  {
+   "filename": "e457c08ef0c4436886fcaaf87c1c6083.png",
+   "alt": 107.300003,
+   "sigma_m": 8.159864125783614,
+   "error_m": 3.701286218881791,
+   "points": 10
+  },
+  {
+   "filename": "57ae66a89c3c463db9d39815d3054c4f.png",
+   "alt": 149.800003,
+   "sigma_m": 8.30873971318866,
+   "error_m": 6.789192935845967,
+   "points": 10
+  },
+  {
+   "filename": "e40578d75ffb46419888a8a5ad8f6cdb.png",
+   "alt": 100.0,
+   "sigma_m": 8.139031048061502,
+   "error_m": 1.7162505729766284,
+   "points": 10
+  },
+  {
+   "filename": "f3037943cd384f959040f526242f5a54.png",
+   "alt": 122.0,
+   "sigma_m": 8.206077699833733,
+   "error_m": 4.270702736076588,
+   "points": 10
+  },
+  {
+   "filename": "cffafe54ffd84bc29ac24eee289d9c33.png",
+   "alt": 338.399994,
+   "sigma_m": 9.470748565718374,
+   "error_m": 9.680478892116636,
+   "points": 6
+  },
+  {
+   "filename": "64cb88361a21457a846201900cd5f9d4.png",
+   "alt": 120.400002,
+   "sigma_m": 8.200773546478576,
+   "error_m": 2.7967777584833575,
+   "points": 10
+  },
+  {
+   "filename": "9370498999234ace8f8790fea948daa7.png",
+   "alt": 279.799988,
+   "sigma_m": 9.031416035102144,
+   "error_m": 6.246117461993657,
+   "points": 10
+  },
+  {
+   "filename": "4ea3575a10ac447281a835e4aafd48c1.png",
+   "alt": 109.5,
+   "sigma_m": 8.166419285759803,
+   "error_m": 0.8708778592351769,
+   "points": 10
+  },
+  {
+   "filename": "d1b9050b11d14121b4482525dabd2749.png",
+   "alt": 350.200012,
+   "sigma_m": 9.56651963081934,
+   "error_m": 3.1117195737658427,
+   "points": 10
+  },
+  {
+   "filename": "35fd3f402c9f4c4cb7fb9d66b362721f.png",
+   "alt": 215.800003,
+   "sigma_m": 8.628407678342322,
+   "error_m": 5.965568534392629,
+   "points": 10
+  },
+  {
+   "filename": "a4273f2cc4384365a1c0ee022dd44f57.png",
+   "alt": 120.400002,
+   "sigma_m": 8.200773546478576,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "757a843f42244704a5772b2a431da8d3.png",
+   "alt": 110.599998,
+   "sigma_m": 8.169744740967424,
+   "error_m": 2.3448980681791545,
+   "points": 10
+  },
+  {
+   "filename": "350b2f92b1344ff6bfc421668d0f4cf4.png",
+   "alt": 299.899994,
+   "sigma_m": 9.175019132933311,
+   "error_m": 4.276061501931161,
+   "points": 10
+  },
+  {
+   "filename": "9ee3b19a5ba44482871708975119ae82.png",
+   "alt": 122.199997,
+   "sigma_m": 8.206745390185754,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "75316e8f96164725bf573cc0f949cddf.png",
+   "alt": 128.399994,
+   "sigma_m": 8.227958283422923,
+   "error_m": 2.6113653734222795,
+   "points": 10
+  },
+  {
+   "filename": "f71ab91f54904315a699569d9d86ddea.png",
+   "alt": 109.699997,
+   "sigma_m": 8.167021534077422,
+   "error_m": 3.1798812044850004,
+   "points": 10
+  },
+  {
+   "filename": "972e89ab91a944df9c989b2489fd67de.png",
+   "alt": 279.899994,
+   "sigma_m": 9.032111328398589,
+   "error_m": 7.374742820148942,
+   "points": 10
+  },
+  {
+   "filename": "bf15a5050ac84f27bd3e4e4f0a0600e6.png",
+   "alt": 119.5,
+   "sigma_m": 8.197819234206706,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "921453e7dbb947d0acdb5bacab747952.png",
+   "alt": 108.699997,
+   "sigma_m": 8.16402079681489,
+   "error_m": 5.519493564494568,
+   "points": 10
+  },
+  {
+   "filename": "bbf534841a8d49c89a896fb64976bc8c.png",
+   "alt": 100.300003,
+   "sigma_m": 8.139859316301974,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "9f1fc84cde1440a38df566533b3adb93.png",
+   "alt": 350.200012,
+   "sigma_m": 9.56651963081934,
+   "error_m": 8.290590581275476,
+   "points": 10
+  },
+  {
+   "filename": "8512e7c126a04ee5aab5a6fd6cc81818.png",
+   "alt": 147.600006,
+   "sigma_m": 8.2999004056365,
+   "error_m": 3.978417345281438,
+   "points": 10
+  },
+  {
+   "filename": "8817f8abb0d9437ab2588b89bcb852d7.png",
+   "alt": 300.0,
+   "sigma_m": 9.175752700012245,
+   "error_m": 7.547540672379652,
+   "points": 10
+  },
+  {
+   "filename": "04c2f4a10c534e29bff2026a3f62371a.png",
+   "alt": 150.399994,
+   "sigma_m": 8.311171446674521,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "133dd2edff5e4095973c4d02ca770123.png",
+   "alt": 106.699997,
+   "sigma_m": 8.158098524297818,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "bc7fdc3d64764ca5b678d760df11a178.png",
+   "alt": 350.100006,
+   "sigma_m": 9.565698269721272,
+   "error_m": 8.621050740843438,
+   "points": 10
+  },
+  {
+   "filename": "1be140b457764d649853116d54d40f28.png",
+   "alt": 136.199997,
+   "sigma_m": 8.25605211462625,
+   "error_m": 5.268070508146368,
+   "points": 10
+  },
+  {
+   "filename": "fac8fd1a983e462fa168a2c3710d2d13.png",
+   "alt": 249.899994,
+   "sigma_m": 8.832479688463662,
+   "error_m": 5.84291710212851,
+   "points": 10
+  },
+  {
+   "filename": "6d406760ec1549c983f1e7cb72bb7e99.png",
+   "alt": 100.300003,
+   "sigma_m": 8.139859316301974,
+   "error_m": 5.724314804673786,
+   "points": 10
+  },
+  {
+   "filename": "31cbebc2a7ec461abc9d3edaf3e739ee.png",
+   "alt": 300.700012,
+   "sigma_m": 9.180892651994975,
+   "error_m": 10.838653577261537,
+   "points": 6
+  },
+  {
+   "filename": "e1e1c163fccb48a2a7625a6d68af87d4.png",
+   "alt": 136.0,
+   "sigma_m": 8.255312308559946,
+   "error_m": 2.880501279176323,
+   "points": 10
+  },
+  {
+   "filename": "f4189fab0a784db9860742240c3a7186.png",
+   "alt": 100.099998,
+   "sigma_m": 8.139306862878149,
+   "error_m": 2.2958558406617,
+   "points": 10
+  },
+  {
+   "filename": "edf5eb4115f246ffa595774f2b6eddee.png",
+   "alt": 146.800003,
+   "sigma_m": 8.296716214520718,
+   "error_m": 2.9898756620574924,
+   "points": 10
+  },
+  {
+   "filename": "e23d1770bc13493dab5b79202eb95dc9.png",
+   "alt": 279.899994,
+   "sigma_m": 9.032111328398589,
+   "error_m": 7.659042384456281,
+   "points": 10
+  },
+  {
+   "filename": "08f251c05f7944c78fa60fb6b11e17fb.png",
+   "alt": 149.5,
+   "sigma_m": 8.30752719541657,
+   "error_m": 1.3619327660153453,
+   "points": 10
+  },
+  {
+   "filename": "80425271f15041c1bfc9339fd46b6f06.png",
+   "alt": 109.099998,
+   "sigma_m": 8.16521792941597,
+   "error_m": 4.638629614739862,
+   "points": 10
+  },
+  {
+   "filename": "e743b9ae39bd4c48833fdf78e639ba84.png",
+   "alt": 349.799988,
+   "sigma_m": 9.563235171111646,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "27bd097da80a4d91815752ac0c1f5fb6.png",
+   "alt": 185.699997,
+   "sigma_m": 8.469812315497958,
+   "error_m": 3.5448917653475474,
+   "points": 10
+  },
+  {
+   "filename": "9d78fb01896f4932ad51307b81367c7f.png",
+   "alt": 150.0,
+   "sigma_m": 8.30954929000036,
+   "error_m": 1.930399231056425,
+   "points": 10
+  },
+  {
+   "filename": "a93077e74a3e4f7e886ada45098c789e.png",
+   "alt": 300.5,
+   "sigma_m": 9.179423102759852,
+   "error_m": 4.470130642982223,
+   "points": 10
+  },
+  {
+   "filename": "4a95747a8faf47b38af8e88f3f0cf807.png",
+   "alt": 119.5,
+   "sigma_m": 8.197819234206706,
+   "error_m": 2.8522369573166313,
+   "points": 10
+  },
+  {
+   "filename": "1e6a669c08fe405a8c9c586dcebbb744.png",
+   "alt": 102.300003,
+   "sigma_m": 8.145442255498574,
+   "error_m": 5.391128405449713,
+   "points": 10
+  },
+  {
+   "filename": "938a1d96c4594326b81a413122900767.png",
+   "alt": 296.299988,
+   "sigma_m": 9.148736434798248,
+   "error_m": 6.571405041723166,
+   "points": 10
+  },
+  {
+   "filename": "c4896970dbdc49e9902f7636677a1640.png",
+   "alt": 149.5,
+   "sigma_m": 8.30752719541657,
+   "error_m": 4.592596754596791,
+   "points": 10
+  },
+  {
+   "filename": "08dce4c9bf5445019bf922e9663628c9.png",
+   "alt": 254.100006,
+   "sigma_m": 8.85932683542144,
+   "error_m": 2.54200258643441,
+   "points": 10
+  },
+  {
+   "filename": "d83274e17f264c6689cc06c2e75cb9b6.png",
+   "alt": 109.400002,
+   "sigma_m": 8.166118558594839,
+   "error_m": 6.261671756107954,
+   "points": 10
+  },
+  {
+   "filename": "57f3e1efe30b4e80beca00670ec7972d.png",
+   "alt": 143.899994,
+   "sigma_m": 8.285308567704721,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "eca9e1e276184472a28cc8a506c39037.png",
+   "alt": 350.5,
+   "sigma_m": 9.568984451640752,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "1dbf5118a93247cdaa679519f293bf86.png",
+   "alt": 100.599998,
+   "sigma_m": 8.140689958816985,
+   "error_m": 4.386504505892462,
+   "points": 10
+  },
+  {
+   "filename": "97183448f2064ae08de1fa4a83f0daa7.png",
+   "alt": 150.100006,
+   "sigma_m": 8.3099544842396,
+   "error_m": 4.693440714051775,
+   "points": 10
+  },
+  {
+   "filename": "3866070144284c8b8528463b177e06d8.png",
+   "alt": 280.200012,
+   "sigma_m": 9.034198377620015,
+   "error_m": 5.0998496358075105,
+   "points": 10
+  },
+  {
+   "filename": "3bee91934da94a83b0f54713be4ceb3a.png",
+   "alt": 119.599998,
+   "sigma_m": 8.198146441623882,
+   "error_m": 1.5668824382806241,
+   "points": 10
+  },
+  {
+   "filename": "9ac89491b1fc49078c8a15de072a05bb.png",
+   "alt": 109.199997,
+   "sigma_m": 8.16551786837768,
+   "error_m": 5.416894620794332,
+   "points": 10
+  },
+  {
+   "filename": "8f6ff28d88e94d4a98c3501dc1e536ca.png",
+   "alt": 350.200012,
+   "sigma_m": 9.56651963081934,
+   "error_m": 7.6436971368787825,
+   "points": 10
+  },
+  {
+   "filename": "07cfc2ba145f4689b51259b8ee664bc7.png",
+   "alt": 219.699997,
+   "sigma_m": 8.650463639163814,
+   "error_m": 8.028149750866111,
+   "points": 10
+  },
+  {
+   "filename": "a2b620a6692149d6a98ad3116ff96dda.png",
+   "alt": 119.5,
+   "sigma_m": 8.197819234206706,
+   "error_m": 3.9444103990995196,
+   "points": 10
+  },
+  {
+   "filename": "f063e4349aaf456e9398f9f8c316054b.png",
+   "alt": 109.699997,
+   "sigma_m": 8.167021534077422,
+   "error_m": 2.099070834447827,
+   "points": 10
+  },
+  {
+   "filename": "bf0f7d9db4254b4aa2119d254f610758.png",
+   "alt": 300.299988,
+   "sigma_m": 9.177954296261921,
+   "error_m": 7.550403167433128,
+   "points": 10
+  },
+  {
+   "filename": "df69fc7843024417bb4a0f3fb369d67d.png",
+   "alt": 134.5,
+   "sigma_m": 8.24979624327948,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "282f323ed9e7456687c8c48e92c0dc1e.png",
+   "alt": 100.0,
+   "sigma_m": 8.139031048061502,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "21474240860548468e707dc7b80a3962.png",
+   "alt": 147.899994,
+   "sigma_m": 8.301098570000944,
+   "error_m": 6.0730605037635526,
+   "points": 10
+  },
+  {
+   "filename": "49f1f6e756bd4c94b13c717066c20aea.png",
+   "alt": 279.899994,
+   "sigma_m": 9.032111328398589,
+   "error_m": 6.211514628899046,
+   "points": 10
+  },
+  {
+   "filename": "5e0c564dbf2641ebbc0868da2e187b25.png",
+   "alt": 141.5,
+   "sigma_m": 8.276028354009012,
+   "error_m": 1.1733559553345894,
+   "points": 10
+  },
+  {
+   "filename": "dee225f062e147e1b1e063329dad4dd0.png",
+   "alt": 109.199997,
+   "sigma_m": 8.16551786837768,
+   "error_m": 1.8643049072001108,
+   "points": 10
+  },
+  {
+   "filename": "5057e716d71e4e97a982074aaea070cc.png",
+   "alt": 350.5,
+   "sigma_m": 9.568984451640752,
+   "error_m": 8.656811908421489,
+   "points": 10
+  },
+  {
+   "filename": "a9e7142b9a5b4404ac0e7e2a4ae6e80e.png",
+   "alt": 100.0,
+   "sigma_m": 8.139031048061502,
+   "error_m": 2.967834182393698,
+   "points": 10
+  },
+  {
+   "filename": "58eb1f3f2e4b4ca4818adc5bf048a3a7.png",
+   "alt": 149.300003,
+   "sigma_m": 8.3067201227087,
+   "error_m": 1.2074160793732476,
+   "points": 10
+  },
+  {
+   "filename": "df49bb4e5cfe4d31b915ddb94b87ced8.png",
+   "alt": 299.799988,
+   "sigma_m": 9.174285751806185,
+   "error_m": 5.914236746048414,
+   "points": 10
+  },
+  {
+   "filename": "33c93f8aa3d245669ddc2dc38865512b.png",
+   "alt": 148.800003,
+   "sigma_m": 8.304706795777259,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "29a39c5b03244d37b14eddcd0281cad8.png",
+   "alt": 104.800003,
+   "sigma_m": 8.152570370929356,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "29e7b9731da34d5eae08716a9abc59a9.png",
+   "alt": 349.5,
+   "sigma_m": 9.560773796490054,
+   "error_m": 8.228183327999279,
+   "points": 10
+  },
+  {
+   "filename": "bc19cc0acc1545b49193dcba7b098237.png",
+   "alt": 149.800003,
+   "sigma_m": 8.30873971318866,
+   "error_m": 4.727365654581456,
+   "points": 10
+  },
+  {
+   "filename": "1fe79ff55f64460085915953a8262d4a.png",
+   "alt": 249.899994,
+   "sigma_m": 8.832479688463662,
+   "error_m": 6.96538553710821,
+   "points": 10
+  },
+  {
+   "filename": "04008516161a44c7b79e3e660425e293.png",
+   "alt": 103.5,
+   "sigma_m": 8.148843042833894,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "856550be66a34fb888cfb0b9af5e4251.png",
+   "alt": 314.700012,
+   "sigma_m": 9.285579197721582,
+   "error_m": 7.426774488532418,
+   "points": 10
+  },
+  {
+   "filename": "e3511c08f91b456e9d841e722b9b3b52.png",
+   "alt": 100.199997,
+   "sigma_m": 8.139582946768288,
+   "error_m": 2.794447448535594,
+   "points": 10
+  },
+  {
+   "filename": "f91b818db69641bab13c112ece5ef54c.png",
+   "alt": 150.100006,
+   "sigma_m": 8.3099544842396,
+   "error_m": 7.260105640943625,
+   "points": 10
+  },
+  {
+   "filename": "1b60fc0ba93b4fb2ba4f38d681cd3f28.png",
+   "alt": 122.0,
+   "sigma_m": 8.206077699833733,
+   "error_m": 2.4718613498708146,
+   "points": 10
+  },
+  {
+   "filename": "0360b122940d46d9b0f715741c4af842.png",
+   "alt": 279.799988,
+   "sigma_m": 9.031416035102144,
+   "error_m": 8.07901979945619,
+   "points": 10
+  },
+  {
+   "filename": "bc6b0d755520442582c3f34709f18d13.png",
+   "alt": 138.199997,
+   "sigma_m": 8.263506381048895,
+   "error_m": 2.1404632276191013,
+   "points": 10
+  },
+  {
+   "filename": "763b07f392b84f49a65b81ef10242f7d.png",
+   "alt": 109.400002,
+   "sigma_m": 8.166118558594839,
+   "error_m": 3.4816775962725184,
+   "points": 10
+  },
+  {
+   "filename": "4772072b5db541ee87fa9089f6450fa6.png",
+   "alt": 350.200012,
+   "sigma_m": 9.56651963081934,
+   "error_m": 3.369200518679084,
+   "points": 10
+  },
+  {
+   "filename": "d16b8b20f2b440b09c63b15b49861de7.png",
+   "alt": 206.699997,
+   "sigma_m": 8.578270416536391,
+   "error_m": 4.709659512164462,
+   "points": 10
+  },
+  {
+   "filename": "fca810fe766d4de189c4da3cfb8f01cd.png",
+   "alt": 145.5,
+   "sigma_m": 8.291576242623076,
+   "error_m": 3.571197039875566,
+   "points": 10
+  },
+  {
+   "filename": "990a580b37e948dd9a931feb6a094c8f.png",
+   "alt": 108.599998,
+   "sigma_m": 8.163722177103196,
+   "error_m": 2.5287793381019754,
+   "points": 10
+  },
+  {
+   "filename": "5327f26cc3b34a418cc0cce2f0f51842.png",
+   "alt": 300.5,
+   "sigma_m": 9.179423102759852,
+   "error_m": 5.012265641587759,
+   "points": 10
+  },
+  {
+   "filename": "2e1fe9fd5b0c40b78e9d2378ebab8176.png",
+   "alt": 147.0,
+   "sigma_m": 8.297510739407866,
+   "error_m": 1.688276074457422,
+   "points": 10
+  },
+  {
+   "filename": "f01f3c526d7445bdbc7b0cc77bf073e9.png",
+   "alt": 127.0,
+   "sigma_m": 8.223081393411563,
+   "error_m": 1.2499250829944528,
+   "points": 10
+  },
+  {
+   "filename": "65edeff52e814a2a9c3b5311e7df7755.png",
+   "alt": 100.400002,
+   "sigma_m": 8.140135932762675,
+   "error_m": 5.35652101812084,
+   "points": 10
+  },
+  {
+   "filename": "7c7795579ed24c5d988d235c7593d146.png",
+   "alt": 279.899994,
+   "sigma_m": 9.032111328398589,
+   "error_m": 6.942937614458722,
+   "points": 10
+  },
+  {
+   "filename": "7f3a61e3c74f4a3e9334e054058b3341.png",
+   "alt": 134.399994,
+   "sigma_m": 8.24943052850018,
+   "error_m": 3.2881970617014944,
+   "points": 10
+  },
+  {
+   "filename": "a6deab14e47a433c91a1b60f8f5711f4.png",
+   "alt": 109.400002,
+   "sigma_m": 8.166118558594839,
+   "error_m": 3.602003871156294,
+   "points": 10
+  },
+  {
+   "filename": "602b288e27fd441bb0870fc6969eef06.png",
+   "alt": 100.599998,
+   "sigma_m": 8.140689958816985,
+   "error_m": 5.041523620363852,
+   "points": 10
+  },
+  {
+   "filename": "f438e927aaea4ff1803bc0dd657f8ad9.png",
+   "alt": 349.899994,
+   "sigma_m": 9.564056039825156,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "3c51e8ff15bb4cf8aef2f4614a85101d.png",
+   "alt": 149.5,
+   "sigma_m": 8.30752719541657,
+   "error_m": 8.203012901684067,
+   "points": 10
+  },
+  {
+   "filename": "ea6a40c8cfeb4abda0471fb388d18974.png",
+   "alt": 300.700012,
+   "sigma_m": 9.180892651994975,
+   "error_m": 6.473704730455522,
+   "points": 10
+  },
+  {
+   "filename": "f146bbb5337a4ecca0e668d4f41111d6.png",
+   "alt": 150.5,
+   "sigma_m": 8.311577641737168,
+   "error_m": 3.960444867263929,
+   "points": 10
+  },
+  {
+   "filename": "a4c69e1fb8a34bc0b6c396eea7972650.png",
+   "alt": 107.199997,
+   "sigma_m": 8.159569183163967,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "392781c04a124d208d17febaa3d70399.png",
+   "alt": 350.200012,
+   "sigma_m": 9.56651963081934,
+   "error_m": 8.285500264983458,
+   "points": 10
+  },
+  {
+   "filename": "1c1f3f18ab9a482d99c29d0ab0262b6b.png",
+   "alt": 127.300003,
+   "sigma_m": 8.224122197880483,
+   "error_m": 3.3336541015941035,
+   "points": 10
+  },
+  {
+   "filename": "f856d7cbc2f0474081e5f5efd81c6c3a.png",
+   "alt": 250.300003,
+   "sigma_m": 8.835020822591028,
+   "error_m": 4.70078811063108,
+   "points": 10
+  },
+  {
+   "filename": "9aea17939da64993bbe93f600a9ba52b.png",
+   "alt": 100.199997,
+   "sigma_m": 8.139582946768288,
+   "error_m": 1.4636147805414554,
+   "points": 10
+  },
+  {
+   "filename": "32d4519ce6844c038328a8817ae944d5.png",
+   "alt": 299.700012,
+   "sigma_m": 9.173552776592913,
+   "error_m": 8.051147860361066,
+   "points": 10
+  },
+  {
+   "filename": "292c25d9b2b8498bb8e446d2be5a4bf9.png",
+   "alt": 126.699997,
+   "sigma_m": 8.222042913373501,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "920fbb38a8ed45d994d8605fe82f8a43.png",
+   "alt": 100.199997,
+   "sigma_m": 8.139582946768288,
+   "error_m": 2.217003147870669,
+   "points": 10
+  },
+  {
+   "filename": "0e7ea8c2f828491b9d923fdb49116c79.png",
+   "alt": 149.5,
+   "sigma_m": 8.30752719541657,
+   "error_m": 4.738302018053025,
+   "points": 10
+  },
+  {
+   "filename": "3b0b0a91b1214fd5a3e4416a2049b94b.png",
+   "alt": 280.0,
+   "sigma_m": 9.032806816613729,
+   "error_m": 5.998835815662776,
+   "points": 10
+  },
+  {
+   "filename": "61b26e3d43714a9499e43bfb88a97901.png",
+   "alt": 150.199997,
+   "sigma_m": 8.31035986792662,
+   "error_m": 0.45131898629309086,
+   "points": 10
+  },
+  {
+   "filename": "1296d79869f04c56bf4a144198e58a1a.png",
+   "alt": 110.300003,
+   "sigma_m": 8.168834650228067,
+   "error_m": 2.281545684773032,
+   "points": 10
+  },
+  {
+   "filename": "4f09ad6cc1344aad8047853357d59636.png",
+   "alt": 349.899994,
+   "sigma_m": 9.564056039825156,
+   "error_m": 11.997374107179414,
+   "points": 6
+  },
+  {
+   "filename": "f6d5d94165e24ea892ca4c7fbc91925f.png",
+   "alt": 169.800003,
+   "sigma_m": 8.394605975515532,
+   "error_m": 4.611172663637633,
+   "points": 10
+  },
+  {
+   "filename": "d2693b00a9544eb3967c54e77f25ad9c.png",
+   "alt": 143.699997,
+   "sigma_m": 8.284529664780141,
+   "error_m": 2.4964250129876913,
+   "points": 10
+  },
+  {
+   "filename": "c2cd76c8ff9347feb11b4f3052855a28.png",
+   "alt": 300.100006,
+   "sigma_m": 9.176486452998393,
+   "error_m": 3.786222814474362,
+   "points": 10
+  },
+  {
+   "filename": "590a10a96662478cae3f603d174801a2.png",
+   "alt": 120.5,
+   "sigma_m": 8.20110309838627,
+   "error_m": 3.2359013122616527,
+   "points": 10
+  },
+  {
+   "filename": "aad7ef48925d46c8aa82833a7a17df6a.png",
+   "alt": 103.900002,
+   "sigma_m": 8.149985141938668,
+   "error_m": 5.96324522209416,
+   "points": 10
+  },
+  {
+   "filename": "f3376885826a4686a306601e4e724d47.png",
+   "alt": 349.700012,
+   "sigma_m": 9.562414712782823,
+   "error_m": 10.271351621607366,
+   "points": 6
+  },
+  {
+   "filename": "dbfd2318f90c4603a983c10ee3c02c87.png",
+   "alt": 149.899994,
+   "sigma_m": 8.309144346077307,
+   "error_m": 2.8675720766898776,
+   "points": 10
+  },
+  {
+   "filename": "a06c9188aa9d488986406ad15175b748.png",
+   "alt": 250.100006,
+   "sigma_m": 8.833749886510942,
+   "error_m": 5.489255598362584,
+   "points": 10
+  },
+  {
+   "filename": "0dd36d740b604a429efbb39e3703e1be.png",
+   "alt": 108.199997,
+   "sigma_m": 8.162530323017306,
+   "error_m": 2.683667847044743,
+   "points": 10
+  },
+  {
+   "filename": "cd69d718a9c246bfaecd04994520a3d2.png",
+   "alt": 149.399994,
+   "sigma_m": 8.307123503547976,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "135d80fb7b624502b106305f2e39018f.png",
+   "alt": 137.0,
+   "sigma_m": 8.259021598992042,
+   "error_m": 4.066490434915556,
+   "points": 10
+  },
+  {
+   "filename": "4e0347fd1ee64534b960a54c7a8ac728.png",
+   "alt": 341.299988,
+   "sigma_m": 9.494069981925971,
+   "error_m": 13.044150187077243,
+   "points": 6
+  },
+  {
+   "filename": "260f7d40f2e94db78d115c4fae943c92.png",
+   "alt": 280.100006,
+   "sigma_m": 9.033502499702543,
+   "error_m": 6.444907225724051,
+   "points": 10
+  },
+  {
+   "filename": "9d3a92fd34ef4f93b786541f67d1db4b.png",
+   "alt": 100.5,
+   "sigma_m": 8.140412812688448,
+   "error_m": 3.1329367619735873,
+   "points": 10
+  },
+  {
+   "filename": "38d3be9f722940b4857268659d659baa.png",
+   "alt": 120.5,
+   "sigma_m": 8.20110309838627,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "60eee92e86d5450a97ca7ec8068da35a.png",
+   "alt": 109.300003,
+   "sigma_m": 8.165818092123267,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "55efb118164e44e19b18086db31d4e11.png",
+   "alt": 350.299988,
+   "sigma_m": 9.567340909493714,
+   "error_m": 6.301576751511943,
+   "points": 10
+  },
+  {
+   "filename": "ec2cbb20f34b4af2bf400b3e0850d46b.png",
+   "alt": 219.699997,
+   "sigma_m": 8.650463639163814,
+   "error_m": 2.9645455457828604,
+   "points": 10
+  },
+  {
+   "filename": "bdc1b5d96ce3437380c39de5b7025520.png",
+   "alt": 120.400002,
+   "sigma_m": 8.200773546478576,
+   "error_m": 1.7463242820509746,
+   "points": 10
+  },
+  {
+   "filename": "0ced0127f3be4918a53c0179790eae5c.png",
+   "alt": 109.699997,
+   "sigma_m": 8.167021534077422,
+   "error_m": 0.9934975205815653,
+   "points": 10
+  },
+  {
+   "filename": "1cb37778f31d403facab7dd0175a33a8.png",
+   "alt": 299.899994,
+   "sigma_m": 9.175019132933311,
+   "error_m": 3.8534269177660043,
+   "points": 10
+  },
+  {
+   "filename": "ae78a2e038a140948a01cfc8dfe0d045.png",
+   "alt": 129.800003,
+   "sigma_m": 8.232885755977694,
+   "error_m": 3.9834852009541013,
+   "points": 10
+  },
+  {
+   "filename": "73824dbddd6e4a5094f7628daed69b20.png",
+   "alt": 129.600006,
+   "sigma_m": 8.232178756187276,
+   "error_m": 2.5772291550253708,
+   "points": 10
+  },
+  {
+   "filename": "86059e5e0b9540fbb3b6965c02c0f2aa.png",
+   "alt": 110.0,
+   "sigma_m": 8.167926906234165,
+   "error_m": 4.0408157226049015,
+   "points": 10
+  },
+  {
+   "filename": "1f4d197d2c10479394bd134d6e10d597.png",
+   "alt": 279.899994,
+   "sigma_m": 9.032111328398589,
+   "error_m": 6.805919152788457,
+   "points": 10
+  },
+  {
+   "filename": "2901366e4cd04f25ad1e60d6f7ccc857.png",
+   "alt": 120.599998,
+   "sigma_m": 8.201432910630448,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "16a9fa85bc894e19953d72970fcd42e7.png",
+   "alt": 109.400002,
+   "sigma_m": 8.166118558594839,
+   "error_m": 3.25291900253533,
+   "points": 10
+  },
+  {
+   "filename": "ec1091443ba1482ebcd3eafc42687b49.png",
+   "alt": 100.199997,
+   "sigma_m": 8.139582946768288,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "2cafb897f9f548b7a7b3dce36c08886c.png",
+   "alt": 350.200012,
+   "sigma_m": 9.56651963081934,
+   "error_m": 5.375129799671615,
+   "points": 10
+  },
+  {
+   "filename": "679b7e930ac24898a8fdfa645e9fd57b.png",
+   "alt": 142.600006,
+   "sigma_m": 8.280263734881398,
+   "error_m": 3.7783262539806373,
+   "points": 10
+  },
+  {
+   "filename": "2fe4d92575b64471b717b21fcb3b5b89.png",
+   "alt": 300.0,
+   "sigma_m": 9.175752700012245,
+   "error_m": 4.4031346557278805,
+   "points": 10
+  },
+  {
+   "filename": "c9b7feccda624520b18099265bfaf713.png",
+   "alt": 149.600006,
+   "sigma_m": 8.30793113778418,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "8abacd82e5f04984a7a29ef4b28542fa.png",
+   "alt": 105.599998,
+   "sigma_m": 8.154886357459006,
+   "error_m": 6.177080605205763,
+   "points": 10
+  },
+  {
+   "filename": "05ad58b02dd043899a7c345b54490ed3.png",
+   "alt": 350.0,
+   "sigma_m": 9.564877072709121,
+   "error_m": 8.248330412221701,
+   "points": 10
+  },
+  {
+   "filename": "a355707461cc4b9c94549d9065fc7f51.png",
+   "alt": 142.100006,
+   "sigma_m": 8.278334775123744,
+   "error_m": 6.2459467313978845,
+   "points": 10
+  },
+  {
+   "filename": "ddff3d22bdec45318cda07f214992dae.png",
+   "alt": 249.800003,
+   "sigma_m": 8.831844997268643,
+   "error_m": 7.507546163323647,
+   "points": 10
+  },
+  {
+   "filename": "b5edab33a1b643b1b13dd0727a95ae12.png",
+   "alt": 100.099998,
+   "sigma_m": 8.139306862878149,
+   "error_m": 5.997516118798501,
+   "points": 10
+  },
+  {
+   "filename": "c49fbb6ff5f44e598f742d95e40ff48f.png",
+   "alt": 300.399994,
+   "sigma_m": 9.178688606646448,
+   "error_m": 3.906398630825369,
+   "points": 10
+  },
+  {
+   "filename": "f1805290ce204e4dbcd252243819fdef.png",
+   "alt": 142.0,
+   "sigma_m": 8.277949719320581,
+   "error_m": 3.395187704434783,
+   "points": 10
+  },
+  {
+   "filename": "58254d4d4ee24cf480c3d0272b1e2b08.png",
+   "alt": 100.0,
+   "sigma_m": 8.139031048061502,
+   "error_m": 1.8861505519000235,
+   "points": 10
+  },
+  {
+   "filename": "0157360695c6436491846a63aafb580c.png",
+   "alt": 137.300003,
+   "sigma_m": 8.260139369582081,
+   "error_m": 2.67785620507515,
+   "points": 10
+  },
+  {
+   "filename": "2aa6f49b48fe4a598e634991f61ac51b.png",
+   "alt": 279.899994,
+   "sigma_m": 9.032111328398589,
+   "error_m": 6.579705916407517,
+   "points": 10
+  },
+  {
+   "filename": "425f9186d23d4c6ba1f7caf91f5988bf.png",
+   "alt": 148.199997,
+   "sigma_m": 8.302299053726491,
+   "error_m": 1.9133353834851334,
+   "points": 10
+  },
+  {
+   "filename": "48f715b66eb448d2849ac08e3563132e.png",
+   "alt": 109.800003,
+   "sigma_m": 8.16732307629294,
+   "error_m": 5.414268356603586,
+   "points": 10
+  },
+  {
+   "filename": "f41da8aa64a747f782e1b4e341ba9c8e.png",
+   "alt": 350.100006,
+   "sigma_m": 9.565698269721272,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "5f0d51b543bc4d16a8e2686b8b63339e.png",
+   "alt": 192.0,
+   "sigma_m": 8.501272942670758,
+   "error_m": 2.877084382700647,
+   "points": 10
+  },
+  {
+   "filename": "4890e81baf124fe1b9f76d27781cde33.png",
+   "alt": 149.600006,
+   "sigma_m": 8.30793113778418,
+   "error_m": 2.322345884667921,
+   "points": 10
+  },
+  {
+   "filename": "09bb4f12a203438d954705e50d3b46a5.png",
+   "alt": 300.600006,
+   "sigma_m": 9.180157784557554,
+   "error_m": 5.144633581308316,
+   "points": 10
+  },
+  {
+   "filename": "60f5a7b242df48118da0ebf514ed3cab.png",
+   "alt": 123.099998,
+   "sigma_m": 8.209762902107963,
+   "error_m": 2.7407884502874817,
+   "points": 10
+  },
+  {
+   "filename": "71aa1a714720445cb52875389f8a9ac5.png",
+   "alt": 101.0,
+   "sigma_m": 8.141801232649653,
+   "error_m": 4.612752298758103,
+   "points": 10
+  },
+  {
+   "filename": "944b06995dea4b3a9eecd33dc6889736.png",
+   "alt": 262.100006,
+   "sigma_m": 8.911469157722749,
+   "error_m": 6.145770257172435,
+   "points": 10
+  },
+  {
+   "filename": "a664fc5aa38347b98d13c1886b46baf6.png",
+   "alt": 147.899994,
+   "sigma_m": 8.301098570000944,
+   "error_m": 3.3025141014648596,
+   "points": 10
+  },
+  {
+   "filename": "a1110c9e0d054e569f329539b2fece9a.png",
+   "alt": 279.600006,
+   "sigma_m": 9.03002624187467,
+   "error_m": 7.310443907048925,
+   "points": 10
+  },
+  {
+   "filename": "6bf712cfd4df4aaaaccc6d1b393da1eb.png",
+   "alt": 109.400002,
+   "sigma_m": 8.166118558594839,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "739c7030f51e4181af810d4af6663ea3.png",
+   "alt": 131.399994,
+   "sigma_m": 8.238578841971968,
+   "error_m": 4.029409825916164,
+   "points": 10
+  },
+  {
+   "filename": "7ee7784e5c2d4c5cbf6f8b056ae644c3.png",
+   "alt": 350.600006,
+   "sigma_m": 9.569806468610778,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "e2c541c5c1724a09bad1249568d7be46.png",
+   "alt": 100.199997,
+   "sigma_m": 8.139582946768288,
+   "error_m": 1.193935520131564,
+   "points": 10
+  },
+  {
+   "filename": "8c2c3332a6af482cb842d6914e1ac3d5.png",
+   "alt": 150.399994,
+   "sigma_m": 8.311171446674521,
+   "error_m": 7.330766650066424,
+   "points": 10
+  },
+  {
+   "filename": "e77f280b4c194d3c8967c31b429d2709.png",
+   "alt": 280.200012,
+   "sigma_m": 9.034198377620015,
+   "error_m": 3.4377113323062622,
+   "points": 10
+  },
+  {
+   "filename": "3fc4843d76ed41dfb259bfd26c9025b4.png",
+   "alt": 122.900002,
+   "sigma_m": 8.209090540597431,
+   "error_m": 4.423775201753604,
+   "points": 10
+  },
+  {
+   "filename": "a593afc2f46c4a9c85ef28f9884be73b.png",
+   "alt": 109.199997,
+   "sigma_m": 8.16551786837768,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "fe16c847399e4982b80f9d5e9308d219.png",
+   "alt": 350.299988,
+   "sigma_m": 9.567340909493714,
+   "error_m": 7.664594896667875,
+   "points": 10
+  },
+  {
+   "filename": "538aecb8487548ed8fd119cbd85cd9aa.png",
+   "alt": 221.5,
+   "sigma_m": 8.660757310175756,
+   "error_m": 7.221286523406751,
+   "points": 10
+  },
+  {
+   "filename": "b6d9dce1418e4899a8aa00f7a50a3f20.png",
+   "alt": 119.599998,
+   "sigma_m": 8.198146441623882,
+   "error_m": 3.5802760719359905,
+   "points": 10
+  },
+  {
+   "filename": "8f69902486e14385b4928701c1fb55e5.png",
+   "alt": 109.400002,
+   "sigma_m": 8.166118558594839,
+   "error_m": 2.489693632658577,
+   "points": 10
+  },
+  {
+   "filename": "b5068d14f755420dacd589a6097e0dd0.png",
+   "alt": 299.799988,
+   "sigma_m": 9.174285751806185,
+   "error_m": 6.317571250692703,
+   "points": 10
+  },
+  {
+   "filename": "cb99a03fd97047aa919b5904581fd07d.png",
+   "alt": 123.699997,
+   "sigma_m": 8.21178625112271,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "f323e41bc6d8418ab96e3a84d8a133af.png",
+   "alt": 100.5,
+   "sigma_m": 8.140412812688448,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "ecbad8cd241545d283e1be0556b3b006.png",
+   "alt": 150.199997,
+   "sigma_m": 8.31035986792662,
+   "error_m": 6.566146818508928,
+   "points": 10
+  },
+  {
+   "filename": "8618851eafc1496ebe657d54958beb52.png",
+   "alt": 279.899994,
+   "sigma_m": 9.032111328398589,
+   "error_m": 6.888690854099617,
+   "points": 10
+  },
+  {
+   "filename": "dd5fa34de8c245c1998bdcf6cf275ea7.png",
+   "alt": 147.899994,
+   "sigma_m": 8.301098570000944,
+   "error_m": 2.679006996540521,
+   "points": 10
+  },
+  {
+   "filename": "176cc54584bf4e1082fdc049a9da5bf9.png",
+   "alt": 109.900002,
+   "sigma_m": 8.167624860996382,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "b505c8c76e23470f940709601ce72bfd.png",
+   "alt": 350.700012,
+   "sigma_m": 9.570628649455493,
+   "error_m": 12.162505163898539,
+   "points": 6
+  },
+  {
+   "filename": "7d8eaff78d934c78b85f1707322b50ba.png",
+   "alt": 170.199997,
+   "sigma_m": 8.396423349586316,
+   "error_m": 5.8196591436985345,
+   "points": 10
+  },
+  {
+   "filename": "ce7802236c0d4f9998a67090a66c1f0b.png",
+   "alt": 120.400002,
+   "sigma_m": 8.200773546478576,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "83320270e8d7469095f131ebde48988d.png",
+   "alt": 300.200012,
+   "sigma_m": 9.177220391847163,
+   "error_m": 5.25845912484548,
+   "points": 10
+  },
+  {
+   "filename": "b0d80c8ef4364e64a12c9b83f8c831fe.png",
+   "alt": 120.599998,
+   "sigma_m": 8.201432910630448,
+   "error_m": 2.4096888293032723,
+   "points": 10
+  },
+  {
+   "filename": "0d09492ec0bb4ebda1197e6b3adddd41.png",
+   "alt": 104.099998,
+   "sigma_m": 8.150557768948339,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "8d067dc4945247d7974b3b385f555bad.png",
+   "alt": 350.100006,
+   "sigma_m": 9.565698269721272,
+   "error_m": 6.711014467060944,
+   "points": 10
+  },
+  {
+   "filename": "fc673df1760b45dd98489c29099462f0.png",
+   "alt": 150.300003,
+   "sigma_m": 8.310765562650841,
+   "error_m": 4.434898256260948,
+   "points": 10
+  },
+  {
+   "filename": "6930911870b64c4dbaa031b8cd2e6697.png",
+   "alt": 250.0,
+   "sigma_m": 8.833114683291615,
+   "error_m": 3.332592837779117,
+   "points": 10
+  },
+  {
+   "filename": "0647664317f242ab9213baf0fceb3d3c.png",
+   "alt": 106.900002,
+   "sigma_m": 8.158686009286816,
+   "error_m": 2.450716287773567,
+   "points": 10
+  },
+  {
+   "filename": "b49af0de88814c108ecd97cec720540a.png",
+   "alt": 150.100006,
+   "sigma_m": 8.3099544842396,
+   "error_m": 5.981381419742847,
+   "points": 10
+  },
+  {
+   "filename": "21dc94080d1446e19fc3e76f4c1a6807.png",
+   "alt": 100.099998,
+   "sigma_m": 8.139306862878149,
+   "error_m": 1.7445561360141517,
+   "points": 10
+  },
+  {
+   "filename": "380b87423703423491d7e472df9f302b.png",
+   "alt": 120.099998,
+   "sigma_m": 8.199786420223472,
+   "error_m": 3.821613545603213,
+   "points": 10
+  },
+  {
+   "filename": "c3ab136627114b14aa1cbf3f7701e86c.png",
+   "alt": 332.100006,
+   "sigma_m": 9.420576111423884,
+   "error_m": 4.906730443640431,
+   "points": 10
+  },
+  {
+   "filename": "94de72aa5ce2471e870b85c3fc70340c.png",
+   "alt": 128.0,
+   "sigma_m": 8.226559741222625,
+   "error_m": 1.953036484715317,
+   "points": 10
+  },
+  {
+   "filename": "e1616263edba46199e1de1c77edb76c7.png",
+   "alt": 279.899994,
+   "sigma_m": 9.032111328398589,
+   "error_m": 6.51835231014532,
+   "points": 10
+  },
+  {
+   "filename": "51065f740c1644bbbb470409ff96dbda.png",
+   "alt": 110.099998,
+   "sigma_m": 8.168229214993614,
+   "error_m": 2.439462413418867,
+   "points": 10
+  },
+  {
+   "filename": "6fe44d50bea64fd6ab4b42020e634e60.png",
+   "alt": 350.299988,
+   "sigma_m": 9.567340909493714,
+   "error_m": 4.703893255400167,
+   "points": 10
+  },
+  {
+   "filename": "3ae6dcdcc58f46c095f67b11d6d2c497.png",
+   "alt": 212.699997,
+   "sigma_m": 8.611118383042419,
+   "error_m": 5.0464806102398425,
+   "points": 10
+  },
+  {
+   "filename": "b7c6ce25b1304763bdad45a531005a7c.png",
+   "alt": 132.0,
+   "sigma_m": 8.240730739542519,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "c446cf84c0454727ad6cd24acd739716.png",
+   "alt": 110.800003,
+   "sigma_m": 8.17035281027119,
+   "error_m": 2.392348888672426,
+   "points": 10
+  },
+  {
+   "filename": "f8f660ce44384334b08ebf46af55d33c.png",
+   "alt": 299.899994,
+   "sigma_m": 9.175019132933311,
+   "error_m": 5.369014035626351,
+   "points": 10
+  },
+  {
+   "filename": "1b4d2271085d48778cfc1f5472ae30e5.png",
+   "alt": 136.300003,
+   "sigma_m": 8.256422428221182,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "b01c4f33185d415283f4f025fdb82e13.png",
+   "alt": 127.800003,
+   "sigma_m": 8.225862017569488,
+   "error_m": 3.2624104428877816,
+   "points": 10
+  },
+  {
+   "filename": "69f249ed191048db8335a31732e9ffea.png",
+   "alt": 101.0,
+   "sigma_m": 8.141801232649653,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "58190c2c9f71406eab57563a08cb09c6.png",
+   "alt": 279.899994,
+   "sigma_m": 9.032111328398589,
+   "error_m": 7.5254022087303465,
+   "points": 10
+  },
+  {
+   "filename": "eccfeb48ff354f1a872e325b477a3e45.png",
+   "alt": 119.699997,
+   "sigma_m": 8.198473912935365,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "149c75176539476aa1833b65b978fc64.png",
+   "alt": 108.800003,
+   "sigma_m": 8.164319701363258,
+   "error_m": 7.846019753590882,
+   "points": 10
+  },
+  {
+   "filename": "15169c3aebce4a24af4e41fa46e4ad71.png",
+   "alt": 100.699997,
+   "sigma_m": 8.140967373896613,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "10be0d62870f4007b0a2e0d95ad6c25f.png",
+   "alt": 350.100006,
+   "sigma_m": 9.565698269721272,
+   "error_m": 1.2122978416300947,
+   "points": 10
+  },
+  {
+   "filename": "0cf3a261d5764c0aa5bac95bfbfd5134.png",
+   "alt": 149.5,
+   "sigma_m": 8.30752719541657,
+   "error_m": 2.7051461611367107,
+   "points": 10
+  },
+  {
+   "filename": "5772b270decd45c9a94816b513ea7d60.png",
+   "alt": 300.200012,
+   "sigma_m": 9.177220391847163,
+   "error_m": 3.916212608605402,
+   "points": 10
+  },
+  {
+   "filename": "dada8902d8d24dc984e4268b15c9a70e.png",
+   "alt": 150.5,
+   "sigma_m": 8.311577641737168,
+   "error_m": 2.1315301099709565,
+   "points": 10
+  },
+  {
+   "filename": "e2a8628cffd64db49876cde571c03bed.png",
+   "alt": 107.0,
+   "sigma_m": 8.158980135216582,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "71ce49f0c9db4cd1809e9df074dd57e1.png",
+   "alt": 350.0,
+   "sigma_m": 9.564877072709121,
+   "error_m": 7.984444580673284,
+   "points": 10
+  },
+  {
+   "filename": "bf15a262d1e04ee582ddd33e9b1660b4.png",
+   "alt": 133.199997,
+   "sigma_m": 8.245062187376737,
+   "error_m": 4.244057610050076,
+   "points": 10
+  },
+  {
+   "filename": "bcb0d37e4bc449a49ca17078ea633da2.png",
+   "alt": 249.899994,
+   "sigma_m": 8.832479688463662,
+   "error_m": 6.642137200059738,
+   "points": 10
+  },
+  {
+   "filename": "b09d6302361a464aacebde37cfd0f26d.png",
+   "alt": 100.0,
+   "sigma_m": 8.139031048061502,
+   "error_m": 1.6044214746764929,
+   "points": 10
+  },
+  {
+   "filename": "eb903781de1e406ea1ab2bad23876f1e.png",
+   "alt": 299.899994,
+   "sigma_m": 9.175019132933311,
+   "error_m": 9.354034832839513,
+   "points": 6
+  },
+  {
+   "filename": "b5712ec654204096a96186d9e54de999.png",
+   "alt": 132.600006,
+   "sigma_m": 8.242891875223515,
+   "error_m": 3.1937546983502316,
+   "points": 10
+  },
+  {
+   "filename": "dfdb0448789d4f78a0cedea68e24ef44.png",
+   "alt": 100.0,
+   "sigma_m": 8.139031048061502,
+   "error_m": 1.8737318077533416,
+   "points": 10
+  },
+  {
+   "filename": "98a99c9c8b51418f839cb1e15996ef03.png",
+   "alt": 148.800003,
+   "sigma_m": 8.304706795777259,
+   "error_m": 2.5329866867524538,
+   "points": 10
+  },
+  {
+   "filename": "0b4e1f8affaf4328aa6cd930fa244027.png",
+   "alt": 279.899994,
+   "sigma_m": 9.032111328398589,
+   "error_m": 6.636468345265865,
+   "points": 10
+  },
+  {
+   "filename": "367b89d291f34b62aab1301dc023f4f9.png",
+   "alt": 149.600006,
+   "sigma_m": 8.30793113778418,
+   "error_m": 1.2141643790531218,
+   "points": 10
+  },
+  {
+   "filename": "79b79ed9f9c4474aa131be949a6ae420.png",
+   "alt": 108.900002,
+   "sigma_m": 8.164618848875186,
+   "error_m": 4.085024150294413,
+   "points": 10
+  },
+  {
+   "filename": "7a9e018a735e4e98ba572c78ef3b5e81.png",
+   "alt": 349.600006,
+   "sigma_m": 9.561594172487789,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "afc584fa15d4474f9823824abd0ba333.png",
+   "alt": 182.800003,
+   "sigma_m": 8.455645134908098,
+   "error_m": 2.952715822455944,
+   "points": 10
+  },
+  {
+   "filename": "a9d6da92ca8e412894086a2e156df643.png",
+   "alt": 150.199997,
+   "sigma_m": 8.31035986792662,
+   "error_m": 1.8879212549211764,
+   "points": 10
+  },
+  {
+   "filename": "1b46187525df4c9f8bf60e3920987417.png",
+   "alt": 300.100006,
+   "sigma_m": 9.176486452998393,
+   "error_m": 4.71912385123409,
+   "points": 10
+  },
+  {
+   "filename": "6f4c0ef0db724312b22a80f64315d471.png",
+   "alt": 119.5,
+   "sigma_m": 8.197819234206706,
+   "error_m": 3.126493682662091,
+   "points": 10
+  },
+  {
+   "filename": "65ba4369fd394250a1368cfbbfb9d094.png",
+   "alt": 104.0,
+   "sigma_m": 8.150271322824532,
+   "error_m": 3.694997180065017,
+   "points": 10
+  },
+  {
+   "filename": "d09890fe8ad04c82b8d215cbf1de480b.png",
+   "alt": 319.600006,
+   "sigma_m": 9.323056213243945,
+   "error_m": 5.000375110649564,
+   "points": 10
+  },
+  {
+   "filename": "195ef442b1eb4639b9234f126b5569ab.png",
+   "alt": 149.5,
+   "sigma_m": 8.30752719541657,
+   "error_m": 4.5517131338706935,
+   "points": 10
+  },
+  {
+   "filename": "3e02e0d52e5c473782f4172180bec928.png",
+   "alt": 251.199997,
+   "sigma_m": 8.840750384728254,
+   "error_m": 2.114016325586439,
+   "points": 10
+  },
+  {
+   "filename": "085ccaa57d5741b3a86fda79909ace80.png",
+   "alt": 108.900002,
+   "sigma_m": 8.164618848875186,
+   "error_m": 4.546594814856439,
+   "points": 10
+  },
+  {
+   "filename": "82d3e1fc20b0404d914225e08cefcd3e.png",
+   "alt": 145.899994,
+   "sigma_m": 8.29315321424342,
+   "error_m": 3.159183080981656,
+   "points": 10
+  },
+  {
+   "filename": "ff5e9ba3ea844219b19c056d55c3efb8.png",
+   "alt": 350.299988,
+   "sigma_m": 9.567340909493714,
+   "error_m": 11.064539951796661,
+   "points": 6
+  },
+  {
+   "filename": "0b22ad8490334703aec6f1615e4bb988.png",
+   "alt": 100.599998,
+   "sigma_m": 8.140689958816985,
+   "error_m": 3.356937551160162,
+   "points": 10
+  },
+  {
+   "filename": "2668a4d7dc76499c90c69e88e4854b47.png",
+   "alt": 148.699997,
+   "sigma_m": 8.304304858310664,
+   "error_m": 6.093560898162639,
+   "points": 10
+  },
+  {
+   "filename": "7bf1625d988f44e3afec51bafa466a5c.png",
+   "alt": 280.200012,
+   "sigma_m": 9.034198377620015,
+   "error_m": 4.397141066730702,
+   "points": 10
+  },
+  {
+   "filename": "02fc68d0a8274af88f92ff092e7e506b.png",
+   "alt": 119.599998,
+   "sigma_m": 8.198146441623882,
+   "error_m": 1.3745595528244978,
+   "points": 10
+  },
+  {
+   "filename": "d7f9771e6e1347acb6941775acfeed16.png",
+   "alt": 109.199997,
+   "sigma_m": 8.16551786837768,
+   "error_m": 2.1026272532217707,
+   "points": 10
+  },
+  {
+   "filename": "6e4415d4dcb840cd8cd21a6687728b3b.png",
+   "alt": 350.200012,
+   "sigma_m": 9.56651963081934,
+   "error_m": 6.416610348266194,
+   "points": 10
+  },
+  {
+   "filename": "c283c8c35daa4eeb8b0d44e968f3229d.png",
+   "alt": 219.800003,
+   "sigma_m": 8.651033659697898,
+   "error_m": 3.152446025007187,
+   "points": 10
+  },
+  {
+   "filename": "0cccc2d8185846a8bd2cbe3986be6798.png",
+   "alt": 119.900002,
+   "sigma_m": 8.199129660272625,
+   "error_m": 3.2910111646124,
+   "points": 10
+  },
+  {
+   "filename": "2ee04ba0c4fa4c29a70851db0f3cfdd1.png",
+   "alt": 109.900002,
+   "sigma_m": 8.167624860996382,
+   "error_m": 2.8810440174842435,
+   "points": 10
+  },
+  {
+   "filename": "f61bb7efe66542f69207fc045304cdad.png",
+   "alt": 299.899994,
+   "sigma_m": 9.175019132933311,
+   "error_m": 6.468406749575108,
+   "points": 10
+  },
+  {
+   "filename": "dab5b6e1ec8a468ab53ab17fb53e712a.png",
+   "alt": 150.100006,
+   "sigma_m": 8.3099544842396,
+   "error_m": 5.1888207776349144,
+   "points": 10
+  },
+  {
+   "filename": "b27e74ab8f5a48a09da4df1b1b4d89fe.png",
+   "alt": 109.5,
+   "sigma_m": 8.166419285759803,
+   "error_m": 4.327215414598344,
+   "points": 10
+  },
+  {
+   "filename": "0becf35ff7b748a69854f4666e70a97a.png",
+   "alt": 144.800003,
+   "sigma_m": 8.28882621279238,
+   "error_m": 4.87789059759422,
+   "points": 10
+  },
+  {
+   "filename": "7426b77867b141e4abde1cfa7e4aa12d.png",
+   "alt": 279.899994,
+   "sigma_m": 9.032111328398589,
+   "error_m": 6.6809286072025245,
+   "points": 10
+  },
+  {
+   "filename": "a76d57c4ba9346c593708b6a03a1d795.png",
+   "alt": 150.199997,
+   "sigma_m": 8.31035986792662,
+   "error_m": 8.649519425857465,
+   "points": 6
+  },
+  {
+   "filename": "7bd28bbaa059442582effd2ccfa5f0b5.png",
+   "alt": 109.300003,
+   "sigma_m": 8.165818092123267,
+   "error_m": 6.338754612991857,
+   "points": 10
+  },
+  {
+   "filename": "e0fa309d19d74019ab807320f8c78d58.png",
+   "alt": 350.200012,
+   "sigma_m": 9.56651963081934,
+   "error_m": 6.725976247133902,
+   "points": 10
+  },
+  {
+   "filename": "60cc760487764946a4448dae6daadc6a.png",
+   "alt": 100.099998,
+   "sigma_m": 8.139306862878149,
+   "error_m": 2.943923719179455,
+   "points": 10
+  },
+  {
+   "filename": "b0c2148648254302a9b4e2a86e551f74.png",
+   "alt": 149.300003,
+   "sigma_m": 8.3067201227087,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "fda2251f937d4bc191e0edd6a17f70ce.png",
+   "alt": 300.0,
+   "sigma_m": 9.175752700012245,
+   "error_m": 5.113702859519802,
+   "points": 10
+  },
+  {
+   "filename": "613f1cb4099e4548acf620732de59750.png",
+   "alt": 149.600006,
+   "sigma_m": 8.30793113778418,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "10c35294b55444aab4bed31c71440464.png",
+   "alt": 105.199997,
+   "sigma_m": 8.153726234796217,
+   "error_m": null,
+   "points": 0
+  },
+  {
+   "filename": "713aaa34a2024f38a8e6a403ec125399.png",
+   "alt": 349.600006,
+   "sigma_m": 9.561594172487789,
+   "error_m": 10.93091452367243,
+   "points": 6
+  },
+  {
+   "filename": "3fd65e3ae73848f1b23885eabff505c4.png",
+   "alt": 148.0,
+   "sigma_m": 8.301498500236416,
+   "error_m": 4.649291781439011,
+   "points": 10
+  },
+  {
+   "filename": "62f9e4b07ddb484f9f250f5cb8a712fa.png",
+   "alt": 249.800003,
+   "sigma_m": 8.831844997268643,
+   "error_m": 8.374904577965124,
+   "points": 10
+  },
+  {
+   "filename": "8fa1673afb7f4409874e2066da5e86ea.png",
+   "alt": 100.400002,
+   "sigma_m": 8.140135932762675,
+   "error_m": 0.5789763183702408,
+   "points": 10
+  },
+  {
+   "filename": "6a8a6488819d441a9bf40ab7dbcd71ff.png",
+   "alt": 299.799988,
+   "sigma_m": 9.174285751806185,
+   "error_m": 6.194010521743579,
+   "points": 10
+  },
+  {
+   "filename": "cefd8d274ebf4f90bb77ab617690f4b7.png",
+   "alt": 100.300003,
+   "sigma_m": 8.139859316301974,
+   "error_m": 1.9648722693041658,
+   "points": 10
+  },
+  {
+   "filename": "a41db57dd5014cb09573f75a783ad350.png",
+   "alt": 148.699997,
+   "sigma_m": 8.304304858310664,
+   "error_m": 4.747697475272445,
+   "points": 10
+  },
+  {
+   "filename": "c36f94d574cd4cb49797e2352a4adea0.png",
+   "alt": 126.800003,
+   "sigma_m": 8.222388832363059,
+   "error_m": 1.4035466020964462,
+   "points": 10
+  },
+  {
+   "filename": "1f1d81e7ec50494ca37d7731b9bed32b.png",
+   "alt": 279.899994,
+   "sigma_m": 9.032111328398589,
+   "error_m": 7.475371863120842,
+   "points": 10
+  },
+  {
+   "filename": "63bcea650da64388b23f029cb8c164da.png",
+   "alt": 141.899994,
+   "sigma_m": 8.277564916711171,
+   "error_m": 2.2980414926907446,
+   "points": 10
+  },
+  {
+   "filename": "10cb359399534fdda27ca483ec1e48a9.png",
+   "alt": 109.699997,
+   "sigma_m": 8.167021534077422,
+   "error_m": 3.811330256165371,
+   "points": 10
+  },
+  {
+   "filename": "5ba69c3f53bd4a908beefb2ea28a741a.png",
+   "alt": 350.100006,
+   "sigma_m": 9.565698269721272,
+   "error_m": 11.07256092448146,
+   "points": 6
+  },
+  {
+   "filename": "9ccae14756144f3f8feae5ae44a82864.png",
+   "alt": 200.899994,
+   "sigma_m": 8.547295745712818,
+   "error_m": 4.449803211125604,
+   "points": 10
+  },
+  {
+   "filename": "620ffb9a773548449eb751900c311761.png",
+   "alt": 147.100006,
+   "sigma_m": 8.297908408756712,
+   "error_m": 3.930119653046879,
+   "points": 10
+  }
+ ]
+}

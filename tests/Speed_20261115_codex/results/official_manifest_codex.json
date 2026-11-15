@@ -1,0 +1,147 @@
+{
+  "domain": "official",
+  "samples": [
+    {
+      "id": 237,
+      "path": "/home/voidness/Storage/Synced Folders/InterIIT Tech 15/Submission_Files/dev_data/dataset/images/350b2f92b1344ff6bfc421668d0f4cf4.png",
+      "meta": {
+        "filename": "350b2f92b1344ff6bfc421668d0f4cf4.png",
+        "alt": "299.899994",
+        "alt_takeoff_pt_dem": "4",
+        "yaw": "172.861364",
+        "pitch": "351.061858",
+        "roll": "355.989295",
+        "cam_fx": "200.2749481",
+        "cam_fy": "200.2043304",
+        "cam_cx": "158.8835449",
+        "cam_cy": "131.6855774",
+        "cam_k1": "-0.256979108",
+        "cam_k2": "0.048323553",
+        "cam_k3": "0",
+        "cam_p1": "0.00012196",
+        "cam_p2": "0.001473685",
+        "lat_sc": 19.123283464234856,
+        "lon_sc": 73.05063069724031
+      },
+      "truth_latlon": [
+        19.127119,
+        73.081772
+      ],
+      "flight": "official_unknown",
+      "truth_xy": [
+        6576.113581143902,
+        7033.715160205495
+      ],
+      "prior_xy": [
+        3294.781636854888,
+        7422.058629537943
+      ]
+    },
+    {
+      "id": 315,
+      "path": "/home/voidness/Storage/Synced Folders/InterIIT Tech 15/Submission_Files/dev_data/dataset/images/7f3a61e3c74f4a3e9334e054058b3341.png",
+      "meta": {
+        "filename": "7f3a61e3c74f4a3e9334e054058b3341.png",
+        "alt": "134.399994",
+        "alt_takeoff_pt_dem": "4",
+        "yaw": "214.124945",
+        "pitch": "347.165745",
+        "roll": "0.229183",
+        "cam_fx": "200.2749481",
+        "cam_fy": "200.2043304",
+        "cam_cx": "158.8835449",
+        "cam_cy": "131.6855774",
+        "cam_k1": "-0.256979108",
+        "cam_k2": "0.048323553",
+        "cam_k3": "0",
+        "cam_p1": "0.00012196",
+        "cam_p2": "0.001473685",
+        "lat_sc": 19.138759429320682,
+        "lon_sc": 73.10044302884891
+      },
+      "truth_latlon": [
+        19.128769,
+        73.093155
+      ],
+      "flight": "official_unknown",
+      "truth_xy": [
+        7775.780493015074,
+        6864.168297352735
+      ],
+      "prior_xy": [
+        8554.609504402824,
+        5766.6027595113555
+      ]
+    },
+    {
+      "id": 330,
+      "path": "/home/voidness/Storage/Synced Folders/InterIIT Tech 15/Submission_Files/dev_data/dataset/images/0e7ea8c2f828491b9d923fdb49116c79.png",
+      "meta": {
+        "filename": "0e7ea8c2f828491b9d923fdb49116c79.png",
+        "alt": "149.5",
+        "alt_takeoff_pt_dem": "4",
+        "yaw": "161.173026",
+        "pitch": "0.458366",
+        "roll": "0.744845",
+        "cam_fx": "200.2749481",
+        "cam_fy": "200.2043304",
+        "cam_cx": "158.8835449",
+        "cam_cy": "131.6855774",
+        "cam_k1": "-0.256979108",
+        "cam_k2": "0.048323553",
+        "cam_k3": "0",
+        "cam_p1": "0.00012196",
+        "cam_p2": "0.001473685",
+        "lat_sc": 19.13865083712401,
+        "lon_sc": 73.0748748117169
+      },
+      "truth_latlon": [
+        19.122475,
+        73.093277
+      ],
+      "flight": "official_unknown",
+      "truth_xy": [
+        7781.0170849032,
+        7561.040012622252
+      ],
+      "prior_xy": [
+        5864.479334157742,
+        5749.176650264473
+      ]
+    }
+  ],
+  "kinds": [
+    "baseline",
+    "optimised",
+    "backbone"
+  ],
+  "geometry": {
+    "attitude": true,
+    "pitch_sign": -1,
+    "roll_sign": -1,
+    "yaw_offset": 180.0,
+    "scale": 1.04,
+    "height_offset": 0.0
+  },
+  "levels": [
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "k": 50,
+  "m": 10,
+  "confidence": 0.21,
+  "dino_batch": 5,
+  "device": "cpu",
+  "threads": 2,
+  "queries": "6/agreement then27/bar11",
+  "dependencies": {
+    "tensorrt": false,
+    "onnx": false,
+    "onnxruntime": false,
+    "numba": false,
+    "torch_tensorrt": false
+  }
+}

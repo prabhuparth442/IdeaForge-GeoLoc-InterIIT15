@@ -1,0 +1,9 @@
+data,score,wrong,answered,queries,n,n_answered,variant
+official150,56.8,0,0.96,6.207,150,144,available_context_jetson
+nudt707,53.44,1,0.913,6.38,150,137,available_context_jetson
+official150,55.4,0,0.96,2.153,150,144,available_context_jetson_early
+nudt707,53.28,1,0.913,2.033,150,137,available_context_jetson_early
+official150,56.8,0,0.96,6.207,150,144,full_context_jetson
+nudt707,53.44,1,0.913,6.38,150,137,full_context_jetson
+official150,55.4,0,0.96,2.153,150,144,full_context_jetson_early
+nudt707,53.28,1,0.913,2.033,150,137,full_context_jetson_early

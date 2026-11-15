@@ -1,0 +1,10 @@
+{
+  "device": "cpu",
+  "workload": "six synthetic queries, level7, 5500m search radius, 2 threads",
+  "original_s": 0.6701149039945449,
+  "optimized_s": 0.3156333179867943,
+  "speedup": 2.1230803777900964,
+  "comparisons": 24,
+  "exact": true,
+  "caveat": "coarse input preparation only, not end-to-end or Jetson timing"
+}

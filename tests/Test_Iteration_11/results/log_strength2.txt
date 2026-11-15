@@ -1,0 +1,2 @@
+[NbConvertApp] Converting notebook Sat_Photo_Dump.ipynb to notebook
+[NbConvertApp] Writing 10300 bytes to Sat_Photo_Dump_executed_strength2.ipynb

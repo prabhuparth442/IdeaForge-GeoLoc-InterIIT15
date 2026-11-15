@@ -1,0 +1,2 @@
+[NbConvertApp] Converting notebook Ours_Inflation_Guard_Valid1212.ipynb to notebook
+[NbConvertApp] Writing 9037 bytes to Ours_Inflation_Guard_Valid1212_executed.ipynb

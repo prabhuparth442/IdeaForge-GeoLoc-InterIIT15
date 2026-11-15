@@ -1,0 +1,14 @@
+{
+  "east0": 694811.4577,
+  "north0": 3130673.6615,
+  "gsd": 0.3,
+  "crs": "EPSG:32649",
+  "levels": [
+    3,
+    4
+  ],
+  "width": 40960,
+  "height": 27770,
+  "source": "/home/voidness/Storage/Synced Folders/InterIIT Tech 15/Code_Testing/dataset/NUDT/Reference_map/changsha/ref.tif",
+  "preprocessing": "headless equalisation and edge features; full raster, bounded memory"
+}

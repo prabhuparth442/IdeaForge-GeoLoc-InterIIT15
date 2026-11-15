@@ -1,0 +1,11 @@
+{
+  "protocol": "Post-pilot negative diagnostic, outside valid 5 km hint assumption; no fitting.",
+  "source_id": 237,
+  "prior": [
+    13328.5,
+    500
+  ],
+  "truth_distance_m": 9395.964886282376,
+  "weights_sha256": "308cbd312c820f2fdbcb5d12b703f902bc872d8ccb78ea3f8589b673b81085cf",
+  "created_at_unix": 1794625281.6706078
+}

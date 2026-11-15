@@ -1,0 +1,30 @@
+{
+  "collected_at_unix": 1794736279.4464297,
+  "python": "3.10.22",
+  "torch": "2.8.0+cu126",
+  "opencv": "4.11.0",
+  "numpy": "1.23.5",
+  "cuda": false,
+  "missing_dependencies": {
+    "onnx": false,
+    "tensorrt": false,
+    "onnxruntime": false,
+    "numba": false,
+    "torch_tensorrt": false
+  },
+  "source_hashes": {
+    "tests/Speed_20261115_codex/summarise_codex.py": "a27c56d6d539e8e0dab33025c24f2fed2f83231edd2795d14c6880fdbf993281",
+    "tests/Speed_20261115_codex/test_optimisations_codex.py": "f2da41ad462b60918a6fa78c61474993ebf89df3fc3d8ffe78b870b7ec6ba696",
+    "tests/Speed_20261115_codex/native_benchmark_codex.py": "81a4e2cfcf9687055a52aae19dbdc729e9a3c8fe37ded0cf9123788c594e67f7",
+    "tests/Speed_20261115_codex/run_speed_codex.py": "d74420d6076221b70f07440b97c136ec6b3615d205e0879a0a6c5f53ea5a2219",
+    "tests/Speed_20261115_codex/compile_benchmark_codex.py": "84bd08817e5c5b3da36fb96e01e0e5af0ed67aedcd6f851f262f46ee7e64d73a",
+    "tests/Speed_20261115_codex/optimisations_codex.py": "31d776ee341a6a63c7935650e619635f98b0cf0505c64b11ae106985686a9dbb",
+    "PROTOCOL_codex.md": "f05b7cf9bd1778f1146f9745ab940ccf588d3bbb37c9bfb4d96da621d57147d4"
+  },
+  "weight_hashes": {
+    "minima_loftr.ckpt": "810d19773ff898ba04a68c99a3eff9c112210bf884214bd76aec885e83b0e257",
+    "dinov2_vits14_timm.safetensors": "04d27f3400d059fc0cfd7d17dd1909a75bf3ea8fb3eeb48b97cb99e57ee20081"
+  },
+  "originals_checked": 279,
+  "originals_changed": []
+}
