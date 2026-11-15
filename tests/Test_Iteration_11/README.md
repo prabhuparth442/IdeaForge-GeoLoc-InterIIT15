@@ -37,3 +37,24 @@ Primary criterion (0 wrong, gain >= 0, interval above 0): **not met** on either 
 3. To gain score from satellite-only training, the training photos must look more like thermal photos (the gap is in calibration, not
    ranking): better hand-made thermal-like rendering, candidates from more look-alike-rich ground (cities), or more satellite scenes. A
    learned visible-to-thermal translation would need thermal targets to train, so it falls under the satellite-only rule.
+
+## It3: valid methods (no thermal training) that actually improve — scored on sets their design never used (`It3_Valid_Methods`)
+
+Test sets: official TEST, NUDT 707, 808, 909 (1,094 photos; the DINO-z veto excludes official TEST, seen when it was set). Pooled paired
+bootstrap vs today's rule; wrong answers summed.
+
+| machine | method | pooled gain | wrong (base) | queries | inlier x2: wrong (base) | altered photos: wrong (base) | verdict |
+|---|---|---|---|---|---|---|---|
+| PC | **two-tier rule** (T8, 3 numbers) | **+1.91 [+1.04, +2.85]** | 3 (10) | 8.4 | 31 (48) | 3 (12) | **improves score and safety** |
+| PC | **DINO-z veto** (T6, 2 numbers) | **+0.65 [+0.08, +1.39]** | 5 (10) | 8.2 | 27 (48) | 4 (12) | **improves (smaller)** |
+| PC | satellite judge S5z | +0.07 [-0.94, +1.08] | 1 (10) | 9.4 | 0-2 at every scale | — | safety only |
+| PC | satellite judge S1z | -0.41 | 2 (10) | 9.6 | — | — | safety only |
+| Jetson | two-tier rule | +0.46 [-0.04, +0.99] | 8 (8) | 6.4 | — | — | not proven |
+| Jetson | **two-tier + early exit 20** | +0.31 [-0.22, +0.84] | 8 (8) | **2.8** | 25 (38) | 5 (8) | **speed (6.5 -> 2.8 queries) at no score cost** |
+| Jetson | early exit by inliers >= 20 | -0.15 [-0.29, -0.04] | 8 (8) | 2.9 | — | — | speed at a tiny cost |
+| Jetson | DINO-z veto | +0.16 | 6 (8) | 6.4 | — | — | not proven |
+| Jetson | satellite judge S1z | -1.33 [-2.26, -0.38] | **0** (8) | 2.7 | 0 at every scale | — | safety, costs score |
+| Jetson | satellite judge S5z | -0.11 | 2 (8) | 2.4 | 0-1 | — | safety + speed |
+
+None is input-invariant: the hand rules' wrong answers still grow with inlier inflation (two-tier 3 -> 31 at x2, base 10 -> 48), only fewer;
+the satellite judges are flat (0-2) but gain no score.

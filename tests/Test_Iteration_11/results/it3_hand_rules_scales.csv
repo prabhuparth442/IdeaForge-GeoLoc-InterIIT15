@@ -1,0 +1,31 @@
+var,rule,scale,wrong,score
+pc,base,0.5,0,48.93
+pc,DINO-z veto,0.5,0,48.93
+pc,two-tier rule,0.5,1,51.55
+jetson,base,0.5,0,48.96
+jetson,two-tier + early exit 20,0.5,1,50.51
+pc,base,0.75,6,50.91
+pc,DINO-z veto,0.75,4,51.1
+pc,two-tier rule,0.75,2,53.54
+jetson,base,0.75,8,50.71
+jetson,two-tier + early exit 20,0.75,2,52.54
+pc,base,1.0,10,52.24
+pc,DINO-z veto,1.0,5,52.73
+pc,two-tier rule,1.0,3,54.32
+jetson,base,1.0,8,52.17
+jetson,two-tier + early exit 20,1.0,8,52.59
+pc,base,1.25,18,52.98
+pc,DINO-z veto,1.25,10,53.77
+pc,two-tier rule,1.25,13,53.8
+jetson,base,1.25,15,52.87
+jetson,two-tier + early exit 20,1.25,12,53.11
+pc,base,1.5,27,52.2
+pc,DINO-z veto,1.5,15,53.57
+pc,two-tier rule,1.5,17,53.73
+jetson,base,1.5,21,52.45
+jetson,two-tier + early exit 20,1.5,15,52.99
+pc,base,2.0,48,50.47
+pc,DINO-z veto,2.0,27,52.69
+pc,two-tier rule,2.0,31,52.71
+jetson,base,2.0,38,51.31
+jetson,two-tier + early exit 20,2.0,25,52.52

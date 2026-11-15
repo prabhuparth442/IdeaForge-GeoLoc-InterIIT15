@@ -1,0 +1,6 @@
+var,rule,wrong_14_runs,mean_score
+pc,base,12,40.66
+pc,DINO-z veto,4,42.06
+pc,two-tier rule,3,45.57
+jetson,base,8,38.87
+jetson,two-tier + early exit 20,5,41.22
