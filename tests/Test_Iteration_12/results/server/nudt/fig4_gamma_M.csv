@@ -1,0 +1,15 @@
+set,kind,value,score60,answered,wrong,sec
+nudt_valid100_clean,gamma,0.0,54.0,0.9,0,4.052042885621389
+nudt_valid100_clean,gamma,0.25,54.0,0.9,0,4.052042885621389
+nudt_valid100_clean,gamma,0.5,54.0,0.9,0,4.052042885621389
+nudt_valid100_clean,gamma,0.75,54.0,0.9,0,4.052042885621389
+nudt_valid100_clean,gamma,1.0,54.0,0.9,0,4.052042885621389
+nudt_valid100_clean,gamma,1.5,54.0,0.9,0,4.052042885621389
+nudt_valid100_clean,gamma,2.0,54.0,0.9,0,4.052042885621389
+nudt_valid100_clean,gamma,3.0,54.0,0.9,0,4.052042885621389
+nudt_valid100_clean,M,1.0,54.0,0.9,0,4.052042885621389
+nudt_valid100_clean,M,2.0,54.0,0.9,0,4.052042885621389
+nudt_valid100_clean,M,3.0,54.0,0.9,0,4.052042885621389
+nudt_valid100_clean,M,5.0,54.0,0.9,0,4.052042885621389
+nudt_valid100_clean,M,7.0,54.0,0.9,0,4.052042885621389
+nudt_valid100_clean,M,10.0,54.0,0.9,0,4.052042885621389

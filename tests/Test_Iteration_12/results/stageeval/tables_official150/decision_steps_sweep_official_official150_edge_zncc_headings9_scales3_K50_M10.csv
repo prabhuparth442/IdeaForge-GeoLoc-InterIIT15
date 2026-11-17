@@ -1,0 +1,21 @@
+what,value,score (/60),wrong answers,answered,seconds per photo
+inliers multiplied by a factor,"x1.00, guard off",52.4,0,0.9,6.3978888352712
+inliers multiplied by a factor,"x1.00, guard on",52.4,0,0.9,6.3978888352712
+inliers multiplied by a factor,"x1.25, guard off",52.0,1,0.9133333333333333,6.144408268928528
+inliers multiplied by a factor,"x1.25, guard on",52.0,1,0.9133333333333333,6.144408268928528
+inliers multiplied by a factor,"x1.50, guard off",52.0,1,0.9133333333333333,6.144408268928528
+inliers multiplied by a factor,"x1.50, guard on",52.0,1,0.9133333333333333,6.144408268928528
+inliers multiplied by a factor,"x2.00, guard off",51.04,3,0.94,5.607812623977662
+inliers multiplied by a factor,"x2.00, guard on",51.04,3,0.94,5.607812623977662
+escalation bar,8,52.0,1,0.9133333333333333,6.3978888352712
+escalation bar,9,52.8,0,0.9066666666666666,6.3978888352712
+escalation bar,10,52.8,0,0.9066666666666666,6.3978888352712
+escalation bar,11,52.4,0,0.9,6.3978888352712
+escalation bar,12,52.4,0,0.9,6.3978888352712
+escalation bar,13,52.4,0,0.9,6.3978888352712
+"agreement radius (sigma), queries","0.5, 2",51.6,0,0.8866666666666667,6.685896755854289
+"agreement radius (sigma), queries","0.5, 3",51.44,0,0.8866666666666667,6.966623822848002
+"agreement radius (sigma), queries","1.0, 2",52.4,0,0.9,6.3978888352712
+"agreement radius (sigma), queries","1.0, 3",51.44,0,0.8866666666666667,6.72230464776357
+"agreement radius (sigma), queries","2.0, 2",52.64,0,0.9066666666666666,6.293823668162028
+"agreement radius (sigma), queries","2.0, 3",51.44,0,0.8866666666666667,6.72230464776357

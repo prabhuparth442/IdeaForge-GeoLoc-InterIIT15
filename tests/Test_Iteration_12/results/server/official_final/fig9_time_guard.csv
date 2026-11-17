@@ -1,0 +1,82 @@
+set,order,guard,score60,answered,wrong,seconds
+official150_blur,by first-pass heading,8,21.75,0.425,1,95.33656347692013
+official150_blur,by first-pass heading,10,21.75,0.425,1,95.61104037165642
+official150_blur,by first-pass heading,12,21.75,0.425,1,96.0069520175457
+official150_blur,by first-pass heading,15,24.0,0.4625,1,96.6051569133997
+official150_blur,by first-pass heading,18,24.0,0.4625,1,97.0803799688816
+official150_blur,by first-pass heading,22,24.0,0.4625,1,97.75971887111663
+official150_blur,by first-pass heading,26,25.5,0.4875,1,98.36052380204201
+official150_blur,by first-pass heading,30,26.25,0.5,1,98.92891247570515
+official150_blur,by first-pass heading,40,27.0,0.5125,1,100.2004841119051
+official150_blur,grid order,8,21.75,0.425,1,94.0119824230671
+official150_blur,grid order,10,21.75,0.425,1,94.28645931780338
+official150_blur,grid order,12,21.75,0.425,1,94.6811851143837
+official150_blur,grid order,15,21.75,0.425,1,95.30846593379974
+official150_blur,grid order,18,22.5,0.4375,1,95.86953428685665
+official150_blur,grid order,22,24.0,0.4625,1,96.5667635768652
+official150_blur,grid order,26,24.0,0.4625,1,97.23798725008965
+official150_blur,grid order,30,24.75,0.475,1,97.98520824015141
+official150_blur,grid order,40,26.25,0.5,1,99.5317695647478
+official150_blur,oracle (best query first),8,30.0,0.5375,1,89.93353248238563
+official150_blur,oracle (best query first),10,30.0,0.5375,1,90.05731638371944
+official150_blur,oracle (best query first),12,30.0,0.5375,1,90.15783179998398
+official150_blur,oracle (best query first),15,30.0,0.5375,1,90.49852290451527
+official150_blur,oracle (best query first),18,30.0,0.5375,1,90.81371937990188
+official150_blur,oracle (best query first),22,30.0,0.5375,1,91.20120979249478
+official150_blur,oracle (best query first),26,30.0,0.5375,1,91.59267652630805
+official150_blur,oracle (best query first),30,30.0,0.5375,1,91.98097821772099
+official150_blur,oracle (best query first),40,30.0,0.5375,1,93.01652413308621
+official150_clean,by first-pass heading,8,44.849999999999994,0.7625,0,31.593206360936165
+official150_clean,by first-pass heading,10,46.05,0.7875,0,31.831403428316115
+official150_clean,by first-pass heading,12,46.05,0.7875,0,32.05176844596863
+official150_clean,by first-pass heading,15,46.8,0.8,0,32.48423674106598
+official150_clean,by first-pass heading,18,46.8,0.8,0,32.92252713739872
+official150_clean,by first-pass heading,22,46.8,0.8,0,33.54798601269722
+official150_clean,by first-pass heading,26,46.8,0.8,0,34.0645681232214
+official150_clean,by first-pass heading,30,46.8,0.8,0,34.75438933074474
+official150_clean,by first-pass heading,40,46.8,0.8,0,36.30955798923969
+official150_clean,grid order,8,44.849999999999994,0.7625,0,31.779639261960984
+official150_clean,grid order,10,46.05,0.7875,0,32.01783632934094
+official150_clean,grid order,12,46.05,0.7875,0,32.238415628671646
+official150_clean,grid order,15,46.8,0.8,0,32.70722198188305
+official150_clean,grid order,18,46.8,0.8,0,33.116569474339485
+official150_clean,grid order,22,46.8,0.8,0,33.75873322784901
+official150_clean,grid order,26,46.8,0.8,0,34.28852711319924
+official150_clean,grid order,30,46.8,0.8,0,34.895354917645456
+official150_clean,grid order,40,46.8,0.8,0,36.39952374100685
+official150_clean,oracle (best query first),8,49.949999999999996,0.8375,0,31.0796219676733
+official150_clean,oracle (best query first),10,49.949999999999996,0.8375,0,31.157617869973183
+official150_clean,oracle (best query first),12,49.949999999999996,0.8375,0,31.278909534215927
+official150_clean,oracle (best query first),15,49.949999999999996,0.8375,0,31.539775863289833
+official150_clean,oracle (best query first),18,49.949999999999996,0.8375,0,31.9191903591156
+official150_clean,oracle (best query first),22,49.949999999999996,0.8375,0,32.43546094894409
+official150_clean,oracle (best query first),26,49.949999999999996,0.8375,0,32.88974617123604
+official150_clean,oracle (best query first),30,49.949999999999996,0.8375,0,33.38579949438572
+official150_clean,oracle (best query first),40,49.949999999999996,0.8375,0,34.66760188043118
+official150_invert,by first-pass heading,8,32.55,0.5875,0,38.58034203350544
+official150_invert,by first-pass heading,10,33.3,0.6,0,38.86702664494514
+official150_invert,by first-pass heading,12,33.3,0.6,0,39.350366190075874
+official150_invert,by first-pass heading,15,34.05,0.6125,0,40.06063440442085
+official150_invert,by first-pass heading,18,34.05,0.6125,0,40.66308528184891
+official150_invert,by first-pass heading,22,34.05,0.6125,0,41.65124726593494
+official150_invert,by first-pass heading,26,34.8,0.625,0,42.428998705744746
+official150_invert,by first-pass heading,30,35.55,0.6375,0,43.451330333948135
+official150_invert,by first-pass heading,40,35.55,0.6375,0,45.46434198617935
+official150_invert,grid order,8,32.55,0.5875,0,37.757848754525185
+official150_invert,grid order,10,33.3,0.6,0,38.04453336596489
+official150_invert,grid order,12,33.3,0.6,0,38.504911905527116
+official150_invert,grid order,15,33.3,0.6,0,39.16689238250255
+official150_invert,grid order,18,33.3,0.6,0,39.78391635417938
+official150_invert,grid order,22,34.05,0.6125,0,40.86175117492676
+official150_invert,grid order,26,34.05,0.6125,0,41.81393528580666
+official150_invert,grid order,30,35.55,0.6375,0,42.88076513707638
+official150_invert,grid order,40,35.55,0.6375,0,45.058861470222475
+official150_invert,oracle (best query first),8,38.7,0.65,0,38.887196105718616
+official150_invert,oracle (best query first),10,38.7,0.65,0,39.053762304782865
+official150_invert,oracle (best query first),12,38.7,0.65,0,39.41114701330662
+official150_invert,oracle (best query first),15,38.7,0.65,0,39.847119426727296
+official150_invert,oracle (best query first),18,38.7,0.65,0,40.28982076048851
+official150_invert,oracle (best query first),22,38.7,0.65,0,40.987948429584506
+official150_invert,oracle (best query first),26,38.7,0.65,0,41.678315261006354
+official150_invert,oracle (best query first),30,38.7,0.65,0,42.48120076954365
+official150_invert,oracle (best query first),40,38.7,0.65,0,44.23253636062145

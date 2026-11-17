@@ -1,0 +1,2 @@
+[NbConvertApp] Converting notebook Idea3_Pose_Sweep_And_Part_Correlation.ipynb to notebook
+[NbConvertApp] Writing 15358 bytes to /tmp/claude-1000/smoke_Idea3_Pose_Sweep_And_Part_Correlation.ipynb

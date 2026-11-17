@@ -1,0 +1,2 @@
+[NbConvertApp] Converting notebook Idea1c_Aligned_Count_Replay.ipynb to notebook
+[NbConvertApp] Writing 24768 bytes to Idea1c_Aligned_Count_Replay_executed.ipynb

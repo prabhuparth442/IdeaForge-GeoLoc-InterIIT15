@@ -1,0 +1,2 @@
+[NbConvertApp] Converting notebook Rich_Dump_Run_LowConf.ipynb to notebook
+[NbConvertApp] Writing 15784 bytes to Rich_Dump_Run_LowConf_executed_fresh1313.ipynb

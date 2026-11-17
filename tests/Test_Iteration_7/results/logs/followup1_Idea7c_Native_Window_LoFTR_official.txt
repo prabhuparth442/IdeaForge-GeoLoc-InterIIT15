@@ -1,0 +1,2 @@
+[NbConvertApp] Converting notebook Idea7c_Native_Window_LoFTR.ipynb to notebook
+[NbConvertApp] Writing 16672 bytes to Idea7c_Native_Window_LoFTR_executed_official.ipynb

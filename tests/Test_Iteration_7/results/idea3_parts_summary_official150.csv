@@ -1,0 +1,13 @@
+group,method,top10,top50,photos
+control,centre,8,8,8
+control,full,7,8,8
+control,parts_mean_slack1,7,8,8
+control,parts_mean_slack5,8,8,8
+control,parts_min_slack1,8,8,8
+control,parts_min_slack5,8,8,8
+never,centre,5,8,12
+never,full,11,11,12
+never,parts_mean_slack1,11,11,12
+never,parts_mean_slack5,11,11,12
+never,parts_min_slack1,9,9,12
+never,parts_min_slack5,8,10,12

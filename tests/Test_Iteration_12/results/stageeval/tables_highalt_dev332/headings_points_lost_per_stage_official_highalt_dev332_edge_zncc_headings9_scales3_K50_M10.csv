@@ -1,0 +1,43 @@
+variant,step,photos alive,points lost here,ceiling score (/60)
+"old setting (1 query, K=100, M=25)",target in the K places (coarse),307,4.518072289156627,55.48192771084337
+"old setting (1 query, K=100, M=25)",target in the M kept (DINO),307,0.0,55.48192771084337
+"old setting (1 query, K=100, M=25)",right candidate chosen (fine),300,1.2650602409638554,54.21686746987952
+"old setting (1 query, K=100, M=25)",answered (decision),239,11.024096385542169,43.192771084337345
+"old setting (1 query, K=100, M=25)",... and within 4 sigma,239,0.0,43.192771084337345
+"old setting (1 query, K=100, M=25)",... and within 1 sigma,134,18.97590361445783,24.21686746987952
+plain (heading 0),target in the K places (coarse),307,4.518072289156627,55.48192771084337
+plain (heading 0),target in the M kept (DINO),307,0.0,55.48192771084337
+plain (heading 0),right candidate chosen (fine),300,1.2650602409638554,54.21686746987952
+plain (heading 0),answered (decision),239,11.024096385542169,43.192771084337345
+plain (heading 0),... and within 4 sigma,239,0.0,43.192771084337345
+plain (heading 0),... and within 1 sigma,134,18.97590361445783,24.21686746987952
+"3 headings (-5, 0, +5)",target in the K places (coarse),318,2.5301204819277108,57.46987951807229
+"3 headings (-5, 0, +5)",target in the M kept (DINO),318,0.0,57.46987951807229
+"3 headings (-5, 0, +5)",right candidate chosen (fine),273,8.132530120481928,49.33734939759036
+"3 headings (-5, 0, +5)",answered (decision),244,5.240963855421687,44.096385542168676
+"3 headings (-5, 0, +5)",... and within 4 sigma,244,0.0,44.096385542168676
+"3 headings (-5, 0, +5)",... and within 1 sigma,140,18.795180722891565,25.30120481927711
+5 headings (step 5),target in the K places (coarse),319,2.3493975903614457,57.65060240963855
+5 headings (step 5),target in the M kept (DINO),319,0.0,57.65060240963855
+5 headings (step 5),right candidate chosen (fine),259,10.843373493975903,46.807228915662655
+5 headings (step 5),answered (decision),244,2.710843373493976,44.096385542168676
+5 headings (step 5),... and within 4 sigma,244,0.0,44.096385542168676
+5 headings (step 5),... and within 1 sigma,140,18.795180722891565,25.30120481927711
+9 headings (step 2.5),target in the K places (coarse),325,1.2650602409638554,58.734939759036145
+9 headings (step 2.5),target in the M kept (DINO),325,0.0,58.734939759036145
+9 headings (step 2.5),right candidate chosen (fine),262,11.385542168674698,47.34939759036145
+9 headings (step 2.5),answered (decision),245,3.072289156626506,44.27710843373494
+9 headings (step 2.5),... and within 4 sigma,245,0.0,44.27710843373494
+9 headings (step 2.5),... and within 1 sigma,136,19.698795180722893,24.57831325301205
+"standard 6 (-5, 0, +5 x 1.0, 1.05)",target in the K places (coarse),327,0.9036144578313253,59.096385542168676
+"standard 6 (-5, 0, +5 x 1.0, 1.05)",target in the M kept (DINO),327,0.0,59.096385542168676
+"standard 6 (-5, 0, +5 x 1.0, 1.05)",right candidate chosen (fine),273,9.759036144578314,49.33734939759036
+"standard 6 (-5, 0, +5 x 1.0, 1.05)",answered (decision),245,5.0602409638554215,44.27710843373494
+"standard 6 (-5, 0, +5 x 1.0, 1.05)",... and within 4 sigma,245,0.0,44.27710843373494
+"standard 6 (-5, 0, +5 x 1.0, 1.05)",... and within 1 sigma,140,18.97590361445783,25.30120481927711
+wide 27 (9 headings x 3 scales),target in the K places (coarse),328,0.7228915662650602,59.27710843373494
+wide 27 (9 headings x 3 scales),target in the M kept (DINO),328,0.0,59.27710843373494
+wide 27 (9 headings x 3 scales),right candidate chosen (fine),265,11.385542168674698,47.89156626506024
+wide 27 (9 headings x 3 scales),answered (decision),250,2.710843373493976,45.18072289156627
+wide 27 (9 headings x 3 scales),... and within 4 sigma,250,0.0,45.18072289156627
+wide 27 (9 headings x 3 scales),... and within 1 sigma,139,20.06024096385542,25.12048192771084

@@ -1,0 +1,7 @@
+new group,photos,AUC old vs this group,Frechet distance to old,share of 5 nearest neighbours that are old photos,"(chance level, if mixed)"
+new 100-350 m,129,1.0,2716.2,0.0,0.795
+new 350-800 m,157,1.0,2351.5,0.0,0.761
+new 800-1300 m,84,1.0,2716.4,0.0,0.856
+new 1300-2100 m,130,1.0,3266.7,0.0,0.794
+ALL new,500,1.0,2409.6,,
+REFERENCE: old half A vs old half B,250,0.57,262.3,,

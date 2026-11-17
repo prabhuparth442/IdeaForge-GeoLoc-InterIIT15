@@ -1,0 +1,32 @@
+chain started Mon Nov 16 09:45:21 AM IST 2026
+09:45:21 start smoke_clean2
+09:45:31 end smoke_clean2 exit 0 (check /home/voidness/Storage/Synced Folders/InterIIT Tech 15/IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_7/results/logs/headless_smoke_clean2.txt)
+09:45:31 start base_clean60
+09:47:58 end base_clean60 exit 0 (check /home/voidness/Storage/Synced Folders/InterIIT Tech 15/IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_7/results/logs/headless_base_clean60.txt)
+09:47:58 start base_invert60
+09:50:38 end base_invert60 exit 0 (check /home/voidness/Storage/Synced Folders/InterIIT Tech 15/IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_7/results/logs/headless_base_invert60.txt)
+09:50:38 start base_blur60
+09:54:26 end base_blur60 exit 0 (check /home/voidness/Storage/Synced Folders/InterIIT Tech 15/IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_7/results/logs/headless_base_blur60.txt)
+09:54:26 start copiesbar_before_clean60
+09:54:26 end copiesbar_before_clean60 exit 1 (check /home/voidness/Storage/Synced Folders/InterIIT Tech 15/IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_7/results/logs/headless_copiesbar_before_clean60.txt)
+09:54:26 start copiesagree_before_clean60
+09:54:26 end copiesagree_before_clean60 exit 1 (check /home/voidness/Storage/Synced Folders/InterIIT Tech 15/IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_7/results/logs/headless_copiesagree_before_clean60.txt)
+09:54:26 start copiesbar_after_clean60
+09:54:26 end copiesbar_after_clean60 exit 1 (check /home/voidness/Storage/Synced Folders/InterIIT Tech 15/IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_7/results/logs/headless_copiesbar_after_clean60.txt)
+09:54:26 start copiesbar_before_invert60
+09:54:26 end copiesbar_before_invert60 exit 1 (check /home/voidness/Storage/Synced Folders/InterIIT Tech 15/IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_7/results/logs/headless_copiesbar_before_invert60.txt)
+09:54:26 start copiesagree_before_invert60
+09:54:26 end copiesagree_before_invert60 exit 1 (check /home/voidness/Storage/Synced Folders/InterIIT Tech 15/IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_7/results/logs/headless_copiesagree_before_invert60.txt)
+09:54:26 start copiesbar_after_invert60
+09:54:26 end copiesbar_after_invert60 exit 1 (check /home/voidness/Storage/Synced Folders/InterIIT Tech 15/IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_7/results/logs/headless_copiesbar_after_invert60.txt)
+09:54:26 start copiesbar_before_blur60
+09:54:26 end copiesbar_before_blur60 exit 1 (check /home/voidness/Storage/Synced Folders/InterIIT Tech 15/IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_7/results/logs/headless_copiesbar_before_blur60.txt)
+09:54:26 start copiesagree_before_blur60
+09:54:26 end copiesagree_before_blur60 exit 1 (check /home/voidness/Storage/Synced Folders/InterIIT Tech 15/IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_7/results/logs/headless_copiesagree_before_blur60.txt)
+09:54:26 start copiesbar_after_blur60
+09:54:27 end copiesbar_after_blur60 exit 1 (check /home/voidness/Storage/Synced Folders/InterIIT Tech 15/IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_7/results/logs/headless_copiesbar_after_blur60.txt)
+09:54:27 start rescue_official500
+10:17:26 end rescue_official500 exit 0 (check /home/voidness/Storage/Synced Folders/InterIIT Tech 15/IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_7/results/logs/headless_rescue_official500.txt)
+10:17:26 start copies_rescue_official500
+10:42:09 end copies_rescue_official500 exit 0 (check /home/voidness/Storage/Synced Folders/InterIIT Tech 15/IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_7/results/logs/headless_copies_rescue_official500.txt)
+chain finished Mon Nov 16 10:42:09 AM IST 2026

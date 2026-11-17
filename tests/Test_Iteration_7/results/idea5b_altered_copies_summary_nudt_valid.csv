@@ -1,0 +1,4 @@
+kind,photos,first_answered,score_first,score_with_copies,copies_answered,wrong_first,wrong_total,seconds_first,seconds_copies_per_skipped
+blur,60,55,52.0,52.3,2,1,2,4.132164939244588,8.7
+clean,60,58,49.0,55.0,0,3,3,4.229157356421153,8.1
+invert,60,55,51.6,53.2,3,1,2,4.082308789094289,8.8

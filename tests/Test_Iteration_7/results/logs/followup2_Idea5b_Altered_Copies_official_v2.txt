@@ -1,0 +1,2 @@
+[NbConvertApp] Converting notebook Idea5b_Altered_Copies.ipynb to notebook
+[NbConvertApp] Writing 14116 bytes to Idea5b_Altered_Copies_executed_official_v2.ipynb

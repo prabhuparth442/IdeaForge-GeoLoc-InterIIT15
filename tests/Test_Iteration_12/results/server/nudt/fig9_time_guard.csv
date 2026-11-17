@@ -1,0 +1,28 @@
+set,order,guard,score60,answered,wrong,seconds
+nudt_valid100_clean,by first-pass heading,8,54.0,0.9,0,3.4543529033660887
+nudt_valid100_clean,by first-pass heading,10,54.0,0.9,0,3.6960856318473816
+nudt_valid100_clean,by first-pass heading,12,54.0,0.9,0,3.9318689107894897
+nudt_valid100_clean,by first-pass heading,15,54.0,0.9,0,4.164619898796081
+nudt_valid100_clean,by first-pass heading,18,54.0,0.9,0,4.407738292217255
+nudt_valid100_clean,by first-pass heading,22,55.0,0.9166666666666666,0,4.632977247238159
+nudt_valid100_clean,by first-pass heading,26,55.0,0.9166666666666666,0,4.960342025756836
+nudt_valid100_clean,by first-pass heading,30,55.0,0.9166666666666666,0,5.196065986156464
+nudt_valid100_clean,by first-pass heading,40,56.3,0.95,0,5.728944230079651
+nudt_valid100_clean,grid order,8,54.0,0.9,0,3.3837936162948608
+nudt_valid100_clean,grid order,10,54.0,0.9,0,3.6255263447761537
+nudt_valid100_clean,grid order,12,54.0,0.9,0,3.861309623718262
+nudt_valid100_clean,grid order,15,54.0,0.9,0,4.094060611724854
+nudt_valid100_clean,grid order,18,54.0,0.9,0,4.337179005146027
+nudt_valid100_clean,grid order,22,54.0,0.9,0,4.619258868694305
+nudt_valid100_clean,grid order,26,54.0,0.9,0,5.000344181060791
+nudt_valid100_clean,grid order,30,54.0,0.9,0,5.309169769287109
+nudt_valid100_clean,grid order,40,55.0,0.9166666666666666,0,6.137700927257538
+nudt_valid100_clean,oracle (best query first),8,56.3,0.95,0,69.60906687974929
+nudt_valid100_clean,oracle (best query first),10,56.3,0.95,0,69.60906687974929
+nudt_valid100_clean,oracle (best query first),12,56.3,0.95,0,69.66206715106964
+nudt_valid100_clean,oracle (best query first),15,56.3,0.95,0,69.70887548923493
+nudt_valid100_clean,oracle (best query first),18,56.3,0.95,0,69.75442507266999
+nudt_valid100_clean,oracle (best query first),22,56.3,0.95,0,69.80518157482148
+nudt_valid100_clean,oracle (best query first),26,56.3,0.95,0,69.85680676698685
+nudt_valid100_clean,oracle (best query first),30,56.3,0.95,0,69.94860570430755
+nudt_valid100_clean,oracle (best query first),40,56.3,0.95,0,70.09480417966843

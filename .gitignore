@@ -60,3 +60,8 @@ tests/Test_Iteration_2/results/cache/
 tests/Test_Iteration_2/results/demo_*/
 .venv-geoloc/
 venv-geoloc/
+
+# ---------- server / overnight leftovers ----------
+tests/Test_Iteration_12/results/server/**/*.log
+*.out
+nohup.out

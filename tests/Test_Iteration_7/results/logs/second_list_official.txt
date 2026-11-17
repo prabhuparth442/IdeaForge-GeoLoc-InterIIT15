@@ -1,0 +1,2 @@
+[NbConvertApp] Converting notebook Idea6b_Refine_Scale_Heading.ipynb to notebook
+[NbConvertApp] Writing 12957 bytes to Idea6b_Refine_Scale_Heading_executed_official.ipynb

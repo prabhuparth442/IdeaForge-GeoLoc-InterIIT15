@@ -1,0 +1,43 @@
+variant,step,photos alive,points lost here,ceiling score (/60)
+"old setting (1 query, K=100, M=25)",target in the K places (coarse),143,2.8,57.2
+"old setting (1 query, K=100, M=25)",target in the M kept (DINO),143,0.0,57.2
+"old setting (1 query, K=100, M=25)",right candidate chosen (fine),138,2.0,55.2
+"old setting (1 query, K=100, M=25)",answered (decision),136,0.8,54.4
+"old setting (1 query, K=100, M=25)",... and within 4 sigma,136,0.0,54.4
+"old setting (1 query, K=100, M=25)",... and within 1 sigma,135,0.4,54.0
+plain (heading 0),target in the K places (coarse),141,3.6,56.4
+plain (heading 0),target in the M kept (DINO),141,0.0,56.4
+plain (heading 0),right candidate chosen (fine),138,1.2,55.2
+plain (heading 0),answered (decision),136,0.8,54.4
+plain (heading 0),... and within 4 sigma,136,0.0,54.4
+plain (heading 0),... and within 1 sigma,135,0.4,54.0
+"3 headings (-5, 0, +5)",target in the K places (coarse),144,2.4,57.599999999999994
+"3 headings (-5, 0, +5)",target in the M kept (DINO),144,0.0,57.599999999999994
+"3 headings (-5, 0, +5)",right candidate chosen (fine),141,1.2,56.4
+"3 headings (-5, 0, +5)",answered (decision),140,0.4,56.0
+"3 headings (-5, 0, +5)",... and within 4 sigma,140,0.0,56.0
+"3 headings (-5, 0, +5)",... and within 1 sigma,138,0.8,55.2
+5 headings (step 5),target in the K places (coarse),145,2.0,58.0
+5 headings (step 5),target in the M kept (DINO),145,0.0,58.0
+5 headings (step 5),right candidate chosen (fine),141,1.6,56.4
+5 headings (step 5),answered (decision),140,0.4,56.0
+5 headings (step 5),... and within 4 sigma,140,0.0,56.0
+5 headings (step 5),... and within 1 sigma,138,0.8,55.2
+9 headings (step 2.5),target in the K places (coarse),147,1.2,58.8
+9 headings (step 2.5),target in the M kept (DINO),147,0.0,58.8
+9 headings (step 2.5),right candidate chosen (fine),143,1.6,57.2
+9 headings (step 2.5),answered (decision),142,0.4,56.8
+9 headings (step 2.5),... and within 4 sigma,142,0.0,56.8
+9 headings (step 2.5),... and within 1 sigma,140,0.8,56.0
+"standard 6 (-5, 0, +5 x 1.0, 1.05)",target in the K places (coarse),145,2.0,58.0
+"standard 6 (-5, 0, +5 x 1.0, 1.05)",target in the M kept (DINO),145,0.0,58.0
+"standard 6 (-5, 0, +5 x 1.0, 1.05)",right candidate chosen (fine),141,1.6,56.4
+"standard 6 (-5, 0, +5 x 1.0, 1.05)",answered (decision),140,0.4,56.0
+"standard 6 (-5, 0, +5 x 1.0, 1.05)",... and within 4 sigma,140,0.0,56.0
+"standard 6 (-5, 0, +5 x 1.0, 1.05)",... and within 1 sigma,139,0.4,55.6
+wide 27 (9 headings x 3 scales),target in the K places (coarse),148,0.8,59.2
+wide 27 (9 headings x 3 scales),target in the M kept (DINO),148,0.0,59.2
+wide 27 (9 headings x 3 scales),right candidate chosen (fine),144,1.6,57.599999999999994
+wide 27 (9 headings x 3 scales),answered (decision),144,0.0,57.599999999999994
+wide 27 (9 headings x 3 scales),... and within 4 sigma,144,0.0,57.599999999999994
+wide 27 (9 headings x 3 scales),... and within 1 sigma,143,0.4,57.2
