@@ -2,7 +2,7 @@
 
 UAV visual geo-localisation for the ideaForge problem statement (Inter-IIT Tech Meet 15.0, team 7114): a thermal photo (320 x 256, with height, yaw, pitch, roll and a GPS hint up to 5 km off) is placed on a satellite map. This is the **research and testing repo**. The submission code is the separate `../Main_Pipeline_Headless`.
 
-**Start here:** `docs/HANDOFF_2026-11-17.md` (current state, results, server layout, open tasks), then `tests/README.md` (what every test folder is).
+**Start here:** `REPO_MAP.md` (what is where, for any AI or person), then `docs/HANDOFF_2026-11-17.md` (current state, results, server layout, open tasks), `CHANGELOG.md` (newest work) and `tests/README.md` (what every test folder is). `AGENTS.md` holds the working rules.
 
 ## Run
 
@@ -34,4 +34,4 @@ Settings are in `src/header/settings.py`. Big data files (maps, model weights): 
 
 ## Where things stand (2026-11-17)
 
-Old official set 52.69 / 60 base (53.60 with altered copies); NUDT 54.24 / 60 (saturated); new high-altitude set 36.35 / 60 base, losses mainly above 800 m (matcher failure, not search). Altered copies is the only repeatable gain; lower bar, agreement rule and aligned rescue do not transfer across data sets. Next experiments (Fable's coarse-answer rule above 800 m, pose-from-matches for precision) are listed in the handoff. Nothing from this round is committed.
+Old official set 52.69 / 60 base (53.60 with altered copies); NUDT 54.24 / 60 (saturated); new high-altitude set 36.35 / 60 base, losses mainly above 800 m (matcher failure, not search). Altered copies is the only repeatable gain; lower bar, agreement rule and aligned rescue do not transfer across data sets. Next experiments (Fable's coarse-answer rule above 800 m, pose-from-matches for precision) are listed in the handoff. Iterations 24-28 (coarse-stage analysis of 2026-11-17) and the 2026-11-18 tidy are not committed.

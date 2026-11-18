@@ -1,0 +1,7 @@
+# Input inspection, written before reconstruction
+
+Inspect four development frames nearest 600, 1000, 1400 and 1900 m, selected by height rather than matcher success. Never open locked-test frames. Use the current headless photo preparation, projection, padding and native-fine cleaning functions directly. Save exact float arrays, masks and source hashes; nearest-neighbour display makes existing samples visible without display smoothing. Satellite windows are at supplied truth for diagnosis, not selected by the pipeline.
+
+Compare raw display stretch, normalization, preblur, actual 224-pixel inputs, no-preblur 224, enlarged 224, redrawn 448 and cleaned redrawn 448. The 448 pair has the same geographic footprint and a satellite tile two levels finer. Enlargement of an already rendered 224 canvas is a control, not extra captured information. No training, model inference, threshold search, production edits or new score claim.
+
+Decision/kill rule: recommend the preservation path only as a candidate if visible source texture survives the finer direct render and existing development diagnostics support it. Reject a claim of improvement from appearance or gradient magnitude alone. Report existing true-place results separately from full-pipeline scores; distant negative-tile controls cannot certify no false answers across a search. Any deployment gain still requires old official, NUDT and new development full-pipeline evaluation, wrong answers beyond 8 sigma, and timing inside the guard. Do not change the current default switches.

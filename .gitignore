@@ -65,3 +65,6 @@ venv-geoloc/
 tests/Test_Iteration_12/results/server/**/*.log
 *.out
 nohup.out
+
+# ---------- the new high-altitude data set (hard links to ../Code_Testing/dataset/Dataset_Official_3, no extra disk space) ----------
+dataset/Dataset_Official_3/

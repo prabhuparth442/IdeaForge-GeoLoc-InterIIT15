@@ -1,0 +1,853 @@
+photo,height,variant,true_inl,wrong_inl
+2,1405.199951,base,0,3
+2,1405.199951,cleaned,0,0
+2,1405.199951,cleaned + denoise + boost,0,0
+2,1405.199951,native 448,0,0
+2,1405.199951,native 448 + cleaned,0,0
+2,1405.199951,native 448 + cleaned + denoise + boost,0,0
+3,1086.800049,base,86,0
+3,1086.800049,cleaned,106,0
+3,1086.800049,cleaned + denoise + boost,114,0
+3,1086.800049,native 448,26,0
+3,1086.800049,native 448 + cleaned,116,0
+3,1086.800049,native 448 + cleaned + denoise + boost,82,0
+4,1377.300049,base,7,0
+4,1377.300049,cleaned,13,0
+4,1377.300049,cleaned + denoise + boost,10,0
+4,1377.300049,native 448,10,0
+4,1377.300049,native 448 + cleaned,14,0
+4,1377.300049,native 448 + cleaned + denoise + boost,4,0
+10,1499.800049,base,11,0
+10,1499.800049,cleaned,6,3
+10,1499.800049,cleaned + denoise + boost,9,0
+10,1499.800049,native 448,21,0
+10,1499.800049,native 448 + cleaned,48,5
+10,1499.800049,native 448 + cleaned + denoise + boost,47,0
+14,1607.0,base,0,0
+14,1607.0,cleaned,0,3
+14,1607.0,cleaned + denoise + boost,0,3
+14,1607.0,native 448,6,0
+14,1607.0,native 448 + cleaned,6,0
+14,1607.0,native 448 + cleaned + denoise + boost,4,4
+17,1535.099976,base,0,0
+17,1535.099976,cleaned,0,0
+17,1535.099976,cleaned + denoise + boost,0,0
+17,1535.099976,native 448,0,0
+17,1535.099976,native 448 + cleaned,21,0
+17,1535.099976,native 448 + cleaned + denoise + boost,18,0
+20,2015.199951,base,0,0
+20,2015.199951,cleaned,0,0
+20,2015.199951,cleaned + denoise + boost,0,0
+20,2015.199951,native 448,0,0
+20,2015.199951,native 448 + cleaned,0,0
+20,2015.199951,native 448 + cleaned + denoise + boost,0,0
+21,1046.699951,base,9,0
+21,1046.699951,cleaned,13,0
+21,1046.699951,cleaned + denoise + boost,18,0
+21,1046.699951,native 448,11,0
+21,1046.699951,native 448 + cleaned,32,0
+21,1046.699951,native 448 + cleaned + denoise + boost,27,0
+22,1175.300049,base,0,0
+22,1175.300049,cleaned,3,0
+22,1175.300049,cleaned + denoise + boost,6,0
+22,1175.300049,native 448,0,0
+22,1175.300049,native 448 + cleaned,0,0
+22,1175.300049,native 448 + cleaned + denoise + boost,0,0
+24,1280.199951,base,20,0
+24,1280.199951,cleaned,18,0
+24,1280.199951,cleaned + denoise + boost,14,0
+24,1280.199951,native 448,0,0
+24,1280.199951,native 448 + cleaned,10,0
+24,1280.199951,native 448 + cleaned + denoise + boost,16,0
+25,1259.699951,base,82,2
+25,1259.699951,cleaned,102,0
+25,1259.699951,cleaned + denoise + boost,89,0
+25,1259.699951,native 448,0,0
+25,1259.699951,native 448 + cleaned,83,0
+25,1259.699951,native 448 + cleaned + denoise + boost,67,0
+26,1875.099976,base,0,0
+26,1875.099976,cleaned,0,0
+26,1875.099976,cleaned + denoise + boost,0,0
+26,1875.099976,native 448,0,0
+26,1875.099976,native 448 + cleaned,0,0
+26,1875.099976,native 448 + cleaned + denoise + boost,0,0
+32,1420.300049,base,0,0
+32,1420.300049,cleaned,0,0
+32,1420.300049,cleaned + denoise + boost,3,0
+32,1420.300049,native 448,5,0
+32,1420.300049,native 448 + cleaned,0,0
+32,1420.300049,native 448 + cleaned + denoise + boost,0,0
+33,1523.400024,base,15,0
+33,1523.400024,cleaned,15,0
+33,1523.400024,cleaned + denoise + boost,19,0
+33,1523.400024,native 448,11,0
+33,1523.400024,native 448 + cleaned,70,0
+33,1523.400024,native 448 + cleaned + denoise + boost,48,0
+37,1082.099976,base,0,0
+37,1082.099976,cleaned,3,0
+37,1082.099976,cleaned + denoise + boost,0,0
+37,1082.099976,native 448,4,0
+37,1082.099976,native 448 + cleaned,5,0
+37,1082.099976,native 448 + cleaned + denoise + boost,0,0
+38,1402.199951,base,0,0
+38,1402.199951,cleaned,5,0
+38,1402.199951,cleaned + denoise + boost,8,0
+38,1402.199951,native 448,0,0
+38,1402.199951,native 448 + cleaned,15,0
+38,1402.199951,native 448 + cleaned + denoise + boost,10,0
+39,876.5,base,61,0
+39,876.5,cleaned,73,0
+39,876.5,cleaned + denoise + boost,55,0
+39,876.5,native 448,12,0
+39,876.5,native 448 + cleaned,38,0
+39,876.5,native 448 + cleaned + denoise + boost,28,0
+40,2011.199951,base,0,0
+40,2011.199951,cleaned,0,0
+40,2011.199951,cleaned + denoise + boost,0,0
+40,2011.199951,native 448,0,0
+40,2011.199951,native 448 + cleaned,0,0
+40,2011.199951,native 448 + cleaned + denoise + boost,0,0
+44,898.700012,base,6,0
+44,898.700012,cleaned,6,0
+44,898.700012,cleaned + denoise + boost,2,0
+44,898.700012,native 448,0,0
+44,898.700012,native 448 + cleaned,0,0
+44,898.700012,native 448 + cleaned + denoise + boost,0,0
+45,1438.599976,base,65,0
+45,1438.599976,cleaned,71,0
+45,1438.599976,cleaned + denoise + boost,78,0
+45,1438.599976,native 448,28,0
+45,1438.599976,native 448 + cleaned,107,0
+45,1438.599976,native 448 + cleaned + denoise + boost,99,0
+47,1300.800049,base,31,3
+47,1300.800049,cleaned,12,3
+47,1300.800049,cleaned + denoise + boost,11,0
+47,1300.800049,native 448,26,0
+47,1300.800049,native 448 + cleaned,38,0
+47,1300.800049,native 448 + cleaned + denoise + boost,29,0
+49,1858.199951,base,0,0
+49,1858.199951,cleaned,3,0
+49,1858.199951,cleaned + denoise + boost,0,0
+49,1858.199951,native 448,0,0
+49,1858.199951,native 448 + cleaned,0,0
+49,1858.199951,native 448 + cleaned + denoise + boost,0,0
+53,1512.5,base,0,0
+53,1512.5,cleaned,0,0
+53,1512.5,cleaned + denoise + boost,0,0
+53,1512.5,native 448,0,0
+53,1512.5,native 448 + cleaned,0,0
+53,1512.5,native 448 + cleaned + denoise + boost,0,0
+55,2016.199951,base,0,0
+55,2016.199951,cleaned,0,0
+55,2016.199951,cleaned + denoise + boost,0,0
+55,2016.199951,native 448,0,0
+55,2016.199951,native 448 + cleaned,0,0
+55,2016.199951,native 448 + cleaned + denoise + boost,0,0
+56,1071.599976,base,0,0
+56,1071.599976,cleaned,4,0
+56,1071.599976,cleaned + denoise + boost,3,0
+56,1071.599976,native 448,0,0
+56,1071.599976,native 448 + cleaned,15,0
+56,1071.599976,native 448 + cleaned + denoise + boost,12,0
+57,1362.5,base,0,0
+57,1362.5,cleaned,0,0
+57,1362.5,cleaned + denoise + boost,0,0
+57,1362.5,native 448,4,0
+57,1362.5,native 448 + cleaned,2,0
+57,1362.5,native 448 + cleaned + denoise + boost,7,0
+58,1370.300049,base,18,0
+58,1370.300049,cleaned,17,0
+58,1370.300049,cleaned + denoise + boost,14,0
+58,1370.300049,native 448,19,0
+58,1370.300049,native 448 + cleaned,17,0
+58,1370.300049,native 448 + cleaned + denoise + boost,10,0
+60,1973.800049,base,9,0
+60,1973.800049,cleaned,10,0
+60,1973.800049,cleaned + denoise + boost,6,0
+60,1973.800049,native 448,5,0
+60,1973.800049,native 448 + cleaned,16,0
+60,1973.800049,native 448 + cleaned + denoise + boost,15,0
+64,1136.800049,base,26,0
+64,1136.800049,cleaned,50,0
+64,1136.800049,cleaned + denoise + boost,46,0
+64,1136.800049,native 448,19,0
+64,1136.800049,native 448 + cleaned,103,0
+64,1136.800049,native 448 + cleaned + denoise + boost,79,0
+67,1815.199951,base,0,0
+67,1815.199951,cleaned,0,0
+67,1815.199951,cleaned + denoise + boost,0,0
+67,1815.199951,native 448,0,0
+67,1815.199951,native 448 + cleaned,0,0
+67,1815.199951,native 448 + cleaned + denoise + boost,0,0
+71,2015.199951,base,0,0
+71,2015.199951,cleaned,0,0
+71,2015.199951,cleaned + denoise + boost,0,0
+71,2015.199951,native 448,0,0
+71,2015.199951,native 448 + cleaned,0,0
+71,2015.199951,native 448 + cleaned + denoise + boost,0,0
+72,1002.400024,base,39,0
+72,1002.400024,cleaned,63,0
+72,1002.400024,cleaned + denoise + boost,48,0
+72,1002.400024,native 448,20,0
+72,1002.400024,native 448 + cleaned,108,0
+72,1002.400024,native 448 + cleaned + denoise + boost,72,0
+74,1268.300049,base,5,0
+74,1268.300049,cleaned,9,0
+74,1268.300049,cleaned + denoise + boost,7,0
+74,1268.300049,native 448,0,0
+74,1268.300049,native 448 + cleaned,5,0
+74,1268.300049,native 448 + cleaned + denoise + boost,3,0
+75,1861.800049,base,0,0
+75,1861.800049,cleaned,0,0
+75,1861.800049,cleaned + denoise + boost,0,0
+75,1861.800049,native 448,0,0
+75,1861.800049,native 448 + cleaned,0,0
+75,1861.800049,native 448 + cleaned + denoise + boost,0,0
+83,831.400024,base,202,2
+83,831.400024,cleaned,178,3
+83,831.400024,cleaned + denoise + boost,131,3
+83,831.400024,native 448,185,0
+83,831.400024,native 448 + cleaned,197,0
+83,831.400024,native 448 + cleaned + denoise + boost,141,0
+84,2009.0,base,5,0
+84,2009.0,cleaned,14,0
+84,2009.0,cleaned + denoise + boost,8,0
+84,2009.0,native 448,0,0
+84,2009.0,native 448 + cleaned,0,0
+84,2009.0,native 448 + cleaned + denoise + boost,0,0
+85,1070.400024,base,0,0
+85,1070.400024,cleaned,4,0
+85,1070.400024,cleaned + denoise + boost,6,0
+85,1070.400024,native 448,0,0
+85,1070.400024,native 448 + cleaned,4,0
+85,1070.400024,native 448 + cleaned + denoise + boost,0,0
+87,1067.900024,base,56,0
+87,1067.900024,cleaned,91,0
+87,1067.900024,cleaned + denoise + boost,79,0
+87,1067.900024,native 448,24,0
+87,1067.900024,native 448 + cleaned,83,0
+87,1067.900024,native 448 + cleaned + denoise + boost,73,0
+88,1386.400024,base,5,0
+88,1386.400024,cleaned,9,0
+88,1386.400024,cleaned + denoise + boost,7,0
+88,1386.400024,native 448,5,0
+88,1386.400024,native 448 + cleaned,20,0
+88,1386.400024,native 448 + cleaned + denoise + boost,27,0
+91,2000.099976,base,0,0
+91,2000.099976,cleaned,4,0
+91,2000.099976,cleaned + denoise + boost,0,0
+91,2000.099976,native 448,0,0
+91,2000.099976,native 448 + cleaned,0,0
+91,2000.099976,native 448 + cleaned + denoise + boost,0,0
+93,899.200012,base,9,0
+93,899.200012,cleaned,0,5
+93,899.200012,cleaned + denoise + boost,0,0
+93,899.200012,native 448,0,0
+93,899.200012,native 448 + cleaned,0,0
+93,899.200012,native 448 + cleaned + denoise + boost,0,0
+95,1324.900024,base,34,0
+95,1324.900024,cleaned,16,0
+95,1324.900024,cleaned + denoise + boost,13,0
+95,1324.900024,native 448,17,0
+95,1324.900024,native 448 + cleaned,37,0
+95,1324.900024,native 448 + cleaned + denoise + boost,27,0
+98,1875.0,base,0,0
+98,1875.0,cleaned,0,0
+98,1875.0,cleaned + denoise + boost,0,0
+98,1875.0,native 448,0,0
+98,1875.0,native 448 + cleaned,0,0
+98,1875.0,native 448 + cleaned + denoise + boost,0,0
+99,1531.699951,base,0,0
+99,1531.699951,cleaned,0,0
+99,1531.699951,cleaned + denoise + boost,0,0
+99,1531.699951,native 448,0,0
+99,1531.699951,native 448 + cleaned,0,0
+99,1531.699951,native 448 + cleaned + denoise + boost,0,0
+101,2015.400024,base,0,0
+101,2015.400024,cleaned,3,0
+101,2015.400024,cleaned + denoise + boost,3,0
+101,2015.400024,native 448,0,0
+101,2015.400024,native 448 + cleaned,0,0
+101,2015.400024,native 448 + cleaned + denoise + boost,0,0
+102,1224.5,base,3,0
+102,1224.5,cleaned,7,0
+102,1224.5,cleaned + denoise + boost,9,0
+102,1224.5,native 448,0,0
+102,1224.5,native 448 + cleaned,6,0
+102,1224.5,native 448 + cleaned + denoise + boost,0,0
+104,1367.300049,base,14,0
+104,1367.300049,cleaned,17,0
+104,1367.300049,cleaned + denoise + boost,15,0
+104,1367.300049,native 448,15,0
+104,1367.300049,native 448 + cleaned,21,0
+104,1367.300049,native 448 + cleaned + denoise + boost,13,0
+105,1244.699951,base,77,0
+105,1244.699951,cleaned,119,0
+105,1244.699951,cleaned + denoise + boost,106,0
+105,1244.699951,native 448,8,0
+105,1244.699951,native 448 + cleaned,80,0
+105,1244.699951,native 448 + cleaned + denoise + boost,71,0
+106,1886.199951,base,0,0
+106,1886.199951,cleaned,4,0
+106,1886.199951,cleaned + denoise + boost,5,0
+106,1886.199951,native 448,0,0
+106,1886.199951,native 448 + cleaned,3,0
+106,1886.199951,native 448 + cleaned + denoise + boost,0,0
+109,1520.199951,base,8,0
+109,1520.199951,cleaned,9,0
+109,1520.199951,cleaned + denoise + boost,9,0
+109,1520.199951,native 448,5,0
+109,1520.199951,native 448 + cleaned,37,0
+109,1520.199951,native 448 + cleaned + denoise + boost,31,0
+114,2007.5,base,7,0
+114,2007.5,cleaned,12,0
+114,2007.5,cleaned + denoise + boost,6,0
+114,2007.5,native 448,0,0
+114,2007.5,native 448 + cleaned,10,0
+114,2007.5,native 448 + cleaned + denoise + boost,10,0
+116,1634.699951,base,0,0
+116,1634.699951,cleaned,0,0
+116,1634.699951,cleaned + denoise + boost,0,0
+116,1634.699951,native 448,0,0
+116,1634.699951,native 448 + cleaned,0,0
+116,1634.699951,native 448 + cleaned + denoise + boost,0,0
+117,1085.099976,base,111,0
+117,1085.099976,cleaned,137,0
+117,1085.099976,cleaned + denoise + boost,135,0
+117,1085.099976,native 448,46,0
+117,1085.099976,native 448 + cleaned,185,0
+117,1085.099976,native 448 + cleaned + denoise + boost,154,0
+118,1434.400024,base,0,0
+118,1434.400024,cleaned,0,0
+118,1434.400024,cleaned + denoise + boost,0,0
+118,1434.400024,native 448,5,0
+118,1434.400024,native 448 + cleaned,18,0
+118,1434.400024,native 448 + cleaned + denoise + boost,25,0
+121,2011.599976,base,0,0
+121,2011.599976,cleaned,0,0
+121,2011.599976,cleaned + denoise + boost,0,0
+121,2011.599976,native 448,0,0
+121,2011.599976,native 448 + cleaned,0,0
+121,2011.599976,native 448 + cleaned + denoise + boost,0,0
+122,847.599976,base,69,0
+122,847.599976,cleaned,87,0
+122,847.599976,cleaned + denoise + boost,87,0
+122,847.599976,native 448,10,0
+122,847.599976,native 448 + cleaned,101,0
+122,847.599976,native 448 + cleaned + denoise + boost,128,0
+124,911.900024,base,0,0
+124,911.900024,cleaned,3,0
+124,911.900024,cleaned + denoise + boost,0,0
+124,911.900024,native 448,0,0
+124,911.900024,native 448 + cleaned,0,0
+124,911.900024,native 448 + cleaned + denoise + boost,0,0
+125,1231.099976,base,8,0
+125,1231.099976,cleaned,10,2
+125,1231.099976,cleaned + denoise + boost,6,0
+125,1231.099976,native 448,13,0
+125,1231.099976,native 448 + cleaned,18,0
+125,1231.099976,native 448 + cleaned + denoise + boost,15,0
+127,1015.200012,base,165,0
+127,1015.200012,cleaned,161,0
+127,1015.200012,cleaned + denoise + boost,140,0
+127,1015.200012,native 448,387,0
+127,1015.200012,native 448 + cleaned,360,0
+127,1015.200012,native 448 + cleaned + denoise + boost,238,0
+128,2015.900024,base,0,0
+128,2015.900024,cleaned,0,0
+128,2015.900024,cleaned + denoise + boost,0,0
+128,2015.900024,native 448,0,0
+128,2015.900024,native 448 + cleaned,0,0
+128,2015.900024,native 448 + cleaned + denoise + boost,0,0
+131,1514.5,base,0,0
+131,1514.5,cleaned,5,0
+131,1514.5,cleaned + denoise + boost,5,0
+131,1514.5,native 448,0,0
+131,1514.5,native 448 + cleaned,10,0
+131,1514.5,native 448 + cleaned + denoise + boost,12,0
+135,1348.699951,base,0,0
+135,1348.699951,cleaned,3,0
+135,1348.699951,cleaned + denoise + boost,0,0
+135,1348.699951,native 448,0,0
+135,1348.699951,native 448 + cleaned,3,0
+135,1348.699951,native 448 + cleaned + denoise + boost,0,0
+136,1075.099976,base,10,2
+136,1075.099976,cleaned,20,0
+136,1075.099976,cleaned + denoise + boost,20,0
+136,1075.099976,native 448,0,0
+136,1075.099976,native 448 + cleaned,20,0
+136,1075.099976,native 448 + cleaned + denoise + boost,19,0
+137,1375.800049,base,6,0
+137,1375.800049,cleaned,0,0
+137,1375.800049,cleaned + denoise + boost,0,0
+137,1375.800049,native 448,13,0
+137,1375.800049,native 448 + cleaned,8,0
+137,1375.800049,native 448 + cleaned + denoise + boost,6,0
+146,1503.599976,base,9,0
+146,1503.599976,cleaned,9,3
+146,1503.599976,cleaned + denoise + boost,9,3
+146,1503.599976,native 448,10,0
+146,1503.599976,native 448 + cleaned,33,0
+146,1503.599976,native 448 + cleaned + denoise + boost,30,0
+149,1858.800049,base,0,0
+149,1858.800049,cleaned,0,0
+149,1858.800049,cleaned + denoise + boost,0,0
+149,1858.800049,native 448,0,0
+149,1858.800049,native 448 + cleaned,0,0
+149,1858.800049,native 448 + cleaned + denoise + boost,0,4
+152,1536.0,base,0,0
+152,1536.0,cleaned,0,0
+152,1536.0,cleaned + denoise + boost,0,0
+152,1536.0,native 448,0,0
+152,1536.0,native 448 + cleaned,25,0
+152,1536.0,native 448 + cleaned + denoise + boost,17,3
+155,2015.300049,base,0,0
+155,2015.300049,cleaned,3,0
+155,2015.300049,cleaned + denoise + boost,0,0
+155,2015.300049,native 448,0,0
+155,2015.300049,native 448 + cleaned,0,0
+155,2015.300049,native 448 + cleaned + denoise + boost,0,0
+156,1014.799988,base,134,0
+156,1014.799988,cleaned,161,3
+156,1014.799988,cleaned + denoise + boost,154,3
+156,1014.799988,native 448,64,0
+156,1014.799988,native 448 + cleaned,237,0
+156,1014.799988,native 448 + cleaned + denoise + boost,176,0
+157,1062.900024,base,3,0
+157,1062.900024,cleaned,5,0
+157,1062.900024,cleaned + denoise + boost,4,0
+157,1062.900024,native 448,0,0
+157,1062.900024,native 448 + cleaned,0,0
+157,1062.900024,native 448 + cleaned + denoise + boost,0,0
+159,1273.800049,base,18,0
+159,1273.800049,cleaned,19,2
+159,1273.800049,cleaned + denoise + boost,13,0
+159,1273.800049,native 448,0,0
+159,1273.800049,native 448 + cleaned,12,0
+159,1273.800049,native 448 + cleaned + denoise + boost,7,0
+160,1871.900024,base,0,0
+160,1871.900024,cleaned,0,0
+160,1871.900024,cleaned + denoise + boost,0,0
+160,1871.900024,native 448,0,0
+160,1871.900024,native 448 + cleaned,0,0
+160,1871.900024,native 448 + cleaned + denoise + boost,0,0
+165,1509.199951,base,20,0
+165,1509.199951,cleaned,26,0
+165,1509.199951,cleaned + denoise + boost,30,0
+165,1509.199951,native 448,25,0
+165,1509.199951,native 448 + cleaned,86,0
+165,1509.199951,native 448 + cleaned + denoise + boost,84,0
+167,1083.5,base,0,0
+167,1083.5,cleaned,0,0
+167,1083.5,cleaned + denoise + boost,0,0
+167,1083.5,native 448,0,0
+167,1083.5,native 448 + cleaned,0,0
+167,1083.5,native 448 + cleaned + denoise + boost,0,0
+169,1396.099976,base,0,0
+169,1396.099976,cleaned,0,0
+169,1396.099976,cleaned + denoise + boost,0,0
+169,1396.099976,native 448,8,0
+169,1396.099976,native 448 + cleaned,21,0
+169,1396.099976,native 448 + cleaned + denoise + boost,17,0
+173,2009.199951,base,0,0
+173,2009.199951,cleaned,0,0
+173,2009.199951,cleaned + denoise + boost,0,0
+173,2009.199951,native 448,0,0
+173,2009.199951,native 448 + cleaned,0,0
+173,2009.199951,native 448 + cleaned + denoise + boost,0,0
+176,1441.0,base,69,0
+176,1441.0,cleaned,61,3
+176,1441.0,cleaned + denoise + boost,66,3
+176,1441.0,native 448,31,0
+176,1441.0,native 448 + cleaned,128,0
+176,1441.0,native 448 + cleaned + denoise + boost,115,0
+178,1307.5,base,36,3
+178,1307.5,cleaned,13,0
+178,1307.5,cleaned + denoise + boost,11,0
+178,1307.5,native 448,20,0
+178,1307.5,native 448 + cleaned,42,0
+178,1307.5,native 448 + cleaned + denoise + boost,23,0
+182,2016.400024,base,0,0
+182,2016.400024,cleaned,0,0
+182,2016.400024,cleaned + denoise + boost,0,0
+182,2016.400024,native 448,0,0
+182,2016.400024,native 448 + cleaned,0,0
+182,2016.400024,native 448 + cleaned + denoise + boost,0,0
+183,1062.5,base,0,0
+183,1062.5,cleaned,0,4
+183,1062.5,cleaned + denoise + boost,2,6
+183,1062.5,native 448,0,0
+183,1062.5,native 448 + cleaned,2,0
+183,1062.5,native 448 + cleaned + denoise + boost,2,0
+185,1299.300049,base,0,0
+185,1299.300049,cleaned,3,0
+185,1299.300049,cleaned + denoise + boost,0,0
+185,1299.300049,native 448,0,0
+185,1299.300049,native 448 + cleaned,0,0
+185,1299.300049,native 448 + cleaned + denoise + boost,0,0
+186,1369.400024,base,19,0
+186,1369.400024,cleaned,18,0
+186,1369.400024,cleaned + denoise + boost,13,0
+186,1369.400024,native 448,15,0
+186,1369.400024,native 448 + cleaned,13,0
+186,1369.400024,native 448 + cleaned + denoise + boost,6,0
+191,1136.099976,base,13,0
+191,1136.099976,cleaned,44,0
+191,1136.099976,cleaned + denoise + boost,35,3
+191,1136.099976,native 448,19,0
+191,1136.099976,native 448 + cleaned,83,0
+191,1136.099976,native 448 + cleaned + denoise + boost,64,0
+192,1788.599976,base,4,0
+192,1788.599976,cleaned,0,0
+192,1788.599976,cleaned + denoise + boost,0,0
+192,1788.599976,native 448,6,0
+192,1788.599976,native 448 + cleaned,4,0
+192,1788.599976,native 448 + cleaned + denoise + boost,0,0
+195,2015.199951,base,0,0
+195,2015.199951,cleaned,0,0
+195,2015.199951,cleaned + denoise + boost,2,0
+195,2015.199951,native 448,0,0
+195,2015.199951,native 448 + cleaned,0,0
+195,2015.199951,native 448 + cleaned + denoise + boost,0,0
+196,906.299988,base,66,0
+196,906.299988,cleaned,99,0
+196,906.299988,cleaned + denoise + boost,74,0
+196,906.299988,native 448,0,0
+196,906.299988,native 448 + cleaned,50,0
+196,906.299988,native 448 + cleaned + denoise + boost,42,0
+197,985.700012,base,4,0
+197,985.700012,cleaned,8,0
+197,985.700012,cleaned + denoise + boost,8,0
+197,985.700012,native 448,0,0
+197,985.700012,native 448 + cleaned,0,0
+197,985.700012,native 448 + cleaned + denoise + boost,0,0
+199,1266.0,base,6,0
+199,1266.0,cleaned,9,0
+199,1266.0,cleaned + denoise + boost,6,0
+199,1266.0,native 448,0,0
+199,1266.0,native 448 + cleaned,8,0
+199,1266.0,native 448 + cleaned + denoise + boost,4,0
+200,1854.300049,base,0,0
+200,1854.300049,cleaned,0,0
+200,1854.300049,cleaned + denoise + boost,0,0
+200,1854.300049,native 448,0,0
+200,1854.300049,native 448 + cleaned,0,0
+200,1854.300049,native 448 + cleaned + denoise + boost,0,0
+205,1511.199951,base,0,0
+205,1511.199951,cleaned,5,0
+205,1511.199951,cleaned + denoise + boost,6,0
+205,1511.199951,native 448,0,0
+205,1511.199951,native 448 + cleaned,31,3
+205,1511.199951,native 448 + cleaned + denoise + boost,33,0
+209,2014.900024,base,0,0
+209,2014.900024,cleaned,0,0
+209,2014.900024,cleaned + denoise + boost,0,0
+209,2014.900024,native 448,0,0
+209,2014.900024,native 448 + cleaned,0,0
+209,2014.900024,native 448 + cleaned + denoise + boost,0,0
+210,1073.400024,base,0,0
+210,1073.400024,cleaned,3,3
+210,1073.400024,cleaned + denoise + boost,0,0
+210,1073.400024,native 448,3,0
+210,1073.400024,native 448 + cleaned,14,0
+210,1073.400024,native 448 + cleaned + denoise + boost,11,0
+211,1418.5,base,3,0
+211,1418.5,cleaned,0,0
+211,1418.5,cleaned + denoise + boost,0,0
+211,1418.5,native 448,0,0
+211,1418.5,native 448 + cleaned,0,0
+211,1418.5,native 448 + cleaned + denoise + boost,0,0
+212,1074.099976,base,59,0
+212,1074.099976,cleaned,91,0
+212,1074.099976,cleaned + denoise + boost,94,0
+212,1074.099976,native 448,22,0
+212,1074.099976,native 448 + cleaned,105,0
+212,1074.099976,native 448 + cleaned + denoise + boost,83,0
+213,1379.800049,base,7,0
+213,1379.800049,cleaned,11,0
+213,1379.800049,cleaned + denoise + boost,9,0
+213,1379.800049,native 448,8,0
+213,1379.800049,native 448 + cleaned,13,0
+213,1379.800049,native 448 + cleaned + denoise + boost,9,0
+217,2000.199951,base,0,0
+217,2000.199951,cleaned,2,0
+217,2000.199951,cleaned + denoise + boost,0,0
+217,2000.199951,native 448,0,0
+217,2000.199951,native 448 + cleaned,0,0
+217,2000.199951,native 448 + cleaned + denoise + boost,0,0
+220,1330.699951,base,36,3
+220,1330.699951,cleaned,13,4
+220,1330.699951,cleaned + denoise + boost,11,0
+220,1330.699951,native 448,10,0
+220,1330.699951,native 448 + cleaned,20,0
+220,1330.699951,native 448 + cleaned + denoise + boost,16,0
+225,2015.400024,base,0,0
+225,2015.400024,cleaned,0,0
+225,2015.400024,cleaned + denoise + boost,0,0
+225,2015.400024,native 448,0,0
+225,2015.400024,native 448 + cleaned,0,0
+225,2015.400024,native 448 + cleaned + denoise + boost,0,0
+226,1206.699951,base,5,0
+226,1206.699951,cleaned,0,0
+226,1206.699951,cleaned + denoise + boost,0,0
+226,1206.699951,native 448,0,0
+226,1206.699951,native 448 + cleaned,0,0
+226,1206.699951,native 448 + cleaned + denoise + boost,0,0
+228,1348.800049,base,20,0
+228,1348.800049,cleaned,24,0
+228,1348.800049,cleaned + denoise + boost,16,0
+228,1348.800049,native 448,0,0
+228,1348.800049,native 448 + cleaned,6,0
+228,1348.800049,native 448 + cleaned + denoise + boost,4,0
+229,1252.099976,base,79,0
+229,1252.099976,cleaned,122,0
+229,1252.099976,cleaned + denoise + boost,112,0
+229,1252.099976,native 448,4,0
+229,1252.099976,native 448 + cleaned,70,0
+229,1252.099976,native 448 + cleaned + denoise + boost,48,0
+230,1878.599976,base,0,0
+230,1878.599976,cleaned,3,0
+230,1878.599976,cleaned + denoise + boost,0,0
+230,1878.599976,native 448,0,0
+230,1878.599976,native 448 + cleaned,0,0
+230,1878.599976,native 448 + cleaned + denoise + boost,0,0
+235,1521.800049,base,10,0
+235,1521.800049,cleaned,23,2
+235,1521.800049,cleaned + denoise + boost,21,0
+235,1521.800049,native 448,4,0
+235,1521.800049,native 448 + cleaned,48,0
+235,1521.800049,native 448 + cleaned + denoise + boost,37,0
+240,1422.0,base,0,0
+240,1422.0,cleaned,3,0
+240,1422.0,cleaned + denoise + boost,4,0
+240,1422.0,native 448,0,0
+240,1422.0,native 448 + cleaned,3,0
+240,1422.0,native 448 + cleaned + denoise + boost,0,0
+241,1083.300049,base,139,0
+241,1083.300049,cleaned,164,2
+241,1083.300049,cleaned + denoise + boost,156,0
+241,1083.300049,native 448,68,0
+241,1083.300049,native 448 + cleaned,203,0
+241,1083.300049,native 448 + cleaned + denoise + boost,180,0
+242,1403.900024,base,4,0
+242,1403.900024,cleaned,6,0
+242,1403.900024,cleaned + denoise + boost,8,0
+242,1403.900024,native 448,4,0
+242,1403.900024,native 448 + cleaned,16,0
+242,1403.900024,native 448 + cleaned + denoise + boost,16,0
+243,2011.400024,base,0,0
+243,2011.400024,cleaned,0,0
+243,2011.400024,cleaned + denoise + boost,0,0
+243,2011.400024,native 448,0,0
+243,2011.400024,native 448 + cleaned,0,0
+243,2011.400024,native 448 + cleaned + denoise + boost,0,0
+247,906.5,base,10,0
+247,906.5,cleaned,0,0
+247,906.5,cleaned + denoise + boost,0,0
+247,906.5,native 448,0,0
+247,906.5,native 448 + cleaned,0,0
+247,906.5,native 448 + cleaned + denoise + boost,0,0
+248,1404.400024,base,75,0
+248,1404.400024,cleaned,58,0
+248,1404.400024,cleaned + denoise + boost,68,0
+248,1404.400024,native 448,28,0
+248,1404.400024,native 448 + cleaned,120,0
+248,1404.400024,native 448 + cleaned + denoise + boost,112,0
+249,1857.5,base,0,0
+249,1857.5,cleaned,0,0
+249,1857.5,cleaned + denoise + boost,0,0
+249,1857.5,native 448,0,0
+249,1857.5,native 448 + cleaned,0,0
+249,1857.5,native 448 + cleaned + denoise + boost,0,0
+251,1296.699951,base,60,3
+251,1296.699951,cleaned,29,0
+251,1296.699951,cleaned + denoise + boost,28,0
+251,1296.699951,native 448,27,0
+251,1296.699951,native 448 + cleaned,34,0
+251,1296.699951,native 448 + cleaned + denoise + boost,25,0
+254,1510.900024,base,0,0
+254,1510.900024,cleaned,0,0
+254,1510.900024,cleaned + denoise + boost,0,0
+254,1510.900024,native 448,0,0
+254,1510.900024,native 448 + cleaned,0,0
+254,1510.900024,native 448 + cleaned + denoise + boost,0,0
+257,2016.0,base,0,0
+257,2016.0,cleaned,0,0
+257,2016.0,cleaned + denoise + boost,0,0
+257,2016.0,native 448,0,0
+257,2016.0,native 448 + cleaned,0,0
+257,2016.0,native 448 + cleaned + denoise + boost,0,0
+258,1073.800049,base,8,0
+258,1073.800049,cleaned,9,0
+258,1073.800049,cleaned + denoise + boost,6,0
+258,1073.800049,native 448,5,0
+258,1073.800049,native 448 + cleaned,35,0
+258,1073.800049,native 448 + cleaned + denoise + boost,19,0
+259,1350.800049,base,0,0
+259,1350.800049,cleaned,0,0
+259,1350.800049,cleaned + denoise + boost,0,0
+259,1350.800049,native 448,0,0
+259,1350.800049,native 448 + cleaned,0,0
+259,1350.800049,native 448 + cleaned + denoise + boost,0,0
+260,1374.300049,base,13,0
+260,1374.300049,cleaned,8,0
+260,1374.300049,cleaned + denoise + boost,8,0
+260,1374.300049,native 448,9,0
+260,1374.300049,native 448 + cleaned,11,0
+260,1374.300049,native 448 + cleaned + denoise + boost,5,0
+265,1973.800049,base,10,0
+265,1973.800049,cleaned,5,0
+265,1973.800049,cleaned + denoise + boost,3,0
+265,1973.800049,native 448,0,0
+265,1973.800049,native 448 + cleaned,13,0
+265,1973.800049,native 448 + cleaned + denoise + boost,6,0
+270,1156.300049,base,60,0
+270,1156.300049,cleaned,65,0
+270,1156.300049,cleaned + denoise + boost,63,0
+270,1156.300049,native 448,33,0
+270,1156.300049,native 448 + cleaned,111,0
+270,1156.300049,native 448 + cleaned + denoise + boost,106,0
+277,2015.199951,base,0,0
+277,2015.199951,cleaned,0,0
+277,2015.199951,cleaned + denoise + boost,0,0
+277,2015.199951,native 448,0,0
+277,2015.199951,native 448 + cleaned,0,0
+277,2015.199951,native 448 + cleaned + denoise + boost,0,0
+278,1009.400024,base,99,0
+278,1009.400024,cleaned,113,0
+278,1009.400024,cleaned + denoise + boost,99,0
+278,1009.400024,native 448,58,0
+278,1009.400024,native 448 + cleaned,175,0
+278,1009.400024,native 448 + cleaned + denoise + boost,118,0
+280,1271.199951,base,16,0
+280,1271.199951,cleaned,18,0
+280,1271.199951,cleaned + denoise + boost,10,0
+280,1271.199951,native 448,3,0
+280,1271.199951,native 448 + cleaned,20,0
+280,1271.199951,native 448 + cleaned + denoise + boost,11,0
+281,1864.199951,base,0,0
+281,1864.199951,cleaned,0,0
+281,1864.199951,cleaned + denoise + boost,2,0
+281,1864.199951,native 448,0,0
+281,1864.199951,native 448 + cleaned,0,0
+281,1864.199951,native 448 + cleaned + denoise + boost,0,0
+286,1509.199951,base,25,0
+286,1509.199951,cleaned,22,3
+286,1509.199951,cleaned + denoise + boost,23,0
+286,1509.199951,native 448,8,0
+286,1509.199951,native 448 + cleaned,73,0
+286,1509.199951,native 448 + cleaned + denoise + boost,71,0
+288,816.200012,base,200,0
+288,816.200012,cleaned,168,3
+288,816.200012,cleaned + denoise + boost,146,0
+288,816.200012,native 448,152,0
+288,816.200012,native 448 + cleaned,155,0
+288,816.200012,native 448 + cleaned + denoise + boost,104,0
+290,1077.5,base,0,0
+290,1077.5,cleaned,4,2
+290,1077.5,cleaned + denoise + boost,0,0
+290,1077.5,native 448,0,0
+290,1077.5,native 448 + cleaned,0,0
+290,1077.5,native 448 + cleaned + denoise + boost,0,0
+293,1387.900024,base,8,0
+293,1387.900024,cleaned,11,0
+293,1387.900024,cleaned + denoise + boost,11,0
+293,1387.900024,native 448,0,0
+293,1387.900024,native 448 + cleaned,22,0
+293,1387.900024,native 448 + cleaned + denoise + boost,16,0
+298,1313.300049,base,33,0
+298,1313.300049,cleaned,13,0
+298,1313.300049,cleaned + denoise + boost,14,0
+298,1313.300049,native 448,11,0
+298,1313.300049,native 448 + cleaned,21,0
+298,1313.300049,native 448 + cleaned + denoise + boost,17,0
+299,1857.800049,base,0,0
+299,1857.800049,cleaned,0,0
+299,1857.800049,cleaned + denoise + boost,0,0
+299,1857.800049,native 448,0,0
+299,1857.800049,native 448 + cleaned,0,0
+299,1857.800049,native 448 + cleaned + denoise + boost,0,0
+300,2016.599976,base,0,0
+300,2016.599976,cleaned,0,0
+300,2016.599976,cleaned + denoise + boost,0,0
+300,2016.599976,native 448,0,0
+300,2016.599976,native 448 + cleaned,0,0
+300,2016.599976,native 448 + cleaned + denoise + boost,0,0
+301,1059.199951,base,0,0
+301,1059.199951,cleaned,0,0
+301,1059.199951,cleaned + denoise + boost,0,0
+301,1059.199951,native 448,0,0
+301,1059.199951,native 448 + cleaned,0,0
+301,1059.199951,native 448 + cleaned + denoise + boost,0,0
+303,1295.599976,base,4,0
+303,1295.599976,cleaned,4,3
+303,1295.599976,cleaned + denoise + boost,0,0
+303,1295.599976,native 448,4,0
+303,1295.599976,native 448 + cleaned,0,0
+303,1295.599976,native 448 + cleaned + denoise + boost,0,0
+304,1238.400024,base,61,0
+304,1238.400024,cleaned,78,0
+304,1238.400024,cleaned + denoise + boost,83,0
+304,1238.400024,native 448,6,0
+304,1238.400024,native 448 + cleaned,71,0
+304,1238.400024,native 448 + cleaned + denoise + boost,51,0
+305,1368.400024,base,11,0
+305,1368.400024,cleaned,17,0
+305,1368.400024,cleaned + denoise + boost,17,0
+305,1368.400024,native 448,13,0
+305,1368.400024,native 448 + cleaned,8,0
+305,1368.400024,native 448 + cleaned + denoise + boost,6,0
+311,1085.900024,base,121,0
+311,1085.900024,cleaned,142,0
+311,1085.900024,cleaned + denoise + boost,133,3
+311,1085.900024,native 448,43,0
+311,1085.900024,native 448 + cleaned,176,3
+311,1085.900024,native 448 + cleaned + denoise + boost,135,0
+312,1686.5,base,0,0
+312,1686.5,cleaned,0,0
+312,1686.5,cleaned + denoise + boost,0,0
+312,1686.5,native 448,0,0
+312,1686.5,native 448 + cleaned,0,0
+312,1686.5,native 448 + cleaned + denoise + boost,0,0
+315,2011.699951,base,0,0
+315,2011.699951,cleaned,0,0
+315,2011.699951,cleaned + denoise + boost,0,0
+315,2011.699951,native 448,0,0
+315,2011.699951,native 448 + cleaned,0,0
+315,2011.699951,native 448 + cleaned + denoise + boost,0,0
+317,901.0,base,84,0
+317,901.0,cleaned,108,0
+317,901.0,cleaned + denoise + boost,100,0
+317,901.0,native 448,10,0
+317,901.0,native 448 + cleaned,78,0
+317,901.0,native 448 + cleaned + denoise + boost,64,0
+318,912.799988,base,3,0
+318,912.799988,cleaned,0,0
+318,912.799988,cleaned + denoise + boost,0,0
+318,912.799988,native 448,0,0
+318,912.799988,native 448 + cleaned,0,0
+318,912.799988,native 448 + cleaned + denoise + boost,0,0
+320,1237.900024,base,4,0
+320,1237.900024,cleaned,15,0
+320,1237.900024,cleaned + denoise + boost,8,0
+320,1237.900024,native 448,0,0
+320,1237.900024,native 448 + cleaned,0,0
+320,1237.900024,native 448 + cleaned + denoise + boost,6,0
+325,1514.199951,base,5,0
+325,1514.199951,cleaned,0,0
+325,1514.199951,cleaned + denoise + boost,0,0
+325,1514.199951,native 448,0,0
+325,1514.199951,native 448 + cleaned,9,0
+325,1514.199951,native 448 + cleaned + denoise + boost,9,0
+329,2015.400024,base,0,0
+329,2015.400024,cleaned,0,0
+329,2015.400024,cleaned + denoise + boost,0,0
+329,2015.400024,native 448,0,0
+329,2015.400024,native 448 + cleaned,0,4
+329,2015.400024,native 448 + cleaned + denoise + boost,0,0
+331,1073.699951,base,0,0
+331,1073.699951,cleaned,7,0
+331,1073.699951,cleaned + denoise + boost,4,0
+331,1073.699951,native 448,0,0
+331,1073.699951,native 448 + cleaned,17,0
+331,1073.699951,native 448 + cleaned + denoise + boost,10,0

@@ -1,0 +1,7 @@
+variant,development_frames,true_at_least8,true_at_least8_percent,wrong_tile_at_least8
+base,142,57,40.140845070422536,0
+cleaned,142,62,43.66197183098591,0
+cleaned + denoise + boost,142,59,41.54929577464789,0
+native 448,142,44,30.985915492957744,0
+native 448 + cleaned,142,72,50.70422535211267,0
+native 448 + cleaned + denoise + boost,142,64,45.07042253521127,0

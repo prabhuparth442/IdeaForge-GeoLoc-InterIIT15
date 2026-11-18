@@ -1,0 +1,12 @@
+{
+  "current_score60": 39.75903614457831,
+  "current_wrong_beyond8sigma": 0,
+  "target_score60": 50.0,
+  "raw_points_needed_for_target": 566.6666666666665,
+  "perfect_skips_current_answers_unchanged": 48.433734939759034,
+  "perfect_precision_existing_answers_only": 51.325301204819276,
+  "truth_picked_best_of_four_score60": 43.355421686746986,
+  "never_answered_by_any_variant": 32,
+  "has_full_point_option_in_any_variant": 173,
+  "illustration_24_perfect_skips_plus_84_six_to_ten": 50.16867469879518
+}

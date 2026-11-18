@@ -1,0 +1,34 @@
+[
+  {
+    "data": "highalt_dev332",
+    "group": "all",
+    "n": 332,
+    "accepted": 144,
+    "wrong": 0,
+    "share": 0.43373493975903615
+  },
+  {
+    "data": "highalt_dev332",
+    "group": "height>=800",
+    "n": 142,
+    "accepted": 13,
+    "wrong": 0,
+    "share": 0.09154929577464789
+  },
+  {
+    "data": "official150",
+    "group": "all",
+    "n": 150,
+    "accepted": 9,
+    "wrong": 0,
+    "share": 0.06
+  },
+  {
+    "data": "nudt150",
+    "group": "all",
+    "n": 150,
+    "accepted": 50,
+    "wrong": 0,
+    "share": 0.3333333333333333
+  }
+]

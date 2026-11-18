@@ -10,6 +10,9 @@ dataset/
 │   └── 268234921/BAND.tif                       scene B, reaches only the south of them (11.7 GB)
 ├── small_sat_area/                     NOT IN GIT, 2.5 GB   the old base map
 │   └── PNEO3_acq20260114_dela3b31007.tif        (any single .tif in this folder is used)
+├── Dataset_Official_3/                 NOT IN GIT, 17 GB   the NEW high-altitude set (Rajasthan, 500 photos, 100-2017 m): HARD LINKS to ../Code_Testing/dataset/Dataset_Official_3 (no extra disk space)
+│   ├── d1.zip, d1/images/                       500 photos + metadata (332 working / 168 locked test: tests/Test_Iteration_12/results/highalt_split.csv)
+│   └── sat_imagery/*.zip                        4 satellite scenes, 4.3-4.7 GB each; extracted map, store and photo folders are on the GPU server only
 └── NUDT/                               NOT IN GIT
     ├── checkpoint/                              model weights, 2.6 GB (needed for every run)
     │   ├── MINIMA/   minima_lightglue.pth, minima_loftr.ckpt, minima_roma.pth, minima_eloftr.ckpt, minima_xoftr.ckpt

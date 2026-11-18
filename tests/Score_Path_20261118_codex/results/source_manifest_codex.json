@@ -1,0 +1,10 @@
+{
+  "tests/Test_Iteration_12/results/native_fine/metadata_dev332.csv": "90571947b89299988a6050352e0cea0c08a56338e733be32afc34d7b20731770",
+  "tests/Test_Iteration_12/results/highalt_split.csv": "46c5235294e131cf06f5ee1ded02a180380b39bdc4bed52b852c51f1d8d0a03f",
+  "tests/Test_Iteration_12/results/native_fine/details_base.csv": "bea10ccbd7e3db8e952a09274232e5e592ae319a67f2a2b5a0698ad9b46deb6e",
+  "tests/Test_Iteration_12/results/native_fine/details_native800.csv": "632b94627acbac51d4405b92b40621d0cba1a0ac26f4988ac872b3f93b22b1c1",
+  "tests/Test_Iteration_12/results/native_fine/details_xoftr800.csv": "ab93581d0c4b37a155160a7e34c9f5e7856758bd89ad5cf05c270331b27903db",
+  "tests/Test_Iteration_12/results/native_fine/details_xoftr800_native800.csv": "901121ef453059def0600e0447aea5f45fdcfc812b18f5c50869455e7e713b1f",
+  "tests/Test_Iteration_12/results/stageeval/tables_highalt_dev332/headings_per_photo_per_variant_official_highalt_dev332_edge_zncc_headings9_scales3_K50_M10.csv": "ee3e968f48b224ace4e50f126fcb3f06143181af3ddde50c5ff0e728f01e3655",
+  "analysis_block": "578b7ad3333c61e213ec0c55300d5c56b1d0c8344b6c353bcebba5b0461e7e61"
+}

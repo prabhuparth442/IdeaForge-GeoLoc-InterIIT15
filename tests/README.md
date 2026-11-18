@@ -2,6 +2,9 @@
 
 | folder | what | how to run |
 |---|---|---|
+| `Score_Path_20261118_codex/` | current XoFTR development losses by height and map level, counterfactual path to 50+, old-stage diagnostic checks and generalization plan; no fitting/new inference/test-result access | `REPORT_codex.md`, `Score_Path_Analysis_executed_codex.ipynb` |
+| `LoFTR_Inputs_20261118_codex/` | actual LoFTR input reconstruction and visual inspection: original frames, blur, 224 inputs, finer direct 448 inputs, cleaning, source cropping and existing Iteration 34 re-score; development only, no model fitting or production edits | `LoFTR_Input_Inspection_executed_codex.ipynb`, `REPORT_codex.md` |
+| `Review_Highalt_20261118_codex/` | independent review of the new dataset: development images, failure stages by height, resolution calculations and saved-result re-scores; no new model fitting or locked-test evaluation | `Highalt_Review_executed_codex.ipynb`, `REPORT_codex.md` |
 | `pipeline/` | unit tests of the pipeline in `src/` (header, image processing, coarse search, fine matching, result thresholding, evaluation, end to end) on a small synthetic world, no dataset needed. Also how to swap one function for your own. Details: `pipeline/README.md` | `python tests/pipeline/run_all.py` |
 | `train/` | tests of the `train/` building blocks: `test_fusion.py` (fusion models, training loop, `run_fusion.py`) `test_blocks.py` (feature families, map bank, candidate sets, learned features) and `test_dino_blocks.py` (DINO tokens, dense family, coarse-method contract; needs the DINOv2 weights) | `python tests/train/test_fusion.py`, `python tests/train/test_blocks.py` |
 | `Parameter_Test/` | `Parameter_Test.ipynb`: how much every hyperparameter (K, M, DINO weight, bar, gamma, rescue, LoFTR confidence, RANSAC, border, margin) moves the score, with the strategies of the analysis. It grew out of `Stage_Evaluation.ipynb`; its data (per-photo tables, sweeps, `full_runs/`) is in the same folder | open the notebook |
@@ -18,5 +21,7 @@
 | `Test_Iteration_8/`, `Test_Iteration_9/`, `Test_Iteration_10/`, `Test_Iteration_11/` | Palash's later rounds (imported 2026-11-15): honest hold-outs (T8), red team with altered photos (T9), evaluation fixes and inlier-scale robustness (T10), a judge trained on satellite imagery only (T11). Each has `README.md` and `REPORT.md` | see the folders |
 | `Test_Iteration_12/` | the high-altitude set (Rajasthan, 100-2017 m): three-set Stage_Evaluation reports, mega dump and replay, dataset similarity, Fable's truth diagnostic, vignette cleaning, GPU-server chains. `README.md` inside; state in `docs/HANDOFF_2026-11-17.md` | see its README |
 | `*_codex/` (`Review_20261113_codex`, `Decision_Ideas_20261114_codex`, `Satellite_Only_20261114_codex`, `Review_20261115_codex`, `Speed_20261115_codex`) | isolated reviews and experiments made by another tool; each folder is self-contained (`README_codex.md`, `PROTOCOL_codex.md`, `REPORT_codex.md`) and can be deleted alone without affecting anything else. `Satellite_Only_20261114_codex` is 612 MB | see each README |
+
+Every test folder now has a `README.md` (the older `Test_Iteration_*` rounds list their notebooks and results inside it). Newest experiments (coarse-stage analysis of 2026-11-17) are in `Test_Iteration_12/results/README.md`. Repo-wide map: `../REPO_MAP.md`; dated log: `../CHANGELOG.md`.
 
 Everything at once (pipeline and train tests, a few minutes): `python tests/run_all.py`.

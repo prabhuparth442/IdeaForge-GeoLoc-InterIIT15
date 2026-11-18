@@ -8,6 +8,7 @@ Everything measured on the new high-altitude photos (Rajasthan, 500 photos, 100-
 |---|---|
 | `Mega_Dump.ipynb` | writes the 143-query raw-match dump per photo (env: KIND, TAG, PHOTOS_FILE, MAX_PHOTOS), shuffled order |
 | `Mega_Replay_Figures.ipynb`, `Mega_Replay_dev60_executed.ipynb` | offline replay of those dumps: query maps, bar sweep, gamma/M, height bands, time guard (figures 1-9). A complement to Stage_Evaluation, not the report |
+| `Coarse_Confidence.ipynb`, `Coarse_Evidence.ipynb`, `Coarse_Evidence_Analysis.ipynb`, `Coarse_Averaging.ipynb`, `Coarse_Refine.ipynb`, `Coarse_Refine_Analysis.ipynb`, `Coarse_Channels.ipynb`, `Coarse_Channels_Analysis.ipynb`, `Edge_Features_By_Height.ipynb`, `Edge_Scale_Matching.ipynb`, `Photo_Tint_And_LoFTR.ipynb`, `Loftr_Map_Cleaning.ipynb`, `Loftr_Photo_Strength.ipynb`, `Headless_Native_Analysis.ipynb`, `Matchers_At_Height.ipynb`, `Synthetic_Geometry_Audit.ipynb`, `Pose_From_Matches.ipynb` | finer-level refinement of the coarse peak (28), averaging of coarse peaks (27, killed), coarse-stage confidence (iteration 25), LoFTR evidence at the coarse place (26), three-set gate analysis |
 | `Dataset_Similarity.ipynb` (+ `_executed`) | old official vs new photos: DINOv2 classifier AUC, vignette, edges, dark spots |
 | `HighAlt_Truth_Diagnostic.ipynb` | Fable's one-query truth diagnostic (coarse and LoFTR with the true place known) |
 
@@ -17,7 +18,9 @@ The main report is the repo-root `Stage_Evaluation.ipynb`, driven by `SE_*` envi
 
 | path | what |
 |---|---|
+| `README.md` | table of every results folder and which notebook made it |
 | `stageeval/` | the three Stage_Evaluation reports (102 MB) |
+| `coarse_confidence/`, `coarse_evidence/`, `coarse_averaging/`, `coarse_refine/` | the coarse-stage experiments of 2026-11-17 (iterations 25-28), data and executed analyses |
 | `figures/`, `fig*.csv` | replay figures 1-9 and their tables |
 | `similarity/` | dataset similarity figures 1-6 (fig6: dark spots against the map) |
 | `highalt_split.csv`, `highalt_dev_bands.csv` | 332 working / 168 locked test split and the per-band scores |
@@ -25,7 +28,7 @@ The main report is the repo-root `Stage_Evaluation.ipynb`, driven by `SE_*` envi
 | `server/` | replays copied back from the GPU server (interim, final, official_final, nudt, official3) |
 | `rich_dump/`, `highalt_truth_diag/`, `flat_field_look.png` | local dumps, Fable's diagnostic outputs, the vignette-removal look |
 
-## Scripts (`scripts/`)
+## Scripts (`scripts/`, own `README.md`)
 
 - `server_chains/`: the shell chains that ran on the GPU server (download, store build, dumps, Stage_Evaluation, dino, refine). They assume the server layout in the handoff doc (`/mnt/e/IdeaForge/...`).
 - `analysis/`: small analysis scripts (`band_cmp.py`, `avg_test.py`, `spots_look.py`, `ff_look.py`).

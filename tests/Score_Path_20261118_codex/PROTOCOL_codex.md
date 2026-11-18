@@ -1,0 +1,7 @@
+# Analysis protocol
+
+Analyze existing development results only: the four Iteration 35/37 headless runs, saved Stage_Evaluation diagnostics, development metadata and split labels. No locked-test result CSV or image is read. Already published test headlines may be quoted as historical evidence, never used to select a method or gate. No model training, inference, image fitting, parameter search or production edits.
+
+Use stored points as authoritative because displayed errors and sigma are rounded. Keep every skipped photo in the denominator. Count wrong answers only among returned matches. Separate current-run loss into skipped photos, accepted localization imprecision, and wrong answers. Label perfect-recovery and truth-picked model selection as counterfactual bounds, never achievable gains. Keep K/M, query count and dataset identities explicit when comparing older stage diagnostics with current headless runs.
+
+Decision rule before the recorded analysis: a proposed route to 50+ must identify enough score headroom in this decomposition, explain a transferable physical/algorithmic mechanism, acknowledge previous negative experiments, and specify validation without drone-image training or band-specific fitted thresholds. This analysis does not enable any method or declare a new score gain. New method experiments need their own preregistration and full old-official/NUDT/new-development checks, wrong answers beside score, and deployment timing.
