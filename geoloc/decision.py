@@ -3,6 +3,8 @@
 All candidates of all queries are put in one list. The winner has the highest  inliers + GAMMA * (DINO z-score).
 Candidates with 0 inliers never win. If nobody has inliers, the first candidate is returned as a best guess (inliers 0).
 The photo is answered only when the winner has at least MIN_INLIERS inliers, otherwise it is a no_match.
+Optional (off by default, see agreement.py): the first pass is also answered when several of its queries agree on the place, and the bar rises when wrong places
+start to collect more inliers than on the development photos.
 """
 import numpy as np
 
@@ -18,6 +20,15 @@ def pool_queries(results):
     shifts = np.concatenate([np.asarray(r["stage2"]["shifts"], dtype=float) for r in results])
     owner = np.concatenate([np.full(len(r["peaks"]), index, dtype=int) for index, r in enumerate(results)])
     return peaks, inliers, shifts, z, owner
+
+
+def pool_aligned(results):
+    """The aligned-count z of every candidate, in the same order as pool_queries (-inf where it was not computed)."""
+    parts = []
+    for result in results:
+        count = len(result["peaks"])
+        parts.append(np.asarray(result["stage2"].get("aligned", np.full(count, -np.inf)), dtype=float))
+    return np.concatenate(parts)
 
 
 def choose_candidate(peaks, inliers, shifts, z):
@@ -36,5 +47,11 @@ def choose_candidate(peaks, inliers, shifts, z):
     return x, y, float(inliers[best]), best, float(z[best])
 
 
-def should_answer(inliers):
-    return inliers >= settings.MIN_INLIERS
+def should_answer(inliers, factor=1.0, second_pass=False):
+    """factor is the inflation guard's factor for the bar (1.0 = the bar as written in settings.py).
+    A photo that needed the second pass uses SECOND_PASS_MIN_INLIERS when it is set."""
+    base = settings.MIN_INLIERS
+    if second_pass and settings.SECOND_PASS_MIN_INLIERS is not None:
+        base = settings.SECOND_PASS_MIN_INLIERS
+    bar = int(round(base * factor))
+    return inliers >= bar

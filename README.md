@@ -28,6 +28,16 @@ Why each part is here (gain measured on the 500 official development photos, sco
 | LoFTR + MINIMA weights | far more inliers on the right place than the older SuperPoint+LightGlue matcher (median 30 vs 0-4 on wrong places) |
 | heading + scale queries | 41.3 -> 49.5 / 60 (6 queries); the right place is among the candidates for 99.6 % of photos instead of 87 % |
 
+Optional, off by default (`settings.py` section 8, code in `geoloc/agreement.py`, tests in `tests/test_agreement.py`): `USE_AGREEMENT` also answers a first-pass photo when 2 of the
+6 standard queries each found the same place, and `USE_INFLATION_GUARD` raises the bar when wrong places start to collect more inliers than on the development photos (needs one process
+for all photos). Both were measured offline on stored candidates of the research repo (agreement +2 to +4.5 of 60, 0 wrong; guard no change on clean data, fewer wrong answers when inliers
+are inflated) and not yet on the Jetson, so they are off and the frozen behaviour is unchanged.
+
+Three more options, all off by default (frozen behaviour unchanged; tests in `tests/test_query_reuse.py`):
+`LOFTR_REUSE_QUERY` runs LoFTR's CNN on the photo canvas once per query instead of once per candidate place (same features in the CPU test; on the dev PC's GPU 12 photos gave the same
+answers, positions within 1.5 m, fine stage about 20 % faster, 3.68 -> 3.15 s per photo; not run on the Jetson). `SECOND_PASS_HEADINGS` / `SECOND_PASS_SCALES` change the grid of the second pass
+(for example wider scales for a height error) and `SECOND_PASS_MIN_INLIERS` sets a higher bar for photos that needed it (the research repo used 11); both measured only offline in the research repo.
+
 Left out on purpose: the learned fusion models and MIND/learned feature maps (trained on NUDT, no gain after the DINO layer), SuperPoint + LightGlue
 (research-only licence), RoMa (never used), the heading penalty and the 0-inlier rescue rule (no measured gain). There is no switch to bring
 any of them back; only publicly usable code and weights are in this folder.
@@ -121,6 +131,26 @@ with a clear message (`geoloc/check_settings.py`). The groups:
 | decision | `GAMMA`, `MIN_INLIERS` | answer or no_match; a wrong answer costs -20, a skipped photo 0 |
 
 `MIN_INLIERS` and `LOFTR_CONFIDENCE` belong together: the inlier counts change with the confidence, so change the bar when you change the confidence.
+
+## Presets: photo view, pose fit and XoFTR (off by default)
+
+`settings.PRESET = None` is the submitted behaviour. Two named configurations are in `presets/`:
+
+| preset | what it is | measured (development sets, out of 60) |
+|---|---|---|
+| `pv_x` | the map drawn into the photo's camera view, a pose fit on the matches, XoFTR for every photo, bar 12 (frozen 2026-11-19) | new set 39.7 to 50.7, old official 52.7 to 60.0, NUDT 48.5 to 52.1, locked split 38.0 to 49.3 |
+| `pv_x_r2` | `pv_x` with two render-match-fit rounds and wider priors; robust to worse metadata | same clean scores within about 1 point; with extra metadata noise 2x: 35 to 45, tilt +2 degrees: 36 to 47 |
+
+```
+./run batch --preset pv_x_r2 --dataset D --preprocess STORE --models MODELS --out OUT
+./run serve --preset pv_x_r2 ...
+```
+
+`--set NAME=VALUE` is applied after the preset, so one value can be changed. Needs `minima_xoftr.ckpt` in the models folder. The numbers were measured with a map store of levels 3 to 11
+(`./run preprocess --set "LEVELS=[3,4,5,6,7,8,9,10,11]"`); with a store of levels 3 to 7 the preset runs with those levels and prints a warning, and photos above about 470 m are drawn at level 7.
+Cost: 1.3 to 3.3 s per photo on the GPU server (base 1.3 s), peak GPU memory 3.4 GB (coarse search at level 3, most photos under 0.5 GB); not measured on the Jetson. Limits (red team): needs metadata that is
+about as good as the development sets, flat ground, no empty or black image regions, untested above 2017 m and on other cameras. Details: `IdeaForge-GeoLoc-InterIIT15/tests/Test_Iteration_12/results/photo_view/red_team/ROBUSTNESS.md`.
+A frame size other than 320 x 256 can be given with the optional metadata columns `img_w`, `img_h` (used by the altitude emulation).
 
 ## Time and memory
 

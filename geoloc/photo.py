@@ -5,6 +5,7 @@ import cv2
 import numpy as np
 
 import settings
+from geoloc import altered_copies, flat_field
 from geoloc.levels import level_gsd
 
 
@@ -17,8 +18,8 @@ def read_camera(meta):
     camera = {}
     for key in ("fx", "fy", "cx", "cy", "k1", "k2", "k3", "p1", "p2"):
         camera[key] = float(meta["cam_" + key])
-    camera["width"] = 320
-    camera["height"] = 256
+    camera["width"] = int(float(meta["img_w"])) if meta.get("img_w") not in (None, "") else 320   # optional columns img_w, img_h: a frame of another size (altitude emulation)
+    camera["height"] = int(float(meta["img_h"])) if meta.get("img_h") not in (None, "") else 256
     return camera
 
 
@@ -46,9 +47,19 @@ def normalise_frame(frame):
     return clahe.apply(as_16bit).astype(np.float32) / 65535
 
 
-def prepare_photo(path, pose, camera, level):
-    """Photo ready for drawing at this zoom level. Done once per photo, every heading query reuses it."""
-    photo = normalise_frame(load_photo(path))
+def prepare_photo(path, pose, camera, level, copy_kind=None, native_clean=False):
+    """Photo ready for drawing at this zoom level. Done once per photo, every heading query reuses it.
+    copy_kind: None for the photo as it is, or one of altered_copies.KINDS to prepare an altered copy of the raw frame instead.
+    native_clean: True = vignette removal and local normalisation for the native-resolution LoFTR canvas (geoloc/native_fine.py), whatever the flat-field settings say."""
+    frame = load_photo(path)
+    if copy_kind is not None:
+        frame = altered_copies.make_copy(frame, copy_kind)
+    if native_clean:
+        frame = flat_field.remove_vignette(frame, camera["cx"], camera["cy"], settings.FLAT_FIELD_DEGREE)
+        frame = flat_field.local_normalise(frame, settings.NATIVE_FINE_LOCAL_NORM_PX)
+    else:
+        frame = flat_field.clean(frame, pose, camera)
+    photo = normalise_frame(frame)
     photo_gsd = pose["height"] / camera["fx"]
     blur = max(0.0, 0.5 * level_gsd(level) / photo_gsd - 0.25)      # the canvas pixel is bigger than the photo pixel
     if blur > 0.2:
@@ -78,12 +89,14 @@ def distort(camera, x, y):
     return x_d, y_d
 
 
-def draw_canvas(photo, pose, camera, level, heading=0.0, scale_factor=1.0):
+def draw_canvas(photo, pose, camera, level, heading=0.0, scale_factor=1.0, size=None):
     """The photo drawn north-up on a TILE x TILE canvas whose pixels are level_gsd(level) metres.
     heading (degrees) is added to the yaw and scale_factor multiplies the projection scale: this is one heading query.
+    size: canvas side in pixels (None = settings.TILE).
     Returns canvas (floats 0..1) and valid (bool: pixels that the photo really covers)."""
     geometry = settings.GEOMETRY
-    size = settings.TILE
+    if size is None:
+        size = settings.TILE
     pixel_size = level_gsd(level)
 
     height = (pose["height"] + geometry["height_offset"]) * geometry["scale"] * scale_factor

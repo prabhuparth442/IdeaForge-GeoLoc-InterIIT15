@@ -28,7 +28,8 @@ def query_list():
 
 
 def second_pass_queries():
-    """The queries of the "all" set that the standard set does not have."""
+    """The queries of the second pass that the first pass did not run. Frozen default: the "all" set (9 headings x scales 1.0, 1.05) minus the standard set.
+    SECOND_PASS_HEADINGS / SECOND_PASS_SCALES (None = the default above) change the grid, for example wider scales."""
     if not settings.SECOND_PASS or settings.QUERY_SET != "standard":
         return []
     first = SETS["standard"]
@@ -36,10 +37,11 @@ def second_pass_queries():
     for factor in first[1]:
         for heading in first[0]:
             first_keys.add((heading, factor))
+    headings = settings.SECOND_PASS_HEADINGS if settings.SECOND_PASS_HEADINGS is not None else SETS["all"][0]
+    factors = settings.SECOND_PASS_SCALES if settings.SECOND_PASS_SCALES is not None else SETS["all"][1]
     extra = []
-    headings, factors = SETS["all"]
     for factor in factors:
         for heading in headings:
-            if (heading, factor) not in first_keys:
+            if (float(heading), float(factor)) not in first_keys:
                 extra.append(dict(heading=float(heading), scale_factor=float(factor)))
     return extra

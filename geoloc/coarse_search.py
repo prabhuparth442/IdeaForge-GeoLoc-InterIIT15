@@ -10,6 +10,7 @@ import torch
 
 import settings
 from geoloc.edge_features import query_edge_features
+from geoloc.fft import irfft2, rfft2
 from geoloc.levels import level_gsd
 
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
@@ -29,8 +30,8 @@ def fast_length(n):
 
 def window_transforms(window, size):
     """The FFTs of the map window. They do not depend on the photo's canvas, so all queries of one photo share them."""
-    return dict(window_fft=torch.fft.rfft2(window, s=size),
-                strength_fft=torch.fft.rfft2((window ** 2).sum(dim=0), s=size))
+    return dict(window_fft=rfft2(window, size),
+                strength_fft=rfft2((window ** 2).sum(dim=0), size))
 
 
 def zncc_everywhere(window, shared, size, kernel, cells):
@@ -42,15 +43,15 @@ def zncc_everywhere(window, shared, size, kernel, cells):
     n_cells = cells.sum()
     window_fft = shared["window_fft"]
 
-    cells_fft = torch.fft.rfft2(cells, s=size)
-    energy = torch.fft.irfft2(shared["strength_fft"] * cells_fft.conj(), s=size)[:out_h, :out_w].clamp_min(0)
+    cells_fft = rfft2(cells, size)
+    energy = irfft2(shared["strength_fft"] * cells_fft.conj(), size)[:out_h, :out_w].clamp_min(0)
 
     kernel_mean = kernel.sum(dim=(1, 2), keepdim=True) / n_cells
     kernel_zero = (kernel - kernel_mean) * cells
-    zero_fft = torch.fft.rfft2(kernel_zero, s=size)
-    dot_zero = torch.fft.irfft2((window_fft * zero_fft.conj()).sum(dim=0), s=size)[:out_h, :out_w]
+    zero_fft = rfft2(kernel_zero, size)
+    dot_zero = irfft2((window_fft * zero_fft.conj()).sum(dim=0), size)[:out_h, :out_w]
 
-    local_sums = torch.fft.irfft2(window_fft * cells_fft.conj()[None], s=size)[:, :out_h, :out_w]
+    local_sums = irfft2(window_fft * cells_fft.conj()[None], size)[:, :out_h, :out_w]
     squared_sums = (local_sums ** 2).sum(dim=0) / n_cells
     variance = (energy - squared_sums).clamp_min(0)
     zncc = dot_zero / (kernel_zero.pow(2).sum().sqrt() * variance.sqrt() + 1e-6)

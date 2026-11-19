@@ -13,6 +13,7 @@ from geoloc.check_settings import check_settings
 
 def add_common_options(parser):
     parser.add_argument("--mode", choices=["answer", "full"], help="override settings.MODE")
+    parser.add_argument("--preset", choices=["pv_x", "pv_x_r2"], help="a named configuration (settings.PRESET): pv_x = photo view + pose fit + XoFTR, pv_x_r2 = the same, robust to worse metadata; --set values are applied after it")
     parser.add_argument("--set", action="append", default=[], metavar="NAME=VALUE", help="override one value of settings.py, e.g. --set K_PEAKS=100 --set HEADINGS=[-5,0,5]")
     parser.add_argument("--map", help="folder with the GeoTIFF scenes")
     parser.add_argument("--models", help="folder with the model weights")
@@ -31,6 +32,12 @@ def apply_options(args):
         settings.DATASET_DIR = args.dataset
     if args.mode:
         settings.MODE = args.mode
+    if args.preset:
+        settings.PRESET = args.preset
+    if settings.PRESET:
+        from presets import apply_preset
+        for warning in apply_preset(settings.PRESET):
+            print("WARNING: " + warning, file=sys.stderr, flush=True)
     for text in args.set:
         name, _, value = text.partition("=")
         if not hasattr(settings, name):
@@ -141,7 +148,7 @@ def batch(args):
         details = csv.writer(details_file)
         details.writerow(["filename", "status", "inliers", "level", "heading", "scale_factor", "z", "total_seconds"]
                          + ["seconds_" + stage for stage in ["photo", "render", "coarse", "semantic", "fine", "decision"]]
-                         + ["gpu_peak_mb", "error_m", "sigma_m", "points"])
+                         + ["gpu_peak_mb", "error_m", "sigma_m", "points", "n_queries", "second_pass", "copy_used", "rescued_by_alignment", "refined", "refine_shift_m", "refine_inliers", "native_used", "xoftr_used", "fallback_queries", "photo_view_used", "pose_fit_used", "pose_fit_move_m", "fit_rms_px", "fit_dpitch", "fit_droll", "fit_dyaw", "fit_dheight", "fit_rounds", "second_inliers", "verify_inliers", "verify_distance_m"])
 
     points_list = []
     times = []
@@ -171,7 +178,8 @@ def batch(args):
             seconds = answer["seconds"]
             details.writerow([name, line[2], answer["inliers"], answer["level"], answer["heading"], answer["scale_factor"], answer["z"], "%.3f" % answer["total_seconds"]]
                              + ["%.3f" % seconds.get(stage, 0.0) for stage in ["photo", "render", "coarse", "semantic", "fine", "decision"]]
-                             + ["%.0f" % answer.get("gpu_peak_mb", 0.0), error_m if error_m == "" else "%.1f" % error_m, sigma if sigma == "" else "%.1f" % sigma, points])
+                             + ["%.0f" % answer.get("gpu_peak_mb", 0.0), error_m if error_m == "" else "%.1f" % error_m, sigma if sigma == "" else "%.1f" % sigma, points]
+                             + [answer.get("n_queries", ""), answer.get("second_pass", ""), answer.get("copy_used", ""), answer.get("rescued_by_alignment", ""), answer.get("refined", ""), answer.get("refine_shift_m", ""), answer.get("refine_inliers", ""), answer.get("native_used", ""), answer.get("xoftr_used", ""), answer.get("fallback_queries", ""), answer.get("photo_view_used", ""), answer.get("pose_fit_used", ""), answer.get("pose_fit_move_m", "")] + [answer.get("fit_" + key, "") for key in ("rms_px", "dpitch", "droll", "dyaw", "dheight", "rounds")] + [answer.get("second_inliers", ""), answer.get("verify_inliers", ""), answer.get("verify_distance_m", "")])
             details_file.flush()
             log("%d/%d %s" % (index + 1, len(rows), info_line(name, answer)))
         elif not full:
