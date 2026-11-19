@@ -44,3 +44,19 @@ One entry per round of work. Details and numbers are in the linked folder or doc
 
 ## 2026-11-03 to 11-05
 - Modular pipeline `src/`, project renamed IdeaForge-GeoLoc-InterIIT15, FFT correlation notes; iteration 1 (seven coarse methods, fine matching, pseudo-thermal training) and iteration 2 (DINO, patch v0.5.5) with results.
+
+## 2026-11-18 (later) - fallback matcher measured
+Server back; the four fallback runs had finished. Old official 52.69 -> 56.05 (+3.4, 1 wrong unchanged), new working 39.70 -> 40.14 (41.44 with native fallback), NUDT 48.52 -> 48.28 with 12 -> 14 wrong (kill rule's wrong clause fails). Not default. See tests/Test_Iteration_12/results/fallback/README.md.
+
+## 2026-11-18 (evening) - map drawn in the photo's own view (iteration 43)
+Diagnostic above 1000 m: photo left as it is, map drawn into its camera view with the metadata pose. XoFTR recall at the zero-false-positive bar 0.60 -> 0.95 (0.52 -> 0.98 above 1600 m), LoFTR 0.43 -> 0.70. Not a pipeline score yet. See tests/Test_Iteration_12/results/photo_view/README.md.
+Later the same evening: photo view wired into the fine stage (PHOTO_VIEW_FROM_HEIGHT_M, off by default). 332 working photos with XoFTR from 800 m and photo view from 1000 m at bar 20: 39.70 -> 42.04, 0 wrong, faster. Precision (1.3 sigma median) is now the limit. See results/photo_view/README.md.
+Pose fit in the pipeline (PHOTO_VIEW_FIT_POSE, off by default): 332 working photos 39.70 -> 42.04 (photo view) -> **46.07** (photo view + pose fit), 0 wrong. Overnight queue started for the gate height and the other two sets. See results/photo_view/README.md and results/tilt_fit/README.md.
+
+## 2026-11-19 (night) - photo view everywhere, pose fit priors, other sets
+Photo view + pose fit on every photo: working set 39.70 -> 48.70 (priors x0.4), NUDT 48.52 -> 52.28 (wrong 12 -> 2), old official 52.69 -> 52.08 at bar 20 (bar grid running). Two-round loop killed. See tests/Test_Iteration_12/results/photo_view/README.md.
+Configuration PV-X (XoFTR everywhere + photo view everywhere + bar 12 + pose fit, priors x0.4), frozen before the locked test run: working 50.69, old official 60.00, NUDT 52.08, locked test 49.32 (base 38.00). See tests/Test_Iteration_12/results/photo_view/FREEZE_PV-X.md and README.md.
+PV-X2 (PV-X + second opinion for answers under 20 inliers up to 1000 m, new switches PHOTO_VIEW_VERIFY_*, off by default): NUDT 52.08 -> 53.56 and 51.68 -> 53.96 (wrong 6 or 8 -> 2), old official 59.88, new set 50.64. Report v0.7 written (Documents/Outputs). See results/photo_view/README.md.
+
+## 2026-11-19 red team of PV-X, robust version PV-X-R2
+Three reviewers (leakage, mechanism, generalisation) found no ground-truth leakage; old official 60.00 and NUDT wrong-answer drop are partly in-sample. Server runs (tests/Test_Iteration_12/results/photo_view/red_team/ROBUSTNESS.md): PV-X loses a lot when the metadata is worse (noise 2x 51.6 -> 35.1) but stays above the base everywhere. 2 fit rounds + wide priors + 6 sigma limit (presets/pv_x_r2.py in Main_Pipeline_Headless) give noise 2x 45.0/45.9, 3x 35.6/33.7, tilt +2 47.2/46.2 (even/odd photos), clean 52.41/48.61 (-1.1 vs PV-X on odd), old official 59.66, NUDT unchanged. Null test: 8 % false answers when the truth is outside the disc. Nothing committed.

@@ -1,0 +1,46 @@
+=== PART 1: paired gain PV-X (seed 0) minus base, per set; CI by photo and by spatial cluster ===
+work332      n=332 clusters=69  base 39.70 PVX 50.69 gain +10.99  photo-boot 95% [+8.78,+13.18]  cluster-boot 95% [+7.31,+15.22]  frac photos better 0.41 worse 0.05 same 0.55  P(gain<=0 | cluster boot) 0.0000
+official500  n=500 clusters=25  base 52.69 PVX 60.00 gain +7.31  photo-boot 95% [+5.63,+9.07]  cluster-boot 95% [+3.74,+12.13]  frac photos better 0.15 worse 0.00 same 0.85  P(gain<=0 | cluster boot) 0.0000
+nudt300      n=300 clusters=15  base 48.52 PVX 52.08 gain +3.56  photo-boot 95% [+0.40,+7.04]  cluster-boot 95% [+0.29,+7.18]  frac photos better 0.05 worse 0.02 same 0.93  P(gain<=0 | cluster boot) 0.0182
+locked168    n=168 clusters=27  base 38.00 PVX 49.32 gain +11.32  photo-boot 95% [+8.00,+14.68]  cluster-boot 95% [+5.79,+18.16]  frac photos better 0.39 worse 0.04 same 0.57  P(gain<=0 | cluster boot) 0.0000
+
+--- decomposition of gain (points per photo x6 /n), by transition ---
+work332      skip->answer +4.75 (n=45) | both answered, precision change +6.23 (n=284) | answer->skip +0.00 (n=0) | wrong answers base 0 -> 1, points from wrong changes -0.36
+official500  skip->answer +5.52 (n=46) | both answered, precision change +1.79 (n=454) | answer->skip +0.00 (n=0) | wrong answers base 1 -> 0, points from wrong changes +0.36
+nudt300      skip->answer +0.12 (n=4) | both answered, precision change +2.24 (n=278) | answer->skip +1.20 (n=3) | wrong answers base 12 -> 6, points from wrong changes +3.20
+locked168    skip->answer +5.82 (n=26) | both answered, precision change +5.50 (n=140) | answer->skip +0.00 (n=0) | wrong answers base 0 -> 1, points from wrong changes -0.71
+
+--- concentration of gain ---
+work332      positives 687 pts total, negatives -79 pts; top10% photos (34) give 48% of net gain; photos needed for 50% of net gain: 36 (11% of set); largest single-cluster share of net gain 14%
+official500  positives 609 pts total, negatives 0 pts; top10% photos (50) give 83% of net gain; photos needed for 50% of net gain: 29 (6% of set); largest single-cluster share of net gain 25%
+nudt300      positives 248 pts total, negatives -70 pts; top10% photos (30) give 139% of net gain; photos needed for 50% of net gain: 3 (1% of set); largest single-cluster share of net gain 28%
+locked168    positives 361 pts total, negatives -44 pts; top10% photos (17) give 49% of net gain; photos needed for 50% of net gain: 18 (11% of set); largest single-cluster share of net gain 24%
+
+--- gain by height band (points/photo x6 = contribution to score if all photos were that band) ---
+                         n   base    pvx   gain  wrong_base  wrong_pvx
+set         hb                                                        
+locked168   <351        44  49.09  51.27   2.18           0          0
+            351-700     32  45.75  53.44   7.69           0          0
+            700-1000    31  42.58  53.81  11.23           0          0
+            1000-1300   18  30.33  40.00   9.67           0          1
+            1300-1600   23  27.39  50.87  23.48           0          0
+            1600+       20  13.20  38.10  24.90           0          0
+nudt300     <351       300  48.52  52.08   3.56          12          6
+official500 <351       500  52.69  60.00   7.31           1          0
+work332     <351        86  48.70  53.86   5.16           0          0
+            351-700     82  48.95  57.37   8.41           0          0
+            700-1000    34  45.18  50.82   5.65           0          0
+            1000-1300   43  38.37  47.58   9.21           0          1
+            1300-1600   45  21.87  50.67  28.80           0          0
+            1600+       42  19.29  34.29  15.00           0          0
+
+--- leave-top-cluster-out: gain on each set when the single best cluster is removed ---
+work332      remove cluster 6765_17870 (n=24): gain +10.99 -> +10.23
+official500  remove cluster off_03 (n=15): gain +7.31 -> +5.68
+nudt300      remove cluster nud_11 (n=22): gain +3.56 -> +2.76
+locked168    remove cluster 6765_17869 (n=30): gain +11.32 -> +10.52
+
+--- seed 1 (hint jitter) for the dev sets, paired with base ---
+work332      seed0 gain +10.99  seed1 gain +10.55   per-photo SD of seed0-seed1 point difference 1.12; photos whose points differ between seeds 2/332
+official500  seed0 gain +7.31  seed1 gain +7.31   per-photo SD of seed0-seed1 point difference 0.00; photos whose points differ between seeds 0/500
+nudt300      seed0 gain +3.56  seed1 gain +3.16   per-photo SD of seed0-seed1 point difference 2.28; photos whose points differ between seeds 6/300

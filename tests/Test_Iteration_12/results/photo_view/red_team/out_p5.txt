@@ -1,0 +1,22 @@
+=== PART 5: locked test (unseen cells) versus dev, and a-priori prediction check ===
+test band counts: {'<351': 44, '351-700': 32, '700-1000': 31, '1000-1300': 18, '1300-1600': 23, '1600+': 20}
+dev band counts: {'<351': 86, '351-700': 82, '700-1000': 34, '1000-1300': 43, '1300-1600': 45, '1600+': 42}
+dev band-means reweighted to the test height mix: base 39.82, PV-X 50.53 (gain +10.71)  | observed test: base 38.00 PV-X 49.32 (gain +11.32)
+observed test PV-X minus dev-predicted (same height mix): -1.21, cluster-boot [2.5,50,97.5] = [-7.2  -1.12  4.17]
+Test PV-X score cluster-boot 95% CI: [42.80, 54.47]; base: [27.77, 46.13]
+Dev PV-X score cluster-boot 95% CI: [46.89, 53.41]
+
+--- how independent is the test split in space? nearest DEV photo to each TEST photo, metres ---
+test->nearest dev: median 172 m, 10% 70 m, min 11 m; share within 100 m: 0.18 within 300 m: 0.80
+dev->nearest dev photo of another cell: median 202 m
+
+--- test per-band PV-X vs dev per-band PV-X (points x6) ---
+            n        base           pvx       
+s         dev test    dev   test    dev   test
+hb                                            
+<351       86   44  48.70  49.09  53.86  51.27
+351-700    82   32  48.95  45.75  57.37  53.44
+700-1000   34   31  45.18  42.58  50.82  53.81
+1000-1300  43   18  38.37  30.33  47.58  40.00
+1300-1600  45   23  21.87  27.39  50.67  50.87
+1600+      42   20  19.29  13.20  34.29  38.10

@@ -1,0 +1,30 @@
+=== PART 2: the ladder of choices, step by step, with cluster-bootstrap CI of each step ===
+working 332 (dev), chronological order of choices:
+  work332   base(XoFTR>=800) -> PV >=1000 m, bar20 (no fit)                 39.70 ->  42.04  step +2.33  cluster-95% [-0.13,+5.57]  P(<=0)=0.033  n=332 wrong 0->0
+  work332     + pose fit, priors 1/1/2/2% (audit noise)                     42.04 ->  46.07  step +4.03  cluster-95% [+1.83,+6.42]  P(<=0)=0.000  n=332 wrong 0->0
+  work332     gate 1000 -> 800                                              46.07 ->  46.10  step +0.04  cluster-95% [-0.27,+0.32]  P(<=0)=0.428  n=332 wrong 0->0
+  work332     gate 800 -> 600                                               46.10 ->  46.57  step +0.47  cluster-95% [-0.29,+1.28]  P(<=0)=0.115  n=332 wrong 0->0
+  work332     gate 600 -> 0 (every photo)                                   46.57 ->  48.00  step +1.43  cluster-95% [-0.85,+4.13]  P(<=0)=0.143  n=332 wrong 0->0
+  work332     priors x1 -> x0.4 (pv2 copy, gate 0)                          48.00 ->  48.70  step +0.70  cluster-95% [-0.63,+2.26]  P(<=0)=0.148  n=332 wrong 0->0
+  work332     bar20/agree-on -> bar12/agree-off (LoFTR<800)                 48.70 ->  48.90  step +0.20  cluster-95% [-0.83,+1.08]  P(<=0)=0.306  n=332 wrong 0->1
+  work332     bar12 agree-off -> agree-on                                   48.90 ->  48.90  step +0.00  cluster-95% [+0.00,+0.00]  P(<=0)=1.000  n=332 wrong 1->1
+  work332     LoFTR<800 -> XoFTR for all (= PV-X)                           48.90 ->  50.69  step +1.79  cluster-95% [+0.98,+2.52]  P(<=0)=0.000  n=332 wrong 1->1
+old official 500 (dev; everything below chosen/inspected with it):
+  official  base -> PV all, bar20, priors x1 (pvs g0b20)                    52.69 ->  52.08  step -0.61  cluster-95% [-3.43,+2.14]  P(<=0)=0.661  n=500 wrong 1->0
+  official    bar20 -> bar12 (pvs)                                          52.08 ->  56.57  step +4.49  cluster-95% [+2.55,+6.72]  P(<=0)=0.000  n=500 wrong 0->0
+  official    -> agree-off bar12, priors x0.4 (pv2_b12na)                   56.57 ->  54.43  step -2.14  cluster-95% [-3.87,-0.69]  P(<=0)=0.999  n=500 wrong 0->0
+  official    -> agree-on bar12 (pv3_b12a)                                  54.43 ->  57.24  step +2.81  cluster-95% [+1.39,+4.55]  P(<=0)=0.000  n=500 wrong 0->0
+  official    -> XoFTR for all (= PV-X)                                     57.24 ->  60.00  step +2.76  cluster-95% [+1.14,+4.94]  P(<=0)=0.000  n=500 wrong 0->0
+NUDT 300 (dev):
+  nudt      base -> PV all, bar20 (pvs g0b20)                               48.52 ->  52.28  step +3.76  cluster-95% [-0.21,+8.62]  P(<=0)=0.037  n=300 wrong 12->2
+  nudt        bar20 -> bar12 (pvs)                                          52.28 ->  52.28  step +0.00  cluster-95% [-2.31,+1.94]  P(<=0)=0.504  n=300 wrong 2->5
+  nudt        bar12 -> agree-off (pv2_b12na)                                52.28 ->  52.48  step +0.20  cluster-95% [-1.01,+1.67]  P(<=0)=0.461  n=300 wrong 5->3
+  nudt        agree-on bar12 (pv3_b12a) vs agree-off                        52.48 ->  52.28  step -0.20  cluster-95% [-1.67,+1.01]  P(<=0)=0.661  n=300 wrong 3->5
+  nudt        -> XoFTR for all (= PV-X)                                     52.28 ->  52.08  step -0.20  cluster-95% [-1.21,+0.61]  P(<=0)=0.658  n=300 wrong 5->6
+
+Total PV-X gain that exists BEFORE any tuning on the set (PV at fixed 'a priori' settings: bar 20, gate>=1000 for highalt, audit priors):
+  working332: base 39.70 -> 46.07 (+6.37); tuned steps after: +4.62 (to 50.69).  official500: base 52.69 -> 52.08 (PV all bar20: -0.61); every point of the +7.31 came after bar/XoFTR choices made on official.  nudt300: 48.52 -> 52.28 (+3.76) then XoFTR-all -0.20.
+
+=== LOCO re-selection of the gate height on the working set (4 real runs, same settings otherwise) ===
+in-sample best 8.000 pts/photo (48.00 score); LOCO-selected held-out 8.000 (48.00 score); selected counts {'p0': 69}
+fixed g0 = 48.00; fixed g1000 = 46.07 (a-priori choice)

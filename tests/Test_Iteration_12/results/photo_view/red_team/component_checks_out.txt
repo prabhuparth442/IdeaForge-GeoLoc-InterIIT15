@@ -1,0 +1,33 @@
+== (d) cameras and altitudes in the dev metadata
+official(d1, 19N) n=500 alt 100-351 m, distinct cameras 1 {'cam_fx': 200.2749, 'cam_fy': 200.2043, 'cam_cx': 158.8835, 'cam_cy': 131.6856, 'cam_k1': -0.257, 'cam_k2': 0.0483, 'cam_k3': 0.0, 'cam_p1': 0.0001, 'cam_p2': 0.0015}
+   pitch(wrapped) mean/std -6.60/6.04  roll(wrapped) mean/std 0.47/3.30
+rajasthan(27N) n=500 alt 101-2017 m, distinct cameras 1 {'cam_fx': 202.4055, 'cam_fy': 202.3026, 'cam_cx': 163.4901, 'cam_cy': 121.6884, 'cam_k1': -0.2776, 'cam_k2': 0.0649, 'cam_k3': 0.0, 'cam_p1': 0.0009, 'cam_p2': -0.0001}
+   pitch(wrapped) mean/std 1.85/3.25  roll(wrapped) mean/std -1.66/8.87
+
+== (a) lens round trip: distort(undistort(pixel)) - pixel, pixels
+official(d1, 19N)    max err 1.00e-10 px, max undistorted radius 1.58 (FOV half-angle 58 deg), corner ground distance / h = 1.58
+rajasthan(27N)       max err 1.00e-10 px, max undistorted radius 1.48 (FOV half-angle 56 deg), corner ground distance / h = 1.48
+
+== (b) vignette removal: correlation of the matcher input with and without it (local_normalise 15 px afterwards, as photo_view.own_photo does)
+official(d1, 19N) corr min 0.976 median 0.989 | vignette amplitude / frame std: median 2.30 max 4.21
+rajasthan(27N) corr min 0.858 median 0.925 | vignette amplitude / frame std: median 4.53 max 5.94
+
+== (c) map level of the photo view: photo ground pixel vs level pixel (fx 202)
+store levels 3 - 7
+   h  100 m photo px  0.51 m -> view level  3 (0.85 m, ratio photo/level 0.61); coarse level  3 canvas  190 m vs photo footprint  158 m
+   h  200 m photo px  1.03 m -> view level  4 (1.20 m, ratio photo/level 0.86); coarse level  5 canvas  380 m vs photo footprint  316 m
+   h  350 m photo px  1.80 m -> view level  5 (1.70 m, ratio photo/level 1.06); coarse level  7 canvas  760 m vs photo footprint  553 m
+   h  600 m photo px  3.08 m -> view level  7 (3.39 m, ratio photo/level 0.91); coarse level  7 canvas  760 m vs photo footprint  949 m
+   h 1000 m photo px  5.14 m -> view level  7 (3.39 m, ratio photo/level 1.51); coarse level  7 canvas  760 m vs photo footprint 1581 m
+   h 1400 m photo px  7.19 m -> view level  7 (3.39 m, ratio photo/level 2.12); coarse level  7 canvas  760 m vs photo footprint 2213 m
+   h 2000 m photo px 10.28 m -> view level  7 (3.39 m, ratio photo/level 3.03); coarse level  7 canvas  760 m vs photo footprint 3162 m
+   h 3000 m photo px 15.42 m -> view level  7 (3.39 m, ratio photo/level 4.54); coarse level  7 canvas  760 m vs photo footprint 4743 m
+store levels 3 - 11
+   h  100 m photo px  0.51 m -> view level  3 (0.85 m, ratio photo/level 0.61); coarse level  3 canvas  190 m vs photo footprint  158 m
+   h  200 m photo px  1.03 m -> view level  4 (1.20 m, ratio photo/level 0.86); coarse level  5 canvas  380 m vs photo footprint  316 m
+   h  350 m photo px  1.80 m -> view level  5 (1.70 m, ratio photo/level 1.06); coarse level  7 canvas  760 m vs photo footprint  553 m
+   h  600 m photo px  3.08 m -> view level  7 (3.39 m, ratio photo/level 0.91); coarse level  8 canvas 1075 m vs photo footprint  949 m
+   h 1000 m photo px  5.14 m -> view level  8 (4.80 m, ratio photo/level 1.07); coarse level 10 canvas 2150 m vs photo footprint 1581 m
+   h 1400 m photo px  7.19 m -> view level  9 (6.79 m, ratio photo/level 1.06); coarse level 11 canvas 3041 m vs photo footprint 2213 m
+   h 2000 m photo px 10.28 m -> view level 10 (9.60 m, ratio photo/level 1.07); coarse level 11 canvas 3041 m vs photo footprint 3162 m
+   h 3000 m photo px 15.42 m -> view level 11 (13.58 m, ratio photo/level 1.14); coarse level 11 canvas 3041 m vs photo footprint 4743 m

@@ -1,0 +1,20 @@
+=== PART 6: pooled highalt (dev + locked test, 500 photos, 96 cells) and fit usage ===
+pooled highalt: base 39.13 PV-X 50.23 gain +11.10 cluster-boot95 [+7.99,+14.54]; PV-X level CI [47.04,52.79]
+
+--- pose-fit usage among answered photos (PV-X seed 0) and points by usage ---
+  work332      fit used 320/329 (dropped by the 3-sigma move rule or no matches: 9); mean points fitted 8.80 vs not fitted -1.22
+  official500  fit used 500/500 (dropped by the 3-sigma move rule or no matches: 0); mean points fitted 10.00 vs not fitted nan
+  nudt300      fit used 282/282 (dropped by the 3-sigma move rule or no matches: 0); mean points fitted 9.23 vs not fitted nan
+  locked168    fit used 165/166 (dropped by the 3-sigma move rule or no matches: 1); mean points fitted 8.33 vs not fitted 6.00
+
+--- sensitivity of the PV-X score to one wrong answer (points of the 60 scale) ---
+  work332      one wrong answer instead of a typical +9 answer = 0.52 of 60; instead of a skip = 0.36
+  official500  one wrong answer instead of a typical +9 answer = 0.35 of 60; instead of a skip = 0.24
+  nudt300      one wrong answer instead of a typical +9 answer = 0.58 of 60; instead of a skip = 0.40
+  locked168    one wrong answer instead of a typical +9 answer = 1.04 of 60; instead of a skip = 0.71
+
+--- hindsight bar 16 (drop answers with 12..15 inliers) on PV-X runs, in-sample: change of score ---
+  work332      drops 3 answers, 1 of them wrong; score change +0.25
+  official500  drops 7 answers, 0 of them wrong; score change -0.84
+  nudt300      drops 6 answers, 3 of them wrong; score change +0.68
+  locked168    drops 2 answers, 1 of them wrong; score change +0.61

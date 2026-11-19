@@ -1,0 +1,15 @@
+=== PART 3: offline prior-scale curve on the 125 photos used to choose x0.4 (points/photo, truth-scored) ===
+0.2    8.000
+0.3    8.256
+0.4    8.536
+0.5    8.320
+0.7    8.136
+1.0    7.944
+1.5    7.664
+2.0    7.536
+per-photo SD 2.29 -> s.e. of one mean 0.21; paired x0.4 vs x1.0: diff 0.592
+x0.4 minus x1.0: 0.592 pts/photo (x6 = 3.55 score-scale) cluster-boot 95% [0.211, 1.065]
+cluster-bootstrap argmax frequencies of the prior scale: {0.2: 0.0, 0.3: 0.014, 0.4: 0.98, 0.5: 0.002, 0.7: 0.0, 1.0: 0.002, 1.5: 0.0, 2.0: 0.0}
+LOCO (leave one cell out): chosen scales {0.4: 49}; held-out 8.536 vs in-sample best 8.536 vs fixed 0.4 8.536 vs fixed 1.0 7.944 pts/photo
+odd/even: choose on odd -> 0.4; other half 8.964 (x1.0 8.161)
+odd/even: choose on even -> 0.4; other half 8.188 (x1.0 7.768)

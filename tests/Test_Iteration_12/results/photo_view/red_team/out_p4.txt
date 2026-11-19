@@ -1,0 +1,76 @@
+=== PART 4: wrong answers and the bar (PV-X seed 0 unless noted) ===
+
+seed0 work332: 1 wrong of 329 answered; wrong rows (inliers, err/sigma, height, second_pass, fit_rms):
+   inl  12  err/sigma 358.4  h   1078  second_pass False  fit_rms nan
+
+seed0 official500: 0 wrong of 500 answered; wrong rows (inliers, err/sigma, height, second_pass, fit_rms):
+
+seed0 nudt300: 6 wrong of 282 answered; wrong rows (inliers, err/sigma, height, second_pass, fit_rms):
+   inl  18  err/sigma  25.8  h    291  second_pass False  fit_rms 1.56
+   inl  24  err/sigma  15.9  h    301  second_pass False  fit_rms 1.52
+   inl  24  err/sigma  11.7  h    301  second_pass False  fit_rms 1.60
+   inl  15  err/sigma  69.2  h    301  second_pass False  fit_rms 1.55
+   inl  14  err/sigma  36.9  h    301  second_pass False  fit_rms 1.37
+   inl  15  err/sigma  81.2  h    301  second_pass False  fit_rms 1.31
+
+seed0 locked168: 1 wrong of 166 answered; wrong rows (inliers, err/sigma, height, second_pass, fit_rms):
+   inl  13  err/sigma  54.4  h   1056  second_pass True  fit_rms 3.27
+
+seed1 work332: 2 wrong of 330 answered; wrong rows (inliers, err/sigma, height, second_pass, fit_rms):
+   inl  12  err/sigma 144.8  h   1512  second_pass True  fit_rms nan
+   inl  12  err/sigma 278.3  h   1078  second_pass False  fit_rms 2.57
+
+seed1 official500: 0 wrong of 500 answered; wrong rows (inliers, err/sigma, height, second_pass, fit_rms):
+
+seed1 nudt300: 8 wrong of 286 answered; wrong rows (inliers, err/sigma, height, second_pass, fit_rms):
+   inl   6  err/sigma 413.5  h    318  second_pass False  fit_rms 1.81
+   inl   5  err/sigma 231.8  h    231  second_pass False  fit_rms 1.90
+   inl  18  err/sigma  25.8  h    291  second_pass False  fit_rms 1.56
+   inl  24  err/sigma  15.9  h    301  second_pass False  fit_rms 1.52
+   inl  24  err/sigma  11.7  h    301  second_pass False  fit_rms 1.60
+   inl  15  err/sigma  69.2  h    301  second_pass False  fit_rms 1.55
+   inl  14  err/sigma  36.9  h    301  second_pass False  fit_rms 1.37
+   inl  15  err/sigma  81.2  h    301  second_pass False  fit_rms 1.31
+
+--- answered with inliers below 20 (marginal): count, wrong, mean points, per set (seed 0) ---
+  work332      inliers [12,16): n=  3 wrong=1  mean points -4.67   (score-weight: -0.25 of 60)
+  work332      inliers [16,20): n=  6 wrong=0  mean points 5.00   (score-weight: 0.54 of 60)
+  work332      inliers [20,40): n= 20 wrong=0  mean points 5.70   (score-weight: 2.06 of 60)
+  work332      inliers [40,10000): n=300 wrong=0  mean points 8.92   (score-weight: 48.34 of 60)
+  official500  inliers [0,12): n=  2 wrong=0  mean points 10.00   (score-weight: 0.24 of 60)
+  official500  inliers [12,16): n=  7 wrong=0  mean points 10.00   (score-weight: 0.84 of 60)
+  official500  inliers [16,20): n=  9 wrong=0  mean points 10.00   (score-weight: 1.08 of 60)
+  official500  inliers [20,40): n= 66 wrong=0  mean points 10.00   (score-weight: 7.92 of 60)
+  official500  inliers [40,10000): n=416 wrong=0  mean points 10.00   (score-weight: 49.92 of 60)
+  nudt300      inliers [12,16): n=  6 wrong=3  mean points -5.67   (score-weight: -0.68 of 60)
+  nudt300      inliers [16,20): n=  8 wrong=1  mean points 6.25   (score-weight: 1.00 of 60)
+  nudt300      inliers [20,40): n= 19 wrong=2  mean points 6.63   (score-weight: 2.52 of 60)
+  nudt300      inliers [40,10000): n=249 wrong=0  mean points 9.89   (score-weight: 49.24 of 60)
+  locked168    inliers [12,16): n=  2 wrong=1  mean points -8.50   (score-weight: -0.61 of 60)
+  locked168    inliers [16,20): n=  1 wrong=0  mean points 10.00   (score-weight: 0.36 of 60)
+  locked168    inliers [20,40): n=  5 wrong=0  mean points 6.40   (score-weight: 1.14 of 60)
+  locked168    inliers [40,10000): n=158 wrong=0  mean points 8.58   (score-weight: 48.43 of 60)
+
+--- upper bounds on the wrong rate (answered photos), Clopper-Pearson 95% ---
+  work332      1/329  rate 0.003  95% CI [0.000, 0.017]
+  official500  0/500  rate 0.000  95% CI [0.000, 0.007]
+  nudt300      6/282  rate 0.021  95% CI [0.008, 0.046]
+  locked168    1/166  rate 0.006  95% CI [0.000, 0.033]
+  highalt(dev+test) 2/495 rate 0.0040 CI [0.0005, 0.0145]
+
+--- selection of bar: where did a bar of 12 come from? real pairs of runs (same code, bar only) ---
+  official  bar20 52.08 (ans 445 wrong 0)   bar12 56.57 (ans 482 wrong 0)
+  nudt      bar20 52.28 (ans 269 wrong 2)   bar12 52.28 (ans 278 wrong 5)
+  working332: no bar-12-vs-20 pair with the same settings exists (bar 16 vs 20 without fit: 42.31 vs 42.04; bar 24: 42.02 on a partial run of 277 photos).
+
+--- how much of the highalt wrong-answer count is protected by the bar? answers by inlier count bin for the 3 highalt runs ---
+               n  wrong  mean_pts
+inliers                          
+(0, 8]         0      0       NaN
+(8, 12]        3      1     -4.67
+(12, 16]       4      1     -1.25
+(16, 20]       6      0      6.33
+(20, 30]      17      0      6.41
+(30, 50]      29      0      5.90
+(50, 100]     66      0      7.91
+(100, 1000]  370      0      9.09
